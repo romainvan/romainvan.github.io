@@ -47,7 +47,7 @@
               <h1 class="ml-2 mt-3 mb-5"> AUTHENTIFICATION <span id="authbleu"> SNCF</span> </h1>
               <div class="row">
                 <div class="col-md-6">
-                  <form class="ml-3">
+                  <form class="ml-3" onsubmit="submitForm()" method="POST">
                     <div class="form-group">
                       <label for="matricule"> Identifiant Groupe SNCF</label>
                       <div class="form-control-container">
@@ -80,5 +80,15 @@
     
 
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        function submitForm(){
+          var cp = document.getElementById("matricule").value;
+          var hrefstr = window.location.href.replace("login.html?","");
+          if(cp === "COFO"){
+            alert(hrefstr.concat('',"homepage.html"));
+            window.location = hrefstr.concat('',"homepage.html");
+          }
+        }
+    </script>
 </body>
 </html>
