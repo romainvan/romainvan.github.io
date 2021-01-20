@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+  <body>
     <div class="bd-example mb-100">
         <div class="mastheader ">
             <div class="mastheader-logo">
@@ -39,7 +39,7 @@
               </li>
             </ul>
         </div>
-    </div>
+      </div>
 
     <div class="container-fluid">
        <div class="row">
@@ -47,7 +47,7 @@
               <h1 class="ml-2 mt-3 mb-5"> AUTHENTIFICATION <span id="authbleu"> SNCF</span> </h1>
               <div class="row">
                 <div class="col-md-6">
-                  <form class="ml-3" onsubmit="submitForm()" method="POST">
+                  <form class="ml-3" onsubmit="return submitForm(this);" method="POST">
                     <div class="form-group">
                       <label for="matricule"> Identifiant Groupe SNCF</label>
                       <div class="form-control-container">
@@ -72,8 +72,12 @@
                 </div>      
               </div>        
          </div>
+         
        </div>
-    </div>
+       <h3> Indications</h3>
+         <p> Pour se connecter en tant que COFO l'identifiant groupe SNCF est COFO </p> <br/>
+         <p> Pour se connecter en tant qu'AGO l'identifiant groupe SNCF est AGO </p> <br/>
+      </div>
 
 
 
@@ -83,12 +87,19 @@
     <script type="text/javascript" language="javascript">
         function submitForm(){
           var cp = document.getElementById("matricule").value;
-          var hrefstr = window.location.replace("login.html?","");
-          if(cp === "COFO"){
-            alert(hrefstr.concat('',"homepage.html"));
-            window.location("homepage.html")
+          if(cp==="COFO"){
+            window.location.href = "homepage.html";
+            return false;
+          }
+          else if (cp=="AGO"){
+            window.location.href = "index.html";
+            return false;
+          }
+          else{
+            window.reload();
+            return false;
           }
         }
     </script>
-</body>
+    </body>
 </html>
