@@ -9,3 +9,22 @@
 select{
     background-color: white;
 }
+
+.blanc{
+    background-color: white;
+}
+
+.imgAccueil{
+    width: 95%;
+    object-fit: contain;
+}
+
+#authbleu{
+    color: #00a9cc;
+}
+
+#imglogin{
+    width: 50%;
+    object-fit: contain;
+    margin-left: 20%;
+}
