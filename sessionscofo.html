@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Demandes en cours</title>
+  <title> Sessions FC</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -54,8 +54,8 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropSessions">
                         <ul>
-                          <li class="dropdown-item"><a href="sessionscofo.html"> Sessions FC</a></li>
-                          <li class="dropdown-item"><a href=""> Sessions FI </a></li>
+                            <li class="dropdown-item"><a href="sessionscofo.html"> Sessions FC</a></li>
+                            <li class="dropdown-item"><a href=""> Sessions FI </a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,71 +105,75 @@
     </div>
 
     <div class="container-fluid">
-        <h1 class="text-center mb-5"> Liste des demandes en cours </h1>
-        <div class="row">
-            <div class="col-md-12">
+       <div class="row">
+           <div class="col-md-12">
+                <h1 class="text-center"> Sessions Formation Continue de l'établissement Infrapôle Paris Nord</h1>
                 <div class="col-md-4 ml-5">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                          <div class="btn-group dropdown" data-component="select-radios">
+                        <div class="btn-group dropdown" data-component="select-radios">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                              <span data-role="placeholder">Tout</span>
-                              <i class="icons-arrow-down" aria-hidden="true"></i>
+                            <span data-role="placeholder">Tout</span>
+                            <i class="icons-arrow-down" aria-hidden="true"></i>
                             </button>
                             <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
-                              <label class="dropdown-item" for="action11">Signalisation</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
-                              <label class="dropdown-item" for="action12">Voie</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
-                              <label class="dropdown-item" for="action13">Produit Train</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
-                              <label class="dropdown-item" for="action14">Caténaire</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
-                              <label class="dropdown-item" for="action15">Circulation</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
-                              <label class="dropdown-item" for="action16">Tout</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
+                            <label class="dropdown-item" for="action11">Signalisation</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
+                            <label class="dropdown-item" for="action12">Voie</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
+                            <label class="dropdown-item" for="action13">Produit Train</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
+                            <label class="dropdown-item" for="action14">Caténaire</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
+                            <label class="dropdown-item" for="action15">Circulation</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
+                            <label class="dropdown-item" for="action16">Tout</label>
                             </div>
-                          </div>
+                        </div>
                         </div>
                         <div class="form-control-container col-md-5 whiteinput autocomplete">
                             <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
                             <datalist id="code">
-                              <option value="VCE40124">
-                              <option value="VA216000">
+                            <option value="VCE40124">
+                            <option value="VA216000">
                             </datalist>
                         </div>
                         <div class="input-group-append">
-                          <button type="button" class="btn btn-primary btn-only-icon">
+                        <button type="button" class="btn btn-primary btn-only-icon">
                             <i class="icons-search" aria-hidden="true"></i>
                             <span class="sr-only">Rechercher sur le site</span>
-                          </button>
+                        </button>
                         </div>
-                      </div>
+                    </div>
                 </div>
-
-                <div class="col-md-12 mt-5">
+                <div class="col-md-11 mt-5 ml-5">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
                           <table class="table">
                             <caption class="sr-only">Titre</caption>
                             <thead class="thead thead-light">
                               <tr>
-                                <th scope="col"><div class="cell-inner">Code demande</div></th>
-                                <th scope="col"><div class="cell-inner">Date de la demande</div></th>
-                                <th scope="col"><div class="cell-inner">Code de l'action</div></th>
-                                <th scope="col"><div class="cell-inner">Matricule</div></th>
-                                <th scope="col"><div class="cell-inner">Nom & Prénom</div></th>
+                                <th scope="col"><div class="cell-inner">Code RAF</div></th>
+                                <th scope="col"><div class="cell-inner">Code Session</div></th>
+                                <th scope="col"><div class="cell-inner">Lieu</div></th>
+                                <th scope="col"><div class="cell-inner">Date début</div></th>
+                                <th scope="col"><div class="cell-inner">Date fin</div></th>
+                                <th scope="col"><div class="cell-inner">Nombre d'agents</div></th>
+                                <td class="cell-placeholder" aria-hidden="true"><span></span></td>
                                 <th class="cell-fixed"><span class="sr-only">Actions</span></th>
                               </tr>
                             </thead>
                             <tbody class="tbody">
                               <tr>
-                                <td><div class="cell-inner">641198</div></td>
-                                <td><div class="cell-inner">15/10/2018</div></td>
-                                <td><div class="cell-inner">VCE40124</div></td>
-                                <td><div class="cell-inner">1234567A</div></td>
-                                <td><div class="cell-inner">Martin Jean</div></td>
+                                
+                                <td><div class="cell-inner"> VT160000</div></td>
+                                <td><div class="cell-inner"> NVT000146</div></td>
+                                <td><div class="cell-inner"> Toulouse</div></td>
+                                <td><div class="cell-inner"> 21/06/2021</div></td>
+                                <td><div class="cell-inner"> 25/06/2021</div></td>
+                                <td><div class="cell-inner"> 1</div></td>
+                                <td class="cell-placeholder"><span></span></td>
                                 <td class="cell-fixed">
                                   <div class="btn-group dropdown">
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
@@ -177,47 +181,8 @@
                                       <i class="icons-options icons-size-1x75" aria-hidden="true"></i>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle0">
-                                      <button type="button" class="dropdown-item">Voir plus de détails</button>
-                                      <button type="button" class="dropdown-item">Modifier</button>
-                                      <button type="button" class="dropdown-item">Supprimer</button>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr> <tr>
-                                <td><div class="cell-inner">646518</div></td>
-                                <td><div class="cell-inner">15/10/2018</div></td>
-                                <td><div class="cell-inner">VCE40124</div></td>
-                                <td><div class="cell-inner">8912345B</div></td>
-                                <td><div class="cell-inner">Dupont Martin</div></td>
-                                <td class="cell-fixed">
-                                  <div class="btn-group dropdown">
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
-                                      <span class="sr-only">Actions</span>
-                                      <i class="icons-options icons-size-1x75" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle0">
-                                      <button type="button" class="dropdown-item">Voir plus de détails</button>
-                                      <button type="button" class="dropdown-item">Modifier</button>
-                                      <button type="button" class="dropdown-item">Supprimer</button>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr> <tr>
-                                <td><div class="cell-inner">792673</div></td>
-                                <td><div class="cell-inner">23/08/2019</div></td>
-                                <td><div class="cell-inner">VA216000</div></td>
-                                <td><div class="cell-inner">6789123C</div></td>
-                                <td><div class="cell-inner">Dubois Bernard</div></td>
-                                <td class="cell-fixed">
-                                  <div class="btn-group dropdown">
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
-                                      <span class="sr-only">Actions</span>
-                                      <i class="icons-options icons-size-1x75" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle0">
-                                      <button type="button" class="dropdown-item">Voir plus de détails</button>
-                                      <button type="button" class="dropdown-item">Modifier</button>
-                                      <button type="button" class="dropdown-item">Supprimer</button>
+                                      <button type="button" class="dropdown-item">Plus de détails</button>
+                                      <button type="button" class="dropdown-item">Exporter</button>
                                     </div>
                                   </div>
                                 </td>
@@ -227,12 +192,9 @@
                         </div>
                       </div>
                 </div>
-            </div>
-        </div>
-        
-
+           </div>
+       </div>
     </div>
-    
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
-    
 </body>
+</html>
