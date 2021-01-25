@@ -71,3 +71,13 @@ select{
     font-size: smaller;
     padding-left: 0%;
 }
+
+
+label { 
+    display: block;
+    min-height: 100%; 
+}
+
+select > .placeholder {
+    display: none;
+}
