@@ -117,7 +117,7 @@
                             <li class="dropdown-item"><a href="#">Paramètre du compte</a></li>
                             <li class="dropdown-item"><a href="#">Préférences</a></li>
                             <li class="dropdown-item darkmode-btn"><a href="#">Mode clair/sombre</a></li>
-                            <li class="dropdown-item"><a href="all/disconnect.php">Se déconnecter</a></li>
+                            <li class="dropdown-item"><a href="index.html">Se déconnecter</a></li>
                         </ul>
                     </div>
                 </div>
@@ -194,7 +194,7 @@
                                 <td class="cell-fixed">
                                   <div class="cell-inner">
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
-                                      <i class="icons-circle-information icons-size-1x25" aria-hidden="true"></i>
+                                      <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande"aria-hidden="true"></i>
                                     </button>
                                     <div class="btn-group dropdown">
                                       <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
@@ -267,6 +267,30 @@
         </div>
         
 
+    </div>
+
+    <div id="ModalDemande" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content"> <br />
+              <h2 class="text-center my-4"> Détails de la demande <strong> 641198 </strong> </h1>
+              <div class="modal-body">
+                  <div class="row">
+                    <div class="col-m-12">
+                      <ul>
+                        <li> Date de la demande : 15/10/2018 </li>
+                        <li> Code de l'action : VCE40124 </li>
+                        <li> Libellé de l'action : CREQ Réglementation Circulation Incidents</li>
+                        <li> Matricule : 1234567A </li>
+                        <li> Nom & Prénom : Martin Jean</li>
+                        <li> Statut de la demande : En cours - Aucune place attribuée</li>
+                      </ul>
+                        
+                    </div>
+                  </div>                           
+              </div>
+  
+          </div>
+      </div>
     </div>
     
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
