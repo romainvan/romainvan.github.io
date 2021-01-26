@@ -281,14 +281,14 @@
                     <div class="table-wrapper" data-component="table">
                         <div class="table-scroller dragscroll">
                             <table class="table">
-                                <thead class="thead thead-light">
+                                <thead class="thead bg-secondary">
                                     <tr>
-                                      <th scope="col"><div class="cell-inner">Code RAF - Code Session</div></th>
-                                      <th scope="col"><div class="cell-inner">Lieu</div></th>
-                                      <th scope="col"><div class="cell-inner">Date de début - Date de fin</div></th>
-                                      <th scope="col"><div class="cell-inner">Groupe</div></th>
-                                      <th scope="col"><div class="cell-inner">Besoin exprimé</div></th>
-                                      <th scope="col"><div class="cell-inner">Places accordées</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Code RAF - Code Session</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Date de début - Date de fin</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Besoin exprimé</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Places accordées</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
@@ -315,17 +315,17 @@
                                         </td>
                                         <td>
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="my-3" readonly>
+                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="codedemande" value="Code demande" class="my-3" readonly>
+                                                <input type="text" name="nomagent" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="datedemande" value="Date demande" class="my-3" readonly>
+                                                <input type="text" name="nomagent" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -342,14 +342,14 @@
                     <div class="table-wrapper" data-component="table">
                         <div class="table-scroller dragscroll">
                             <table class="table">
-                                <thead class="thead thead-light">
+                                <thead class="thead bg-secondary">
                                     <tr>
-                                      <th scope="col"><div class="cell-inner">Code RAF - Code Session</div></th>
-                                      <th scope="col"><div class="cell-inner">Lieu</div></th>
-                                      <th scope="col"><div class="cell-inner">Date de début - Date de fin</div></th>
-                                      <th scope="col"><div class="cell-inner">Groupe</div></th>
-                                      <th scope="col"><div class="cell-inner">Besoin exprimé</div></th>
-                                      <th scope="col"><div class="cell-inner">Places accordées</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Code RAF - Code Session</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Date de début - Date de fin</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Besoin exprimé</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Places accordées</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
@@ -373,12 +373,13 @@
                 <div id="ModalRepart" class="modal fade">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content" style="border: 2px solid black;"> <br />
-                            <h1 class="text-center my-4"> Ajout des agents pour la session VT16000 - NVT0000146 </h1>
+                            <h2 class="text-center my-4"> Ajout des agents pour la session VT16000 - NVT0000146 </h1>
                             <div class="modal-body">
-                                <form>
+                                <form method="POST">
+                                    <h2 class="text-center"> Agent 1</h2>
                                     <div class="form-group">
-                                        <label for="numcp"> Agent 1</label>
-                                        <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                        <label for="numcp2"> Numéro de CP</label>
+                                        <select name="numcp2" id="numcp2" class="form-control selectRepart my-2" onchange="change2()"> 
                                             <option selected="selected" disabled="true"> Numéro de CP de l'agent</option>
                                             <option value="1234567A">1234567A</option> 
                                             <option value="8912345B">8912345B </option> 
@@ -386,7 +387,28 @@
                                             <option value="4567891D">4567891D</option> 
                                         </select> 
                                     </div>
-                                </form>
+
+                                    <div class="form-row mb-3">
+                                        <div class="col">
+                                            <label for="nameAgent1"> Nom et Prénom</label>
+                                            <input type="text" name="nameAgent1" id="nameAgent1" value="Nom Prénom" class="form-control" readonly>
+                                        </div>
+                                        <div class="col">
+                                            <label for="codeDemande1"> Code de la demande</label>
+                                            <input type="text" name="codeDemande1" id="codeDemande1" value="Code demande" class="form-control" readonly>
+                                        </div>
+                                        <div class="col">
+                                            <label for="dateDemande1"> Date de la demande </label>
+                                            <input type="text" name="dateDemande1" id="dateDemande1" value="Date demande" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 offset-md-5">
+                                            <button type="submit" class="btn btn-success text-white"> Valider </button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>                                                    
                             </div>
                 
                         </div>
@@ -413,6 +435,13 @@
             document.getElementById("nomagent").value = object[value].nomPrenom
             document.getElementById("codedemande").value = object[value].code
             document.getElementById("datedemande").value = object[value].date
+        }
+
+        function change2(){
+            var value = document.getElementById("numcp2").value;
+            document.getElementById("nameAgent1").value = object[value].nomPrenom
+            document.getElementById("codeDemande1").value = object[value].code
+            document.getElementById("dateDemande1").value = object[value].date
         }
     </script>
     
