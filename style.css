@@ -24,7 +24,7 @@ select{
 }
 
 .whiteinput{
-    background-color: white;
+    background-color: white !important;
 }
 
 #imglogin{
@@ -164,4 +164,9 @@ select > .placeholder {
   .icons-calendar-time{
       color: black;
   }
+  
+  #myChart{
+    width: 100%;
+  }
+  
   

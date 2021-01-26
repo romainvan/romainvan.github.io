@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Page d'acceuil pour les COFO</title>
+  <title>Page d'acceuil pour les AGO</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  
 
 </head>
 
@@ -20,7 +21,7 @@
 
     <div class="mastheader">
         <div class="mastheader-logo">
-        <a href="accueilcofo.html">
+        <a href="accueilago.html">
             <img alt="SNCF" src="bootstrap-sncf.metier.v4.3.1-r5/assets/img/brand/sncf-logo.png" width="70" />
         </a>
         </div>
@@ -29,22 +30,7 @@
         </header>
         <ul class="mastheader-title toolbar mb-0">
             <li class="toolbar-item separator-gray-500">
-                <div class="btn-group dropdown">
-                    <button class="btn btn-transparent dropdown-toggle toolbar-item-spacing" type="button" id="dropDemandes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="mycontrol">
-                        <span class="d-none d-xl-block">Mes demandes</span>
-                        <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropDemandes">
-                        <ul>
-                            <li class="dropdown-item"><a href="cofoDemandeCours.html"> En cours </a></li>
-                            <li class="dropdown-item"><a href=""> Rejeter </a></li>
-                            <li class="dropdown-item"><a href=""> A reconduire </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li class="toolbar-item separator-gray-500">
-                <a href="repartCOFO.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing"> Répartition</a>
+                <a href="repartCOFO.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing"> Créer une session</a>
             </li>
             <li class="toolbar-item separator-gray-500">
                 <div class="btn-group dropdown">
@@ -92,9 +78,9 @@
                           <i class="fa fa-times" aria-hidden="true"></i>
                         </div>
                         <div class="notifications-body">
-                          <p class="notification-texte mb-2"> Une place accordée pour le code VT16000</p>
+                          <p class="notification-texte mb-2"> Demande de création d'une session pour le code VT160000</p>
                           <p class="notification-date text-muted mt-1">
-                            <i class="icons-calendar-time icons-size-1x" aria-hidden="true"></i> 25/01/2021
+                            <i class="icons-calendar-time icons-size-1x" aria-hidden="true"></i> 26/01/2021
                           </p>
                         </div>
                       </a>
@@ -123,39 +109,92 @@
     </div>
 
     <div class="container-fluid">
-        
-        <h1 class="text-center mb-5"> Bienvenue sur MaPlanifRéseau Pierre </h1>
+        <h1 class="text-center mb-5"> Création d'une session </h1>
         <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-8 offset-md-2 border border-dark blanc">
-                    <h1 class="text-center mb-3"> Actualités du 18 Janvier pour <br/>l'Infrapôle Paris Nord</h1>
-                    <div>
-                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
-                                <p class="mt-2"> Le taux de réussite pour les stagiaires de décembre était de 92,8%</p>
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="coderaf" class="ml-1"> Code RAF</label>
+                            <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control">
+                                <datalist id="code">
+                                        <option value="VCE40124">
+                                        <option value="VA216000">
+                                </datalist>
+                        </div>
+
+                        <div class="col">
+                            <label for="campus" class="ml-1"> Campus </label>
+                            <input list="campusList" type="text" id="campus" class="whiteinput border-0 form-control">
+                                <datalist id="campusList">
+                                        <option value="Nanterre">
+                                        <option value="Bègles">
+                                        <option value="Saint Priest"></option>
+                                </datalist>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-row mt-4">
+                        <div class="col">
+                            <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                            <div data-component="picker">
+                                <div class="input-group" data-toggle>
+                                  <div class="form-control-container">
+                                    <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de début" data-input>
+                                    <span class="form-control-state"></span>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                            <div data-component="picker">
+                                <div class="input-group" data-toggle>
+                                  <div class="form-control-container">
+                                    <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                                    <span class="form-control-state"></span>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="places" class="ml-1"> Nombre de places</label>
+                        <input type="number" class="form-control whiteinput" id="places"> 
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="group" class="ml-1"> Groupe</label>
+                        <input type="text" class="form-control whiteinput" id="group"> 
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 offset-md-5">
+                            <button type="submit" class="btn btn-success text-white"> Ajouter la session </button>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6">
-                        <figure>
-                            <img src="images/formation.jpeg" class="imgAccueil ml-2 mt-2">
-                            <figcaption class="text-center lead"> 103 agents en formation <br/> actuellement </figcaption>
-                        </figure>
-                    </div>
-                    <div class="col-md-6">
-                        <figure>
-                            <img src="images/chantier.jpeg" class="imgAccueil ml-2 mt-2 mb-2">
-                            <figcaption class="text-center lead"> 324 agents sur chantier <br/> actuellement </figcaption>
-                        </figure>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-
+        
+        
+        
     </div>
-    
+
+    <script src="graphAgo.js"></script>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
 </body>
 </html>
