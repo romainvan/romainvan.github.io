@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title> Liste des sessions </title>
+  <title>Répartition AC</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  
 
 </head>
 
@@ -20,7 +21,7 @@
 
     <div class="mastheader">
         <div class="mastheader-logo">
-        <a href="accueilcofo.html">
+        <a href="accueilac.html">
             <img alt="SNCF" src="bootstrap-sncf.metier.v4.3.1-r5/assets/img/brand/sncf-logo.png" width="70" />
         </a>
         </div>
@@ -29,22 +30,7 @@
         </header>
         <ul class="mastheader-title toolbar mb-0">
             <li class="toolbar-item separator-gray-500">
-                <div class="btn-group dropdown">
-                    <button class="btn btn-transparent dropdown-toggle toolbar-item-spacing" type="button" id="dropDemandes" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="mycontrol">
-                        <span class="d-none d-xl-block">Mes demandes</span>
-                        <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropDemandes">
-                        <ul>
-                            <li class="dropdown-item"><a href="cofoDemandeCours.html"> En cours </a></li>
-                            <li class="dropdown-item"><a href=""> Rejeter </a></li>
-                            <li class="dropdown-item"><a href=""> A reconduire </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li class="toolbar-item separator-gray-500">
-                <a href="repartCOFO.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing"> Répartition</a>
+                <a href="repartAC.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing"> Répartition </a>
             </li>
             <li class="toolbar-item separator-gray-500">
                 <div class="btn-group dropdown">
@@ -54,7 +40,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropSessions">
                         <ul>
-                            <li class="dropdown-item"><a href="sessionscofo.html"> Sessions FC</a></li>
+                            <li class="dropdown-item"><a href="sessionsac.html"> Sessions FC</a></li>
                             <li class="dropdown-item"><a href=""> Sessions FI </a></li>
                         </ul>
                     </div>
@@ -87,20 +73,20 @@
     
                     <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="notif">
                       <h6 class="dropdown-header text-center">Notifications (1) </h6>
-                      <a class="dropdown-item dropdown-notification" href="repartCOFO.html">
+                      <a class="dropdown-item dropdown-notification" href="creesession.html">
                         <div class="notification-read">
                           <i class="fa fa-times" aria-hidden="true"></i>
                         </div>
                         <div class="notifications-body">
-                          <p class="notification-texte mb-2"> Une place accordée pour le code VT16000</p>
+                          <p class="notification-texte mb-2"> Attribution d'une place pour le code VT160000</p>
                           <p class="notification-date text-muted mt-1">
-                            <i class="icons-calendar-time icons-size-1x" aria-hidden="true"></i> 25/01/2021
+                            <i class="icons-calendar-time icons-size-1x" aria-hidden="true"></i> 26/01/2021
                           </p>
                         </div>
                       </a>
     
                     </ul>
-                  </div>
+                </div>
             </li>
             <li class="toolbar-item separator-black-500">
                 <div class="btn-group dropdown">
@@ -113,7 +99,7 @@
                         <ul>
                             <li class="dropdown-item"><a href="#">Paramètre du compte</a></li>
                             <li class="dropdown-item"><a href="#">Préférences</a></li>
-                            <li class="dropdown-item"><a id="darkmode-btn" href="#">Mode clair/sombre</a></li>
+                            <li class="dropdown-item darkmode-btn"><a href="#">Mode clair/sombre</a></li>
                             <li class="dropdown-item"><a href="index.html">Se déconnecter</a></li>
                         </ul>
                     </div>
@@ -123,49 +109,50 @@
     </div>
 
     <div class="container-fluid">
-       <div class="row">
-           <div class="col-md-12">
-                <h1 class="text-center"> Sessions Formation Continue de l'établissement Infrapôle Paris Nord</h1>
+        <h1 class="text-center mb-5"> Répartition </h1>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="col-md-4 ml-5">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                        <div class="btn-group dropdown" data-component="select-radios">
+                          <div class="btn-group dropdown" data-component="select-radios">
                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                            <span data-role="placeholder">Tout</span>
-                            <i class="icons-arrow-down" aria-hidden="true"></i>
+                              <span data-role="placeholder">Tout</span>
+                              <i class="icons-arrow-down" aria-hidden="true"></i>
                             </button>
                             <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
-                            <label class="dropdown-item" for="action11">Signalisation</label>
-                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
-                            <label class="dropdown-item" for="action12">Voie</label>
-                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
-                            <label class="dropdown-item" for="action13">Produit Train</label>
-                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
-                            <label class="dropdown-item" for="action14">Caténaire</label>
-                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
-                            <label class="dropdown-item" for="action15">Circulation</label>
-                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
-                            <label class="dropdown-item" for="action16">Tout</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
+                              <label class="dropdown-item" for="action11">Signalisation</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
+                              <label class="dropdown-item" for="action12">Voie</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
+                              <label class="dropdown-item" for="action13">Produit Train</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
+                              <label class="dropdown-item" for="action14">Caténaire</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
+                              <label class="dropdown-item" for="action15">Circulation</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
+                              <label class="dropdown-item" for="action16">Tout</label>
                             </div>
-                        </div>
+                          </div>
                         </div>
                         <div class="form-control-container col-md-5 whiteinput autocomplete">
                             <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
                             <datalist id="code">
-                            <option value="VCE40124">
-                            <option value="VA216000">
+                              <option value="VCE40124">
+                              <option value="VA216000">
                             </datalist>
                         </div>
                         <div class="input-group-append">
-                        <button type="button" class="btn btn-primary btn-only-icon">
+                          <button type="button" class="btn btn-primary btn-only-icon">
                             <i class="icons-search" aria-hidden="true"></i>
                             <span class="sr-only">Rechercher sur le site</span>
-                        </button>
+                          </button>
                         </div>
-                    </div>
+                      </div>
                 </div>
-                <div class="col-md-11 mt-5 ml-5">
+
+                <div class="col-md-12 mt-5">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
                           <table class="table">
@@ -176,7 +163,9 @@
                                 <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
                                 <th scope="col"><div class="cell-inner text-white">Date début</div></th>
                                 <th scope="col"><div class="cell-inner text-white">Date fin</div></th>
-                                <th scope="col"><div class="cell-inner text-white">Nombre d'agents</div></th>
+                                <th scope="col"><div class="cell-inner text-white">Nombre de places totales </div></th>
+                                <th scope="col"><div class="cell-inner text-white">Nombre de places ZP </div></th>
+                                <th scope="col"><div class="cell-inner text-white">Groupe </div></th>
                                 <td class="cell-placeholder" aria-hidden="true"><span></span></td>
                                 <th class="cell-fixed"><span class="sr-only">Actions</span></th>
                               </tr>
@@ -189,29 +178,95 @@
                                 <td><div class="cell-inner"> Bègles</div></td>
                                 <td><div class="cell-inner"> 21/06/2021</div></td>
                                 <td><div class="cell-inner"> 25/06/2021</div></td>
-                                <td><div class="cell-inner"> 1</div></td>
+                                <td><div class="cell-inner"> 12 </div></td>
+                                <td><div class="cell-inner"> 3</div></td>
+                                <td><div class="cell-inner"> ISOLE </div></td>
                                 <td class="cell-placeholder"><span></span></td>
                                 <td class="cell-fixed">
-                                  <div class="btn-group dropdown">
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
-                                      <span class="sr-only">Actions</span>
-                                      <i class="icons-options icons-size-1x75" aria-hidden="true"></i>
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle0">
-                                      <button type="button" class="dropdown-item">Plus de détails</button>
-                                      <button type="button" class="dropdown-item">Éditer la convocation</button>
-                                      <button type="button" class="dropdown-item">Exporter</button>
-                                    </div>
-                                  </div>
+                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC"> Répartir </button>
                                 </td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
                       </div>
+                    </div>
                 </div>
-           </div>
-       </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalRepartAC" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border: 2px solid black;"> <br />
+                <h2 class="text-center my-4"> Répartition pour la session VT16000 - NVT0000146 </h1>
+                <div class="modal-body">
+                    <form method="POST">
+                        <h2 class="text-center mb-4"> <strong> Nombre de places : 3 </strong>  </h2>
+                        <div class="form-row">
+                           <div class="col">
+                               <label for="e1"> Infrapôle Aquitaine (5 demandes) </label>
+                               <input type="number" class="form-control" id="e1">
+                           </div>
+                           <div class="col">
+                                <label for="e2"> Infrapôle Bretagne (8 demandes)</label>
+                                <input type="number" class="form-control" id="e2">
+                            </div>
+                            
+                        </div>
+
+                        <div class="form-row my-4">
+                            <div class="col">
+                                <label for="e3"> Infrapôle Centre (2 demandes) </label>
+                                <input type="number" class="form-control" id="e3">
+                            </div>
+                            <div class="col">
+                                 <label for="e4"> Infrapôle Indre Limousin (0 demande)</label>
+                                 <input type="number" class="form-control" id="e4">
+                             </div>
+                        </div>
+
+                        <div class="form-row my-4">
+                            <div class="col">
+                                <label for="e5"> Infrapôle LGV Atlantique (3 demandes) </label>
+                                <input type="number" class="form-control" id="e5">
+                            </div>
+                            <div class="col">
+                                 <label for="e6"> Infrapôle Midi-Pyrénées (12 demandes)</label>
+                                 <input type="number" class="form-control" id="e6">
+                             </div>
+                        </div>
+
+                        <div class="form-row my-4">
+                            <div class="col">
+                                <label for="e7"> Infrapôle Pays de la Loire (7 demandes) </label>
+                                <input type="number" class="form-control" id="e7">
+                            </div>
+                            <div class="col">
+                                 <label for="e8"> Infrapôle Poitou-Charentes (9 demandes)</label>
+                                 <input type="number" class="form-control" id="e8">
+                             </div>
+                        </div>
+
+                        <div class="form-row my-4">
+                            <div class="col">
+                                <label for="e9"> Établissement Industriel Atlantique (1 demande) </label>
+                                <input type="number" class="form-control" id="e9">
+                            </div>
+                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 offset-md-5">
+                                <button type="submit" class="btn btn-success text-white"> Valider </button>
+                            </div>
+                        </div>
+                        
+                    </form>                                                    
+                </div>
+    
+            </div>
+        </div>
     </div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
 </body>

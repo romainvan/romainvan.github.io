@@ -75,8 +75,9 @@
        </div>
        <div class="col-md-10 offset-md-1 blanc mt-5">
           <h3 class="mt-3"> Indications</h3>
-          <p> Pour se connecter en tant que COFO l'identifiant groupe SNCF est COFO </p> <br/>
-          <p> Pour se connecter en tant qu'AGO l'identifiant groupe SNCF est AGO </p> <br/>
+          <p> Pour se connecter en tant que COFO l'identifiant groupe SNCF est  <strong> COFO </strong> et le mot de passe <strong> reste vide </strong>  </p> <br/>
+          <p> Pour se connecter en tant qu'AGO l'identifiant groupe SNCF est <strong> AGO </strong> et le mot de passe <strong> reste vide </strong> </p> <br/>
+          <p> Pour se connecter en tant qu'AC l'identifiant groupe SNCF est <strong> AC </strong> et le mot de passe <strong> reste vide </strong></p> <br/>
        </div>
        
       </div>
@@ -95,6 +96,10 @@
           }
           else if (cp=="AGO"){
             window.location.href = "accueilago.html";
+            return false;
+          }
+          else if (cp=="AC"){
+            window.location.href = "accueilac.html";
             return false;
           }
           else{

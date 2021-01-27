@@ -168,5 +168,10 @@ select > .placeholder {
   #myChart{
     width: 100%;
   }
+
+  .btnrepart{
+    font-size: medium;
+    padding: 0% !important;
+  }
   
   
