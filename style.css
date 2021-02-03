@@ -181,3 +181,12 @@ select > .placeholder {
   .radiusBtn{
       border-radius: 15px !important;
   }
+  .alert{
+    color: red;
+    font-weight: bold;
+  }
+
+  input {
+    display: block;
+    width: 100% !important;
+  }

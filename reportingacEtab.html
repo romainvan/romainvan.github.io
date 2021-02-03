@@ -64,7 +64,7 @@
     
                     <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="notif">
                       <h6 class="dropdown-header text-center">Notifications (1) </h6>
-                      <a class="dropdown-item dropdown-notification" href="creesession.html">
+                      <a class="dropdown-item dropdown-notification" href="repartAC.html">
                         <div class="notification-read">
                           <i class="fa fa-times" aria-hidden="true"></i>
                         </div>
@@ -102,7 +102,7 @@
     <nav role="navigation" class="mastnav">
         <ul class="mastnav-top">
           <li>
-            <a href="reportingac.html" class="mastnav-item active">
+            <a href="reportingac.html" class="mastnav-item">
                 <i class="icons-large-france icons-size-1x5 " aria-hidden="true"></i>
                 <span class="font-weight-medium">Zone de Production</span>
             </a>
@@ -112,7 +112,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="mastnav-item active">
+            <a href="reportingsuiviAgent.html" class="mastnav-item">
               <i class="icons-circle-account-connected icons-size-1x5 " aria-hidden="true"></i>
               <span class="font-weight-medium">Suivi agent</span>
             </a>
@@ -331,16 +331,20 @@
 
         <div class="row mt-5">
             <div class="col-md-5 offset-md-1 whitediv">
-                <h1 class="text-center mt-2"> Formation initiale</h1>
-                <canvas>
+                <h1 class="text-center"> Formation initiale</h1>
+                <canvas id="zpACInitiale">
 
                 </canvas>
             </div>
-            <div class="col-md-5 whitediv ml-3">
-                <h1 class="text-center mt-2"> Formation continue</h1>
+            <div class="col-md-5 ml-5 whitediv">
+                <h1 class="text-center"> Formation continue</h1>
+                <canvas id="zpACContinue">
+
+                </canvas>
             </div>
         </div>
     </div>
+    <script src="graphACReport.js"></script>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
 
 </body>
