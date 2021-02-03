@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   
 
 </head>
@@ -46,17 +47,7 @@
                 </div>
             </li>
             <li class="toolbar-item separator-gray-500">
-                <div class="btn-group dropdown">
-                    <button class="btn btn-transparent dropdown-toggle toolbar-item-spacing" type="button" id="dropSessions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="mycontrol">
-                        <span class="d-none d-xl-block">Reporting</span>
-                        <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropSessions">
-                        <ul>
-                            <li class="dropdown-item"><a href="reportingac.html"> Sessions</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <a href="reportingac.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing"> Reporting </a>
             </li>
             
         </ul>
@@ -143,38 +134,65 @@
             <div class="col-md-4 offset-md-1">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                      <div class="btn-group dropdown" data-component="select-radios">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                          <span data-role="placeholder">Choix du mois</span>
-                          <i class="icons-arrow-down" aria-hidden="true"></i>
-                        </button>
-                        <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
-                          <label class="dropdown-item" for="action11">Janvier</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
-                          <label class="dropdown-item" for="action12">Février</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
-                          <label class="dropdown-item" for="action13">Mars</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
-                          <label class="dropdown-item" for="action14">Avril</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
-                          <label class="dropdown-item" for="action15">Mai</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
-                          <label class="dropdown-item" for="action17">Juillet</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action18" class="sr-only"/>
-                          <label class="dropdown-item" for="action18">Août</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action19" class="sr-only"/>
-                          <label class="dropdown-item" for="action19">Septembre</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action20" class="sr-only"/>
-                          <label class="dropdown-item" for="action20">Octobre</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action21" class="sr-only"/>
-                          <label class="dropdown-item" for="action21">Novembre</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action22" class="sr-only"/>
-                          <label class="dropdown-item" for="action22">Décembre</label>
-                          <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action23" class="sr-only"/>
-                          <label class="dropdown-item" for="action23">Annuel</label>
+                        <div class="btn-group dropdown" data-component="select-radios">
+                            <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
+                            <span data-role="placeholder">Choix du mois</span>
+                            <i class="icons-arrow-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
+                            <label class="dropdown-item" for="action11">Janvier</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
+                            <label class="dropdown-item" for="action12">Février</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
+                            <label class="dropdown-item" for="action13">Mars</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
+                            <label class="dropdown-item" for="action14">Avril</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
+                            <label class="dropdown-item" for="action15">Mai</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
+                            <label class="dropdown-item" for="action17">Juillet</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action18" class="sr-only"/>
+                            <label class="dropdown-item" for="action18">Août</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action19" class="sr-only"/>
+                            <label class="dropdown-item" for="action19">Septembre</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action20" class="sr-only"/>
+                            <label class="dropdown-item" for="action20">Octobre</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action21" class="sr-only"/>
+                            <label class="dropdown-item" for="action21">Novembre</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action22" class="sr-only"/>
+                            <label class="dropdown-item" for="action22">Décembre</label>
+                            <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action23" class="sr-only"/>
+                            <label class="dropdown-item" for="action23">Annuel</label>
+                            </div>
                         </div>
-                      </div>
+                        <div class="btn-group dropdown ml-2" data-component="select-radios">
+                            <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup1">
+                            <span data-role="placeholder">Choix de l'année</span>
+                            <i class="icons-arrow-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="actionsgroup1" class="dropdown-menu dropdown-menu-right">
+
+                                <input data-role="value" type="radio" name="keywordSearch1" value="2021" id="id2021" class="sr-only"/>
+                                <label class="dropdown-item" for="id2021"> 2021 </label>
+
+                                <input data-role="value" type="radio" name="keywordSearch1" value="2021" id="id2020" class="sr-only"/>
+                                <label class="dropdown-item" for="id2020"> 2020 </label>
+
+                                <input data-role="value" type="radio" name="keywordSearch1" value="2019" id="id2019" class="sr-only"/>
+                                <label class="dropdown-item" for="id2019"> 2019 </label>
+
+                                <input data-role="value" type="radio" name="keywordSearch1" value="2018" id="id2018" class="sr-only"/>
+                                <label class="dropdown-item" for="id2018"> 2018 </label>                               
+
+                            </div>
+                        </div>
+                        <div class="input-group-append">
+                            <button type="button" class="btn btn-primary btn-only-icon radiusBtn ml-2">
+                              <i class="icons-search" aria-hidden="true"></i>
+                              <span class="sr-only">Rechercher sur le site</span>
+                            </button>
+                        </div>
                     </div>
                   </div>
             </div>
@@ -252,14 +270,22 @@
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-5 offset-md-1">
+            <div class="col-md-5 offset-md-1 whitediv">
                 <h1 class="text-center"> Formation initiale</h1>
+                <canvas id="zpACInitiale">
+
+                </canvas>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5 ml-5 whitediv">
                 <h1 class="text-center"> Formation continue</h1>
+                <canvas id="zpACContinue">
+
+                </canvas>
             </div>
         </div>
     </div>
+
+    <script src="graphACReport.js"></script>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
 
 </body>
