@@ -25,7 +25,7 @@
         </a>
         </div>
         <header class="mr-5">
-            <h1 class="text-uppercase text-white pt-2 pl-3 ml-2">MaPlanifRéseau</h1>
+            <h1 class="text-uppercase text-white pt-2 pl-3 ml-2">OctopusRéseau</h1>
         </header>
         <ul class="mastheader-title toolbar mb-0">
             <li class="toolbar-item separator-gray-500">
@@ -226,7 +226,7 @@
                             <p class="text-center my-1"> Lieu de formation :</p>
                         </div>
                         <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Toulouse</p>
+                            <p class="text-center my-1"> Lyon</p>
                         </div>
                         <div class="col-md-4">
                         </div>
@@ -356,13 +356,81 @@
                                 <tbody class="tbody">
                                     <tr class="trhead">
                                         <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> VT160000 - NVT0000146</div></td>
-                                        <td><div class="cell-inner"> Toulouse </div></td>
+                                        <td><div class="cell-inner"> Lyon </div></td>
                                         <td><div class="cell-inner"> 21/06/2021 - 25/06/2021</div></td>
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 5</div></td>
                                         <td><div class="cell-inner"> 1</div></td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="0">
+                                       
+                                        <td>
+                                            <div class="cell-inner">
+                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                    <option selected="selected" disabled="true"> Numéro de CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option value="8912345B">8912345B </option> 
+                                                    <option value="6789123C">6789123C</option> 
+                                                    <option value="4567891D">4567891D</option> 
+                                                </select> 
+                                            </div> 
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="nomagent" value="Nom" class="mt-2 form-control" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                        
+                                    <tr class="trhead">
+                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> VA620600 - NVT0000151</div></td>
+                                        <td><div class="cell-inner"> Nanterre </div></td>
+                                        <td><div class="cell-inner"> 28/06/2021 - 29/06/2021 </div></td>
+                                        <td><div class="cell-inner"> ISOLE </div></td>
+                                        <td><div class="cell-inner"> 5</div></td>
+                                        <td><div class="cell-inner"> 2</div></td>
+                                    </tr>
+                                    <tr class="trgroup" data-trgroup="1">
+                                       
+                                        <td>
+                                            <div class="cell-inner">
+                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                    <option selected="selected" disabled="true"> Numéro de CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option value="8912345B">8912345B </option> 
+                                                    <option value="6789123C">6789123C</option> 
+                                                    <option value="4567891D">4567891D</option> 
+                                                </select> 
+                                            </div> 
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="nomagent" value="Nom" class="mt-2 form-control" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="trgroup" data-trgroup="1">
                                        
                                         <td>
                                             <div class="cell-inner">
@@ -417,11 +485,19 @@
                                 <tbody class="tbody">
                                     <tr data-toggle="modal" data-target="#ModalRepart">
                                         <td><div class="cell-inner"> VT160000 - NVT0000146</div></td>
-                                        <td><div class="cell-inner"> Toulouse </div></td>
+                                        <td><div class="cell-inner"> Lyon </div></td>
                                         <td><div class="cell-inner"> 21/06/2021 - 25/06/2021</div></td>
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 5</div></td>
                                         <td><div class="cell-inner"> 1</div></td>
+                                    </tr>
+                                    <tr data-toggle="modal" data-target="#ModalRepart2">
+                                        <td><div class="cell-inner"> VA620600 - NVT0000151</div></td>
+                                        <td><div class="cell-inner"> Nanterre </div></td>
+                                        <td><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
+                                        <td><div class="cell-inner"> ISOLE </div></td>
+                                        <td><div class="cell-inner"> 5</div></td>
+                                        <td><div class="cell-inner"> 2</div></td>
                                     </tr>
                                     
                                 </tbody>
@@ -464,6 +540,79 @@
                                             <input type="text" name="dateDemande1" id="dateDemande1" value="Date demande" class="form-control" readonly>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-2 offset-md-5">
+                                            <button type="submit" class="btn btn-success text-white"> Valider </button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>                                                    
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ModalRepart2" class="modal fade">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content" style="border: 2px solid black;"> <br />
+                            <h2 class="text-center my-4"> Ajout des agents pour la session VT16000 - NVT0000146 </h1>
+                            <div class="modal-body">
+                                <form method="POST">
+                                    <h2 class="text-center"> Agent 1</h2>
+                                    <div class="form-group">
+                                        <label for="numcp2"> Numéro de CP</label>
+                                        <select name="numcp2" id="numcp2" class="form-control selectRepart my-2" onchange="change2()"> 
+                                            <option selected="selected" disabled="true"> Numéro de CP de l'agent</option>
+                                            <option value="1234567A">1234567A</option> 
+                                            <option value="8912345B">8912345B </option> 
+                                            <option value="6789123C">6789123C</option> 
+                                            <option value="4567891D">4567891D</option> 
+                                        </select> 
+                                    </div>
+
+                                    <div class="form-row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="nameAgent1"> Nom et Prénom</label>
+                                            <input type="text" name="nameAgent1" id="nameAgent1" value="Nom Prénom" class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="codeDemande1"> Code de la demande</label>
+                                            <input type="text" name="codeDemande1" id="codeDemande1" value="Code demande" class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="dateDemande1"> Date de la demande </label>
+                                            <input type="text" name="dateDemande1" id="dateDemande1" value="Date demande" class="form-control" readonly>
+                                        </div>
+                                    </div>
+
+                                    <h2 class="text-center"> Agent 2</h2>
+                                    <div class="form-group">
+                                        <label for="numcp2"> Numéro de CP</label>
+                                        <select name="numcp2" id="numcp2" class="form-control selectRepart my-2" onchange="change2()"> 
+                                            <option selected="selected" disabled="true"> Numéro de CP de l'agent</option>
+                                            <option value="1234567A">1234567A</option> 
+                                            <option value="8912345B">8912345B </option> 
+                                            <option value="6789123C">6789123C</option> 
+                                            <option value="4567891D">4567891D</option> 
+                                        </select> 
+                                    </div>
+
+                                    <div class="form-row mb-3">
+                                        <div class="col-md-6">
+                                            <label for="nameAgent1"> Nom et Prénom</label>
+                                            <input type="text" name="nameAgent1" id="nameAgent1" value="Nom Prénom" class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="codeDemande1"> Code de la demande</label>
+                                            <input type="text" name="codeDemande1" id="codeDemande1" value="Code demande" class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="dateDemande1"> Date de la demande </label>
+                                            <input type="text" name="dateDemande1" id="dateDemande1" value="Date demande" class="form-control" readonly>
+                                        </div>
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-md-2 offset-md-5">
                                             <button type="submit" class="btn btn-success text-white"> Valider </button>
