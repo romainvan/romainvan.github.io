@@ -190,3 +190,28 @@ select > .placeholder {
     display: block;
     width: 100% !important;
   }
+
+  .encours{
+    background-color: #128fdc;
+  }
+
+  .hiddentable {
+    background-color: #128fdc;
+  }
+
+  .separator {
+    border-right: 1px solid white;
+    height: 80%;
+  }
+
+  .bodycolor{
+    background-color: #f2f2f2;
+  }
+
+  
+
+
+
+  
+
+

@@ -184,21 +184,24 @@
                         </div>
                       </div>
                 </div>
-
+                <h2 class="mt-4"> Choix 1 </h2>
                 <div class="col-md-12 mt-5">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
                           <table class="table">
                             <thead class="thead bg-secondary">
                               <tr>
-                                <th scope="col"><div class="cell-inner text-white">Code RAF</div></th>
-                                <th scope="col"><div class="cell-inner text-white">Code Session</div></th>
-                                <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
-                                <th scope="col"><div class="cell-inner text-white">Date début</div></th>
-                                <th scope="col"><div class="cell-inner text-white">Date fin</div></th>
-                                <th scope="col"><div class="cell-inner text-white">Groupe </div></th>
-                                <th scope="col"><div class="cell-inner text-white">Nombre de places totales </div></th>
-                                <th scope="col"><div class="cell-inner text-white">Nombre de places ZP </div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Code RAF</div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Code Session</div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Lieu</div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Date début</div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Date fin</div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Groupe </div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places totales </div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places ZP </div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre d'inscrits ZP </div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Restants à répartir </div></th>
+                                <th scope="col"><div class="cell-inner text-white justify-content-center">Rendre des places </div></th>
                                 <td class="cell-placeholder" aria-hidden="true"><span></span></td>
                                 <th class="cell-fixed"><span class="sr-only">Actions</span></th>
                               </tr>
@@ -206,17 +209,71 @@
                             <tbody class="tbody">
                               <tr>
                                 
-                                <td><div class="cell-inner text"> VT160000</div></td>
-                                <td><div class="cell-inner"> NVT000146</div></td>
-                                <td><div class="cell-inner"> Bègles</div></td>
-                                <td><div class="cell-inner"> 21/06/2021</div></td>
-                                <td><div class="cell-inner"> 25/06/2021</div></td>
-                                <td><div class="cell-inner"> ISOLE </div></td>
-                                <td><div class="cell-inner"> 12 </div></td>
-                                <td><div class="cell-inner"> 3</div></td>
+                                <td><div class="cell-inner justify-content-center"> VT160000</div></td>
+                                <td><div class="cell-inner justify-content-center"> NVT000146</div></td>
+                                <td><div class="cell-inner justify-content-center"> Bègles</div></td>
+                                <td><div class="cell-inner justify-content-center"> 21/06/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> 25/06/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                                <td><div class="cell-inner justify-content-center"> 12 </div></td>
+                                <td><div class="cell-inner justify-content-center"> 3</div></td>
+                                <td><div class="cell-inner justify-content-center"> 0</div></td>
+                                <td><div class="cell-inner justify-content-center"> 2</div></td>
+                                <td><div class="cell-inner justify-content-center"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button></div></td>
                                 <td class="cell-placeholder"><span></span></td>
                                 <td class="cell-fixed">
                                   <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC"> Répartir </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div class="cell-inner justify-content-center"> VA216000</div></td>
+                                <td><div class="cell-inner justify-content-center"> NVT000172</div></td>
+                                <td><div class="cell-inner justify-content-center"> Lyon</div></td>
+                                <td><div class="cell-inner justify-content-center"> 05/07/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> 06/07/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                                <td><div class="cell-inner justify-content-center"> 6 </div></td>
+                                <td><div class="cell-inner justify-content-center"> 2</div></td>
+                                <td><div class="cell-inner justify-content-center"> 0</div></td>
+                                <td><div class="cell-inner justify-content-center"> 1</div></td>
+                                <td><div class="cell-inner justify-content-center"> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalRendre2"> Rendre</button></div></td>
+                                <td class="cell-placeholder"><span></span></td>
+                                <td class="cell-fixed">
+                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC2"> Répartir </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div class="cell-inner justify-content-center"> VA216000</div></td>
+                                <td><div class="cell-inner justify-content-center"> NVT000172</div></td>
+                                <td><div class="cell-inner justify-content-center"> Lyon</div></td>
+                                <td><div class="cell-inner justify-content-center"> 05/07/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> 06/07/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                                <td><div class="cell-inner justify-content-center"> 6 </div></td>
+                                <td><div class="cell-inner justify-content-center"> 2</div></td>
+                                <td><div class="cell-inner justify-content-center"> 0</div></td>
+                                <td><div class="cell-inner justify-content-center"> 1</div></td>
+                                <td><div class="cell-inner justify-content-center"> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalRendre2"> Rendre</button></div></td>
+                                <td class="cell-placeholder"><span></span></td>
+                                <td class="cell-fixed">
+                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC2"> Répartir </button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td><div class="cell-inner justify-content-center"> VA216000</div></td>
+                                <td><div class="cell-inner justify-content-center"> NVT000172</div></td>
+                                <td><div class="cell-inner justify-content-center"> Lyon</div></td>
+                                <td><div class="cell-inner justify-content-center"> 05/07/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> 06/07/2021</div></td>
+                                <td><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                                <td><div class="cell-inner justify-content-center"> 6 </div></td>
+                                <td><div class="cell-inner justify-content-center"> 2</div></td>
+                                <td><div class="cell-inner justify-content-center"> 0</div></td>
+                                <td><div class="cell-inner justify-content-center"> 1</div></td>
+                                <td><div class="cell-inner justify-content-center"> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalRendre2"> Rendre</button></div></td>
+                                <td class="cell-placeholder"><span></span></td>
+                                <td class="cell-fixed">
+                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC2"> Répartir </button>
                                 </td>
                               </tr>
                             </tbody>
@@ -224,9 +281,195 @@
                         </div>
                       </div>
                     </div>
-                </div>
+                </div>               
             </div>
         </div>
+
+        <h2 class="mt-2"> Choix 2 </h2>
+
+        <div class="col-md-12 mt-5 px-5">
+            <div class="table-wrapper table-responsive">
+                <div class="table-scroller last-cell-fixed dragscroll">
+                  <table class="table table-fixed">
+                    <thead class="thead bg-secondary">
+                      <tr>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Code RAF</div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Code Session</div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Lieu</div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Date début</div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Date fin</div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Groupe </div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places totales </div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places ZP </div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre d'inscrits ZP </div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Restants à répartir </div></th>
+                        <th scope="col"><div class="cell-inner text-white justify-content-center">Rendre des places </div></th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody">
+                      <tr>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> VT160000</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> NVT000146</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> Bègles</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> 21/06/2021</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> 25/06/2021</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> 12 </div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> 3</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> 0</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv')"><div class="cell-inner justify-content-center"> 3</div></td>
+                        <td ><div class="cell-inner justify-content-center"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button></div></td>
+                      </tr>
+                      <tr style="display: none;" id="affichemyDiv" class="bodycolor">
+                          <td colspan="2"></td>
+                          <td colspan="7">
+                            <table class="table mt-3">
+                                <thead class="thead hiddentable">
+                                  <tr>
+                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Etablissement</div></th>
+                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de demandes</div></th>
+                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places accordées</div></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> ESTI Île-de-France</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 10</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infralog Travaux Île-de-France</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 13</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris-Est</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 5</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Nord</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 18</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Sud-Ouest</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 7</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Sud-Est</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 22 </div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Saint-Lazarre</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 3 </div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </td>
+                          <td colspan="2"></td>
+                      </tr>
+
+                      <tr>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> VA216000</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> NVT000172</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> Lyon</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> 05/07/2021</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> 06/07/2021</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> 6 </div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> 2</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> 0</div></td>
+                        <td onclick="affichemyDiv('affichemyDiv2')"><div class="cell-inner justify-content-center"> 1</div></td>
+                        <td><div class="cell-inner justify-content-center"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button></div></td>
+                      </tr>
+                      <tr style="display: none;" id="affichemyDiv2" class="bodycolor">
+                          <td colspan="2"></td>
+                          <td colspan="7">
+                            <table class="table mt-3">
+                                <thead class="thead hiddentable">
+                                  <tr>
+                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Etablissement</div></th>
+                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de demandes</div></th>
+                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places accordées</div></th>
+                                  </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> ESTI Île-de-France</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 3</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" value="1"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infralog Travaux Île-de-France</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 2</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris-Est</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 0</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Nord</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 4</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Sud-Ouest</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 1</div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Sud-Est</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 5 </div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                  <tr>
+                                    <td><div class="cell-inner justify-content-center"> Infrapôle Paris Saint-Lazarre</div></td>
+                                    <td><div class="cell-inner justify-content-center"> 8 </div></td>
+                                    <td><div class="cell-inner justify-content-center"> <input class="form-control" type="number" placeholder="Places accordées"/></div></td>                                
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </td>
+                          <td colspan="2"></td>
+                      </tr>
+                      <tr>
+                        <td><div class="cell-inner justify-content-center"> VA216000</div></td>
+                        <td><div class="cell-inner justify-content-center"> NVT000172</div></td>
+                        <td><div class="cell-inner justify-content-center"> Lyon</div></td>
+                        <td><div class="cell-inner justify-content-center"> 05/07/2021</div></td>
+                        <td><div class="cell-inner justify-content-center"> 06/07/2021</div></td>
+                        <td><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                        <td><div class="cell-inner justify-content-center"> 6 </div></td>
+                        <td><div class="cell-inner justify-content-center"> 2</div></td>
+                        <td><div class="cell-inner justify-content-center"> 0</div></td>
+                        <td><div class="cell-inner justify-content-center"> 1</div></td>
+                        <td><div class="cell-inner justify-content-center"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button></div></td>
+                      </tr>
+                      <tr>
+                        <td><div class="cell-inner justify-content-center"> VA216000</div></td>
+                        <td><div class="cell-inner justify-content-center"> NVT000172</div></td>
+                        <td><div class="cell-inner justify-content-center"> Lyon</div></td>
+                        <td><div class="cell-inner justify-content-center"> 05/07/2021</div></td>
+                        <td><div class="cell-inner justify-content-center"> 06/07/2021</div></td>
+                        <td><div class="cell-inner justify-content-center"> ISOLE </div></td>
+                        <td><div class="cell-inner justify-content-center"> 6 </div></td>
+                        <td><div class="cell-inner justify-content-center"> 2</div></td>
+                        <td><div class="cell-inner justify-content-center"> 0</div></td>
+                        <td><div class="cell-inner justify-content-center"> 1</div></td>
+                        <td><div class="cell-inner justify-content-center"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button></div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>  
     </div>
 
     <div id="ModalRepartAC" class="modal fade">
@@ -301,6 +544,139 @@
             </div>
         </div>
     </div>
+
+    <div id="ModalRendre1" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="border: 2px solid black;"> <br />
+              <h2 class="text-center my-4"> Rendre des places pour la session NVT000146 - VT160000 </h1>
+              <div class="modal-body">
+                  <form method="POST">
+                      <div class="form-group">                    
+                        <label for="rendre"> Rendre des places</label>
+                        <input type="number" class="form-control" id="rendre">
+                      </div>
+                      <div class="row">
+                          <div class="col-md-2 offset-md-5">
+                              <button class="btn btn-success text-white"> Valider </button>
+                          </div>
+                      </div>
+                      
+                  </form>                                                    
+              </div>
+  
+          </div>
+      </div>
+    </div>
+
+    <div id="ModalRendre2" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="border: 2px solid black;"> <br />
+              <h2 class="text-center my-4"> Rendre des places pour la session NVT000172 - VA216000 </h1>
+              <div class="modal-body">
+                  <form method="POST">
+                      <div class="form-group">                    
+                        <label for="rendre2"> Rendre des places</label>
+                        <input type="number" class="form-control" id="rendre2">
+                      </div>
+                      <div class="row">
+                          <div class="col-md-2 offset-md-5">
+                              <button class="btn btn-success text-white"> Valider </button>
+                          </div>
+                      </div>
+                      
+                  </form>                                                    
+              </div>
+  
+          </div>
+      </div>
+    </div>
+
+    <div id="ModalRepartAC2" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="border: 2px solid black;"> <br />
+              <h2 class="text-center my-4"> Répartition pour la session VA216000 - NVT000172 </h1>
+              <div class="modal-body">
+                  <form method="POST">
+                      <h2 class="text-center mb-4"> <strong> Nombre de places : 2 </strong>  </h2>
+                      <div class="form-row">
+                         <div class="col">
+                             <label for="e1"> Infrapôle Aquitaine (5 demandes) </label>
+                             <input type="number" class="form-control" id="e1">
+                         </div>
+                         <div class="col">
+                              <label for="e2"> Infrapôle Bretagne (8 demandes)</label>
+                              <input type="number" class="form-control" id="e2">
+                          </div>
+                          
+                      </div>
+
+                      <div class="form-row my-4">
+                          <div class="col">
+                              <label for="e3"> Infrapôle Centre (2 demandes) </label>
+                              <input type="number" class="form-control" id="e3">
+                          </div>
+                          <div class="col">
+                               <label for="e4"> Infrapôle Indre Limousin (0 demande)</label>
+                               <input type="number" class="form-control" id="e4">
+                           </div>
+                      </div>
+
+                      <div class="form-row my-4">
+                          <div class="col">
+                              <label for="e5"> Infrapôle LGV Atlantique (3 demandes) </label>
+                              <input type="number" class="form-control" id="e5">
+                          </div>
+                          <div class="col">
+                               <label for="e6"> Infrapôle Midi-Pyrénées (12 demandes)</label>
+                               <input type="number" class="form-control" id="e6">
+                           </div>
+                      </div>
+
+                      <div class="form-row my-4">
+                          <div class="col">
+                              <label for="e7"> Infrapôle Pays de la Loire (7 demandes) </label>
+                              <input type="number" class="form-control" id="e7">
+                          </div>
+                          <div class="col">
+                               <label for="e8"> Infrapôle Poitou-Charentes (9 demandes)</label>
+                               <input type="number" class="form-control" id="e8">
+                           </div>
+                      </div>
+
+                      <div class="form-row my-4">
+                          <div class="col">
+                              <label for="e9"> Établissement Industriel Atlantique (1 demande) </label>
+                              <input type="number" class="form-control" id="e9">
+                          </div>
+                          
+                      </div>
+
+                      <div class="row">
+                          <div class="col-md-2 offset-md-5">
+                              <button type="submit" class="btn btn-success text-white"> Valider </button>
+                          </div>
+                      </div>
+                      
+                  </form>                                                    
+              </div>
+  
+          </div>
+      </div>
+
+      
+
+      
+  </div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script>
+        function affichemyDiv(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "table-row";
+            } else {
+                x.style.display = "none";
+            }
+        } 
+    </script>
 </body>
 </html>
