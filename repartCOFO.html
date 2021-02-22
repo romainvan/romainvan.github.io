@@ -351,6 +351,7 @@
                                       <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
                                       <th scope="col"><div class="cell-inner text-white">Besoin exprimé</div></th>
                                       <th scope="col"><div class="cell-inner text-white">Places accordées</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Rendre des places</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
@@ -361,6 +362,7 @@
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 5</div></td>
                                         <td><div class="cell-inner"> 1</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="0">
                                        
@@ -400,6 +402,7 @@
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 5</div></td>
                                         <td><div class="cell-inner"> 2</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="1">
                                        
@@ -468,6 +471,7 @@
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 15</div></td>
                                         <td contenteditable="true"><div class="cell-inner"> 4</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="2">
                                        
@@ -606,24 +610,27 @@
                                       <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
                                       <th scope="col"><div class="cell-inner text-white">Besoin exprimé</div></th>
                                       <th scope="col"><div class="cell-inner text-white">Places accordées</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Rendre des places</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
-                                    <tr data-toggle="modal" data-target="#ModalRepart">
-                                        <td><div class="cell-inner"> VT160000 - NVT0000146</div></td>
-                                        <td><div class="cell-inner"> Lyon </div></td>
-                                        <td><div class="cell-inner"> 21/06/2021 - 25/06/2021</div></td>
-                                        <td><div class="cell-inner"> ISOLE </div></td>
-                                        <td><div class="cell-inner"> 5</div></td>
-                                        <td><div class="cell-inner"> 1</div></td>
+                                    <tr>
+                                        <td data-toggle="modal" data-target="#ModalRepart"><div class="cell-inner"> VT160000 - NVT0000146</div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"><div class="cell-inner"> Lyon </div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"><div class="cell-inner"> 21/06/2021 - 25/06/2021</div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"><div class="cell-inner"> ISOLE </div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"><div class="cell-inner"> 5</div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"><div class="cell-inner"> 1</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
-                                    <tr data-toggle="modal" data-target="#ModalRepart2">
-                                        <td><div class="cell-inner"> VA620600 - NVT0000151</div></td>
-                                        <td><div class="cell-inner"> Nanterre </div></td>
-                                        <td><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
-                                        <td><div class="cell-inner"> ISOLE </div></td>
-                                        <td><div class="cell-inner"> 5</div></td>
-                                        <td><div class="cell-inner"> 2</div></td>
+                                    <tr>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"><div class="cell-inner"> VA620600 - NVT0000151</div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"><div class="cell-inner"> Nanterre </div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"><div class="cell-inner"> ISOLE </div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"><div class="cell-inner"> 5</div></td>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"><div class="cell-inner"> 2</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     <tr class="trhead">
                                         <td class="cell-inner cell-caret"> VT160000 - NVT0000146</div></td>
@@ -632,6 +639,7 @@
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 15</div></td>
                                         <td><div class="cell-inner"> 4</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     
                                 </tbody>
@@ -654,16 +662,18 @@
                                       <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
                                       <th scope="col"><div class="cell-inner text-white">Besoin exprimé</div></th>
                                       <th scope="col"><div class="cell-inner text-white">Places accordées</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Rendre des places</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
-                                    <tr onclick="affichemyDiv('affichemyDiv3')">
-                                        <td><div class="cell-inner"> VT160000 - NVT0000146</div></td>
-                                        <td><div class="cell-inner"> Lyon </div></td>
-                                        <td><div class="cell-inner"> 21/06/2021 - 25/06/2021</div></td>
-                                        <td><div class="cell-inner"> ISOLE </div></td>
-                                        <td><div class="cell-inner"> 5</div></td>
-                                        <td><div class="cell-inner"> 1</div></td>
+                                    <tr>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"><div class="cell-inner"> VT160000 - NVT0000146</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"><div class="cell-inner"> Lyon </div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"><div class="cell-inner"> 21/06/2021 - 25/06/2021</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"><div class="cell-inner"> ISOLE </div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"><div class="cell-inner"> 5</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"><div class="cell-inner"> 1</div></td>
+                                        <td><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
                                         <td colspan="1"></td>
@@ -710,16 +720,17 @@
                                                 </tbody>
                                             </table>
                                         </td>
-                                        <td colspan="1"></td>
+                                        <td colspan="2"></td>
 
                                     </tr>
-                                    <tr onclick="affichemyDiv('affichemyDiv4')">
-                                        <td><div class="cell-inner"> VA620600 - NVT0000151</div></td>
-                                        <td><div class="cell-inner"> Nanterre </div></td>
-                                        <td><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
-                                        <td><div class="cell-inner"> ISOLE </div></td>
-                                        <td><div class="cell-inner"> 5</div></td>
-                                        <td><div class="cell-inner"> 2</div></td>
+                                    <tr>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> VA620600 - NVT0000151</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> Nanterre </div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> ISOLE </div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> 5</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> 2</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
                                         <td colspan="1"></td>
@@ -795,16 +806,17 @@
                                                 </tbody>
                                             </table>
                                         </td>
-                                        <td colspan="1"></td>
+                                        <td colspan="2"></td>
 
                                     </tr>
-                                    <tr onclick="affichemyDiv('affichemyDiv5')">
-                                        <td class="cell-inner cell-caret"> VT160000 - NVT0000146</div></td>
-                                        <td><div class="cell-inner"> Bordeaux </div></td>
-                                        <td><div class="cell-inner"> 05/07/2021-07/07/2021</div></td>
-                                        <td><div class="cell-inner"> ISOLE </div></td>
-                                        <td><div class="cell-inner"> 15</div></td>
-                                        <td><div class="cell-inner"> 4</div></td>
+                                    <tr>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"> <div class="cell-inner"> VT160000 - NVT0000146</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"><div class="cell-inner"> Bordeaux </div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"><div class="cell-inner"> 05/07/2021-07/07/2021</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"><div class="cell-inner"> ISOLE </div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"><div class="cell-inner"> 15</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"><div class="cell-inner"> 4</div></td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"><div class="cell-inner"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </div></td>
                                     </tr>
 
                                     <tr style="display: none;" id="affichemyDiv5" class="bodycolor">
@@ -939,7 +951,7 @@
                                                 </tbody>
                                             </table>
                                         </td>
-                                        <td colspan="1"></td>
+                                        <td colspan="2"></td>
 
                                     </tr>
                                     
@@ -1069,6 +1081,52 @@
                 </div>
             </div>
         </div>
+
+        <div id="ModalRendre1" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 2px solid black;"> <br />
+                    <h2 class="text-center my-4"> Rendre des places pour la session NVT000146 - VT160000 </h1>
+                    <div class="modal-body">
+                        <form method="POST">
+                            <div class="form-group">                    
+                              <label for="rendre"> Rendre des places</label>
+                              <input type="number" class="form-control" id="rendre">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 offset-md-5">
+                                    <button class="btn btn-success text-white"> Valider </button>
+                                </div>
+                            </div>
+                            
+                        </form>                                                    
+                    </div>
+        
+                </div>
+            </div>
+          </div>
+      
+          <div id="ModalRendre2" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 2px solid black;"> <br />
+                    <h2 class="text-center my-4"> Rendre des places pour la session NVT000172 - VA216000 </h1>
+                    <div class="modal-body">
+                        <form method="POST">
+                            <div class="form-group">                    
+                              <label for="rendre2"> Rendre des places</label>
+                              <input type="number" class="form-control" id="rendre2">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 offset-md-5">
+                                    <button class="btn btn-success text-white"> Valider </button>
+                                </div>
+                            </div>
+                            
+                        </form>                                                    
+                    </div>
+        
+                </div>
+            </div>
+          </div>
         
 
     </div>
