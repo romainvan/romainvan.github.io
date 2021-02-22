@@ -29,7 +29,18 @@
         </header>
         <ul class="mastheader-title toolbar mb-0">
             <li class="toolbar-item separator-gray-500">
-                <a href="repartAC.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing"> Répartition </a>
+              <div class="btn-group dropdown">
+                <button class="btn btn-transparent dropdown-toggle toolbar-item-spacing" type="button" id="dropRepart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="mycontrol">
+                    <span class="d-none d-xl-block">Répartition</span>
+                    <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropRepart">
+                    <ul>
+                        <li class="dropdown-item"><a href="repartAC.html"> Répartir</a></li>
+                        <li class="dropdown-item"><a href="placesrendues.html"> Voir les places rendues </a></li>
+                    </ul>
+                </div>
+              </div>
             </li>
             <li class="toolbar-item separator-gray-500">
                 <div class="btn-group dropdown">
