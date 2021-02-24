@@ -177,9 +177,16 @@
         ],
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json"
-        }
+        },
+        "drawCallback": function () {
+        $('.dataTables_paginate > .pagination a').addClass('btn btn-primary');
+        $('.dataTables_paginate > .pagination a').removeClass('paginate_button current');
+
+    }
       });
   } );
+
+
   $(function(){
       $("#includedContentAC8").load("navac.html"); 
     });
