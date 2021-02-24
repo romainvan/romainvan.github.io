@@ -145,7 +145,10 @@
 <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
 <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
-
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -162,10 +165,18 @@
         buttons: [
             'searchPanes',
             {
+              extend : 'searchPanes',
+              className : 'btn btn-primary',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+
+            },
+            {
               extend : 'copyHtml5',
               className : 'btn btn-warning',
                 init: function( api, node, config) {
-                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+                  $(node).removeClass('dt-button')
               }
             },
             {
