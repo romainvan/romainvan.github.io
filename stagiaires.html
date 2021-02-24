@@ -143,9 +143,28 @@
       $('#example').DataTable({
         dom: 'Bfrtip',
         buttons: [
-            'copyHtml5',
-            'excelHtml5',
-            'csvHtml5',
+            {
+              extend : 'copyHtml5',
+              className : 'btn btn-warning',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-sucess',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-sucess',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
             {
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
