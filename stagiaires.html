@@ -150,13 +150,16 @@
 <script>
   $(document).ready(function() {
       var table = $('#example').DataTable({
+        searchPanes: true,
         dom: 'PBfrtip',
-        searchPanes:{
-                cascadePanes: true,
-                layout: 'columns-4',
-                viewTotal: true,
-                show : true
-        },
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3,4,5], // Index of columns (starting at 0) that you want show/hide
+            }
+        ],
         buttons: [
             {
               extend : 'copyHtml5',
