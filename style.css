@@ -208,7 +208,9 @@ select > .placeholder {
     background-color: #f2f2f2;
   }
 
-  
+  .dataTables_wrapper .dataTables_filter{
+    width: 25%!important;
+  }
 
 
 
