@@ -150,7 +150,10 @@
 <script>
   $(document).ready(function() {
       var table = $('#example').DataTable({
-        searchPanes: true,
+        searchPanes:{
+          cascadePanes: true,
+          viewTotal: true
+        },
         dom: 'PBfrtip',
         columnDefs:[
             {
