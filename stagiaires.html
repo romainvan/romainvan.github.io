@@ -150,7 +150,7 @@
 <script>
   $(document).ready(function() {
       var table = $('#example').DataTable({
-        dom: 'PBfrtip',
+        dom: 'Bfrtip',
         columnDefs:[
             {
                 searchPanes:{
@@ -160,6 +160,7 @@
             }
         ],
         buttons: [
+            'searchPanes',
             {
               extend : 'copyHtml5',
               className : 'btn btn-warning',
@@ -197,7 +198,6 @@
         }
       });
       table.searchPanes.rebuildPane();
-      table.searchPanes.hide();
       //console.log(table);
       //var container = $('<div/>').insertBefore(table.table().container());
       //console.log(container);
