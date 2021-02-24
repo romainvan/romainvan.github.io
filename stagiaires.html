@@ -150,10 +150,8 @@
 <script>
   $(document).ready(function() {
       var table = $('#example').DataTable({
-        searchPanes: {
-            columns: [1,2,3,4,5,6]
-        },
         dom: 'PBfrtip',
+        searchPanes: true,
         buttons: [
             {
               extend : 'copyHtml5',
@@ -191,7 +189,7 @@
             "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json"
         }
       });
-      $('#example').DataTable().searchPanes.rebuildPane();
+      table.searchPanes.rebuildPane();
       //console.log(table);
       //var container = $('<div/>').insertBefore(table.table().container());
       //console.log(container);
