@@ -197,6 +197,7 @@
         }
       });
       table.searchPanes.rebuildPane();
+      table.searchPanes.container().hide();
       //console.log(table);
       //var container = $('<div/>').insertBefore(table.table().container());
       //console.log(container);
@@ -248,7 +249,6 @@ function chartData(table) {
 
   $(function(){
       $("#includedContentAC8").load("navac.html");
-      document.getElementsByClassName("dtsp-panesContainer")[0].hidden=true;
     });
   </script>
 
