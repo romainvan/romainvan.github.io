@@ -134,6 +134,9 @@
 <script>
   $(document).ready(function() {
       $('#example').DataTable({
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json"
         }
