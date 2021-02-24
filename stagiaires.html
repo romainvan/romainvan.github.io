@@ -166,16 +166,13 @@
             {
               extend : 'searchPanes',
               className : 'btn btn-primary',
-                init: function( api, node, config) {
-                  $(node).removeClass('dt-button')
-              }
-
+              
             },
             {
               extend : 'copyHtml5',
               className : 'btn btn-warning',
                 init: function( api, node, config) {
-                  $(node).removeClass('dt-button')
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
               }
             },
             {
