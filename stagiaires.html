@@ -134,7 +134,11 @@
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
 <script>
   $(document).ready(function() {
-      $('#example').DataTable();
+      $('#example').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json"
+        }
+      });
   } );
   $(function(){
       $("#includedContentAC8").load("navac.html"); 
