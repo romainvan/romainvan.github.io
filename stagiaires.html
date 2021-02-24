@@ -165,8 +165,10 @@
         buttons: [
             {
               extend : 'searchPanes',
-              text : "Afficher les filtres",
-              className : 'btn btn-primary'
+              className : 'btn btn-primary',
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
               
             },
             {
@@ -204,7 +206,7 @@
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
             searchPanes: {
-                collapse: "Search Options"
+                collapse: "Afficher les filtres"
             }
         }
       });
