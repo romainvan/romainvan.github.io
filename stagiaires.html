@@ -150,10 +150,6 @@
 <script>
   $(document).ready(function() {
       var table = $('#example').DataTable({
-        searchPanes:{
-          cascadePanes: true,
-          viewTotal: true
-        },
         dom: 'PBfrtip',
         columnDefs:[
             {
@@ -164,7 +160,6 @@
             }
         ],
         buttons: [
-          'searchPanes',
             {
               extend : 'copyHtml5',
               className : 'btn btn-warning',
@@ -252,7 +247,8 @@ function chartData(table) {
 
 
   $(function(){
-      $("#includedContentAC8").load("navac.html"); 
+      $("#includedContentAC8").load("navac.html");
+      document.getElementsByClassName("dtsp-panesContainer")[0].hidden=true;
     });
   </script>
 
