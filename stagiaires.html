@@ -176,13 +176,7 @@
               text: 'Filtres avancés',
               className: 'btn btn-success',
               action: function (e, dt, node, config) {
-                if($(".dtsp-panesContainer").is("visible")){
-                  alert("hide le")
-                  $(".dtsp-panesContainer").hide()
-                }
-                else
-                  $(".dtsp-panesContainer").show()
-                
+                  $(".dtsp-panesContainer").toggle()
               },
             },
             {
@@ -295,20 +289,15 @@ function chartData(table,column) {
 }
 
 function showGraph() {
-  var x = document.getElementById("graph");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-
+  $("#graph").toggle()
+}
 
   $(function(){
       $("#includedContentAC8").load("navac.html");
+      $("#graph").hide()
       $(".dtsp-panesContainer").hide()
-
     });
+
   </script>
 
 </body>

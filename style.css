@@ -216,9 +216,6 @@ select > .placeholder {
     color: white !important;
   }
 
-  #graph{
-    display: none;
-  }
 
   .dt-button{
     color: #fff !important;
