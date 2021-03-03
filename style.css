@@ -212,6 +212,15 @@ select > .placeholder {
     width: 90%;
   }
 
+  .dataTables_filter {
+    white-space:nowrap;
+
+}
+
+.dataTables_filter label, .dataTables_filter input {
+    display: inline-block;
+}
+
   th.sorting_asc th.sorting_desc{
     color: white !important;
   }
