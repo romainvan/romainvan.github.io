@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <script> 
     $(function(){
@@ -85,14 +86,19 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        
+                                      <div class="cell-inner">
+                                        <div class="custom-control custom-checkbox custom-checkbox-alone">
+                                          <input type="checkbox" class="custom-control-input" id="examples-cell1">
+                                          <label class="custom-control-label" for="examples-cell1"><span class="sr-only">Aorem ipsum dolor sit amet, type Aenean commodo, ver 1</span></label>
+                                        </div>
+                                      </div>
                                     </td>
                                     <td> <div class="cell-inner  justify-content-center"> 792673 </div></td>
                                     <td> <div class="cell-inner  justify-content-center"> VT160000 </div></td>
                                     <td> <div class="cell-inner  justify-content-center"> 6789123C </div></td>
                                     <td> <div class="cell-inner  justify-content-center"> Martin Jean </div></td>
                                     <td> <div class="cell-inner  justify-content-center"> 25/11/2019 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Envoyée </div></td>
+                                    <td> <div class="cell-inner  justify-content-center"> Non envoyée </div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -102,6 +108,15 @@
         </div>
     </div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
-
+    <script>
+      $("#examples-thead").click(function() {
+        $("input[type=checkbox]").prop("checked", $(this).prop("checked"));
+      });
+      $("input[type=checkbox]").click(function() {
+        if (!$(this).prop("checked")) {
+          $("#examples-thead").prop("checked", false);
+        }
+      });
+    </script>
     </body>
 </html>

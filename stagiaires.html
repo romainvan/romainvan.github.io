@@ -176,6 +176,7 @@
   $(document).ready(function() {
       var table = $('#example').DataTable({
         dom: 'BPfrtip',
+        "pagingType": "full_numbers",
         columnDefs:[
             {
                 searchPanes:{
@@ -185,7 +186,7 @@
             }
         ],
         lengthMenu: [
-          [ 10, 25, 50, 100],
+          [10, 25, 50, 100],
           [ '10 ', '25 ', '50 ', '100 ']
         ],
         buttons: [

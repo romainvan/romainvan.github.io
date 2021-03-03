@@ -220,7 +220,11 @@ select > .placeholder {
     display: none;
   }
 
+  #graph{
+    display: none;
+  }
 
+ 
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
