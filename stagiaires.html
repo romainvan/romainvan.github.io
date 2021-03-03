@@ -51,7 +51,7 @@
       </nav>
 
     <div class="container-fluid">
-        <h1 class="text-center mb-5"> Suivi de stagiaires </h1>
+        <h1 class="text-center mb-5"> Suivi d'un stagiaire </h1>
         <div class="row">
                 <div class="col-md-8 offset-md-1">
                     <div class="input-group">
@@ -106,32 +106,46 @@
                                 <td><div class="cell-inner text"> VT140000</div></td>
                                 <td><div class="cell-inner"> NVT000185</div></td>
                                 <td><div class="cell-inner"> Bègles</div></td>
-								<td><div class="cell-inner"> OPSEG_20_6_1</div></td>
+								<td><div class="cell-inner">  OPSEG-20-1</div></td>
                                 <td><div class="cell-inner"> 21/06/2021</div></td>
                                 <td><div class="cell-inner"> 25/06/2021</div></td>
                                 <td class="bg-success text-white"><div class="cell-inner"> REALISE </div></td>
                               </tr>
-							  <tr>
-                                <td><div class="cell-inner text">12345678A<br /> Giroud</div></td>
-								<td><div class="cell-inner text"> Infrapôle Paris Nord</div></td>
-                                <td><div class="cell-inner text"> VT180000</div></td>
-                                <td><div class="cell-inner"> NVT000248</div></td>
-                                <td><div class="cell-inner"> Bègles</div></td>
-								<td><div class="cell-inner"> OPSEG_20_6_1</div></td>
-                                <td><div class="cell-inner"> 21/06/2021</div></td>
-                                <td><div class="cell-inner"> 25/06/2021</div></td>
-                                <td class="bg-info text-white"><div class="cell-inner"> EN COURS </div></td>
-                              </tr>
+						
 							  <tr>
                                 <td><div class="cell-inner text">9800000N<br /> GRIEZMAN Antoine</div></td>
 								<td><div class="cell-inner text"> Infrapôle Paris Sud-Est</div></td>
                                 <td><div class="cell-inner text"> VT160000</div></td>
                                 <td><div class="cell-inner"> NVT000140</div></td>
                                 <td><div class="cell-inner"> Bègles</div></td>
-								<td><div class="cell-inner"> OPSEG_20_6_1</div></td>
-                                <td><div class="cell-inner"> 21/06/2021</div></td>
-                                <td><div class="cell-inner"> 25/06/2021</div></td>
+								<td><div class="cell-inner"> OPSEG-20-1</div></td>
+                                <td><div class="cell-inner"> 12/07/2021</div></td>
+                                <td><div class="cell-inner"> 15/07/2021</div></td>
                                 <td class="bg-danger text-white"><div class="cell-inner"> ANNULE </div></td>
+                              </tr>
+
+                              <tr>
+                                <td><div class="cell-inner text">9800000N<br /> GRIEZMAN Antoine</div></td>
+								<td><div class="cell-inner text"> Infrapôle Paris Sud-Est</div></td>
+                                <td><div class="cell-inner text"> VA650600</div></td>
+                                <td><div class="cell-inner"> NVT000235</div></td>
+                                <td><div class="cell-inner"> Nanterre</div></td>
+								<td><div class="cell-inner"> </div></td>
+                                <td><div class="cell-inner"> 09/08/2021</div></td>
+                                <td><div class="cell-inner"> 13/08/2021</div></td>
+                                <td class="bg-success text-white"><div class="cell-inner"> REALISE </div></td>
+                              </tr>
+
+                              <tr>
+                                <td><div class="cell-inner text">9800000N<br /> GRIEZMAN Antoine</div></td>
+								<td><div class="cell-inner text"> Infrapôle Paris Sud-Est</div></td>
+                                <td><div class="cell-inner text"> VA660400</div></td>
+                                <td><div class="cell-inner"> NVT000361</div></td>
+                                <td><div class="cell-inner"> Bègles</div></td>
+								<td><div class="cell-inner"> </div></td>
+                                <td><div class="cell-inner"> 18/08/2021</div></td>
+                                <td><div class="cell-inner"> 20/08/2021</div></td>
+                                <td class="bg-success text-white"><div class="cell-inner"> REALISE </div></td>
                               </tr>
                             </tbody>
                           </table>
@@ -167,17 +181,29 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5], // Index of columns (starting at 0) that you want show/hide
+                targets: [0,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide
             }
+        ],
+        lengthMenu: [
+          [ 10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
         ],
         buttons: [
           //'searchPanes',
             {
+              extend : 'pageLength',
+              className : 'btn btn-success',
+              
+            },
+            {
               text: 'Filtres avancés',
-              className: 'btn btn-success',
+              className: 'btn btn-primary',
               action: function (e, dt, node, config) {
                   $(".dtsp-panesContainer").toggle()
               },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
             },
             {
               extend : 'copyHtml5',
@@ -220,6 +246,12 @@
                   0 : 'Aucun filtres séléctionnés'
                 },
                 clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              }
             }
         }
       });
@@ -233,11 +265,11 @@
               type: 'pie',
           },
           title: {
-              text: 'Stagiaires',
+              text: 'Statut',
           },
           series: [
               {
-                  data: chartData(table,2),
+                  data: chartData(table,8),
               },
           ],
       });
@@ -258,8 +290,11 @@
 
  // On each draw, update the data in the chart
  table.on('draw', function () {
-     chart.series[0].setData(chartData(table,0));
+     chart.series[0].setData(chartData(table,8));
+     chart.series[0].setName("Total");
      chart2.series[0].setData(chartData(table,2));
+     chart2.series[0].setName("Total");
+
  });
 
   } );
