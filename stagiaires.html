@@ -70,8 +70,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-11 mt-5 ofsset-md-1">
+                <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
+                <div class="col-md-11 mt-5 ofsset-md-1" id="graph">
                     <div class="row">
                       <div class="col-md-5 offset-md-2">
                         <div id="container" style="width:90%; height:100%"> </div>
@@ -81,8 +81,7 @@
                       </div>
                     </div>
                 </div>
-
-                
+                                
                 <div class="col-md-11 mt-5 offset-md-1">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
@@ -162,7 +161,7 @@
 <script>
   $(document).ready(function() {
       var table = $('#example').DataTable({
-        dom: 'Bfrtip',
+        dom: 'BPfrtip',
         columnDefs:[
             {
                 searchPanes:{
@@ -172,7 +171,20 @@
             }
         ],
         buttons: [
-          'searchPanes',
+          //'searchPanes',
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-success',
+              action: function (e, dt, node, config) {
+                if($(".dtsp-panesContainer").is("visible")){
+                  alert("hide le")
+                  $(".dtsp-panesContainer").hide()
+                }
+                else
+                  $(".dtsp-panesContainer").show()
+                
+              },
+            },
             {
               extend : 'copyHtml5',
               className : 'btn btn-warning',
@@ -208,7 +220,12 @@
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
             searchPanes: {
-                collapse: "Afficher les filtres"
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres séléctionnés'
+                },
+                clearMessage : 'Réinitialisé'
             }
         }
       });
@@ -250,6 +267,7 @@
      chart.series[0].setData(chartData(table,0));
      chart2.series[0].setData(chartData(table,2));
  });
+
   } );
 
 function chartData(table,column) {
@@ -276,9 +294,20 @@ function chartData(table,column) {
     });
 }
 
+function showGraph() {
+  var x = document.getElementById("graph");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+
 
   $(function(){
       $("#includedContentAC8").load("navac.html");
+      $(".dtsp-panesContainer").hide()
+
     });
   </script>
 
