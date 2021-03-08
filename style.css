@@ -233,6 +233,13 @@ select > .placeholder {
     display: none;
   }
 
+  table.demande{
+    margin-bottom: 5% !important;
+    width: 100% !important;
+  }
+
+
+
  
   .dt-button{
     color: #fff !important;
