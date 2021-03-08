@@ -208,7 +208,7 @@
                             <p class="text-center my-3"> Agent 1</p>
                         </div>
                         <div class="col-md-1 repartAgent border-2">
-                            <select name="plan" id="plan" class="form-control selectRepart my-2"> 
+                            <select name="plan" id="plan" class="form-control selectRepart my-2" onchange="change1()"> 
                                 <option value="none" selected disabled hidden> 
                                   Num CP
                                 </option> 
@@ -216,20 +216,19 @@
                                 <option value="8912345V">8912345B </option> 
                                 <option value="6789123C">6789123C</option> 
                                 <option value="4567891D">4567891D</option> 
-                                <option value="2345678E">2345678E</option> 
                             </select> 
                         </div>
                         <div class="col-md-1 repartAgent border-2">
-
+                            <input type="text" name="nom1" id="nom1" value="Nom" class="mt-2 form-control" readonly>
                         </div>
                         <div class="col-md-1 repartAgent border-2">
-
+                            <input type="text" name="prenom1" id="prenom1" value="Prénom" class="mt-2 form-control" readonly>
                         </div>
                         <div class="col-md-1 repartAgent border-2">
-
+                            <input type="text" name="code1" id="code1" value="Code" class="mt-2 form-control" readonly>
                         </div>
                         <div class="col-md-1 repartAgent border-2">
-
+                            <input type="text" name="date1" id="date1" value="Date" class="mt-2 form-control" readonly>
                         </div>
                         <div class="col-md-1 repartAgent border-2">
 
@@ -312,7 +311,7 @@
                                        
                                         <td>
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select class="form-control selectRepart my-2"> 
                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -323,17 +322,17 @@
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                <input type="text"  value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -341,28 +340,27 @@
                                        
                                         <td>
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select class="form-control selectRepart my-2"> 
                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
                                                     <option value="6789123C">6789123C</option> 
                                                     <option value="4567891D">4567891D</option> 
                                                 </select> 
-                                            </div> 
-                                        </td>
+                                            </div> PremierPrécédent1SuivantDernier
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -381,7 +379,7 @@
                                        
                                         <td>
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select class="form-control selectRepart my-2" > 
                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -392,17 +390,17 @@
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -410,7 +408,7 @@
                                        
                                         <td>
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select class="form-control selectRepart my-2" > 
                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -421,17 +419,17 @@
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text"  value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                <input type="text"  value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -439,7 +437,7 @@
                                        
                                         <td>
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select  class="form-control selectRepart my-2"> 
                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -450,17 +448,17 @@
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                <input type="text"  value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -468,7 +466,7 @@
                                        
                                         <td>
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select class="form-control selectRepart my-2"> 
                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -479,17 +477,17 @@
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                <input type="text"  value="Code demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                             </div>
                                         </td>
                                     </tr>
@@ -594,7 +592,7 @@
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select name="numcp" id="numcp4" class="form-control selectRepart my-2" onchange="change4()"> 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -606,17 +604,17 @@
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text" name="nomagent4" id="nomagent4" value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" name="codedemande4" id="codedemande4" value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" name="datedemande4" id="datedemande4" value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -648,7 +646,7 @@
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select name="numcp" class="form-control selectRepart my-2"> 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -660,24 +658,24 @@
                                                         </td>
                                                         <td colspan="2"> 
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text"  value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text"  value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select class="form-control selectRepart my-2"> 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -689,17 +687,17 @@
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text"  value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -732,7 +730,7 @@
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select class="form-control selectRepart my-2"> 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -744,24 +742,24 @@
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select class="form-control selectRepart my-2" > 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -773,24 +771,24 @@
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select class="form-control selectRepart my-2" > 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -802,24 +800,24 @@
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <div class="cell-inner">
-                                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                                <select class="form-control selectRepart my-2" > 
                                                                     <option selected="selected" disabled="true"> CP de l'agent</option>
                                                                     <option value="1234567A">1234567A</option> 
                                                                     <option value="8912345B">8912345B </option> 
@@ -831,17 +829,17 @@
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="nomagent" id="nomagent" value="Nom Prénom" class="mt-2 form-control" readonly>
+                                                                <input type="text" value="Nom Prénom" class="mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="codedemande" id="codedemande" value="Code demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Code demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                         <td colspan="2">
                                                             <div class="cell-inner">
-                                                                <input type="text" name="dateDemande" id="datedemande" value="Date demande" class=" mt-2 form-control" readonly>
+                                                                <input type="text" value="Date demande" class=" mt-2 form-control" readonly>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -1053,7 +1051,23 @@
             } else {
                 x.style.display = "none";
             }
-        } 
+        }
+
+        function change1() {
+            var value = document.getElementById("plan").value;
+            document.getElementById("nom1").value = object[value].nomPrenom.split(" ")[0]
+            document.getElementById("prenom1").value = object[value].nomPrenom.split(" ")[1]
+            document.getElementById("code1").value = object[value].code
+            document.getElementById("date1").value = object[value].date
+        }
+
+        function change4() {
+            var value = document.getElementById("numcp4").value;
+            document.getElementById("nomagent4").value = object[value].nomPrenom
+            document.getElementById("codedemande4").value = object[value].code
+            document.getElementById("datedemande4").value = object[value].date
+        }
+
 
     </script>
     
