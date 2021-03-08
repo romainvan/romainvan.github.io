@@ -238,6 +238,10 @@ select > .placeholder {
     width: 100% !important;
   }
 
+  .dtsp-panesContainer{
+    background-color: white !important;
+  }
+
 
 
  
