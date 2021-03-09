@@ -1,0 +1,257 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Liste des sessions</title>
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+
+</head>
+
+<body>
+    <div id="includedContentAC8"></div>
+    
+    <div class="container-fluid">
+        <h1 class="text-center mb-5"> Suivi Formation Initiale de l'établissement Infrapôle Paris Nord </h1>
+        <div class="row">
+
+            <div class="col-md-12 mt-5">
+                <div class="table-wrapper">
+                    <div class="table-scroller last-cell-fixed dragscroll">
+                      <table class="table display mb-5" id="sessionscofo">
+                        <thead class="thead bg-secondary">
+                          <tr>
+                            <th scope="col">Nom du groupe</th>
+                            <th scope="col">Nombre d'agents de l'établissement</th>
+                            <th scope="col" class="no-sort"> Actions </th>
+                          </tr>
+                        </thead>
+                        <tbody class="tbody">
+                          <tr>
+                            <td><div class="cell-inner text"> OPSEG-20-6</div></td>
+                            <td><div class="cell-inner"> 3</div></td>
+                            <td>
+                                <button type="button" class="btn btn-only-icon btn-white" data-toggle="modal" data-target="#ModalAgents">
+                                    <span class="sr-only">Search</span>
+                                    <i class="icons-menu-account icons-size-2x" aria-hidden="true"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-only-icon btn-white" data-toggle="modal" data-target="#ModalSessions">
+                                    <span class="sr-only">Search</span>
+                                    <i class="icons-large-information icons-size-2x" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="footercofo6"></div>
+
+    <div id="ModalAgents" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border: 2px solid black;"> <br />
+                <h2 class="text-center my-4"> Liste des agents du groupe <strong> OPSEG-20-6 </strong> </h1>
+                <div class="modal-body">                     
+                    <ul class="list-group">
+                        <li class="list-group-item"> 1234567A Dupont Martin</li>
+                        <li class="list-group-item"> 8912345B Courbet Théo</li>
+                        <li class="list-group-item"> 6789123C Mercier Jean</li>
+                    </ul>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalSessions" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border: 2px solid black;"> <br />
+                <h2 class="text-center my-4"> Liste des sessions du groupe <strong> OPSEG-20-6 </strong> </h1>
+                <div class="modal-body"> 
+                    <h2> Sessions passées</h2>                    
+                    <ul class="list-group">
+                        <li class="list-group-item"> VS121100 : NVS0000078</li>
+                        <li class="list-group-item"> VS121200 : NVS0000073</li>
+                        <li class="list-group-item"> VS122100 : NVS0000074</li>
+                    </ul>
+                    <h2 class="mt-2"> Sessions à venir </h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> VS122200 : NVS0000085 </li>
+                        <li class="list-group-item"> VS123300 : NVS0000082</li>
+                        <li class="list-group-item"> VS122400 : NVS0000090</li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                            <a href="listesessionsgroupe.html" class="btn btn-primary"> Voir plus en détails</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script>
+      $(function(){
+        $("#includedContentAC8").load("navcofo.html");
+        $("#footercofo6").load("footer.html"); 
+
+      });
+
+      function seeSessions(){
+          var array = window.location.href.split("/");
+          array[array.length-1]="listesessionsgroupe.html";
+          location.href = array.join("/");
+      }
+      
+      
+      $(document).ready(function() {
+      var table = $('#sessionscofo').DataTable({
+        dom: 'BPfrtip',
+        "pagingType": "full_numbers",
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+      orderable: false,
+      targets: "no-sort"
+    }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning',
+              exportOptions: {
+                  columns: [ 0,1]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success',
+              exportOptions: {
+                  columns: [ 0,1]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success',
+              exportOptions: {
+                  columns: [ 0,1]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'portrait',
+                pageSize : 'LEGAL',
+                exportOptions: {
+                  columns: [ 0,1]
+                },
+                className : 'btn btn-primary',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copy',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      $('#sessionscofo thead th').addClass('text-white');
+      })
+
+      function seeStagiaires(){
+          var array = window.location.href.split("/");
+          array[array.length-1]="listestagiaires.html";
+          location.href = array.join("/");
+      }
+    </script>
+</body>
+</html>
