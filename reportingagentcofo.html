@@ -30,7 +30,7 @@
 
                 <div class="btn-group dropdown col-md-5" data-component="select-radios">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                      <span data-role="placeholder">Choix du mois</span>
+                      <span data-role="placeholder">Novembre</span>
                       <i class="icons-arrow-down" aria-hidden="true"></i>
                     </button>
                     <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
@@ -68,7 +68,13 @@
                         <label class="dropdown-item" for="action22">Décembre</label>
       
                         <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action23" class="sr-only"/>
-                        <label class="dropdown-item" for="action23">Annuel</label>
+                        <label class="dropdown-item" for="action23">2021</label>
+
+                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action24" class="sr-only"/>
+                        <label class="dropdown-item" for="action24">2020</label>
+
+                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action25" class="sr-only"/>
+                        <label class="dropdown-item" for="action25">2019</label>
                     </div>
                 </div>
               
@@ -90,7 +96,7 @@
             </div>
         </div>
         <div class="col-md-2 offset-md-6">
-            <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
+            <button class="btn btn-primary" id="mybtngraph" tex> Afficher les graphiques</button>
         </div>
         <div class="col-md-11 mt-5 ofsset-md-1" id="graph">
             <div class="row">
@@ -359,9 +365,14 @@
     });
 }
 
-function showGraph() {
-  $("#graph").toggle()
-}
+$(document).ready(function() { 
+            $("#mybtngraph").click(function() { 
+                $("#graph").toggle()
+               
+
+            }); 
+}); 
+
 
     </script>
 </body>
