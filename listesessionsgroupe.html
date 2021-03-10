@@ -31,6 +31,7 @@
                         <thead class="thead bg-secondary">
                           <tr>
                             <th scope="col">Code RAF</th>
+                            <th scope="col">Libellé de l'action</th>
                             <th scope="col">Code Session</th>
                             <th scope="col">Lieu</th>
                             <th scope="col">Date de début</th>
@@ -42,6 +43,7 @@
                         <tbody class="tbody">
                           <tr>
                             <td><div class="cell-inner text"> VS121100</div></td>
+                            <td><div class="cell-inner"> Maintenance des installations 'Sol' TVM 300</div></td>
                             <td><div class="cell-inner"> NVS0000078</div></td>
                             <td><div class="cell-inner"> Bègles</div></td>
                             <td><div class="cell-inner"> 01/02/2021</div></td>
@@ -51,6 +53,7 @@
                           </tr>
                           <tr>
                             <td><div class="cell-inner text"> VS121200</div></td>
+                            <td><div class="cell-inner"> Maintenance des installation 'Sol' TVM 300 module A'</div></td>
                             <td><div class="cell-inner"> NVS0000073</div></td>
                             <td><div class="cell-inner"> Bègles</div></td>
                             <td><div class="cell-inner"> 14/02/2021</div></td>
@@ -60,6 +63,7 @@
                           </tr>
                           <tr>
                             <td><div class="cell-inner text"> VS122100</div></td>
+                            <td><div class="cell-inner"> Maintenance des installation 'Sol' TVM 430 module A</div></td>
                             <td><div class="cell-inner"> NVS0000074</div></td>
                             <td><div class="cell-inner"> Bègles</div></td>
                             <td><div class="cell-inner"> 01/03/2021</div></td>
@@ -69,6 +73,7 @@
                           </tr>
                           <tr>
                             <td><div class="cell-inner text"> VS122200</div></td>
+                            <td><div class="cell-inner"> Maintenance des installation 'Sol' TVM 430 module A'</div></td>
                             <td><div class="cell-inner"> NVS0000085</div></td>
                             <td><div class="cell-inner"> Nanterre</div></td>
                             <td><div class="cell-inner"> 15/03/2021</div></td>
@@ -78,6 +83,7 @@
                           </tr>
                           <tr>
                             <td><div class="cell-inner text"> VS123300</div></td>
+                            <td><div class="cell-inner"> Maintenance des équipements 'SEI' module A</div></td>
                             <td><div class="cell-inner"> NVS0000082</div></td>
                             <td><div class="cell-inner"> Nanterre</div></td>
                             <td><div class="cell-inner"> 29/03/2021</div></td>
@@ -87,6 +93,7 @@
                           </tr>
                           <tr>
                             <td><div class="cell-inner text"> VS123400</div></td>
+                            <td><div class="cell-inner"> Maintenance des équipements 'SEI' module A'</div></td>
                             <td><div class="cell-inner"> NVS0000090</div></td>
                             <td><div class="cell-inner"> Nanterre</div></td>
                             <td><div class="cell-inner"> 12/04/2021</div></td>
@@ -134,7 +141,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,6], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,7], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -168,7 +175,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -178,7 +185,7 @@
               extend : 'excelHtml5',
               className : 'btn btn-success',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -188,7 +195,7 @@
               extend : 'csvHtml5',
               className : 'btn btn-success',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -197,10 +204,10 @@
             },
             {
                 extend: 'pdfHtml5',
-                orientation: 'portrait',
+                orientation: 'landscape',
                 pageSize : 'LEGAL',
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {

@@ -31,6 +31,7 @@
                         <thead class="thead bg-secondary">
                           <tr>
                             <th scope="col">Code RAF</th>
+                            <th scope="col">Libellé de l'action</th>
                             <th scope="col">Code Session</th>
                             <th scope="col">Lieu</th>
                             <th scope="col">Date de début</th>
@@ -43,6 +44,7 @@
                         <tbody class="tbody">
                           <tr>
                             <td><div class="cell-inner text"> VT160000</div></td>
+                            <td><div class="cell-inner"> Réseaux IP et applicatifs SNCF</div></td>
                             <td><div class="cell-inner"> NVT000146</div></td>
                             <td><div class="cell-inner"> Bègles</div></td>
                             <td><div class="cell-inner"> 21/06/2021</div></td>
@@ -64,6 +66,7 @@
                           </tr>
                           <tr>
                             <td><div class="cell-inner text"> VT140000</div></td>
+                            <td><div class="cell-inner"> Réseaux IP et applicatifs SNCF</div></td>
                             <td><div class="cell-inner"> NVT000423</div></td>
                             <td><div class="cell-inner"> Nanterre</div></td>
                             <td><div class="cell-inner"> 13/07/2021</div></td>
@@ -123,7 +126,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -157,7 +160,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -167,7 +170,7 @@
               extend : 'excelHtml5',
               className : 'btn btn-success',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -177,7 +180,7 @@
               extend : 'csvHtml5',
               className : 'btn btn-success',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -186,10 +189,10 @@
             },
             {
                 extend: 'pdfHtml5',
-                orientation: 'portrait',
+                orientation: 'landscape',
                 pageSize : 'LEGAL',
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {
