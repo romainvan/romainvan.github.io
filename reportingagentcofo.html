@@ -123,6 +123,7 @@
             <thead class="thead bg-secondary text-white">
               <tr>
                   <th scope="col"> Code RAF</th>
+                  <th scope="col"> Libellé de l'action</th>
                   <th scope="col"> Code Session </th>
                   <th scope="col"> Lieu </th>
                   <th scope="col"> Date de début </th>
@@ -135,6 +136,7 @@
             <tbody class="tbody">
               <tr>
                 <td><div class="cell-inner text"> VNFC18IB1</div></td>
+                <td><div class="cell-inner"> Norme NF C 18-510 Habilitation domaine BT</div></td>
                 <td><div class="cell-inner"> NVS0001058</div></td>
                 <td><div class="cell-inner"> Nanterre</div></td>
                 <td><div class="cell-inner"> 16/11/2020</div></td>
@@ -145,6 +147,7 @@
               </tr>
               <tr>
                 <td><div class="cell-inner text"> VNFC18IH1</div></td>
+                <td><div class="cell-inner"> Norme NF C 18-510 Habilitation domaine HTA</div></td>
                 <td><div class="cell-inner"> NVS0000401</div></td>
                 <td><div class="cell-inner"> Nanterre</div></td>
                 <td><div class="cell-inner"> 19/11/2020</div></td>
@@ -156,6 +159,7 @@
 
               <tr>
                 <td><div class="cell-inner text"> VPRCOACOPE</div></td>
+                <td><div class="cell-inner"> Module Coactivité (RSNCF/RSO) opérateurs MT</div></td>
                 <td><div class="cell-inner"> NVP0000798</div></td>
                 <td><div class="cell-inner"> Bègles</div></td>
                 <td><div class="cell-inner"> 02/11/2020</div></td>
@@ -200,7 +204,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,2,3,4,5,7], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,3,4,5,7,8], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -234,7 +238,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -244,7 +248,7 @@
               extend : 'excelHtml5',
               className : 'btn btn-success',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -254,7 +258,7 @@
               extend : 'csvHtml5',
               className : 'btn btn-success',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -263,10 +267,10 @@
             },
             {
                 extend: 'pdfHtml5',
-                orientation: 'portrait',
+                orientation: 'landscape',
                 pageSize : 'LEGAL',
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {
