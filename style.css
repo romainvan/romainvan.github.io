@@ -234,10 +234,6 @@ select > .placeholder {
     display: none;
   }
 
-  table.demande{
-    margin-bottom: 5% !important;
-    width: 100% !important;
-  }
 
   .dtsp-panesContainer{
     background-color: white !important;
@@ -259,7 +255,8 @@ select > .placeholder {
   .imgfooter{
       width: 25%;
   }
- 
+
+   
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
