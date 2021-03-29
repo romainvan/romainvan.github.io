@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Création session</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script> 
+    $(function(){
+      $("#includedContentAgo1").load("navago.html"); 
+      $("#footerago2").load("footer.html"); 
+    });
+  </script> 
+  
+
+</head>
+
+<body>
+    <div id="includedContentAgo1"></div>
+    
+    <div class="container-fluid">
+        <h1 class="text-center mb-5"> Demandes d'inscriptions en attente d'approbation </h1>
+        
+        <div class="col-md-11 mt-5 ml-5">
+            <div class="table-wrapper" data-component="table">
+                <div class="table-scroller dragscroll">
+                    <table class="table">
+                        <thead class="thead bg-secondary">
+                            <tr>
+                              <th scope="col"><div class="cell-inner text-white">Code RAF</div></th>
+                              <th scope="col"><div class="cell-inner text-white">Code Session</div></th>
+                              <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
+                              <th scope="col"><div class="cell-inner text-white">Date de début</div></th>
+                              <th scope="col"><div class="cell-inner text-white">Date de fin</div></th>
+                              <th scope="col"><div class="cell-inner text-white">CP de l'agent</div></th>
+                              <th scope="col"><div class="cell-inner text-white">Nombre d'inscrits</div></th>
+                              <th scope="col"><div class="cell-inner text-white">Capacité maximale</div></th>
+                              <th scope="col"><div class="cell-inner text-white justify-content-center">Actions</div></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td><div class="cell-inner text"> VT160000</div></td>
+                                <td><div class="cell-inner text"> NVT000146</div></td>
+                                <td><div class="cell-inner"> Bègles</div></td>
+                                <td><div class="cell-inner"> 21/06/2021</div></td>
+                                <td><div class="cell-inner"> 25/06/2021</div></td>
+                                <td><div class="cell-inner">1234567A</div></td>
+                                <td><div class="cell-inner">12</div></td>
+                                <td><div class="cell-inner">18</div></td>
+                                <td class="text-center"> <i class="icons-checked icons-size-1x5 mt-3 text-success ml-2" aria-hidden="true"></i>  <i class="icons-circle-delete icons-size-1x5 mt-2 ml-2 text-danger" aria-hidden="true"></i></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>                                
+        
+        
+        
+    </div>
+
+    <div id="footerago2"></div>
+
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+</body>
+</html>
