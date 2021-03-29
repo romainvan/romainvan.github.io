@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Pot commun National</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script> 
+      $(function(){
+        $("#includedContentCofo4").load("navcofo.html"); 
+        $("#footercofo3").load("footer.html"); 
+      });
+    </script> 
+
+
+</head>
+
+<body>
+    <div id="includedContentCofo4"></div>
+    
+    <div class="container-fluid">
+        <h1 class="text-center mb-5"> Pot commun National </h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-8 ml-5">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="btn-group dropdown ml-5" data-component="select-radios">
+                            <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
+                              <span data-role="placeholder">Tout</span>
+                              <i class="icons-arrow-down" aria-hidden="true"></i>
+                            </button>
+                            <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
+                              <label class="dropdown-item" for="action11">Signalisation</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
+                              <label class="dropdown-item" for="action12">Voie</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
+                              <label class="dropdown-item" for="action13">Produit Train</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
+                              <label class="dropdown-item" for="action14">Caténaire</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
+                              <label class="dropdown-item" for="action15">Circulation</label>
+                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
+                              <label class="dropdown-item" for="action16">Tout</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-control-container col-md-5 whiteinput autocomplete">
+                            <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
+                            <datalist id="code">
+                              <option value="VCE40124">
+                              <option value="VA216000">
+                            </datalist>
+                        </div>
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-primary btn-only-icon">
+                            <i class="icons-search" aria-hidden="true"></i>
+                            <span class="sr-only">Rechercher sur le site</span>
+                          </button>
+                        </div>
+                      </div>
+                </div>
+
+              
+
+                <div class="col-md-11 mt-5 ml-5">
+                    <div class="table-wrapper" data-component="table">
+                        <div class="table-scroller dragscroll">
+                            <table class="table">
+                                <thead class="thead bg-secondary">
+                                    <tr>
+                                      <th scope="col"><div class="cell-inner text-white">Code RAF - Code Session</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Date de début - Date de fin</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Places restantes</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                    <tr class="trhead">
+                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> VA620600 - NVT0000151</div></td>
+                                        <td><div class="cell-inner"> Nanterre </div></td>
+                                        <td><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
+                                        <td><div class="cell-inner"> ISOLE </div></td>
+                                        <td><div class="cell-inner"> 2</div></td>
+                                    </tr>
+                                    <tr class="trgroup" data-trgroup="0">
+                                       
+                                        <td>
+                                            <div class="cell-inner">
+                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                    <option selected="selected" value="reset"> CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option value="8912345B">8912345B </option> 
+                                                    <option value="6789123C">6789123C</option> 
+                                                    <option value="4567891D">4567891D</option> 
+                                                </select> 
+                                            </div> 
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="nomagent" placeholder="Nom Prénom" class="mt-2 form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="codedemande" id="codedemande" placeholder="Code demande" class=" mt-2 form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="dateDemande" id="datedemande" placeholder="Date demande" class=" mt-2 form-control">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="trgroup" data-trgroup="0">
+                                       
+                                        <td>
+                                            <div class="cell-inner">
+                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                    <option selected="selected" value="reset"> CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option value="8912345B">8912345B </option> 
+                                                    <option value="6789123C">6789123C</option> 
+                                                    <option value="4567891D">4567891D</option> 
+                                                </select> 
+                                            </div> 
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent" id="nomagent" placeholder="Nom Prénom" class="mt-2 form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="codedemande" id="codedemande" placeholder="Code demande" class=" mt-2 form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="dateDemande" id="datedemande" placeholder="Date demande" class=" mt-2 form-control">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="trhead">
+                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> VT160000 - NVT0000146</div></td>
+                                        <td><div class="cell-inner"> Bordeaux </div></td>
+                                        <td><div class="cell-inner"> 05/07/2021-07/07/2021</div></td>
+                                        <td><div class="cell-inner"> ISOLE </div></td>
+                                        <td><div class="cell-inner"> 1</div></td>
+                                    </tr>
+                                    <tr class="trgroup" data-trgroup="1">
+                                       
+                                        <td>
+                                            <div class="cell-inner">
+                                                <select name="numcp2" id="numcp2" class="form-control selectRepart my-2" onchange="change2()"> 
+                                                    <option selected="selected" value="reset"> CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option value="8912345B">8912345B </option> 
+                                                    <option value="6789123C">6789123C</option> 
+                                                    <option value="4567891D">4567891D</option> 
+                                                </select> 
+                                            </div> 
+                                        </td>
+                                        <td colspan="2">
+                                            <div class="cell-inner">
+                                                <input type="text" name="nomagent2" id="nomagent2" placeholder="Nom Prénom" class="mt-2 form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="codedemande2" id="codedemande2" placeholder="Code demande" class=" mt-2 form-control">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cell-inner">
+                                                <input type="text" name="dateDemande2" id="dateDemande2" placeholder="Date demande" class=" mt-2 form-control">
+                                            </div>
+                                        </td>
+                                    </tr>                                   
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+        </div>
+    
+
+
+    </div>
+    <div id="footercofo3"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+
+    <script>
+        var object = new Object();
+        object["1234567A"] = {"nomPrenom" : "Dupont Martin" , "code" : "8456" , "date" : "20/09/2020"};
+        object["8912345B"] = {"nomPrenom" : "Durand Arthur" , "code" : "2567" , "date" : "22/10/2020"};
+        object["6789123C"] = {"nomPrenom" : "Fournier Gabriel" , "code" : "1221" , "date" : "01/12/2020"};
+        object["4567891D"] = {"nomPrenom" : "Muller Thomas" , "code" : "5746" , "date" : "11/12/2020"};
+        object["reset"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
+
+
+        function change(){
+            var value = document.getElementById("numcp").value;
+            document.getElementById("nomagent").value = object[value].nomPrenom
+            document.getElementById("codedemande").value = object[value].code
+            document.getElementById("datedemande").value = object[value].date  
+        }
+
+        function change2(){
+            var value = document.getElementById("numcp2").value;
+            document.getElementById("nomagent2").value = object[value].nomPrenom
+            document.getElementById("codedemande2").value = object[value].code
+            document.getElementById("datedemande2").value = object[value].date  
+        }
+    </script>
+</body>
+
+</html>

@@ -73,10 +73,30 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-12 mt-5 row">
+              <div class="col-md-2 offset-md-7 h-100">
+                <button class="btn btn-primary" onclick="envoiZP()">
+                    Envoyer dans le pot commun de la ZP
+                </button>
+              </div>
+              <div class="col-md-2 ml-5">
+                <button class="btn btn-success h-100" onclick="envoiNational()">
+                    Envoyer dans le pot commun national
+                </button>
+              </div>
+            </div>
             <div class="col-md-12 mt-5">
                 <div class="table-wrapper">
                     <table class="table">
                         <thead class="thead bg-secondary">
+                          <th>
+                            <div class="cell-inner">
+                              <div class="custom-control custom-checkbox custom-checkbox-alone">
+                                <input type="checkbox" class="custom-control-input" id="examples-thead">
+                                <label class="custom-control-label" for="examples-thead"><span class="sr-only">Tout sélectionner</span></label>
+                              </div>
+                            </div>
+                          </th>
                             <th scope="col"><div class="cell-inner text-white justify-content-center">Établissement</div></th>
                             <th scope="col"><div class="cell-inner text-white justify-content-center">Code RAF</div></th>
                             <th scope="col"><div class="cell-inner text-white justify-content-center">Code Session</div></th>
@@ -87,13 +107,19 @@
                             <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places accordées </div></th>
                             <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre de places rendues </div></th>
                             <th scope="col"><div class="cell-inner text-white justify-content-center">Nombre d'inscrits </div></th>
-                            <td class="cell-placeholder" aria-hidden="true"><span></span></td>
-                            <th class="cell-fixed"><span class="sr-only">Actions</span></th>
                         </thead>
 
                         <tbody class="tbody">
                             
                             <tr>
+                                <td>
+                                  <div class="cell-inner">
+                                    <div class="custom-control custom-checkbox custom-checkbox-alone">
+                                      <input type="checkbox" class="custom-control-input" id="examples-cell0">
+                                      <label class="custom-control-label" for="examples-cell0"><span class="sr-only">Aorem ipsum dolor sit amet, type Aenean commodo, ver 1</span></label>
+                                    </div>
+                                  </div>
+                                </td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> Infrapôle Paris-Est</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> VT160000</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> NVT000146</div></td>
@@ -104,20 +130,18 @@
                                 <td scope="col"> <div class="cell-inner justify-content-center"> 3</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> 1</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> 2</div></td>
-                                <td class="cell-fixed">
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle0">
-                                        <button type="button" class="dropdown-item">Définir les actions</button>
-                                      </div>
-                                    </div>
-                                  </td>
+                                
                             </tr>
 
                             <tr>
+                                <td>
+                                  <div class="cell-inner">
+                                    <div class="custom-control custom-checkbox custom-checkbox-alone">
+                                      <input type="checkbox" class="custom-control-input" id="examples-cell1">
+                                      <label class="custom-control-label" for="examples-cell1"><span class="sr-only">Aorem ipsum dolor sit amet, type Aenean commodo, ver 1</span></label>
+                                    </div>
+                                  </div>
+                                </td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> Infrapôle Paris-Nord</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> VA620600</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> NVT0000151</div></td>
@@ -128,18 +152,7 @@
                                 <td scope="col"> <div class="cell-inner justify-content-center"> 5</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> 1</div></td>
                                 <td scope="col"> <div class="cell-inner justify-content-center"> 3</div></td>
-                                <td class="cell-fixed">
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle1">
-                                        <button type="button" class="dropdown-item">Définir les actions</button>
-
-                                      </div>
-                                    </div>
-                                  </td>
+                                
                             </tr>
 
                         </tbody>
@@ -153,5 +166,23 @@
     </div>
     <div id="footerac2"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script>
+      $("#examples-thead").click(function() {
+        $("input[type=checkbox]").prop("checked", $(this).prop("checked"));
+      });
+      $("input[type=checkbox]").click(function() {
+        if (!$(this).prop("checked")) {
+          $("#examples-thead").prop("checked", false);
+        }
+      });
+
+      function envoiZP(){
+        window.confirm("Voulez-vous envoyez ces sessions dans le pot commun de votre ZP")
+      }
+
+      function envoiNational(){
+        window.confirm("Voulez-vous envoyez ces sessions dans le pot commun national")
+      }
+    </script>
 </body>
 </html>
