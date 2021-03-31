@@ -277,11 +277,8 @@
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
     <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="script.js"></script>
+
     <script>
        $(function(){
         $("#includedContentCofo5").load("navcofo.html"); 
@@ -340,6 +337,10 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success',
+              title : 'Export sessions du '+titleFile(),
+              filename : function() {
+                  return "Export_Sessions_"+dateFile()
+              },
               exportOptions: {
                 columns: [ 0,1,2,3,4,5,6,7,8]
                 },
@@ -350,6 +351,9 @@
             {
               extend : 'csvHtml5',
               className : 'btn btn-success',
+              filename : function() {
+                  return "Export_Sessions_"+dateFile()
+              },
               exportOptions: {
                 columns: [ 0,1,2,3,4,5,6,7,8]
                 },
@@ -362,6 +366,10 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
+                title : 'Export sessions du '+titleFile(),
+                filename : function() {
+                    return "Export_Sessions_"+dateFile()
+                },
                 exportOptions: {
                   columns: [ 0,1,2,3,4,5,6,7,8]
                 },
