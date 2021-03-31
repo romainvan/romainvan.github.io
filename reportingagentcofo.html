@@ -85,6 +85,7 @@
                       <option value="8912345B">
                       <option value="6789123C">
                       <option value="9514759D">
+                      <option value="9800000N">
                     </datalist>
                 </div>
                 <div class="input-group-append">
@@ -122,6 +123,7 @@
           <table class="table display" id="cofoall">
             <thead class="thead bg-secondary text-white">
               <tr>
+                  <th scope="col">CP NOM Prénom</th>
                   <th scope="col"> Code RAF</th>
                   <th scope="col"> Libellé de l'action</th>
                   <th scope="col"> Code Session </th>
@@ -135,6 +137,7 @@
             </thead>
             <tbody class="tbody">
               <tr>
+                <td><div class="cell-inner text">9800000N<br /> GRIEZMAN Antoine</div></td>
                 <td><div class="cell-inner text"> VNFC18IB1</div></td>
                 <td><div class="cell-inner"> Norme NF C 18-510 Habilitation domaine BT</div></td>
                 <td><div class="cell-inner"> NVS0001058</div></td>
@@ -146,6 +149,7 @@
                 <td><div class="cell-inner"> Continue</div></td>
               </tr>
               <tr>
+                <td><div class="cell-inner text">9800000N<br /> GRIEZMAN Antoine</div></td>
                 <td><div class="cell-inner text"> VNFC18IH1</div></td>
                 <td><div class="cell-inner"> Norme NF C 18-510 Habilitation domaine HTA</div></td>
                 <td><div class="cell-inner"> NVS0000401</div></td>
@@ -158,6 +162,7 @@
               </tr>
 
               <tr>
+                <td><div class="cell-inner text">9800000N<br /> GRIEZMAN Antoine</div></td>
                 <td><div class="cell-inner text"> VPRCOACOPE</div></td>
                 <td><div class="cell-inner"> Module Coactivité (RSNCF/RSO) opérateurs MT</div></td>
                 <td><div class="cell-inner"> NVP0000798</div></td>
@@ -189,6 +194,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="script.js"></script>
     <script>
        $(function(){
         $("#includedContentCofo6").load("navcofo.html"); 
@@ -204,7 +210,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,3,4,5,7,8], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,4,5,7,8,9], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -238,7 +244,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8]
+                  columns: [ 0,1,2,3,4,5,6,7,8,9]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -247,8 +253,12 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success',
+              title : 'Export agent du '+titleFile(),
+              filename : function() {
+                  return "Export_Agent_"+dateFile()
+              },
               exportOptions: {
-                columns: [ 0,1,2,3,4,5,6,7,8]
+                columns: [ 0,1,2,3,4,5,6,7,8,9]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -257,8 +267,11 @@
             {
               extend : 'csvHtml5',
               className : 'btn btn-success',
+              filename : function() {
+                  return "Export_Agent_"+dateFile()
+              },
               exportOptions: {
-                columns: [ 0,1,2,3,4,5,6,7,8]
+                columns: [ 0,1,2,3,4,5,6,7,8,9]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -269,8 +282,12 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
+                title : 'Export agent du '+titleFile(),
+                filename : function() {
+                    return "Export_Agent_"+dateFile()
+                },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8]
+                  columns: [ 0,1,2,3,4,5,6,7,8,9]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
@@ -322,7 +339,7 @@
           },
           series: [
               {
-                  data: chartData(table,3),
+                  data: chartData(table,4),
               },
           ],
       });
@@ -336,16 +353,16 @@
           },
           series: [
               {
-                  data: chartData(table,0),
+                  data: chartData(table,1),
               },
           ],
       });
 
     // On each draw, update the data in the chart
     table.on('draw', function () {
-        chart.series[0].setData(chartData(table,3));
+        chart.series[0].setData(chartData(table,4));
         chart.series[0].setName("Session(s) dans ce campus");
-        chart2.series[0].setData(chartData(table,0));
+        chart2.series[0].setData(chartData(table,1));
         chart2.series[0].setName("Session(s) avec ce code RAF");
 
     });

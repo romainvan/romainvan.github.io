@@ -1,3 +1,6 @@
+/**
+ * Fonction pour afficher la date dans le nom du fichier exemple : Export_Sessions_31-03-2021_15h52.xlsx
+ */
 function dateFile() {
     var date = new Date();
     var dateStr =
@@ -9,6 +12,9 @@ function dateFile() {
     return dateStr;
 }
 
+/**
+ * Fonction pour afficher la date dans le titre du fichier PDF ou xlsx exemple : Export sessions du 31/03/2021 à 15h52
+ */
 function titleFile() {
     var date = new Date();
     var dateStr =
