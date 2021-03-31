@@ -114,11 +114,8 @@
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
     <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/series-label.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="script.js"></script>
+
     <script>
       $(function(){
         $("#includedContentAC8").load("navcofo.html");
@@ -185,9 +182,9 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success',
-              title : 'Export sessions formations initiales du '+new Date(Date.now()).toLocaleString(),
+              title : 'Export sessions formations initiales du '+titleFile(),
               filename : function() {
-                  return "Export_SessionsFI"
+                  return "Export_SessionsFI_"+dateFile()
               },
               exportOptions: {
                   columns: [ 0,1]
@@ -200,7 +197,7 @@
               extend : 'csvHtml5',
               className : 'btn btn-success',
               filename : function() {
-                  return "Export_SessionsFI"
+                  return "Export_SessionsFI_"+dateFile()
               },
               exportOptions: {
                   columns: [ 0,1]
@@ -214,9 +211,9 @@
                 extend: 'pdfHtml5',
                 orientation: 'portrait',
                 pageSize : 'LEGAL',
-                title : 'Export sessions formations initiales du '+new Date(Date.now()).toLocaleString(),
+                title : 'Export sessions formations initiales du '+titleFile(),
                 filename : function() {
-                    return "Export_SessionsFI"
+                    return "Export_SessionsFI_"+dateFile()
                 },
                 exportOptions: {
                   columns: [ 0,1]
