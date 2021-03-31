@@ -96,7 +96,7 @@
                     </ul>
                     <div class="row">
                         <div class="col-md-4 offset-md-4">
-                            <a href="listesessionsgroupe.html" class="btn btn-primary"> Voir plus en détails</a>
+                            <a href="listesessionsgroupe.html" class="btn btn-primary mt-3"> Voir plus en détails</a>
                         </div>
                     </div>
 
@@ -185,6 +185,10 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success',
+              title : 'Export sessions formations initiales du '+new Date(Date.now()).toLocaleString(),
+              filename : function() {
+                  return "Export_SessionsFI"
+              },
               exportOptions: {
                   columns: [ 0,1]
                 },
@@ -195,6 +199,9 @@
             {
               extend : 'csvHtml5',
               className : 'btn btn-success',
+              filename : function() {
+                  return "Export_SessionsFI"
+              },
               exportOptions: {
                   columns: [ 0,1]
                 },
@@ -207,8 +214,19 @@
                 extend: 'pdfHtml5',
                 orientation: 'portrait',
                 pageSize : 'LEGAL',
+                title : 'Export sessions formations initiales du '+new Date(Date.now()).toLocaleString(),
+                filename : function() {
+                    return "Export_SessionsFI"
+                },
                 exportOptions: {
                   columns: [ 0,1]
+                },
+                customize: function (doc) {
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                 
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {
