@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Reporting agent</title>
+  <title>Tableau de bord agent</title>
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
@@ -22,7 +22,7 @@
     <div id="includedContentCofo6"></div>
 
     <div class="container-fluid">
-      <h1 class="text-center mb-5"> Reporting agent </h1>
+      <h1 class="text-center mb-5"> Tableau de bord agent </h1>
 
       <div class="row">
         <div class="col-md-4">
@@ -316,7 +316,7 @@
           },
           series: [
               {
-                  data: chartData(table,2),
+                  data: chartData(table,3),
               },
           ],
       });
@@ -337,7 +337,7 @@
 
     // On each draw, update the data in the chart
     table.on('draw', function () {
-        chart.series[0].setData(chartData(table,2));
+        chart.series[0].setData(chartData(table,3));
         chart.series[0].setName("Session(s) dans ce campus");
         chart2.series[0].setData(chartData(table,0));
         chart2.series[0].setName("Session(s) avec ce code RAF");

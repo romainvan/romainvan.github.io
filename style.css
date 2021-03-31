@@ -67,12 +67,12 @@ select{
 .repartAgent {
     background-color: white;
 }
-
+/*
 .selectRepart{
     font-size: smaller;
     padding-left: 0%;
 }
-
+*/
 
 
 select > .placeholder {

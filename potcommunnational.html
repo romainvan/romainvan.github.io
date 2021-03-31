@@ -12,16 +12,10 @@
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script> 
-      $(function(){
-        $("#includedContentCofo4").load("navcofo.html"); 
-        $("#footercofo3").load("footer.html"); 
-      });
-    </script> 
-
-
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
 </head>
 
 <body>
@@ -76,27 +70,31 @@
                 <div class="col-md-11 mt-5 ml-5">
                     <div class="table-wrapper" data-component="table">
                         <div class="table-scroller dragscroll">
-                            <table class="table">
+                            <table class="table" id="potnational">
                                 <thead class="thead bg-secondary">
                                     <tr>
-                                      <th scope="col"><div class="cell-inner text-white">Code RAF - Code Session</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Date de début - Date de fin</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Places restantes</div></th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Code RAF  </div> </th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Code Session </div> </th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Lieu </th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Date de début</th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Date de fin</th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Groupe</th>
+                                      <th scope="col"> <div class="cell-inner text-white"> Places restantes</th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
                                     <tr class="trhead">
-                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> VA620600 - NVT0000151</div></td>
+                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> VA620600</div></td>
+                                        <td><div class="cell-inner"> NVT0000151 </div></td>
                                         <td><div class="cell-inner"> Nanterre </div></td>
-                                        <td><div class="cell-inner"> 28/06/2021 - 29/06/2021</div></td>
+                                        <td><div class="cell-inner"> 28/06/2021</div></td>
+                                        <td><div class="cell-inner"> 29/06/2021</div></td>
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 2</div></td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="0">
                                        
-                                        <td>
+                                        <td colspan="2">
                                             <div class="cell-inner">
                                                 <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
                                                     <option selected="selected" value="reset"> CP de l'agent</option>
@@ -107,7 +105,7 @@
                                                 </select> 
                                             </div> 
                                         </td>
-                                        <td colspan="2">
+                                        <td colspan="3">
                                             <div class="cell-inner">
                                                 <input type="text" name="nomagent" id="nomagent" placeholder="Nom Prénom" class="mt-2 form-control">
                                             </div>
@@ -126,9 +124,9 @@
 
                                     <tr class="trgroup" data-trgroup="0">
                                        
-                                        <td>
+                                        <td colspan="2">
                                             <div class="cell-inner">
-                                                <select name="numcp" id="numcp" class="form-control selectRepart my-2" onchange="change()"> 
+                                                <select name="numcp3" id="numcp3" class="form-control selectRepart my-2" onchange="change3()"> 
                                                     <option selected="selected" value="reset"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -137,33 +135,35 @@
                                                 </select> 
                                             </div> 
                                         </td>
-                                        <td colspan="2">
+                                        <td colspan="3">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent" placeholder="Nom Prénom" class="mt-2 form-control">
+                                                <input type="text" name="nomagent3" id="nomagent3" placeholder="Nom Prénom" class="mt-2 form-control">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande" placeholder="Code demande" class=" mt-2 form-control">
+                                                <input type="text" name="codedemande3" id="codedemande3" placeholder="Code demande" class=" mt-2 form-control">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande" placeholder="Date demande" class=" mt-2 form-control">
+                                                <input type="text" name="dateDemande3" id="datedemande3" placeholder="Date demande" class="mt-2 form-control">
                                             </div>
                                         </td>
                                     </tr>
 
                                     <tr class="trhead">
-                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> VT160000 - NVT0000146</div></td>
+                                        <td class="cell-inner cell-caret" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> VT160000</div></td>
+                                        <td><div class="cell-inner"> NVT0000146 </div></td>
                                         <td><div class="cell-inner"> Bordeaux </div></td>
-                                        <td><div class="cell-inner"> 05/07/2021-07/07/2021</div></td>
+                                        <td><div class="cell-inner"> 05/07/2021</div></td>
+                                        <td><div class="cell-inner"> 07/07/2021</div></td>
                                         <td><div class="cell-inner"> ISOLE </div></td>
                                         <td><div class="cell-inner"> 1</div></td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="1">
                                        
-                                        <td>
+                                        <td colspan="2">
                                             <div class="cell-inner">
                                                 <select name="numcp2" id="numcp2" class="form-control selectRepart my-2" onchange="change2()"> 
                                                     <option selected="selected" value="reset"> CP de l'agent</option>
@@ -174,7 +174,7 @@
                                                 </select> 
                                             </div> 
                                         </td>
-                                        <td colspan="2">
+                                        <td colspan="3">
                                             <div class="cell-inner">
                                                 <input type="text" name="nomagent2" id="nomagent2" placeholder="Nom Prénom" class="mt-2 form-control">
                                             </div>
@@ -186,7 +186,7 @@
                                         </td>
                                         <td>
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande2" id="dateDemande2" placeholder="Date demande" class=" mt-2 form-control">
+                                                <input type="text" name="dateDemande2" id="datedemande2" placeholder="Date demande" class=" mt-2 form-control">
                                             </div>
                                         </td>
                                     </tr>                                   
@@ -206,6 +206,14 @@
     </div>
     <div id="footercofo3"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 
     <script>
         var object = new Object();
@@ -229,7 +237,23 @@
             document.getElementById("codedemande2").value = object[value].code
             document.getElementById("datedemande2").value = object[value].date  
         }
+
+        function change3(){
+            var value = document.getElementById("numcp3").value;
+            document.getElementById("nomagent3").value = object[value].nomPrenom
+            document.getElementById("codedemande3").value = object[value].code
+            document.getElementById("datedemande3").value = object[value].date  
+        }
     </script>
+
+    <script> 
+        $(function(){
+            $("#includedContentCofo4").load("navcofo.html"); 
+            $("#footercofo3").load("footer.html"); 
+        });
+    </script>
+
+       
 </body>
 
 </html>
