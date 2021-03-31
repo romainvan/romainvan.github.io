@@ -372,16 +372,34 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success',
+              title : 'Export demandes en cours du '+new Date(Date.now()).toLocaleString(),
+              filename : function(){
+                  return "Export_Demandes"
+              },
               exportOptions: {
                   columns: [ 0,1,2,3,4,5,6]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
+              },
+              customize: function (xlsx) {
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                $('row c[r^="G"]', sheet).each( function () {
+                  if ( $('is t', this).text() == 'En attente de place' ) {
+                        $(this).attr( 's', '20' );
+                  }
+                  else if($('is t', this).text() == 'Inscrit'){
+                    $(this).attr( 's', '15' );
+                  }
+                });
               }
             },
             {
               extend : 'csvHtml5',
               className : 'btn btn-success',
+              filename : function(){
+                  return "Export_Demandes"
+              },
               exportOptions: {
                   columns: [ 0,1,2,3,4,5,6]
                 },
@@ -394,6 +412,10 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
+                title : 'Export demande en cours du '+new Date(Date.now()).toLocaleString(),
+                filename : function(){
+                  return "Export_Demandes"
+                },
                 exportOptions: {
                   columns: [ 0,1,2,3,4,5,6]
                 },
@@ -402,6 +424,18 @@
                       Array(doc.content[1].table.body[0].length + 1).join('*').split('');
                   doc.styles.tableBodyEven.alignment = 'center';
                   doc.styles.tableBodyOdd.alignment = 'center'; 
+                  statut = table.column(6).data().toArray();
+                  for (var i = 0; i < statut.length; i++) {
+                    statut[i] = statut[i].replace("<div class=\"cell-inner\">","")
+                    statut[i] = statut[i].replace("</div>","").trim()
+                    if (statut[i]==="En attente de place" ) {
+                      doc.content[1].table.body[i+1][6].fillColor = '#128fdc';
+                    }
+                    if (statut[i]==="Inscrit") {
+                      doc.content[1].table.body[i+1][6].fillColor = '#82be00';
+                    }
+                  }
+                 
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {
