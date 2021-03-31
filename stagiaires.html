@@ -256,21 +256,24 @@
                   return "Export_Suivi_Agent"
                 },
                 customize: function (doc) {
+                  
+                  statut = doc.content[1].table.body
+                 
+                  for (var i = 1; i < statut.length; i++) {
+                    statut[i][8].text = statut[i][8].text.replace("<div class=\"cell-inner\">","")
+                    statut[i][8].text = statut[i][8].text.replace("</div>","").trim()
+                    if (statut[i][8].text ==="REALISE" ) {
+                      doc.content[1].table.body[i][8].fillColor = '#82be00';
+                    }
+                    if (statut[i][8].text==="ANNULE") {
+                      doc.content[1].table.body[i][8].fillColor = '#cd0037';
+                    }
+                  }
+
                   doc.content[1].table.widths = 
                       Array(doc.content[1].table.body[0].length + 1).join('*').split('');
                   doc.styles.tableBodyEven.alignment = 'center';
                   doc.styles.tableBodyOdd.alignment = 'center'; 
-                  statut = table.column(8).data().toArray();
-                  for (var i = 0; i < statut.length; i++) {
-                    statut[i] = statut[i].replace("<div class=\"cell-inner\">","")
-                    statut[i] = statut[i].replace("</div>","").trim()
-                    if (statut[i]==="REALISE") {
-                      doc.content[1].table.body[i+1][8].fillColor = '#82be00';
-                    }
-                    if (statut[i]==="ANNULE") {
-                      doc.content[1].table.body[i+1][8].fillColor = '#cd0037 ';
-                    }
-                  }
                  
                 },
                 className : 'btn btn-primary',
@@ -293,8 +296,18 @@
               pageLength: {
                 _: "%d éléments par page",
                 '-1': "Tout afficher"
-              }
-            }
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
         }
       });
       //table.searchPanes.rebuildPane();

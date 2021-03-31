@@ -385,6 +385,7 @@
               customize: function (xlsx) {
                 var sheet = xlsx.xl.worksheets['sheet1.xml'];
                 $('row c[r^="G"]', sheet).each( function () {
+                  console.log($('is t', this).text())
                   if ( $('is t', this).text() == 'En attente de place' ) {
                         $(this).attr( 's', '20' );
                   }
@@ -420,21 +421,25 @@
                   columns: [ 0,1,2,3,4,5,6]
                 },
                 customize: function (doc) {
+                  
+                  statut = doc.content[1].table.body
+                 
+                  for (var i = 1; i < statut.length; i++) {
+                    console.log( statut[i])
+                    statut[i][6].text = statut[i][6].text.replace("<div class=\"cell-inner\">","")
+                    statut[i][6].text = statut[i][6].text.replace("</div>","").trim()
+                    if (statut[i][6].text ==="En attente de place" ) {
+                      doc.content[1].table.body[i][6].fillColor = '#128fdc';
+                    }
+                    if (statut[i][6].text==="Inscrit") {
+                      doc.content[1].table.body[i][6].fillColor = '#82be00';
+                    }
+                  }
+
                   doc.content[1].table.widths = 
                       Array(doc.content[1].table.body[0].length + 1).join('*').split('');
                   doc.styles.tableBodyEven.alignment = 'center';
                   doc.styles.tableBodyOdd.alignment = 'center'; 
-                  statut = table.column(6).data().toArray();
-                  for (var i = 0; i < statut.length; i++) {
-                    statut[i] = statut[i].replace("<div class=\"cell-inner\">","")
-                    statut[i] = statut[i].replace("</div>","").trim()
-                    if (statut[i]==="En attente de place" ) {
-                      doc.content[1].table.body[i+1][6].fillColor = '#128fdc';
-                    }
-                    if (statut[i]==="Inscrit") {
-                      doc.content[1].table.body[i+1][6].fillColor = '#82be00';
-                    }
-                  }
                  
                 },
                 className : 'btn btn-primary',
@@ -458,7 +463,7 @@
                 _: "%d éléments par page",
                 '-1': "Tout afficher"
               },
-              copy: 'Copy',
+              copy: 'Copier',
             copySuccess: {
                 1: "Copie d'une ligne",
                 _: "Copie de %d lignes"
