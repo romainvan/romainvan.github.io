@@ -226,12 +226,11 @@
                 var count = 0;
                 var skippedHeader = false;
                 $('row c[r^="I"]', sheet).each( function () {
-                  console.log($('is t', this).text())
                   if ( $('is t', this).text() == 'REALISE' ) {
-                        $(this).attr( 's', '35' );
+                        $(this).attr( 's', '15' );
                   }
                   else if($('is t', this).text() == 'ANNULE'){
-                    $(this).attr( 's', '40' );
+                    $(this).attr( 's', '10' );
                   }
                 });
               }
@@ -253,6 +252,16 @@
                       Array(doc.content[1].table.body[0].length + 1).join('*').split('');
                   doc.styles.tableBodyEven.alignment = 'center';
                   doc.styles.tableBodyOdd.alignment = 'center'; 
+                  statut = table.column(8).data().toArray();
+                  for (var i = 0; i < statut.length; i++) {
+                    if (statut[i]==="<div class=\"cell-inner\"> REALISE </div>") {
+                      doc.content[1].table.body[i+1][8].fillColor = 'green';
+                    }
+                    if (statut[i]==="<div class=\"cell-inner\"> ANNULE </div>") {
+                      doc.content[1].table.body[i+1][8].fillColor = 'red';
+                    }
+                  }
+                 
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {

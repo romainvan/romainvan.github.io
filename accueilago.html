@@ -19,6 +19,9 @@
     $(function(){
       $("#includedContentAgo").load("navago.html"); 
       $("#footerago1").load("navago.html"); 
+      var date = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      $("#actuago").text("Actualités du " +date.toLocaleDateString("fr-FR", options)+ " pour le campus de Bordeaux")
     });
   </script> 
   
@@ -32,7 +35,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="col-md-8 offset-md-2 border border-dark blanc">
-                    <h1 class="text-center mb-3"> Actualités du 18 Janvier pour <br/> le campus de Bordeaux</h1>
+                    <h1 class="text-center mb-4 mt-4" id="actuago"> </h1>
                     <div>
                         <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
                             <p class="mt-2"> Le taux de remplissage du mois de décembre était de 85%</p>
