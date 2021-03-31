@@ -31,15 +31,15 @@
                     <table class="table" id="demandeago">
                         <thead class="thead bg-secondary">
                             <tr>
-                              <th scope="col"><div class="cell-inner text-white">Code RAF</div></th>
-                              <th scope="col"><div class="cell-inner text-white">Code Session</div></th>
-                              <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
-                              <th scope="col"><div class="cell-inner text-white">Date de début</div></th>
-                              <th scope="col"><div class="cell-inner text-white">Date de fin</div></th>
-                              <th scope="col"><div class="cell-inner text-white">CP de l'agent</div></th>
-                              <th scope="col"><div class="cell-inner text-white">Nombre d'inscrits</div></th>
-                              <th scope="col"><div class="cell-inner text-white">Capacité maximale</div></th>
-                              <th scope="col" class="no-sort"><div class="cell-inner text-white justify-content-center">Actions</div></th>
+                              <th scope="col">Code RAF</th>
+                              <th scope="col">Code Session</th>
+                              <th scope="col">Lieu</th>
+                              <th scope="col">Date de début</th>
+                              <th scope="col">Date de fin</th>
+                              <th scope="col">CP de l'agent</th>
+                              <th scope="col">Nombre d'inscrits</th>
+                              <th scope="col">Capacité maximale</th>
+                              <th scope="col" class="no-sort">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="tbody">
@@ -159,9 +159,16 @@
             {
                 extend: 'pdfHtml5',
                 pageSize : 'LEGAL',
+                orientation: 'landscape',
                 title : 'Export demande du '+new Date(Date.now()).toLocaleString(),
                 exportOptions: {
                   columns: [ 0,1,2,3,4,5,6,7]
+                },
+                customize: function (doc) {
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
                 },
                 className : 'btn btn-primary',
                 init: function( api, node, config) {
@@ -197,7 +204,7 @@
             },
         }
       });
-      $('#demandeago thead th').addClass('text-white');
+      $('#demandeago thead th').addClass('text-white justify-content-center');
       })
     </script> 
 </body>
