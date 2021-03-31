@@ -172,6 +172,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="script.js"></script>
 
 <script>
   $(document).ready(function() {
@@ -217,9 +218,9 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success',
-              title : 'Export suivi du stagiaire 9800000N du '+new Date(Date.now()).toLocaleString(),
+              title : 'Export suivi du stagiaire 9800000N du '+titleFile(),
               filename : function() {
-                  return "Export_Suivi_Agent"
+                  return "Export_Suivi_Agent_"+dateFile()
               },
               init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -240,6 +241,9 @@
               extend : 'csvHtml5',
               className : 'btn btn-success',
               filename : function() {
+                  return "Export_Suivi_Agent_"+dateFile()
+              },
+              filename : function() {
                   return "Export_Suivi_Agent"
               },
                 init: function( api, node, config) {
@@ -251,9 +255,9 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize: 'LEGAL',
-                title : 'Export suivi du stagiaire 9800000N du '+new Date(Date.now()).toLocaleString(),
+                title : 'Export suivi du stagiaire 9800000N du '+titleFile(),
                 filename : function() {
-                  return "Export_Suivi_Agent"
+                    return "Export_Suivi_Agent_"+dateFile()
                 },
                 customize: function (doc) {
                   
