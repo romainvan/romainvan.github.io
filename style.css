@@ -267,6 +267,10 @@ select > .placeholder {
     margin-bottom: 1em;
   }
 
+  .iconNotif{
+    color: black;
+  }
+
      
   .dt-button{
     color: #fff !important;
