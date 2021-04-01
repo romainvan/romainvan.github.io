@@ -256,7 +256,12 @@ select > .placeholder {
       width: 25%;
   }
 
-   
+  .btnnopad{
+    padding-left: 1em !important;
+    padding-right: 1em!important;
+  }
+
+     
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
@@ -271,10 +276,11 @@ select > .placeholder {
     -ms-user-select: none!important;
     user-select: none!important;
     border: 1px solid transparent!important;
-    padding: .59375rem 1.875rem!important;
+    padding: .59375rem 1em!important;
     font-size: 1rem!important;
     line-height: 1.5!important;
     border-radius: .4375rem!important;
+    margin-right: 0 !important;
     -webkit-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out!important;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out!important;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out!important;
