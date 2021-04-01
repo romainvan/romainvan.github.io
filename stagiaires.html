@@ -195,12 +195,12 @@
           //'searchPanes',
             {
               extend : 'pageLength',
-              className : 'btn btn-success mt-1',
+              className : 'btn btn-success mt-1 btnnopad',
               
             },
             {
               text: 'Filtres avancés',
-              className: 'btn btn-primary',
+              className: 'btn btn-primary btnnopad',
               action: function (e, dt, node, config) {
                   $(".dtsp-panesContainer").toggle()
               },
@@ -210,14 +210,14 @@
             },
             {
               extend : 'copyHtml5',
-              className : 'btn btn-warning',
+              className : 'btn btn-warning btnnopad',
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
               }
             },
             {
               extend : 'excelHtml5',
-              className : 'btn btn-success',
+              className : 'btn btn-success btnnopad',
               title : 'Export suivi du stagiaire 9800000N du '+titleFile(),
               filename : function() {
                   return "Export_Suivi_Agent_"+dateFile()
@@ -239,7 +239,7 @@
             },
             {
               extend : 'csvHtml5',
-              className : 'btn btn-success',
+              className : 'btn btn-success btnnopad',
               filename : function() {
                   return "Export_Suivi_Agent_"+dateFile()
               },
@@ -280,7 +280,7 @@
                   doc.styles.tableBodyOdd.alignment = 'center'; 
                  
                 },
-                className : 'btn btn-primary',
+                className : 'btn btn-primary btnnopad',
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-pdf buttons-html5')
                 }

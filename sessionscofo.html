@@ -138,12 +138,12 @@
           //'searchPanes',
             {
               extend : 'pageLength',
-              className : 'btn btn-success mt-1',
+              className : 'btn btn-success mt-1 btnnopad',
               
             },
             {
               text: 'Filtres avancés',
-              className: 'btn btn-primary',
+              className: 'btn btn-primary btnnopad',
               action: function (e, dt, node, config) {
                   $(".dtsp-panesContainer").toggle()
               },
@@ -155,7 +155,7 @@
               extend : 'copyHtml5',
               text : 'Copier',
               copyTitle: 'Données copiées',
-              className : 'btn btn-warning',
+              className : 'btn btn-warning btnnopad',
               exportOptions: {
                   columns: [ 0,1,2,3,4,5,6,7]
                 },
@@ -165,7 +165,7 @@
             },
             {
               extend : 'excelHtml5',
-              className : 'btn btn-success',
+              className : 'btn btn-success btnnopad',
               title : 'Export sessions formations continues du '+titleFile(),
               filename : function() {
                 return "Export_SessionsFC_"+dateFile()
@@ -179,7 +179,7 @@
             },
             {
               extend : 'csvHtml5',
-              className : 'btn btn-success',
+              className : 'btn btn-success btnnopad',
               filename : function() {
                 return "Export_SessionsFC_"+dateFile()
               },
@@ -208,7 +208,7 @@
                   doc.styles.tableBodyEven.alignment = 'center';
                   doc.styles.tableBodyOdd.alignment = 'center'; 
                 },
-                className : 'btn btn-primary',
+                className : 'btn btn-primary btnnopad',
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-pdf buttons-html5')
                 }
