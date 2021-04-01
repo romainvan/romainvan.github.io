@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 
   <script> 
     $(function(){
@@ -22,6 +23,7 @@
       var date = new Date();
       var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
       $("#actuago").text("Actualités du " +date.toLocaleDateString("fr-FR", options)+ " pour le campus de Bordeaux")
+      $("#monthago").text(actuDate())
     });
   </script> 
   
@@ -38,7 +40,7 @@
                     <h1 class="text-center mb-4 mt-4" id="actuago"> </h1>
                     <div>
                         <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
-                            <p class="mt-2"> Le taux de remplissage du mois de décembre était de 85%</p>
+                            <p class="mt-2 sameLine"> Le taux de remplissage du mois </p> <p class="mt-2 sameLine" id="monthago"> </p> <p class="mt-2 sameLine"> était de 85%</p>
                         </div>
                     </div>
                 </div>

@@ -22,16 +22,7 @@
         var date = new Date();
         var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
         $("#actuac").text("Actualités du " +date.toLocaleDateString("fr-FR", options)+ " pour la zone de production Atlantique")
-        var month = actuDate()
-        console.log(month)
-        var displaymonth = ""
-        if(month==="avril" || month==="août" || month==="octobre"){
-            displaymonth="d'"+month
-        }
-        else{
-            displaymonth="de "+month
-        }
-        $("#monthac").text(displaymonth)
+        $("#monthac").text(actuDate())
       });
 
     </script> 

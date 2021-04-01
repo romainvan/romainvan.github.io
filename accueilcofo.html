@@ -13,6 +13,7 @@
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 
   <script> 
     $(function(){
@@ -21,6 +22,7 @@
       var date = new Date();
       var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
       $("#actucofo").text("Actualités du " +date.toLocaleDateString("fr-FR", options)+ " pour l'Infrapôle Paris Nord")
+      $("#monthcofo").text(actuDate())
     });
 
   </script> 
@@ -40,7 +42,8 @@
                     <h1 class="text-center mb-4 mt-4" id="actucofo"> </h1>
                     <div>
                         <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
-                                <p class="mt-2"> Le taux de présence pour les stagiaires de décembre était de 92,8%</p>
+                                <p class="mt-2 sameLine"> Le taux de présence pour les stagiaires </p> <p class="mt-2 sameLine" id="monthcofo"> </p> <p class="mt-2 sameLine"> était de 92,8%</p>
+
                         </div>
                     </div>
                 </div>

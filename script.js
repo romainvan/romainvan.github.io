@@ -29,8 +29,15 @@ function titleFile() {
 function actuDate() {
     var today = new Date();
     var lastMonth = new Date();
-    lastMonth.setDate(today.getDate()-30 );
+    lastMonth.setDate(today.getDate() - 30 );
     const month = lastMonth.toLocaleString('default', { month: 'long' });
-    return month;
+    var displaymonth = ""
+    if(month==="avril" || month==="août" || month==="octobre"){
+        displaymonth="d'"+month
+    }
+    else{
+        displaymonth="de "+month
+    }
+    return displaymonth;
 }
 
