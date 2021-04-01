@@ -24,46 +24,6 @@
     <div class="container-fluid">
         <h1 class="text-center mb-5"> Sessions FC pour le campus de Bordeaux Bègles  </h1>
         <div class="row">
-            <div class="col-md-8 ml-5">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                    <div class="btn-group dropdown" data-component="select-radios">
-                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                        <span data-role="placeholder">Tout</span>
-                        <i class="icons-arrow-down" aria-hidden="true"></i>
-                        </button>
-                        <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
-                        <label class="dropdown-item" for="action11">Signalisation</label>
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
-                        <label class="dropdown-item" for="action12">Voie</label>
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
-                        <label class="dropdown-item" for="action13">Produit Train</label>
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
-                        <label class="dropdown-item" for="action14">Caténaire</label>
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
-                        <label class="dropdown-item" for="action15">Circulation</label>
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
-                        <label class="dropdown-item" for="action16">Tout</label>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="form-control-container col-md-5 whiteinput autocomplete">
-                        <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
-                        <datalist id="code">
-                        <option value="VCE40124">
-                        <option value="VA216000">
-                        </datalist>
-                    </div>
-                    <div class="input-group-append">
-                    <button type="button" class="btn btn-primary btn-only-icon">
-                        <i class="icons-search" aria-hidden="true"></i>
-                        <span class="sr-only">Rechercher sur le site</span>
-                    </button>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-md-11 ml-5 mt-5 mb-5">
                 <div class="table-wrapper">
                     <div class="table-scroller last-cell-fixed dragscroll">
@@ -72,6 +32,7 @@
                           <tr>
                             <th scope="col">Code RAF</th>
                             <th scope="col">Code Session</th>
+                            <th scope="col">Division métier</th>
                             <th scope="col">Lieu</th>
                             <th scope="col">Date de début</th>
                             <th scope="col">Date de fin</th>
@@ -86,6 +47,7 @@
                             
                             <td><div class="cell-inner text"> VT160000</div></td>
                             <td><div class="cell-inner"> NVT000146</div></td>
+                            <td><div class="cell-inner"> Signalisation</div></td>
                             <td><div class="cell-inner"> Bègles</div></td>
                             <td><div class="cell-inner"> 21/06/2021</div></td>
                             <td><div class="cell-inner"> 25/06/2021</div></td>
@@ -110,6 +72,7 @@
                             
                             <td><div class="cell-inner text"> VT160000</div></td>
                             <td><div class="cell-inner"> NVT000146</div></td>
+                            <td><div class="cell-inner"> Signalisation</div></td>
                             <td><div class="cell-inner"> Bègles</div></td>
                             <td><div class="cell-inner"> 21/06/2021</div></td>
                             <td><div class="cell-inner"> 25/06/2021</div></td>
@@ -150,6 +113,7 @@
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
     <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="script.js"> </script>
     <script> 
       $(function(){
         $("#includedContentAgo3").load("navago.html"); 
@@ -165,7 +129,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -199,7 +163,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -208,8 +172,12 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success btnnopad',
+              title : 'Export sessions formations continues du '+titleFile(),
+              filename : function() {
+                return "Export_SessionsFC_"+dateFile()
+              },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -218,8 +186,11 @@
             {
               extend : 'csvHtml5',
               className : 'btn btn-success btnnopad',
+              filename : function() {
+                return "Export_SessionsFC_"+dateFile()
+              },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -230,8 +201,12 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
+                title : 'Export sessions formations continues du '+titleFile(),
+                filename : function() {
+                  return "Export_SessionsFC_"+dateFile()
+                },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
