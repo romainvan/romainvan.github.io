@@ -80,7 +80,7 @@
                                   <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle1">
-                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item" onclick="seeDetails()">Plus de détails</button>
                                   <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
                                 </div>
                               </div>
@@ -249,6 +249,12 @@
           var array = window.location.href.split("/");
           array[array.length-1]="listestagiaires.html";
           location.href = array.join("/");
+      }
+
+      function seeDetails(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="detailsSessionsCOFO.html";
+        location.href = array.join("/");
       }
     </script>
 </body>
