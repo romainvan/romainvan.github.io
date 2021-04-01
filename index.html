@@ -13,10 +13,18 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 
   <script> 
     $(function(){
       $("#footerindex").load("footer.html"); 
+      var date = new Date();
+      var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+      $("#actuindex").text("Actualités du " +date.toLocaleDateString("fr-FR", options));
+      $("#monthindex").text(actuDate())
+      $("#nextrmpf").text(nextRMPF())
+
+
     });
   </script> 
 
@@ -50,16 +58,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="col-md-8 offset-md-2 border border-dark blanc">
-                    <h1 class="text-center mb-3"> Actualités du 18 Janvier</h1>
+                    <h1 class="text-center mb-4 mt-4" id="actuindex"> </h1>
                     <div>
-                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
-                                <p class="mt-2"> Nouveaux codes RAF pour la voie</p>
+                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded py-3">
+                                <p class="mt-2 sameLine"> Nouveaux codes RAF pour la voie</p>
                         </div>
-                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
-                            <p class="mt-2"> Le taux de remplissage de décembre était de 85,6%</p>
+                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded py-3">
+                            <p class="mt-2 sameLine"> Le taux de remplissage du mois </p> <p class="mt-2 sameLine" id="monthindex"> </p> <p class="mt-2 sameLine"> était de 85,6%</p>
                         </div>
-                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded">
-                            <p class="mt-2"> Date des prochaines RMPF : 28 Janvier 2021</p>
+                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded py-3">
+                            <p class="mt-2 sameLine"> Date des prochaines RMPF : le </p> <p class="mt-2 sameLine" id="nextrmpf"> </p>
                         </div>
                     </div>
                 </div>

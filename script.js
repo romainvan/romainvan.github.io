@@ -26,6 +26,9 @@ function titleFile() {
     return dateStr;
 }
 
+/**
+ * Fonction pour afficher le mois précédent dans la partie actualités 
+ */
 function actuDate() {
     var today = new Date();
     var lastMonth = new Date();
@@ -40,4 +43,23 @@ function actuDate() {
     }
     return displaymonth;
 }
+
+/**
+ * Fonction pour renvoyer le mois suivant dans la partie actualités
+ */
+
+ function nextRMPF(){
+    var date = new Date();
+    var nextMonth = new Date();
+    nextMonth.setDate(date.getDate() + 30 );
+    var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+    var array = nextMonth.toLocaleDateString("fr-FR", options).split(" ")
+    if(array[0]==="samedi"){
+        nextMonth.setDate(nextMonth.getDate()+2)
+    }
+    else if (array[0]==="dimanche"){
+        nextMonth.setDate(nextMonth.getDate()+1)
+    }
+    return nextMonth.toLocaleDateString("fr-FR", options)
+ }
 

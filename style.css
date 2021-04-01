@@ -263,6 +263,8 @@ select > .placeholder {
 
   .sameLine{
     display: inline;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
      
