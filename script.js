@@ -26,3 +26,11 @@ function titleFile() {
     return dateStr;
 }
 
+function actuDate() {
+    var today = new Date();
+    var lastMonth = new Date();
+    lastMonth.setDate(today.getDate()-30 );
+    const month = lastMonth.toLocaleString('default', { month: 'long' });
+    return month;
+}
+

@@ -261,6 +261,10 @@ select > .placeholder {
     padding-right: 1em!important;
   }
 
+  .sameLine{
+    display: inline;
+  }
+
      
   .dt-button{
     color: #fff !important;

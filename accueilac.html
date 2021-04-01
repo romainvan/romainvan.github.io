@@ -13,6 +13,7 @@
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 
     <script> 
       $(function(){
@@ -21,6 +22,16 @@
         var date = new Date();
         var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
         $("#actuac").text("Actualités du " +date.toLocaleDateString("fr-FR", options)+ " pour la zone de production Atlantique")
+        var month = actuDate()
+        console.log(month)
+        var displaymonth = ""
+        if(month==="avril" || month==="août" || month==="octobre"){
+            displaymonth="d'"+month
+        }
+        else{
+            displaymonth="de "+month
+        }
+        $("#monthac").text(displaymonth)
       });
 
     </script> 
@@ -38,7 +49,7 @@
                     <h1 class="text-center mb-4 mt-4" id="actuac"> </h1>
                     <div class="justify-content-center">
                         <div class="col-md-10 ml-2 border border-primary mb-3 rounded justify-content-center">
-                            <p class="mt-2"> Le taux de remplissage du mois de décembre était de 88,7%</p>
+                            <p class="mt-2 sameLine"> Le taux de remplissage du mois </p> <p class="mt-2 sameLine" id="monthac"> </p> <p class="mt-2 sameLine"> était de 88,7%</p>
                         </div>
                     </div>
                 </div>
