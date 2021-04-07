@@ -12,15 +12,12 @@
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
 
-  <script> 
-    $(function(){
-      $("#includedContentAgo3").load("navago.html"); 
-      $("#footerago4").load("footer.html"); 
-    });
-  </script> 
-  
+    
 
 </head>
 
@@ -34,17 +31,17 @@
                 
                 <div class="col-md-10 offset-md-1">
                     <div class="table-wrapper">
-                        <table class="table">
+                        <table class="table" id="ago2">
                             <thead class="thead bg-secondary">
                                 <tr>
                                    
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Code Demande</div></th>
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Code Action</div></th>
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Libellé Action</div></th>
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Matricule</div></th>
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Nom & Prénom</div></th>
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Date de la demande</div></th>
-                                    <th scope="col"><div class="cell-inner text-white justify-content-center">Actions</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Code Demande</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Code Action</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Libellé Action</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Matricule</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Nom & Prénom</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Date de la demande</div></th>
+                                    <th scope="col" class="no-sort"><div class="text-white justify-content-center">Actions</div></th>
                                 </tr>
                             </thead>
 
@@ -52,35 +49,35 @@
                                 
                                 <tr>
                                     
-                                    <td> <div class="cell-inner  justify-content-center"> 646518 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> VE200200 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Protections MICOM P12x </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> 8912345B </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Dupont Martin </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> 19/10/2018 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> <i class="icons-circle-delete icons-size-1x5 mt-2 ml-2 text-danger" aria-hidden="true"></i> </div> </td>
+                                    <td> 646518 </td>
+                                    <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                    <td> 8912345B </td>
+                                    <td> Dupont Martin </td>
+                                    <td> 19/10/2018 </td>
+                                    <td> <i class="icons-circle-delete icons-size-1x5 ml-2 text-danger" aria-hidden="true"></i>  </td>
                                 </tr>
 
                                 <tr>
                                    
-                                    <td> <div class="cell-inner  justify-content-center"> 641198 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> VE200200 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Protections MICOM P12x </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> 1234567A </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Martin Jean </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> 15/10/2018 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> <i class="icons-circle-delete icons-size-1x5 mt-2 ml-2 text-danger" aria-hidden="true"></i> </div> </td>
+                                    <td> 641198 </td>
+                                    <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                    <td> 1234567A </td>
+                                    <td> Martin Jean </td>
+                                    <td> 15/10/2018 </td>
+                                    <td> <i class="icons-circle-delete icons-size-1x5 ml-2 text-danger" aria-hidden="true"></i>  </td>
 
                                 </tr>
                                 <tr>
                                     
-                                    <td> <div class="cell-inner  justify-content-center"> 792673 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> VE200200 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Protections MICOM P12x </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> 6789123C </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> Mbappe Kylian </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> 25/11/2019 </div></td>
-                                    <td> <div class="cell-inner  justify-content-center"> <i class="icons-circle-delete icons-size-1x5 mt-2 ml-2 text-danger" aria-hidden="true"></i> </div> </td>
+                                    <td> 792673 </td>
+                                    <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                    <td> 6789123C </td>
+                                    <td> Mbappe Kylian </td>
+                                    <td> 25/11/2019 </td>
+                                    <td> <i class="icons-circle-delete icons-size-1x5 ml-2 text-danger" aria-hidden="true"></i>  </td>
 
                                 </tr>
                             </tbody>
@@ -92,5 +89,151 @@
     </div>
     <div id="footerago4"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="script.js"> </script>
+    <script> 
+        $(function(){
+          $("#includedContentAgo3").load("navago.html"); 
+          $("#footerago4").load("footer.html"); 
+        });
+
+        $(document).ready(function() {
+      var table = $('#ago2').DataTable({
+        dom: 'BPfrtip',
+        "pagingType": "full_numbers",
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3,4,5], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+      orderable: false,
+      targets: "no-sort"
+    }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                  columns: [0,1,2,3,4,5]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export liste des inscrits de la session VE200200 - NVE0000047 au '+titleFile(),
+              filename : function() {
+                return "Export_InscritsVE200200-NVE0000047_"+dateFile()
+              },
+              exportOptions: {
+                  columns: [0,1,2,3,4,5]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              filename : function() {
+                return "Export_InscritsVE200200-NVE0000047_"+dateFile()
+              },
+              exportOptions: {
+                  columns: [0,1,2,3,4,5]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize : 'LEGAL',
+                title : 'Export liste des inscrits de la session VE200200 - NVE0000047 au '+titleFile(),
+                filename : function() {
+                    return "Export_InscritsVE200200-NVE0000047_"+dateFile()
+                },
+                exportOptions: {
+                  columns: [0,1,2,3,4,5]
+                },
+                customize: function (doc) {
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      $('#ago2 thead th').addClass('text-white');
+      })
+      </script> 
 </body>
 </html>

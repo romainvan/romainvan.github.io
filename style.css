@@ -8,8 +8,6 @@ body {
   height: 100%;
 }
 
-
-
 .whitediv{
     background-color: white;
 }
@@ -281,6 +279,15 @@ select > .placeholder {
 
   .btnicon{
     background-color: white !important;
+  }
+
+  .table td, .table th{
+    text-align: center;
+ }
+
+  .table td{
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
 
      

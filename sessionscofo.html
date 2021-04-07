@@ -43,21 +43,21 @@
                         </thead>
                         <tbody class="tbody">
                           <tr>
-                            <td><div class="cell-inner text"> VT160000</div></td>
-                            <td><div class="cell-inner"> Réseaux IP et applicatifs SNCF</div></td>
-                            <td><div class="cell-inner"> NVT000146</div></td>
-                            <td><div class="cell-inner"> Bègles</div></td>
-                            <td><div class="cell-inner"> 21/06/2021</div></td>
-                            <td><div class="cell-inner"> 25/06/2021</div></td>
-                            <td><div class="cell-inner"> Voie</div></td>
-                            <td><div class="cell-inner"> 1</div></td>
+                            <td> VT160000</td>
+                            <td> Réseaux IP et applicatifs SNCF</td>
+                            <td> NVT000146</td>
+                            <td> Bègles</td>
+                            <td> 21/06/2021</td>
+                            <td> 25/06/2021</td>
+                            <td> Voie</td>
+                            <td> 1</td>
                             <td>
                               <div class="btn-group dropdown">
-                                <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle10">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Actions</span>
                                   <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
                                 </button>
-                                <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle0">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                   <button type="button" class="dropdown-item">Plus de détails</button>
                                   <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
                                 </div>
@@ -65,21 +65,21 @@
                             </td>
                           </tr>
                           <tr>
-                            <td><div class="cell-inner text"> VT140000</div></td>
-                            <td><div class="cell-inner"> Réseaux IP et applicatifs SNCF</div></td>
-                            <td><div class="cell-inner"> NVT000423</div></td>
-                            <td><div class="cell-inner"> Nanterre</div></td>
-                            <td><div class="cell-inner"> 13/07/2021</div></td>
-                            <td><div class="cell-inner"> 15/07/2021</div></td>
-                            <td><div class="cell-inner"> Signalisation</div></td>
-                            <td><div class="cell-inner"> 3</div></td>
+                            <td> VT140000</td>
+                            <td> Réseaux IP et applicatifs SNCF</td>
+                            <td> NVT000423</td>
+                            <td> Nanterre</td>
+                            <td> 13/07/2021</td>
+                            <td> 15/07/2021</td>
+                            <td> Signalisation</td>
+                            <td> 3</td>
                             <td>
                               <div class="btn-group dropdown align-right">
-                                <button class="btn btn-only-icon btn-transparent btn-color-gray" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window" aria-controls="toggle11">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btncofo1" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <span class="sr-only">Actions</span>
                                   <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
                                 </button>
-                                <div class="dropdown-menu dropdown-menu-right" id="fixedlastrow-toggle1">
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
                                   <button type="button" class="dropdown-item" onclick="seeDetails()">Plus de détails</button>
                                   <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
                                 </div>
@@ -125,6 +125,7 @@
                 },
                 targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
             },
+            { width: "30%", targets: 1 },
             {
       orderable: false,
       targets: "no-sort"
