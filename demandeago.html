@@ -54,7 +54,7 @@
                                 <td><div class="cell-inner">1234567A</div></td>
                                 <td><div class="cell-inner">12</div></td>
                                 <td><div class="cell-inner">18</div></td>
-                                <td class="text-center"> <button class="btn"> <i class="icons-checked icons-size-1x5 mt-3 text-success ml-2" aria-hidden="true"></i> </button>  <button class="btn"><i class="icons-circle-delete icons-size-1x5 mt-2 ml-2 text-danger" aria-hidden="true"></i></button> </td>
+                                <td class="text-center"> <button class="btn btn-sm btnicon" id="accept"> <i class="icons-checked icons-size-1x5 mt-3 text-success ml-2"></i> </button>  <button class="btn btn-sm btnicon" id="refuse"> <i class="icons-circle-delete icons-size-1x5 mt-3 ml-2 text-danger"></i> </button>  </td>
                                 
                             </tr>
                         </tbody>
@@ -84,6 +84,15 @@
           $("#includedContentAgo1").load("navago.html"); 
           $("#footerago2").load("footer.html"); 
         });
+
+        $("#accept").click(function(){
+            alert("Accepter la demande");
+          });
+
+        $("#refuse").click(function(){
+            alert("Refuser la demande");
+        });
+
 
         $(document).ready(function() {
       var table = $('#demandeago').DataTable({

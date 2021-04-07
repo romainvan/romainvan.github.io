@@ -279,6 +279,10 @@ select > .placeholder {
     color: black;
   }
 
+  .btnicon{
+    background-color: white !important;
+  }
+
      
   .dt-button{
     color: #fff !important;
