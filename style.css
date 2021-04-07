@@ -290,6 +290,12 @@ select > .placeholder {
     padding-bottom: 15px !important;
   }
 
+  .table .nopad{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+
      
   .dt-button{
     color: #fff !important;
