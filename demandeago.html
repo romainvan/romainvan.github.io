@@ -36,6 +36,7 @@
                               <th scope="col">Lieu</th>
                               <th scope="col">Date de début</th>
                               <th scope="col">Date de fin</th>
+                              <th scope="col">Code demande</th>
                               <th scope="col">CP de l'agent</th>
                               <th scope="col">Nombre d'inscrits</th>
                               <th scope="col">Capacité maximale</th>
@@ -49,6 +50,7 @@
                                 <td><div class="cell-inner"> Bègles</div></td>
                                 <td><div class="cell-inner"> 21/06/2021</div></td>
                                 <td><div class="cell-inner"> 25/06/2021</div></td>
+                                <td><div class="cell-inner">627341</div></td>
                                 <td><div class="cell-inner">1234567A</div></td>
                                 <td><div class="cell-inner">12</div></td>
                                 <td><div class="cell-inner">18</div></td>
@@ -92,7 +94,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -126,7 +128,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -142,7 +144,7 @@
               autoFilter: true,
               sheetName: 'Export demande',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -155,7 +157,7 @@
                 return "Export_Demandes_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -171,7 +173,7 @@
                   return "Export_Demandes_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
