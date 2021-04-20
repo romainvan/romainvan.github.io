@@ -198,7 +198,7 @@ select > .placeholder {
   }
 
   .encours{
-    background-color: #128fdc;
+    background-color: #128fdc !important;
   }
 
   .hiddentable {
