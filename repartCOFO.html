@@ -56,6 +56,9 @@
 
                                     <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action5" class="sr-only"/>
                                     <label class="dropdown-item" for="action5">Mai</label>
+                                  
+                                  <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action7" class="sr-only"/>
+                                    <label class="dropdown-item" for="action5">Juin</label>
 
                                     <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action6" class="sr-only"/>
                                     <label class="dropdown-item" for="action6">Juillet</label>
@@ -252,6 +255,7 @@
                                 <thead class="thead bg-secondary">
                                     <tr>
                                       <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
+                                      <th scope="col"><div class="text-white">Division métier</div></th>
                                       <th scope="col"><div class="text-white">Lieu</div></th>
                                       <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
                                       <th scope="col"><div class="text-white">Groupe</div></th>
@@ -263,6 +267,7 @@
                                 <tbody class="tbody">
                                     <tr class="trhead">
                                         <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="0"> <div class="cell-inner"> VT160000 - NVT0000146 </div></td>
+                                        <td> Signalisation </td>  
                                         <td> Lyon </td>
                                         <td> 21/06/2021 - 25/06/2021</td>
                                         <td> ISOLE </td>
@@ -303,6 +308,7 @@
                         
                                     <tr class="trhead">
                                         <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="1">  <div class="cell-inner nopad"> VA620600 - NVT0000151 </div></td>
+                                        <td> Produit Train </td>  
                                         <td> Nanterre </td>
                                         <td> 28/06/2021 - 29/06/2021 </td>
                                         <td> ISOLE </td>
@@ -371,6 +377,7 @@
                                
                                     <tr class="trhead">
                                         <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="2">  <div class="cell-inner nopad"> VT160000 - NVT0000146 </div></td>
+                                         <td> Signalisation </td>
                                         <td> Bordeaux </td>
                                         <td> 05/07/2021-07/07/2021</td>
                                         <td> ISOLE </td>
@@ -510,6 +517,7 @@
                                 <thead class="thead bg-secondary">
                                     <tr>
                                       <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
+                                       <th scope="col"><div class="text-white">Division métier</div></th>
                                       <th scope="col"><div class="text-white">Lieu</div></th>
                                       <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
                                       <th scope="col"><div class="text-white">Groupe</div></th>
@@ -521,6 +529,7 @@
                                 <tbody class="tbody">
                                     <tr>
                                         <td data-toggle="modal" data-target="#ModalRepart"> VT160000 - NVT0000146</td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"> Signalisation </td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> Lyon </td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> 21/06/2021 - 25/06/2021</td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> ISOLE </td>
@@ -529,7 +538,8 @@
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr>
-                                        <td data-toggle="modal" data-target="#ModalRepart2"> VA620600 - NVT0000151</td>
+                                        <td data-toggle="modal" data-target="#ModalRepart2"> VA620600 - NVT0000151</td>  
+                                       <td data-toggle="modal" data-target="#ModalRepart2"> Produit Train </td>
                                         <td data-toggle="modal" data-target="#ModalRepart2"> Nanterre </td>
                                         <td data-toggle="modal" data-target="#ModalRepart2"> 28/06/2021 - 29/06/2021</td>
                                         <td data-toggle="modal" data-target="#ModalRepart2"> ISOLE </td>
@@ -539,6 +549,7 @@
                                     </tr>
                                     <tr class="trhead">
                                         <td class="cell-caret"> VT160000 - NVT0000146</td>
+                                        <td> Signalisation </td>
                                         <td> Bordeaux </td>
                                         <td> 05/07/2021-07/07/2021</td>
                                         <td> ISOLE </td>
@@ -567,6 +578,7 @@
                                 <thead class="thead bg-secondary">
                                     <tr>
                                       <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
+                                      <th scope="col"><div class="text-white">Division métier </div></th>
                                       <th scope="col"><div class="text-white">Lieu</div></th>
                                       <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
                                       <th scope="col"><div class="text-white">Groupe</div></th>
@@ -578,6 +590,7 @@
                                 <tbody class="tbody">
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> VT160000 - NVT0000146</td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"> Signalisation </td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> Lyon </td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> 21/06/2021 - 25/06/2021</td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> ISOLE </td>
@@ -632,6 +645,7 @@
                                     </tr>
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv4')"> VA620600 - NVT0000151</td>
+                                        <td onclick="affichemyDiv('affichemyDiv4')"> Produit Train </td>
                                         <td onclick="affichemyDiv('affichemyDiv4')"> Nanterre </td>
                                         <td onclick="affichemyDiv('affichemyDiv4')"> 28/06/2021 - 29/06/2021</td>
                                         <td onclick="affichemyDiv('affichemyDiv4')"> ISOLE </td>
@@ -715,6 +729,7 @@
                                     </tr>
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv5')">  VT160000 - NVT0000146</td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"> Signalisation </td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> Bordeaux </td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> 05/07/2021-07/07/2021</td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> ISOLE </td>
