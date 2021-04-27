@@ -21,56 +21,12 @@
 
 <body class="d-flex flex-column">
     <div id="includedContentAC8"></div>
-    <nav role="navigation" class="mastnav">
-        <ul class="mastnav-top">
-          <li>
-            <a href="reportingac.html" class="mastnav-item">
-                <i class="icons-large-france icons-size-1x5 " aria-hidden="true"></i>
-                <span class="font-weight-medium">Zone de Production</span>
-            </a>
-            <a href="reportingacEtab.html" class="mastnav-item">
-              <i class="icons-large-building icons-size-1x5 " aria-hidden="true"></i>
-              <span class="font-weight-medium">Établissements</span>
-            </a>
-          </li>
-          <li>
-            <a href="stagiaires.html" class="mastnav-item active">
-              <i class="icons-circle-account-connected icons-size-1x5 " aria-hidden="true"></i>
-              <span class="font-weight-medium">Suivi agent</span>
-            </a>
-          </li>
-
-
-        </ul>
-        <div class="mastnav-bottom d-none d-lg-block">
-          <a href="#" class="mastnav-item mastnav-item-horizontal">
-            <i class="icons-support icons-size-1x5" aria-hidden="true"></i>
-            <span class="font-weight-medium">Support</span>
-          </a>
-        </div>
-      </nav>
-
         <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Suivi d'un stagiaire </h1>
+        <h1 class="text-center"> Suivi des stagiaires </h1>
         <div class="row">
-                <div class="col-md-8 offset-md-1">
-                    <div class="input-group">
-                        <div class="form-control-container col-md-5 whiteinput autocomplete">
-                            <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
-                            <datalist id="code">
-                              <option value="9800000N">
-                              <option value="12345678A">
-                            </datalist>
-                        </div>
-                        <div class="input-group-append">
-                          <button type="button" class="btn btn-primary btn-only-icon">
-                            <i class="icons-search" aria-hidden="true"></i>
-                            <span class="sr-only">Rechercher sur le site</span>
-                          </button>
-                        </div>
-                    </div>
+                <div class="col-md-2 offset-md-10 ">
+                  <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
                 </div>
-                <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
                 <div class="col-md-11 mt-5 ofsset-md-1" id="graph">
                     <div class="row">
                       <div class="col-md-5 offset-md-2">
@@ -82,7 +38,7 @@
                     </div>
                 </div>
                                 
-                <div class="col-md-11 mt-5 offset-md-1">
+                <div class="col-md-12 mt-5">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
                           <table class="table display" id="example">
@@ -109,7 +65,7 @@
 								<td>  OPSEG-20-1</td>
                                 <td> 21/06/2021</td>
                                 <td> 25/06/2021</td>
-                                <td class="bg-success text-white"> REALISE </td>
+                                <td class="bg-success text-white"> PRESENT </td>
                               </tr>
 						
 							  <tr>
@@ -133,19 +89,52 @@
 								<td> </td>
                                 <td> 09/08/2021</td>
                                 <td> 13/08/2021</td>
-                                <td class="bg-success text-white"> REALISE </td>
+                                <td class="bg-success text-white"> PRESENT </td>
                               </tr>
 
                               <tr>
-                                <td>9800000N<br /> GRIEZMAN Antoine</td>
-								<td> Infrapôle Paris Sud-Est</td>
+                                <td>1234567A<br /> Bartolli Marion</td>
+								<td> Infrapôle Paris Nord</td>
                                 <td> VA660400</td>
                                 <td> NVT000361</td>
                                 <td> Bègles</td>
-								<td> </td>
+                                <td>  JCSE-21-3</td>
                                 <td> 18/08/2021</td>
                                 <td> 20/08/2021</td>
-                                <td class="bg-success text-white"> REALISE </td>
+                                <td class="bg-success text-white"> PRESENT </td>
+                              </tr>
+                              <tr>
+                                <td>1234567A<br /> Bartolli Marion</td>
+								<td> Infrapôle Paris Nord</td>
+                                <td> VA650600</td>
+                                <td> NVT000259</td>
+                                <td> Bègles</td>
+                                <td> JCSE-21-3</td>
+                                <td> 25/08/2021</td>
+                                <td> 27/08/2021</td>
+                                <td class="bg-warning text-white"> ABSENT </td>
+                              </tr>
+                              <tr>
+                                <td>1234567A<br /> Bartolli Marion</td>
+								<td> Infrapôle Paris Nord</td>
+                                <td> VA650600</td>
+                                <td> NVT000259</td>
+                                <td> Bègles</td>
+                                <td> JCSE-21-3</td>
+                                <td> 25/08/2021</td>
+                                <td> 27/08/2021</td>
+                                <td class="bg-info text-white"> ENCOURS </td>
+                              </tr>
+                              <tr>
+                                <td>1234567A<br /> Bartolli Marion</td>
+								<td> Infrapôle Paris Nord</td>
+                                <td> VA650600</td>
+                                <td> NVT000259</td>
+                                <td> Bègles</td>
+                                <td> JCSE-21-3</td>
+                                <td> 25/08/2021</td>
+                                <td> 27/08/2021</td>
+                                <td class="text-black"> PROCHAINEMENT </td>
                               </tr>
                             </tbody>
                           </table>
@@ -228,11 +217,17 @@
               customize: function (xlsx) {
                 var sheet = xlsx.xl.worksheets['sheet1.xml'];
                 $('row c[r^="I"]', sheet).each( function () {
-                  if ( $('is t', this).text() == 'REALISE' ) {
+                  if ( $('is t', this).text() == 'PRESENT' ) {
                         $(this).attr( 's', '15' );
                   }
                   else if($('is t', this).text() == 'ANNULE'){
                     $(this).attr( 's', '10' );
+                  }
+                  else if($('is t', this).text() == 'ABSENT'){
+                    $(this).attr( 's', '5' );
+                  }
+                  else if($('is t', this).text() == 'ENCOURS'){
+                    $(this).attr( 's', '20' );
                   }
                 });
               }
@@ -264,11 +259,20 @@
                   statut = doc.content[1].table.body
                  
                   for (var i = 1; i < statut.length; i++) {
-                    if (statut[i][8].text ==="REALISE" ) {
+                    if (statut[i][8].text ==="PRESENT" ) {
                       doc.content[1].table.body[i][8].fillColor = '#82be00';
                     }
                     if (statut[i][8].text==="ANNULE") {
                       doc.content[1].table.body[i][8].fillColor = '#cd0037';
+                    }
+                    if (statut[i][8].text==="ABSENT") {
+                      doc.content[1].table.body[i][8].fillColor = '#ffb612';
+                    }
+                    if (statut[i][8].text==="ENCOURS") {
+                      doc.content[1].table.body[i][8].fillColor = '#009aa6 ';
+                    }
+                    if (statut[i][8].text==="PROCHAINEMENT") {
+                      doc.content[1].table.body[i][8].fillColor = '#FFFFFF ';
                     }
                   }
 
@@ -324,6 +328,17 @@
           title: {
               text: 'Statut',
           },
+          tooltip: {
+            pointFormat: '{series.name}: {point.percentage:.1f} %<br> Total : {point.y}'
+          },
+          plotOptions: {
+            pie: {
+              dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>:<br> Taux: {point.percentage:.1f} %<br>Total: {point.y} stagiaire(s)',
+              }
+            }
+          },
           series: [
               {
                   data: chartData(table,8),
@@ -348,7 +363,7 @@
  // On each draw, update the data in the chart
  table.on('draw', function () {
      chart.series[0].setData(chartData(table,8));
-     chart.series[0].setName("Total");
+     chart.series[0].setName("Taux");
      chart2.series[0].setData(chartData(table,2));
      chart2.series[0].setName("Total");
 

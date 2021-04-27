@@ -295,6 +295,22 @@ select > .placeholder {
     padding-bottom: 0px !important;
   }
 
+  .placescardfc{
+    border-left: 5px solid red !important;
+  }
+
+  .placescardfi{
+    border-left: 5px solid green !important;
+  }
+
+  .progress {
+    height: 2em;
+  }
+
+  .resumecard{
+    height: 100% !important;
+  }
+
 
      
   .dt-button{
