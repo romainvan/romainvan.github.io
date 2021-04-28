@@ -25,7 +25,7 @@
             <div class="col-md-8 offset-md-1 mb-2">
                 <div class="input-group">
                     <div class="form-control-container col-md-5 whiteinput autocomplete">
-                        <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" value="1234567A" onchange='changestagiaire(this)' placeholder="Choix de l'agent">
+                        <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" value="1234567A" placeholder="Choix de l'agent">
                         <datalist id="code">
                             <option value="9800000N">
                             <option value="1234567A">
@@ -182,13 +182,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
   });
-
-  function changestagiaire(elem){
-      console.log(elem.value)
-      console.log()
-      console.log(calendar.getEvents())
-  }
- 
 
   </script>
     
