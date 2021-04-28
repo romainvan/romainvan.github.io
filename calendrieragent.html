@@ -1,0 +1,196 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Calendrier stagiaire</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="fullcalendar/lib/main.css" rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentCofo3"></div>
+
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center"> Calendrier stagiaire </h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-1 mb-2">
+                <div class="input-group">
+                    <div class="form-control-container col-md-5 whiteinput autocomplete">
+                        <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" value="1234567A" onchange='changestagiaire(this)' placeholder="Choix de l'agent">
+                        <datalist id="code">
+                            <option value="9800000N">
+                            <option value="1234567A">
+                        </datalist>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-10 offset-md-1" id="calendar">
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="footercofo2"></div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="titresession">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul >
+              <li id="datedebut">  </li>
+              <li id="datefin"> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src='fullcalendar/lib/main.js'></script>
+    <script src='fullcalendar/lib/locales/fr.js'></script>
+    <script src="script.js"></script>
+  
+    <script>
+      $(function(){
+        $("#includedContentCofo3").load("navac.html"); 
+        $("#footercofo2").load("footer.html"); 
+
+      });
+    </script>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+        left: 'prev,next today,datepicker',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+      },
+      locale: 'fr' ,
+      minTime: '08:30:00',
+      maxTime: '17:00:00',
+      navLinks: true,
+      businessHours: true, // display business hours
+      editable: true,
+      selectable: true,
+      contentHeight: 600,
+      eventLimit: true,
+      customButtons: {
+            // Add custom datepicker
+            datepicker: {
+                text: 'Choisir une date',
+                click: function(e) {
+                    picker.show();
+                }
+            }
+        },
+      eventClick: function(info) {
+        //alert('Event: ' + info.event.title);
+        //alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+        //alert('View: ' + info.view.type);
+
+        // change the border color just for fun
+        //info.el.style.borderColor = 'red';
+        $('#myModal').modal('show')
+        $('#titresession').text(info.event._def.title)
+        $('#datedebut').text("20")
+        var datedebut = info.event.start
+        var datefin = info.event.end
+        const options = {
+          timeZone:"Europe/Paris",
+          hour12 : false,
+          hour:  "2-digit",
+          minute: "2-digit",
+          weekday: "long",
+          year: "numeric",
+          month:"long",
+          day:"numeric"
+	      }
+        $('#datedebut').text("Date début: "+new Date(datedebut).toLocaleDateString("fr",options))
+        $('#datefin').text("Date fin: "+new Date(datefin).toLocaleDateString("fr",options))
+
+      },
+      businessHours: [ // specify an array instead
+        {
+            daysOfWeek: [ 2, 3, 4 ],
+            startTime: '08:30', 
+            endTime: '17:00'
+        },
+        {
+            daysOfWeek: [ 1 ],
+            startTime: '13:30', 
+            endTime: '17:00' 
+        },
+        {
+            daysOfWeek: [ 5 ], 
+            startTime: '8:30', 
+            endTime: '12:00' 
+        }
+      ],
+      
+      events: [
+        {
+          title: 'Accès à E - UV4 Sécurité Signalisation Mécanique',
+          start: '2021-04-26T13:30:00',
+          end: '2021-04-27T17:00:00',
+          
+        },
+        {
+          title: 'Accès à E - UV6 Technique EE - Energie',
+          start: '2021-08-25T08:30:00',
+          end: '2021-08-27T12:00:00',
+          
+        },
+      ]
+    });
+    calendar.render();
+    var i18n = {
+      previousMonth	: 'Mois précédent',
+      nextMonth		: 'Mois prochain',
+      months 			: ['Janvier','Février', 'Mars','Avril','Mai','Juin','Juillet','Août','Septembre',"Octobre","Novembre","Décembre"],
+      weekdays		: [" lundi "," mardi "," mercredi "," jeudi "," vendredi "," samedi ","dimanche"],
+      weekdaysShort	: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam','Dim']
+    };
+    var picker = new Pikaday({
+        field: document.querySelector('.fc-datepicker-button'),
+        format: 'yy-mm-dd',
+        i18n: i18n,
+        onSelect: function(dateString) {
+            picker.gotoDate(new Date(dateString));
+            calendar.gotoDate(new Date(dateString));
+        }
+    });
+  });
+
+  function changestagiaire(elem){
+      console.log(elem.value)
+      console.log()
+      console.log(calendar.getEvents())
+  }
+ 
+
+  </script>
+    
+</body>
+</html>
