@@ -311,6 +311,16 @@ select > .placeholder {
     height: 100% !important;
   }
 
+  .fc-daygrid-day .fc-day .fc-day-mon .fc-day-past .fc-day-other{
+    height: 10px !important;
+
+  }
+
+  .modal {
+    display: none;
+  }
+
+  
 
      
   .dt-button{
