@@ -380,15 +380,7 @@ select > .placeholder {
     display: none !important;
   }
 
-  .navindex{
-    z-index: 200;
-  }
-
-  .footerindex {
-    z-index: 100;
-  }
-
-  
+ 
 
   .dt-button{
     color: #fff !important;
