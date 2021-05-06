@@ -376,7 +376,7 @@ select > .placeholder {
     margin: 0 7px;
   }
 
-  .fc-daygrid-event-dot {
+  .fc-daygrid-event-dot,.fc .fc-list-event-dot {
     display: none !important;
   }
 

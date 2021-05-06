@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Calendrier campus</title>
+  <title>Calendrier groupe</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -21,7 +21,7 @@
     <nav role="navigation" class="mastnav">
         <ul class="mastnav-top">
             <li>
-            <a href="calendrierago.html" class="mastnav-item active">
+            <a href="calendrierago.html" class="mastnav-item">
                 <i class="icons-large-building icons-size-1x5 " aria-hidden="true"></i>
                 <span class="font-weight-medium">Campus</span>
             </a>
@@ -35,7 +35,7 @@
             </li>
 
             <li>
-            <a href="calendriergroupeago.html" class="mastnav-item">
+            <a href="calendriergroupeago.html" class="mastnav-item active">
                 <i class="icons-large-group icons-size-1x5 " aria-hidden="true"></i>
                 <span class="font-weight-medium">Groupes</span>
             </a>
@@ -46,8 +46,24 @@
     
 
     <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center"> Calendrier Campus Bègles </h1>
-        <div class="col-md-10 offset-md-1" id="calendar"></div>
+        <h1 class="text-center" id="titlegroupe"> Calendrier groupe </h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-1 mb-3">
+                <div class="input-group">
+                    <div class="form-control-container col-md-5 whiteinput autocomplete">
+                        <input list="code" type="text" id="groupe" class="whiteinput border-0 form-control" placeholder="Choix du groupe" onchange="changename()">
+                        <datalist id="code">
+                            <option value="VOIE-22-1">
+                            <option value="SE-22-1">
+                        </datalist>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-10 offset-md-1" id="calendar">
+
+            </div>
+        </div>
     </div>
     
     <div id="footerago2"></div>
@@ -70,7 +86,14 @@
     </script>
 
 <script>
-
+    function changename(){
+       if($("#groupe").val()==""){
+        $("#titlegroupe").text("Calendrier groupe")
+       }
+       else{
+        $("#titlegroupe").text("Calendrier du groupe "+$("#groupe").val())
+       }
+    }
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
 

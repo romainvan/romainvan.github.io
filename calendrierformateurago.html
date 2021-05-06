@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Calendrier campus</title>
+  <title>Calendrier formateur</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -21,14 +21,14 @@
     <nav role="navigation" class="mastnav">
         <ul class="mastnav-top">
             <li>
-            <a href="calendrierago.html" class="mastnav-item active">
+            <a href="calendrierago.html" class="mastnav-item">
                 <i class="icons-large-building icons-size-1x5 " aria-hidden="true"></i>
                 <span class="font-weight-medium">Campus</span>
             </a>
             </li>
 
             <li>
-            <a href="calendrierformateurago.html" class="mastnav-item">
+            <a href="calendrierformateurago.html" class="mastnav-item active">
                 <i class="icons-menu-account icons-size-1x5 " aria-hidden="true"></i>
                 <span class="font-weight-medium">Formateurs</span>
             </a>
@@ -46,8 +46,24 @@
     
 
     <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center"> Calendrier Campus Bègles </h1>
-        <div class="col-md-10 offset-md-1" id="calendar"></div>
+        <h1 class="text-center" id="titleformateur"> Calendrier formateur </h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-1 mb-3">
+                <div class="input-group">
+                    <div class="form-control-container col-md-5 whiteinput autocomplete">
+                        <input list="code" type="text" id="formateur" class="whiteinput border-0 form-control" placeholder="Choix du formateur" onchange="changename()">
+                        <datalist id="code">
+                            <option value="Dupont Jean">
+                            <option value="Martin Caroline">
+                        </datalist>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col-md-10 offset-md-1" id="calendar">
+
+            </div>
+        </div>
     </div>
     
     <div id="footerago2"></div>
@@ -70,7 +86,15 @@
     </script>
 
 <script>
-
+    function changename(){
+       console.log($("#formateur").val())
+       if($("#formateur").val()==""){
+        $("#titleformateur").text("Calendrier formateur")
+       }
+       else{
+        $("#titleformateur").text("Calendrier de "+$("#formateur").val())
+       }
+    }
     document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
 
