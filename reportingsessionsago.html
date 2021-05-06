@@ -90,9 +90,9 @@
             <div class="col-md-5">
               <div id="container2" style="width:90%; height:100%"> </div>
             </div>
-            <div class="col-md-4 offset-md-5 mt-3 whitecard">
+            <div class="col-md-3 offset-md-5 mt-3 whitecard">
               <div class="card whitecard">
-                <h2 class="card-header text-center whitecard pb-0"> Taux de remplissage : </h2>
+                <h2 class="card-header text-center whitecard pb-0"> Taux de remplissage de l'ensemble des sessions : </h2>
                 <h1 class="card-header text-center whitecard" id="taux"> </h1>
               </div>
             </div>
@@ -396,6 +396,17 @@
           title: {
               text: 'Code RAF',
           },
+          tooltip: {
+            pointFormat: 'Nombre de session(s) {point.y}'
+          },
+          plotOptions: {
+            pie: {
+              dataLabels: {
+                enabled: true,
+                format: '<b>{point.y} session(s) {point.name}',
+              }
+            }
+          },
           series: [
               {
                   data: chartData(table,0),
@@ -405,14 +416,47 @@
 
       var chart2 = Highcharts.chart('container2', {
           chart: {
-              type: 'pie',
+            type: 'column'
           },
           title: {
               text: 'Taux de remplissage',
           },
+          xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+          },
+          tooltip: {
+            pointFormat: 'Taux de remplissage {point.y}%'
+          },
+          plotOptions: {
+            pie: {
+              dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}: {point.y}%',
+              }
+            }
+          },
           series: [
               {
                   data: tauxremplissage(table),
+                  colorByPoint: true,
+                  dataLabels: {
+                    enabled: true,
+                    color: '#FFFFFF',
+                    align: 'right',
+                    format: '{point.y:.1f} %', // one decimal
+                    y: 30, // 10 pixels down from the top
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
               },
           ],
       });
