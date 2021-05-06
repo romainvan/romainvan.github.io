@@ -78,17 +78,23 @@
               </div>
             </div> <!-- col-md-3 -->
             <div class="col-md-2 offset-md-7">
-              <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
+              <button onclick="showGraph()" class="btn btn-primary mb-3"> Afficher graphiques</button>
             </div>
           </div>
         </div>
-        <div class="col-md-11 mt-5 ofsset-md-1" id="graph">
+        <div class="col-md-12" id="graph">
           <div class="row">
             <div class="col-md-5 offset-md-2">
               <div id="container" style="width:90%; height:100%"> </div>
             </div>
             <div class="col-md-5">
               <div id="container2" style="width:90%; height:100%"> </div>
+            </div>
+            <div class="col-md-4 offset-md-5 mt-3 whitecard">
+              <div class="card whitecard">
+                <h2 class="card-header text-center whitecard pb-0"> Taux de remplissage : </h2>
+                <h1 class="card-header text-center whitecard" id="taux"> </h1>
+              </div>
             </div>
           </div>
         </div>
@@ -105,6 +111,8 @@
                   <th scope="col"> Division métier</th>
                   <th scope="col"> Groupe </th>
                   <th scope="col"> Typologie</th>
+                  <th scope="col"> Théorique</th>
+                  <th scope="col"> Inscrits</th>
               </tr>
             </thead>
             <tbody class="tbody">
@@ -114,12 +122,30 @@
                 <td> Protections MICOM P12x</td>
                 <td> NVE0000047</td>
                 <td> Bègles</td>
-                <td> 23/06/2021</td>
-                <td> 25/06/2021</td>
+                <td> 02/06/2021</td>
+                <td> 03/06/2021</td>
                 <td> Caténaire</td>
                 <td> ISOLE</td>
                 <td> Continue</td>
+                <td> 12 </td>
+                <td> 11 </td>
               </tr>
+
+              <tr>
+                <td> VE200200</td>
+                <td> Protections MICOM P12x</td>
+                <td> NVE0000053</td>
+                <td> Bègles</td>
+                <td> 23/06/2021</td>
+                <td> 24/06/2021</td>
+                <td> Caténaire</td>
+                <td> ISOLE</td>
+                <td> Continue</td>
+                <td> 12 </td>
+                <td> 10 </td>
+              </tr>
+
+              
              
               <tr>
                 <td> VSC10500TS</td>
@@ -131,18 +157,36 @@
                 <td> Produit Train</td>
                 <td> ISOLE</td>
                 <td> Continue</td>
+                <td> 16 </td>
+                <td> 13 </td>
               </tr>
             
               <tr>
                 <td> VVI12000TS </td>
                 <td> Agent PN en travaux TS</td>
-                <td> NVV0000861</td>
+                <td> NVV0000751</td>
                 <td> Bègles</td>
                 <td> 15/06/2021</td>
                 <td> 16/06/2021</td>
                 <td> Voie</td>
                 <td> ISOLE</td>
                 <td> Initiale</td>
+                <td> 8 </td>
+                <td> 6 </td>
+              </tr>
+
+              <tr>
+                <td> VVI12000TS </td>
+                <td> Agent PN en travaux TS</td>
+                <td> NVV0000861</td>
+                <td> Bègles</td>
+                <td> 26/06/2021</td>
+                <td> 27/06/2021</td>
+                <td> Voie</td>
+                <td> ISOLE</td>
+                <td> Initiale</td>
+                <td> 8 </td>
+                <td> 7 </td>
               </tr>
               
               <tr>
@@ -155,6 +199,8 @@
                 <td> Voie</td>
                 <td> ISOLE</td>
                 <td> Continue</td>
+                <td> 16 </td>
+                <td> 15 </td>
               </tr>
 
               <tr>
@@ -167,6 +213,22 @@
                 <td> Signalisation</td>
                 <td> ISOLE</td>
                 <td> Continue</td>
+                <td> 12 </td>
+                <td> 10 </td>
+              </tr>
+
+              <tr>
+                <td> VT160000  </td>
+                <td> Réseaux IP et applicatifs SNCF</td>
+                <td> NVT000185</td>
+                <td> Bègles</td>
+                <td> 07/06/2021</td>
+                <td> 11/06/2021</td>
+                <td> Signalisation</td>
+                <td> ISOLE</td>
+                <td> Continue</td>
+                <td> 12 </td>
+                <td> 7 </td>
               </tr>
              
             </tbody>
@@ -346,11 +408,11 @@
               type: 'pie',
           },
           title: {
-              text: 'Typologie',
+              text: 'Taux de remplissage',
           },
           series: [
               {
-                  data: chartData(table,8),
+                  data: tauxremplissage(table),
               },
           ],
       });
@@ -359,35 +421,74 @@
     table.on('draw', function () {
         chart.series[0].setData(chartData(table,0));
         chart.series[0].setName("Total");
-        chart2.series[0].setData(chartData(table,8));
-        chart2.series[0].setName("Total");
+        chart2.series[0].setData(tauxremplissage(table));
+        chart2.series[0].setName("Taux de remplissage");
 
     });
       })
 
-      function chartData(table,column) {
-    var counts = {};
- 
-    // Count the number of entries for each position
-    table
-        .column(column, { search: 'applied' })
-        .data()
-        .each(function (val) {
-            if (counts[val]) {
-                counts[val] += 1;
-            } else {
-                counts[val] = 1;
-            }
-        });
- 
-    // And map it to the format highcharts uses
-    return $.map(counts, function (val, key) {
-        return {
-            name: key,
-            y: val,
-        };
-    });
-}
+    function chartData(table,column) {
+      var counts = {};
+  
+      // Count the number of entries for each position
+      table
+          .column(column, { search: 'applied' })
+          .data()
+          .each(function (val) {
+              if (counts[val]) {
+                  counts[val] += 1;
+              } else {
+                  counts[val] = 1;
+              }
+          });
+
+      // And map it to the format highcharts uses
+      return $.map(counts, function (val, key) {
+          return {
+              name: key,
+              y: val,
+          };
+      });
+    }
+
+
+    function tauxremplissage(table) {
+      var counts = {};
+      var res = {};
+      // Count the number of entries for each position
+      table.rows({ search: 'applied' }).every(function(){
+        var row = this.data()
+        var val = row[0]
+        if (res[val]) {
+          res[val][0] += parseInt(row[9])
+          res[val][1] += parseInt(row[10])
+        } else {
+          res[val] = [parseInt(row[9]),parseInt(row[10])]
+        }
+      })
+      var total1=0
+      var total2=0
+      for (const [key, value] of Object.entries(res)) {
+        var num = res[key][1] / res[key][0] * 100
+        total1 += res[key][1]
+        total2+= res[key][0]
+        counts[key] = parseFloat(num.toFixed(2))
+      }
+      var numtotal = total1 / total2 * 100
+      if(isNaN(numtotal))
+        numtotal=0
+      var tauxtotal = parseFloat(numtotal.toFixed(2))
+      $("#taux").text(tauxtotal + "%")
+      // And map it to the format highcharts uses
+      return $.map(counts, function (val, key) {
+          return {
+              name: key,
+              y: val,
+          };
+      });
+    }
+
+    
 
 function showGraph() {
   $("#graph").toggle()

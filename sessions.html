@@ -1,0 +1,409 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Suivi des sessions</title>
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+  
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAC8"></div>
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center"> Suivi des sessions </h1>
+        <div class="row">
+                <div class="col-md-2 offset-md-10 ">
+                  <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
+                </div>
+                <div class="col-md-11 mt-5 ofsset-md-1" id="graph">
+                    <div class="row">
+                      <div class="col-md-5 offset-md-2">
+                        <div id="container" style="width:90%; height:100%"> </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div id="container2" style="width:90%; height:100%"> </div>
+                      </div>
+                    </div>
+                </div>
+                                
+                <div class="col-md-12 mt-5">
+                    <div class="table-wrapper">
+                        <div class="table-scroller last-cell-fixed dragscroll">
+                          <table class="table display" id="example">
+                            <thead class="thead bg-secondary text-white">
+                              <tr>
+								  <th scope="col"> Date </th>		
+                                  <th scope="col"> Etablissement </th>
+                                  <th scope="col"> Code RAF </th>
+                                  <th scope="col"> Code Session </th>
+								  <th scope="col"> Nom Session </th>
+								  <th scope="col"> Campus </th>
+                                  <th scope="col"> Théorique </th>
+                                  <th scope="col"> Repart </th>
+								  <th scope="col"> Repart conso </th>
+                                  <th scope="col"> Pot commun donné </th>
+								  <th scope="col"> Pot commun conso </th>
+								  <th scope="col"> Présent </th>
+                              </tr>
+                            </thead>
+                            <tbody class="tbody">
+                              <tr>
+								<td> 10/04/21 - 15/04/21</td>
+								<td> Infrapôle Paris Sud-Est</td>
+                                <td> VT140000</td>
+                                <td> NVT000185</td>
+								<td> OPSEG-20-1</td>
+                                <td> Bègles</td>
+								<td> 20</td>
+                                <td> 4</td>
+								<td> 3</td>
+								<td> 1</td>
+                                <td> 0</td>
+								<td> 2</td>
+                              </tr>
+						
+							  <tr>
+								<td> 10/04/21 - 15/04/21</td>
+                                <td> Infrapôle Paris Nord</td>
+                                <td> VT140000</td>
+                                <td> NVT000185</td>
+								<td> OPSEG-20-1</td>
+                                <td> Bègles</td>
+								<td> 20</td>
+                                <td> 5</td>
+								<td> 5</td>
+								<td> 0</td>
+                                <td> 1</td>
+								<td> 6</td>
+                              </tr>
+
+                              <tr>
+								<td> 10/04/21 - 15/04/21</td>
+                                <td> Infrapôle Paris Rive Gauche</td>
+                                <td> VT140000</td>
+                                <td> NVT000185</td>
+								<td> OPSEG-20-1</td>
+                                <td> Bègles</td>
+								<td> 20</td>
+                                <td> 2</td>
+								<td> 0</td>
+								<td> 2</td>
+                                <td> 1</td>
+								<td> 1</td>
+                              </tr>
+							  
+							  
+							  
+							   <tr>
+								<td> 10/04/21 - 15/04/21</td>
+								<td> Infrapôle Paris Sud-Est</td>
+                                <td> VT160000</td>
+                                <td> NVT000187</td>
+								<td> JC-21-1</td>
+                                <td> Nanterre</td>
+								<td> 12</td>
+                                <td> 4</td>
+								<td> 3</td>
+								<td> 1</td>
+                                <td> 0</td>
+								<td> 3</td>
+                              </tr>
+						
+							  <tr>
+								<td> 10/04/21 - 15/04/21</td>
+                                <td> Infrapôle Paris Nord</td>
+                                <td> VT160000</td>
+                                <td> NVT000187</td>
+								<td> JC-21-1</td>
+                                <td> Nanterre</td>
+								<td> 12</td>
+                                <td> 5</td>
+								<td> 5</td>
+								<td> 0</td>
+                                <td> 2</td>
+								<td> 4</td>
+                              </tr>
+
+                              <tr>
+								<td> 10/04/21 - 15/04/21</td>
+                                <td> Infrapôle Paris Rive Gauche</td>
+                                <td> VT160000</td>
+                                <td> NVT000187</td>
+								<td> JC-21-1</td>
+                                <td> Nanterre</td>
+								<td> 12</td>
+                                <td> 2</td>
+								<td> 0</td>
+								<td> 2</td>
+                                <td> 1</td>
+								<td> 2</td>
+                              </tr>
+
+                              
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerac8"></div>
+
+<script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+<script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="script.js"></script>
+
+<script>
+  $(document).ready(function() {
+      var table = $('#example').DataTable({
+        dom: 'BPfrtip',
+        "pagingType": "full_numbers",
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide
+            }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              className : 'btn btn-warning btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export suivi sessions '+titleFile(),
+              filename : function() {
+                  return "Export_Suivi_Sessions_"+dateFile()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              filename : function() {
+                  return "Export_Suivi_Sessions_"+dateFile()
+              },
+              filename : function() {
+                  return "Export_Suivi_Sessions"
+              },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'LEGAL',
+                title : 'Export suivi des Sessions du '+titleFile(),
+                filename : function() {
+                    return "Export_Suivi_Sessions_"+dateFile()
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      //table.searchPanes.rebuildPane();
+      //console.log(table);
+      //var container = $('<div/>').insertBefore(table.table().container());
+      //console.log(container);
+      $('#example thead th').addClass('text-white');
+      var chart = Highcharts.chart('container', {
+          chart: {
+              type: 'pie',
+          },
+          title: {
+              text: 'Répartition',
+          },
+          tooltip: {
+            pointFormat: '{series.name}: {point.percentage:.1f} %<br> Total : {point.y}'
+          },
+          plotOptions: {
+            pie: {
+              dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>:<br> Taux: {point.percentage:.1f} %<br>Total: {point.y} stagiaire(s)',
+              }
+            }
+          },
+          series: [
+              {
+                  data: chartData(table,7),
+              },
+          ],
+      });
+
+      var chart2 = Highcharts.chart('container2', {
+          chart: {
+              type: 'pie',
+          },
+          title: {
+              text: 'Code RAF',
+          },
+          series: [
+              {
+                  data: chartData(table,2),
+              },
+          ],
+      });
+
+ // On each draw, update the data in the chart
+ table.on('draw', function () {
+     chart.series[0].setData(chartData(table,1));
+     chart.series[0].setName("Taux");
+     chart2.series[0].setData(chartData(table,2));
+     chart2.series[0].setName("Total");
+
+ });
+
+  } );
+
+function chartData(table,column) {
+    var counts = {};
+ 
+    // Count the number of entries for each position
+    table
+        .column(column, { search: 'applied' })
+        .data()
+        .each(function (val) {
+            if (counts[val]) {
+                counts[val] += 1;
+            } else {
+                counts[val] = 1;
+            }
+        });
+ 
+    // And map it to the format highcharts uses
+    return $.map(counts, function (val, key) {
+        return {
+            name: key,
+            y: val,
+        };
+    });
+}
+
+function chartSumData(table,column) {
+    var counts = {};
+	var values = {};
+	var nb = 0;
+    // Count the number of entries for each position
+    table
+        .column(column, { search: 'applied' })
+        .data()
+        .each(function (val) {
+            if (counts[val]) {
+                nb += counts[val];
+				values[val] = nb;
+            }
+        });
+ 
+    // And map it to the format highcharts uses
+    return $.map(counts, function (val, key) {
+        return {
+            name: key,
+            y: val,
+        };
+    });
+}
+
+
+function showGraph() {
+  $("#graph").toggle()
+}
+
+  $(function(){
+      $("#includedContentAC8").load("navago.html");
+      $("#footerac8").load("footer.html");
+      $("#graph").hide()
+      $(".dtsp-panesContainer").hide()
+    });
+
+  </script>
+
+</body>
+
+</html>

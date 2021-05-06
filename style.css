@@ -320,9 +320,76 @@ select > .placeholder {
     display: none;
   }
 
+  .whitecard {
+    background-color: white !important;
+  }
+  
+  .fc .fc-non-business{
+    background-color: #E8E8E8	!important;
+  }
+
+  .tooltipevent{
+    width:300px;/*
+    height:100px;*/
+    background:#ccc;
+    position:absolute;
+    z-index:10001;
+    transform:translate3d(-50%,-100%,0);
+    font-size: 0.8rem;
+    box-shadow: 1px 1px 3px 0px #888888;
+    line-height: 1rem;
+  }
+  .tooltipevent div{
+      padding:10px;
+  }
+  .tooltipevent div:first-child{
+      font-weight:bold;
+      color:White;
+      background-color:#888888;
+  }
+  .tooltipevent div:last-child{
+      background-color:white;
+      position:relative;
+  }
+  .tooltipevent div:last-child::after, .tooltipevent div:last-child::before{
+      width:0;
+      height:0;
+      border:solid 5px transparent;/*
+      box-shadow: 1px 1px 2px 0px #888888;*/
+      border-bottom:0;
+      border-top-color:whitesmoke;
+      position: absolute;
+      display: block;
+      content: "";
+      bottom:-4px;
+      left:50%;
+      transform:translateX(-50%);
+  }
+  .tooltipevent div:last-child::before{
+      border-top-color:#888888;
+      bottom:-5px;
+  }
+
+  .fc .fc-daygrid-event-harness {
+    background-color: #0088ce;
+    color : white;
+    margin: 0 7px;
+  }
+
+  .fc-daygrid-event-dot {
+    display: none !important;
+  }
+
+  .navindex{
+    z-index: 200;
+  }
+
+  .footerindex {
+    z-index: 100;
+  }
+
   
 
-     
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
