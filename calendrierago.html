@@ -24,7 +24,7 @@
             <li>
             <a href="calendrierago.html" class="mastnav-item active">
                 <i class="icons-large-building icons-size-1x5 " aria-hidden="true"></i>
-                <span class="font-weight-medium">Campus</span>
+                <span class="font-weight-medium">Global</span>
             </a>
             </li>
 
@@ -98,7 +98,10 @@
         </div>
        
         <div class="col-md-11 offset-md-1 row px-0">
-          <div class="col-md-11" id="calendar"></div>
+          <div class="col-md-11">
+            <div class="col-md-12" id="calendar"></div>
+            <div class="col-md-12" id="calendar2"></div>
+          </div>
           <div class="col-md-1 row" id="legend">
             <div class="col-md-12">
               <span class="dot bg-success"> </span>
@@ -137,20 +140,35 @@
     <script src='fullcalendar/lib/locales/fr.js'></script>
     <script src="script.js"></script>
     <script src="calendarall.js"></script>
+    <script src="calendarmetier.js"></script>
+
   
     <script>
       $(function () {
+        $("#legend").hide()
         $("#includedContentAgo3").load("navago.html"); 
         $("#footerago2").load("footer.html"); 
         $('[data-toggle="tooltip"]').tooltip()
         $("#calendar").hide()
-        $("#legend").hide()
+        $("#calendar2").hide()
+
 
       })
 
       function displaycalender() {
-        $("#calendar").show()
-        $("#legend").show()
+        var metier = $("#metier").val()
+        if(metier==null || metier == "Tout"){
+          $("#calendar").show()
+          $("#legend").show()
+          $("#calendar2").hide()
+        }
+        else{
+          $("#calendar").hide()
+          $("#legend").show()
+          $("#calendar2").show()
+
+        }
+        
 
       }
     </script>

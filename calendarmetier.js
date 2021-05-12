@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
+    var calendarEl = document.getElementById('calendar2');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
     headerToolbar: {
@@ -103,80 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             end: new Date('2021-06-24T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
             classNames : ['bg-success']
-        },
-        {
-            id : 'c',
-            title: 'NVV0000861 : Agent PN en travaux TS',
-            start: new Date('2021-06-15T08:30:00'),
-            end: new Date('2021-06-15T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
-        },
-        {
-            id : 'c',
-            title: 'NVV0000861 : Agent PN en travaux TS',
-            start: new Date('2021-06-16T08:30:00'),
-            end: new Date('2021-06-16T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
-        },
-        {
-            id : 'd',
-            title: 'NVE0000120 : Maintenance - Eurobalises',
-            start: new Date('2021-06-01T08:30:00'),
-            end: new Date('2021-06-01T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
-        },
-        {
-            id : 'd',
-            title: 'NVE0000120 : Maintenance - Eurobalises',
-            start: new Date('2021-06-02T08:30:00'),
-            end: new Date('2021-06-02T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
-        },
-        {
-            id : 'e',
-            title: "NVE0001025 : Formation DPX et spécialistes CREQ à l'Y9000",
-            start: new Date('2021-06-01T08:30:00'),
-            end: new Date('2021-06-01T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-danger']
-        },
-        {
-            id : 'e',
-            title: "NVE0001025 : Formation DPX et spécialistes CREQ à l'Y9000",
-            start: new Date('2021-06-02T13:30:00'),
-            end: new Date('2021-06-02T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-danger']
-        },
-        {
-            id : 'e',
-            title: "NVE0001025 : Formation DPX et spécialistes CREQ à l'Y9000",
-            start: new Date('2021-06-03T13:30:00'),
-            end: new Date('2021-06-03T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-danger']
-        },
-        {
-            id : 'f',
-            title: 'NVV0000251 : Agent PN en travaux TS',
-            start: new Date('2021-06-02T08:30:00'),
-            end: new Date('2021-06-02T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
-        },
-        {
-            id : 'f',
-            title: 'NVV0000251 : Agent PN en travaux TS',
-            start: new Date('2021-06-03T08:30:00'),
-            end: new Date('2021-06-03T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
-        },        
-             
+        },          
         
     ],
     });
