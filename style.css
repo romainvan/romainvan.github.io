@@ -384,7 +384,7 @@ select > .placeholder {
     display: none !important;
   }
 
-  #valid {
+  .valid {
     margin-top: 1.9em;
   }
 

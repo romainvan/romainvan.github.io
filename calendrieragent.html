@@ -34,8 +34,37 @@
                    
                 </div>
             </div>
-            <div class="col-md-10 offset-md-1" id="calendar">
-
+            <div class="col-md-11 offset-md-1 row px-0">
+              <div class="col-md-11">
+                <div class="col-md-12" id="calendar"></div>
+              </div>
+              <div class="col-md-1 row" id="legend">
+                <div class="col-md-12">
+                  <span class="dot bg-success"> </span>
+                  <p class="legendinline"> Caténaire</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-warning"> </span>
+                  <p class="legendinline"> Voie</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-primary"> </span>
+                  <p class="legendinline"> Signalisation</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-danger"> </span>
+                  <p class="legendinline"> Produit Train</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-dark"> </span>
+                  <p class="legendinline"> Circulation</p>
+                </div>
+                
+              </div>
             </div>
         </div>
     </div>
@@ -96,7 +125,7 @@
     <script>
       $(function(){
         $("#includedContentCofo3").load("navcofo.html"); 
-        $("#footercofo2").load("footer.html"); 
+        $("#footercofo2").load("footer.html");
 
       });
     </script>
@@ -186,33 +215,37 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'Accès à E - UV4 Sécurité Signalisation Mécanique',
           start: new Date('2021-04-26T13:30:00'),
           end: new Date('2021-04-26T17:00:00'),
+          classNames : ['bg-primary']
         },
         {
           id : 'a',
           title: 'Accès à E - UV4 Sécurité Signalisation Mécanique',
           start: new Date('2021-04-27T08:30:00'),
           end: new Date('2021-04-27T17:00:00'),
+          classNames : ['bg-primary']
         },            
         {
           id:'b',
           title: 'Accès à E - UV6 Technique EE - Energie',
           start: new Date('2021-08-25T08:30:00'),
-          end: new Date('2021-08-25T17:00:00')
+          end: new Date('2021-08-25T17:00:00'),
+          classNames : ['bg-primary']
         },
         {
           id:'b',
           title: 'Accès à E - UV6 Technique EE - Energie',
           start: new Date('2021-08-26T08:30:00'),
-          end: new Date('2021-08-26T17:00:00')
+          end: new Date('2021-08-26T17:00:00'),
+          classNames : ['bg-primary']
         },
         {
           id:'b',
           title: 'Accès à E - UV6 Technique EE - Energie',
           start: new Date('2021-08-27T08:30:00'),
-          end: new Date('2021-08-27T12:00:00')
+          end: new Date('2021-08-27T12:00:00'),
+          classNames : ['bg-primary']
         },
       ],
-      eventColor: '#0088ce'
     });
     calendar.render();
     var i18n = {
