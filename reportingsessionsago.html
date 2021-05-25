@@ -84,13 +84,13 @@
         </div>
         <div class="col-md-12" id="graph">
           <div class="row">
-            <div class="col-md-5 offset-md-2">
+            <div class="col-md-5 offset-md-1">
               <div id="container" style="width:90%; height:100%"> </div>
             </div>
             <div class="col-md-5">
               <div id="container2" style="width:90%; height:100%"> </div>
             </div>
-            <div class="col-md-5 offset-md-4 mt-3 h-10">
+            <div class="col-md-4 offset-md-4 mt-3 h-10">
                 <div id="container3" style="width:90%; height:70%"> </div>
             </div>
           </div>
@@ -465,7 +465,8 @@
 
       var chart3 = Highcharts.chart('container3', {
         chart: {
-          type: 'solidgauge'
+          type: 'solidgauge',
+          height: 280,
         },
 
         title: {
