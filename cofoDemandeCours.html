@@ -355,8 +355,11 @@
             {
       orderable: false,
       targets: "no-sort",
-    }
+            }
         ],
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
         lengthMenu: [
           [10, 25, 50, 100],
           [ '10 ', '25 ', '50 ', '100 ']
@@ -494,6 +497,7 @@
             },
         }
       });
+     
       var chart = Highcharts.chart('containercofo', {
           chart: {
               type: 'pie',

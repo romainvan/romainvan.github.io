@@ -184,6 +184,9 @@
       var table = $('#example').DataTable({
         dom: 'BPfrtip',
         "pagingType": "full_numbers",
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
         columnDefs:[
             {
                 searchPanes:{
