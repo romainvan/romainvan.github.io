@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean ',
             classNames : ['bg-success']
         },
+
         {
             id : 'b',
             title: 'NVE0000053 : Protections MICOM P12x',
