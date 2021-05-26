@@ -8,6 +8,7 @@ var calendar = new FullCalendar.Calendar(calendarEl, {
     right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
   },
   locale: 'fr' ,
+  weekNumbers : 'true',
   minTime: '08:30:00',
   maxTime: '17:00:00',
   navLinks: true,
