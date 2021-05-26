@@ -371,9 +371,7 @@ select > .placeholder {
   }
 
   .fc .fc-daygrid-event-harness {
-    background-color: white;
     color : white;
-    margin: 0 7px;
   }
 
   .fc .fc-list-table td {
