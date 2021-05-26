@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-02T13:30:00'),
             end: new Date('2021-06-02T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-success']
+            classNames : ['bg-success','pl-2']
         },
         {
             id : 'a',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-03T08:30:00'),
             end: new Date('2021-06-03T17:00:00'),
             description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-success']
+            classNames : ['bg-success','pl-2']
         },
 
         {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-23T13:30:00'),
             end: new Date('2021-06-23T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-success']
+            classNames : ['bg-success','pl-2']
         },
         {
             id : 'b',
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-24T08:30:00'),
             end: new Date('2021-06-24T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-success']
+            classNames : ['bg-success','pl-2']
         },
         {
             id : 'c',
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-15T08:30:00'),
             end: new Date('2021-06-15T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
+            classNames : ['bg-warning','pl-2']
         },
         {
             id : 'c',
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-16T08:30:00'),
             end: new Date('2021-06-16T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
+            classNames : ['bg-warning','pl-2']
         },
         {
             id : 'd',
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-01T13:30:00'),
             end: new Date('2021-06-01T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },
         {
             id : 'd',
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-02T08:30:00'),
             end: new Date('2021-06-02T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },
         {
             id : 'e',
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-01T08:30:00'),
             end: new Date('2021-06-01T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-danger']
+            classNames : ['bg-danger','pl-2']
         },
         {
             id : 'e',
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-02T13:30:00'),
             end: new Date('2021-06-02T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-danger']
+            classNames : ['bg-danger','pl-2']
         },
         {
             id : 'e',
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-03T13:30:00'),
             end: new Date('2021-06-03T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-danger']
+            classNames : ['bg-danger','pl-2']
         },
         {
             id : 'f',
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-02T08:30:00'),
             end: new Date('2021-06-02T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
+            classNames : ['bg-warning','pl-2']
         },
         {
             id : 'f',
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-03T08:30:00'),
             end: new Date('2021-06-03T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-warning']
+            classNames : ['bg-warning','pl-2']
         },
         {
             id : 'g',
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-03T08:30:00'),
             end: new Date('2021-06-03T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-success']
+            classNames : ['bg-success','pl-2']
         },
         {
             id : 'g',
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-04T08:30:00'),
             end: new Date('2021-06-04T12:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-success']
+            classNames : ['bg-success','pl-2']
         },
         {
             id : 'h',
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-05-31T13:30:00'),
             end: new Date('2021-05-31T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },    
         {
             id : 'h',
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-01T08:30:00'),
             end: new Date('2021-06-01T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },      
         {
             id : 'h',
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-02T08:30:00'),
             end: new Date('2021-06-02T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },   
         {
             id : 'h',
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-03T08:30:00'),
             end: new Date('2021-06-03T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },
         {
             id : 'h',
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-04T08:30:00'),
             end: new Date('2021-06-04T12:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },  
                       
         

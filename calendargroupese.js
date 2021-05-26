@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-05-31T13:30:00'),
             end: new Date('2021-05-31T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },
         {
             id : 'd',
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             start: new Date('2021-06-01T08:30:00'),
             end: new Date('2021-06-01T17:00:00'),
             description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-            classNames : ['bg-primary']
+            classNames : ['bg-primary','pl-2']
         },
        
         

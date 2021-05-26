@@ -78,7 +78,7 @@ eventMouseLeave: function(info) {
       start: new Date('2021-06-02T13:30:00'),
       end: new Date('2021-06-02T17:00:00'),
       description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-      classNames : ['bg-success']
+      classNames : ['bg-success','pl-2']
     },
     {
       id : 'a',
@@ -86,7 +86,7 @@ eventMouseLeave: function(info) {
       start: new Date('2021-06-03T08:30:00'),
       end: new Date('2021-06-03T17:00:00'),
       description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean ',
-      classNames : ['bg-success']
+      classNames : ['bg-success','pl-2']
     },
     {
       id : 'b',
@@ -94,7 +94,7 @@ eventMouseLeave: function(info) {
       start: new Date('2021-06-23T13:30:00'),
       end: new Date('2021-06-23T17:00:00'),
       description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-      classNames : ['bg-success']
+      classNames : ['bg-success','pl-2']
     },
     {
       id : 'b',
@@ -102,7 +102,7 @@ eventMouseLeave: function(info) {
       start: new Date('2021-06-24T08:30:00'),
       end: new Date('2021-06-24T17:00:00'),
       description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-      classNames : ['bg-success']
+      classNames : ['bg-success','pl-2']
     },
     {
       id : 'c',
@@ -110,7 +110,7 @@ eventMouseLeave: function(info) {
       start: new Date('2021-06-15T08:30:00'),
       end: new Date('2021-06-15T17:00:00'),
       description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-      classNames : ['bg-warning']
+      classNames : ['bg-warning','pl-2']
     },
     {
       id : 'c',
@@ -118,7 +118,7 @@ eventMouseLeave: function(info) {
       start: new Date('2021-06-16T08:30:00'),
       end: new Date('2021-06-16T17:00:00'),
       description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
-      classNames : ['bg-warning']
+      classNames : ['bg-warning','pl-2']
     },               
     
   ],
