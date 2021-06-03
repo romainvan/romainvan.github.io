@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Places rendues COFO </title>
+  <title>Places rendues AC</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -22,9 +22,9 @@
 <body class="d-flex flex-column">
 
     <div id="includedContentAC1"></div>
-    
-        <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Places rendues par les coordinateurs formations</h1>
+
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-5"> Places rendues par les animateurs consultants</h1>
         <div class="row">
             <div class="col-md-12 row">
                 <div class="col-md-4 ml-5">
@@ -66,100 +66,62 @@
                         </div>
                       </div>
                     </div> <!-- col md 4 -->
-                    <div class="col-md-2 row offset-md-5">
-                      <div class="col-md-12 mb-2">
-                        <button class="btn btn-primary" onclick="envoiZP()">
-                            Envoyer dans le pot commun de la ZP
-                        </button>
-                      </div>
-                      <div class="col-md-12">
-                        <button class="btn btn-success" onclick="envoiNational()">
-                            Envoyer dans le pot commun national
-                        </button>
-                      </div>
-                    </div>
-                    
-                </div> 
             </div>
-              
+
             <div class="col-md-12 mt-5">
+                <div class="col-md-12 row">
+                    <div class="col-md-2 offset-md-10">
+                        <button class="btn btn-success mb-2 btn-block"> Enregistrer</button>
+                    </div>
+                </div>
                 <div class="table-wrapper">
-                    <table class="table" id="placesrendues">
+                    <table class="table" id="placesrenduesac">
                         <thead class="thead bg-secondary">
-                          <th>
-                           
-                              <div class="custom-control custom-checkbox custom-checkbox-alone">
-                                <input type="checkbox" class="custom-control-input" id="examples-thead">
-                                <label class="custom-control-label" for="examples-thead"><span class="sr-only">Tout sélectionner</span></label>
-                              </div>
-                            
-                          </th>
-                            <th scope="col">Établissement</th>
-                            <th scope="col">Code RAF</th>
-                            <th scope="col">Code Session</th>
-                            <th scope="col">Groupe</th>
-                            <th scope="col">Lieu</th>
-                            <th scope="col">Date de début</th>
-                            <th scope="col">Date de fin </th>
-                            <th scope="col">Nombre de places accordées </th>
-                            <th scope="col">Nombre de places rendues </th>
-                            <th scope="col">Nombre d'inscrits </th>
+
+                            <th class="text-white" scope="col">Code RAF</th>
+                            <th class="text-white" scope="col">Code Session</th>
+                            <th class="text-white" scope="col">Groupe</th>
+                            <th class="text-white" scope="col">Lieu</th>
+                            <th class="text-white" scope="col">Date de début</th>
+                            <th class="text-white" scope="col">Date de fin </th>
+                            <th class="text-white" scope="col">Places rendues par  </th>
+                            <th class="text-white" scope="col">Nombre de places rendues </th>
+                            <th class="text-white" scope="col">Nombre de places prises par votre ZP </th>
+
                         </thead>
 
-                        <tbody class="tbody">
-                            
+                        <tbody>
+
                             <tr>
-                                <td>
-                                  
-                                    <div class="custom-control custom-checkbox custom-checkbox-alone">
-                                      <input type="checkbox" class="custom-control-input" id="examples-cell0">
-                                      <label class="custom-control-label" for="examples-cell0"><span class="sr-only">Aorem ipsum dolor sit amet, type Aenean commodo, ver 1</span></label>
-                                    </div>
-                                 
-                                </td>
-                                <td scope="col">  Infrapôle Paris-Est</td>
-                                <td scope="col">  VT160000</td>
-                                <td scope="col">  NVT000146</td>
-                                <td scope="col">  ISOLE</td>
-                                <td scope="col">  Bègles</td>
-                                <td scope="col">  21/06/2021</td>
-                                <td scope="col">  25/06/2021</td>
-                                <td scope="col">  3</td>
-                                <td scope="col">  1</td>
-                                <td scope="col">  2</td>
-                                
+                                <td> VT160000</td>
+                                <td> NVT000146</td>
+                                <td> ISOLE</td>
+                                <td> Bègles</td>
+                                <td> 21/06/2021	</td>
+                                <td> 25/06/2021	</td>
+                                <td> ZP A	</td>
+                                <td> 2	</td>
+                                <td > <input type="number" class="form-control" value="0"> </td>
                             </tr>
 
                             <tr>
-                                <td>
-                                  
-                                    <div class="custom-control custom-checkbox custom-checkbox-alone">
-                                      <input type="checkbox" class="custom-control-input" id="examples-cell1">
-                                      <label class="custom-control-label" for="examples-cell1"><span class="sr-only">Aorem ipsum dolor sit amet, type Aenean commodo, ver 1</span></label>
-                                    </div>
-                                  
-                                </td>
-                                <td scope="col">  Infrapôle Paris-Nord</td>
-                                <td scope="col">  VA620600</td>
-                                <td scope="col">  NVT0000151</td>
-                                <td scope="col">  ISOLE</td>
-                                <td scope="col">  Nanterre</td>
-                                <td scope="col">  28/06/2021</td>
-                                <td scope="col">  29/06/2021</td>
-                                <td scope="col">  5</td>
-                                <td scope="col">  1</td>
-                                <td scope="col">  3</td>
-                                
+                                <td> VA620600</td>
+                                <td> NVT0000151	</td>
+                                <td> ISOLE</td>
+                                <td> Nanterre</td>
+                                <td> 28/06/2021		</td>
+                                <td> 29/06/2021	</td>
+                                <td> ZP NEN </td>
+                                <td> 1	</td>
+                                <td > <input type="number" class="form-control" value="0"> </td>
                             </tr>
 
                         </tbody>
+                       
                     </table>
                 </div>
             </div>
         </div>
-
-
-
     </div>
     <div id="footerac2"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
@@ -173,30 +135,13 @@
     <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
     <script src="script.js"></script>
     <script>
-      $("#examples-thead").click(function() {
-        $("input[type=checkbox]").prop("checked", $(this).prop("checked"));
-      });
-      $("input[type=checkbox]").click(function() {
-        if (!$(this).prop("checked")) {
-          $("#examples-thead").prop("checked", false);
-        }
-      });
+        $(function(){
+            $("#includedContentAC1").load("navac.html");
+            $("#footerac2").load("footer.html"); 
+        });
 
-      $(function(){
-        $("#includedContentAC1").load("navac.html");
-        $("#footerac2").load("footer.html"); 
-      });
-
-      function envoiZP(){
-        window.confirm("Voulez-vous envoyez ces sessions dans le pot commun de votre ZP")
-      }
-
-      function envoiNational(){
-        window.confirm("Voulez-vous envoyez ces sessions dans le pot commun national")
-      }
-
-      $(document).ready(function() {
-      var table = $('#placesrendues').DataTable({
+         $(document).ready(function() {
+      var table = $('#placesrenduesac').DataTable({
         dom: 'BPfrtip',
         "pagingType": "full_numbers",
         "initComplete": function() {
@@ -207,7 +152,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -326,9 +271,7 @@
             },
         }
       });
-      $('#placesrendues thead th').addClass('text-white');
-      })
-
+         })
     </script>
 </body>
 </html>
