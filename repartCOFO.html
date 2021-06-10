@@ -29,9 +29,22 @@
     
     <div class="container-fluid flex-grow-1 flex-shrink-0">
 
-        <h1 class="text-center mb-5"> Répartition </h1>
+        <h1 class="text-center mb-5"> Répartition formation continue </h1>
         <div class="row">
             <div class="col-md-12">
+                <div class="row mb-2">
+                    <div class="col-md-3 ml-5">
+                        <label for="etab" class="ml-1"> Établissement</label>
+                        <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
+                        <datalist id="etab">
+                            <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
+                            <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
+                        </datalist>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+                    </div>
+                </div>
                 <div class="col-md-8 ml-5">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -101,7 +114,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="form-control-container col-md-5 whiteinput autocomplete">
+                        <div class="form-control-container col-md-2 whiteinput autocomplete">
                             <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
                             <datalist id="code">
                               <option value="VCE40124">
@@ -133,7 +146,7 @@
                             <p class="text-center my-1"> Lieu de formation :</p>
                         </div>
                         <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Lyon</p>
+                            <p class="text-center my-1"> Saint-Priest</p>
                         </div>
                         <div class="col-md-4">
                         </div>
@@ -266,7 +279,7 @@
                                     <tr class="trhead">
                                         <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="0"> <div class="cell-inner"> VT160000 - NVT0000146 </div></td>
                                         <td> Signalisation </td>  
-                                        <td> Lyon </td>
+                                        <td> Saint-Priest </td>
                                         <td> 21/06/2021 - 25/06/2021</td>
                                         <td> ISOLE </td>
                                         <td> 5</td>
@@ -372,7 +385,7 @@
                                     <tr class="trhead">
                                         <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="2">  <div class="cell-inner nopad"> VA670701 - NVT0000245 </div></td>
                                          <td> Signalisation </td>
-                                        <td> Bordeaux </td>
+                                        <td> Bègles </td>
                                         <td> 15/06/2021-17/06/2021</td>
                                         <td> ISOLE </td>
                                         <td> 15</td>
@@ -495,7 +508,7 @@
                                     <tr>
                                         <td data-toggle="modal" data-target="#ModalRepart"> VT160000 - NVT0000146</td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> Signalisation </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> Lyon </td>
+                                        <td data-toggle="modal" data-target="#ModalRepart"> Saint-Priest </td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> 21/06/2021 - 25/06/2021</td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> ISOLE </td>
                                         <td data-toggle="modal" data-target="#ModalRepart"> 5</td>
@@ -515,7 +528,7 @@
                                     <tr class="trhead">
                                         <td class="cell-caret"> VA670701 - NVT0000245</td>
                                         <td> Signalisation </td>
-                                        <td> Bordeaux </td>
+                                        <td> Bègles </td>
                                         <td> 15/06/2021-17/06/2021</td>
                                         <td> ISOLE </td>
                                         <td> 15</td>
@@ -556,7 +569,7 @@
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> VT160000 - NVT0000146</td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> Signalisation </td>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> Lyon </td>
+                                        <td onclick="affichemyDiv('affichemyDiv3')"> Saint-Priest </td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> 21/06/2021 - 25/06/2021</td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> ISOLE </td>
                                         <td onclick="affichemyDiv('affichemyDiv3')"> 5</td>
@@ -691,7 +704,7 @@
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv5')">  VA670701 - NVT0000245</td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> Signalisation </td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> Bordeaux </td>
+                                        <td onclick="affichemyDiv('affichemyDiv5')"> Bègles </td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> 15/06/2021-17/06/2021</td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> ISOLE </td>
                                         <td onclick="affichemyDiv('affichemyDiv5')"> 15</td>

@@ -6,23 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Pot commun National</title>
+  <title>Pot commun ZP</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script> 
+      $(function(){
+        $("#includedContentCofo4").load("navcofo.html"); 
+        $("#footercofo3").load("footer.html"); 
+      });
+    </script> 
+
+
 </head>
 
 <body class="d-flex flex-column">
     <div id="includedContentCofo4"></div>
     
-        <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Pot commun National </h1>
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-2"> Pot commun ZP formation initiale </h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="row mb-2">
@@ -62,11 +68,11 @@
                             </div>
                           </div>
                         </div>
-                        <div class="form-control-container col-md-2 whiteinput autocomplete">
-                            <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
+                        <div class="form-control-container col-md-3 whiteinput autocomplete">
+                            <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" placeholder="Parcours">
                             <datalist id="code">
-                              <option value="VCE40124">
-                              <option value="VA216000">
+                              <option value="CFOP - OP / Reconversion">
+                              <option value="JCV - Jeune Cadre Voie">
                             </datalist>
                         </div>
                         <div class="input-group-append">
@@ -83,33 +89,31 @@
                 <div class="col-md-11 mt-5 ml-5">
                     <div class="table-wrapper" data-component="table">
                         <div class="table-scroller dragscroll">
-                            <table class="table display" id="potnational">
+                            <table class="table">
                                 <thead class="thead bg-secondary">
                                     <tr>
-                                      <th scope="col"> <div class="cell-inner text-white"> Code RAF  </div> </th>
-                                      <th scope="col"> <div class="cell-inner text-white"> Code Session </div> </th>
-                                      <th scope="col"> <div class="cell-inner text-white"> Lieu  </div></th>
-                                      <th scope="col"> <div class="cell-inner text-white"> Date de début </div></th>
-                                      <th scope="col"> <div class="cell-inner text-white"> Date de fin </div></th>
-                                      <th scope="col"> <div class="cell-inner text-white"> Groupe </div></th>
-                                      <th scope="col"> <div class="cell-inner text-white"> Places restantes </div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Code parcours - Libellé parcours</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Date de début</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Date de fin</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
+                                      <th scope="col"><div class="cell-inner text-white">Places restantes</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
                                     <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> VA620600</div></td>
-                                        <td> NVT0000151  </td>
-                                        <td> Nanterre  </td>
-                                        <td> 28/06/2021 </td>
-                                        <td> 29/06/2021 </td>
-                                        <td> ISOLE  </td>
-                                        <td> 2 </td>
+                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> CFOP - OP / Reconversion </div></td>
+                                        <td>  Saint-Priest  </td>
+                                        <td>  05/01/2022 </td>
+                                        <td>  10/12/2022 </td>
+                                        <td>  LY AMV5 01/22 OP  </td>
+                                        <td>  1 </td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="0">
                                        
                                         <td colspan="2">
                                             <div class="cell-inner">
-                                                <select id="numcp10" class="form-control selectRepart my-2" onchange="changeCP('10')">
+                                                <select id="numcp1" class="form-control selectRepart my-2" onchange="changeCP('1')">
                                                     <option selected="selected" value="reset"> CP de l'agent</option>
                                                     <option value="1234567A">1234567A</option> 
                                                     <option value="8912345B">8912345B </option> 
@@ -120,59 +124,19 @@
                                         </td>
                                         <td colspan="3">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent10" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" name="nomagent" id="nomagent1" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
-                                        <td>
-                                            <div class="cell-inner">
-                                                <input type="text" name="codedemande" id="codedemande10" placeholder="Code demande" class=" mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="cell-inner">
-                                                <input type="text" name="dateDemande" id="datedemande10" placeholder="Date demande" class=" mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-                                    <tr class="trgroup" data-trgroup="0">
-                                       
-                                        <td colspan="2">
-                                            <div class="cell-inner">
-                                                <select id="numcp11" class="form-control selectRepart my-2" onchange="changeCP('11')">
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="1234567A">1234567A</option> 
-                                                    <option value="8912345B">8912345B </option> 
-                                                    <option value="6789123C">6789123C</option> 
-                                                    <option value="4567891D">4567891D</option> 
-                                                </select> 
-                                            </div> 
-                                        </td>
-                                        <td colspan="3">
-                                            <div class="cell-inner">
-                                                <input type="text" name="nomagent3" id="nomagent11" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="cell-inner">
-                                                <input type="text" name="codedemande3" id="codedemande11" placeholder="Code demande" class=" mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="cell-inner">
-                                                <input type="text" name="dateDemande3" id="datedemande11" placeholder="Date demande" class="mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
+                                        
                                     </tr>
 
                                     <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> VT160000</div></td>
-                                        <td> NVT0000146  </td>
-                                        <td> Bègles  </td>
-                                        <td> 05/07/2021 </td>
-                                        <td> 07/07/2021 </td>
-                                        <td> ISOLE  </td>
-                                        <td> 1 </td>
+                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> JCV - Jeune Cadre Voie</div></td>
+                                        <td>  Bègles  </td>
+                                        <td>  15/01/2022 </td>
+                                        <td>  25/06/2023 </td>
+                                        <td>  JCVB_21-01  </td>
+                                        <td>  2 </td>
                                     </tr>
                                     <tr class="trgroup" data-trgroup="1">
                                        
@@ -189,20 +153,38 @@
                                         </td>
                                         <td colspan="3">
                                             <div class="cell-inner">
-                                                <input type="text" name="nomagent2" id="nomagent20" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                <input type="text" name="nomagent" id="nomagent20" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
-                                        <td>
+                                        
+                                    </tr>
+
+                                    <tr class="trgroup" data-trgroup="1">
+                                       
+                                        <td colspan="2">
                                             <div class="cell-inner">
-                                                <input type="text" name="codedemande2" id="codedemande20" placeholder="Code demande" class=" mt-2 form-control" readonly>
-                                            </div>
+                                                <select id="numcp21" class="form-control selectRepart my-2" onchange="changeCP('21')">
+                                                    <option selected="selected" value="reset"> CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option value="8912345B">8912345B </option> 
+                                                    <option value="6789123C">6789123C</option> 
+                                                    <option value="4567891D">4567891D</option> 
+                                                </select> 
+                                            </div> 
                                         </td>
-                                        <td>
+                                        <td colspan="3">
                                             <div class="cell-inner">
-                                                <input type="text" name="dateDemande2" id="datedemande20" placeholder="Date demande" class=" mt-2 form-control" readonly>
+                                                <input type="text" name="nomagent" id="nomagent21" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
                                             </div>
                                         </td>
-                                    </tr>                                   
+                                       
+                                    </tr>
+
+                                    
+                                                      
+                                    
+                               
+                                   
                                 </tbody>
                             </table>
                         </div>
@@ -219,14 +201,6 @@
     </div>
     <div id="footercofo3"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
-    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
-    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
 
     <script>
         var object = new Object();
@@ -245,15 +219,6 @@
         }
 
     </script>
-
-    <script> 
-        $(function(){
-            $("#includedContentCofo4").load("navcofo.html"); 
-            $("#footercofo3").load("footer.html"); 
-        });
-    </script>
-
-       
 </body>
 
 </html>

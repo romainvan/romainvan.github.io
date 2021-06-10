@@ -1,0 +1,275 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Répartition COFO</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script> 
+      $(function(){
+        $("#includedContentCofo4").load("navcofo.html"); 
+        $("#footercofo3").load("footer.html"); 
+      });
+    </script> 
+
+
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentCofo4"></div>
+    
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-2"> Répartition formation initiale </h1>
+        <div class="row">
+            <div class="col-md-12 row">
+                <div class="col-md-3 ml-5">
+                    <label for="etab" class="ml-1"> Établissement</label>
+                    <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
+                    <datalist id="etab">
+                        <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
+                        <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
+                    </datalist>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+                </div>
+            </div>
+            <div class="col-md-11 ml-5 mb-5 row">
+                <div class="col-md-2 offset-md-10">
+                    <button class="btn btn-success mb-2 btn-block" onclick="confirmBtn()"> Enregistrer</button>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-scroller dragscroll">
+                        <table class="table">
+
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col"><div class="text-white">Code Parcours - Libellé Parcours</div></th>
+                                    <th scope="col"><div class="text-white">Division métier </div></th>
+                                    <th scope="col"><div class="text-white">Lieu</div></th>
+                                    <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
+                                    <th scope="col"><div class="text-white">Groupe</div></th>
+                                    <th scope="col"><div class="text-white">Besoin exprimé</div></th>
+                                    <th scope="col"><div class="text-white">Places accordées</div></th>
+                                    <th scope="col"><div class="text-white">Rendre des places</div></th>
+                                  </tr>
+                            </thead>
+
+                            <tbody class="tbody">
+                                <tr>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> CFOP - OP / Reconversion</td>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> Circulation </td>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> Saint-Priest </td>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> 05/01/2022 - 10/12/2022 </td>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> LY AMV5 01/22 OP </td>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
+                                    <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
+                                    <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                </tr>
+                                <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
+                                    <td colspan="1"></td>
+                                    <td colspan="6">
+                                        <table class="table mt-3">
+                                            <thead class="thead hiddentable">
+                                              <tr>
+                                                <th scope="col"><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody class="tbody">
+                                                <tr>
+                                                    <td>
+                                                        
+                                                        <select id="numcp41" class="form-control selectRepart my-2" onchange="changeCP('41')"> 
+                                                            <option selected="selected" value="reset"> CP de l'agent</option>
+                                                            <option value="1234567A">1234567A</option> 
+                                                            <option value="2345678F">2345678F</option> 
+                                                        </select> 
+                                                         
+                                                        
+                                                    </td>
+                                                    <td colspan="2">
+                                                        
+                                                            <input type="text" name="nomagent4" id="nomagent41" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                        
+                                                    </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td colspan="1"></td>
+                                </tr>
+
+                                <tr>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> JCV - Jeune Cadre Voie	</td>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> Voie </td>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> Bègles </td>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> 15/01/2022 - 25/06/2023 </td>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> JCVB_21-01 </td>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> 10</td>
+                                    <td onclick="affichemyDiv('affichemyDiv4')"> 2</td>
+                                    <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                </tr>
+                                <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
+                                    <td colspan="1"></td>
+                                    <td colspan="6">
+                                        <table class="table mt-3">
+                                            <thead class="thead hiddentable">
+                                              <tr>
+                                                <th scope="col"><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                              </tr>
+                                            </thead>
+                                            <tbody class="tbody">
+                                                <tr>
+                                                    <td>
+                                                        
+                                                        <select id="numcp42" class="form-control selectRepart my-2" onchange="changeCP('42')"> 
+                                                            <option selected="selected" value="reset"> CP de l'agent</option>
+                                                            <option value="8912345B">8912345B </option> 
+                                                            <option value="6789123C">6789123C</option> 
+                                                            <option value="3456789H">3456789H</option> 
+                                                        </select> 
+                                                         
+                                                        
+                                                    </td>
+                                                    <td colspan="2">
+                                                        
+                                                            <input type="text" name="nomagent4" id="nomagent42" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                        
+                                                    </td>
+                                                    
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        
+                                                        <select id="numcp43" class="form-control selectRepart my-2" onchange="changeCP('43')"> 
+                                                            <option selected="selected" value="reset"> CP de l'agent</option>
+                                                            <option value="8912345B">8912345B </option> 
+                                                            <option value="6789123C">6789123C</option> 
+                                                            <option value="3456789H">3456789H</option> 
+                                                        </select> 
+                                                         
+                                                        
+                                                    </td>
+                                                    <td colspan="2">
+                                                        
+                                                            <input type="text" name="nomagent4" id="nomagent43" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                        
+                                                    </td>
+                                                    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td colspan="1"></td>
+                                </tr>
+
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalRendre1" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border: 2px solid black;"> <br />
+                <h2 class="text-center my-4"> Rendre des places pour le parcours CFOP - OP / Reconversion - LY AMV5 01/22 OP	  </h1>
+                <div class="modal-body">
+                
+                        <div class="form-group">                    
+                          <label for="rendre"> Rendre des places</label>
+                          <input type="number" class="form-control" id="rendre" value=0>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-5">
+                                <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                            </div>
+                        </div>
+                        
+                                                           
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalRendre2" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border: 2px solid black;"> <br />
+                <h2 class="text-center my-4"> Rendre des places pour le parcours JCV - Jeune Cadre Voie - JCVB_21-01  </h1>
+                <div class="modal-body">
+                
+                        <div class="form-group">                    
+                          <label for="rendre"> Rendre des places</label>
+                          <input type="number" class="form-control" id="rendre" value=0>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-5">
+                                <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                            </div>
+                        </div>
+                        
+                                                           
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="footercofo3"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+
+    <script>
+        var object = new Object();
+        object["1234567A"] = {"nomPrenom" : "Dupont Martin" , "code" : "124782" , "date" : "20/09/2020"};
+        object["8912345B"] = {"nomPrenom" : "Durand Arthur" , "code" : "754329" , "date" : "22/10/2020"};
+        object["6789123C"] = {"nomPrenom" : "Fournier Gabriel" , "code" : "815637" , "date" : "01/12/2020"};
+        object["4567891D"] = {"nomPrenom" : "Muller Thomas" , "code" : "5746" , "date" : "11/12/2020"};
+        object["2345678F"] = {"nomPrenom" : "Roux Adèle" , "code" : "152743" , "date" : "10/05/2020"};
+        object["3456789H"] = {"nomPrenom" : "Legrand Barbara" , "code" : "453745" , "date" : "09/02/2021"};
+        object["4891234B"] = {"nomPrenom" : "Garcia Roger" , "code" : "482103" , "date" : "25/03/2021"};
+        object["5678912G"] = {"nomPrenom" : "Vasseur Cedric" , "code" : "501267" , "date" : "10/02/2021"};
+        object["6123456J"] = {"nomPrenom" : "Bailly Thomas" , "code" : "912457" , "date" : "21/10/2020"};
+        object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
+        object["reset"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
+
+        function affichemyDiv(id) {
+        var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "table-row";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function confirmBtn() {
+            confirm("Etes-vous sûr d'enregistrer ces modifications");
+        }
+
+        function changeCP(id){
+            var value = document.getElementById("numcp"+id).value;
+            document.getElementById("nomagent"+id).value = object[value].nomPrenom
+            document.getElementById("codedemande"+id).value = object[value].code
+            document.getElementById("datedemande"+id).value = object[value].date
+        }
+
+
+    </script>
+    
+</body>
+</html>

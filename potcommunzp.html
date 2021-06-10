@@ -31,7 +31,20 @@
         <h1 class="text-center mb-5"> Pot commun ZP </h1>
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-8 ml-5">
+                <div class="row mb-2">
+                    <div class="col-md-3 ml-5">
+                        <label for="etab" class="ml-1"> Établissement</label>
+                        <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
+                        <datalist id="etab">
+                            <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
+                            <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
+                        </datalist>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+                    </div>
+                </div>
+                <div class="col-md-8">
                     <div class="input-group">
                         <div class="input-group-prepend">
                           <div class="btn-group dropdown ml-5" data-component="select-radios">
@@ -55,7 +68,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="form-control-container col-md-5 whiteinput autocomplete">
+                        <div class="form-control-container col-md-2 whiteinput autocomplete">
                             <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
                             <datalist id="code">
                               <option value="VCE40124">

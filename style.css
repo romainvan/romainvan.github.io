@@ -403,6 +403,14 @@ select > .placeholder {
     display: inline-block;
   }
 
+  .btndate{
+    margin-top: 5%;
+  }
+
+  .btnvalid{
+    margin-top: 22%;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
