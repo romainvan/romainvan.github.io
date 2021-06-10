@@ -29,7 +29,7 @@
     
     <div class="container-fluid flex-grow-1 flex-shrink-0">
 
-        <h1 class="text-center mb-5"> Répartition formation continue </h1>
+        <h1 class="text-center mb-5"> Répartition sessions </h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="row mb-2">
@@ -479,6 +479,47 @@
                                             
                                         </td>
                                     </tr>
+
+                                    <tr class="trhead">
+                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="4"> <div class="cell-inner"> VENCRTTXTS - NVT0000791 </div></td>
+                                        <td> Voie </td>  
+                                        <td> Bègles </td>
+                                        <td> 21/06/2021 - 25/06/2021</td>
+                                        <td> JCVB_21-01	 </td>
+                                        <td> </td>
+                                        <td> 1</td>
+                                        <td> <button class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                    </tr>
+                                    <tr class="trgroup" data-trgroup="4">
+                                       
+                                        <td>
+                                            
+                                                <select name="numcp" id="numcp40" value="2345678F" class="form-control selectRepart my-2" onchange="changeCPFI('40')"> 
+                                                    <option value="reset"> CP de l'agent</option>
+                                                    <option value="1234567A">1234567A</option> 
+                                                    <option selected="selected" value="2345678F">2345678F</option> 
+                                                </select> 
+                                             
+                                        </td>
+                                        <td colspan="2">
+                                            
+                                                <input type="text" name="nomagent" id="nomagent40" placeholder="Nom Prénom" value="Berger Nicolas" class="mt-2 form-control" readonly>
+                                            
+                                        </td>
+                                        <td colspan="2">
+                                            
+                                                <input type="text" name="codedemande" id="codedemande40" placeholder="Code demande" class=" mt-2 form-control" readonly>
+                                            
+                                        </td>
+                                        <td colspan="2">
+                                            
+                                                <input type="text" name="dateDemande" id="datedemande40" placeholder="Date demande" class=" mt-2 form-control" readonly>
+                                            
+                                        </td>
+                                    </tr>
+
+
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -535,6 +576,18 @@
                                         <td> 3</td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
+
+                                </tr>
+                                <tr>
+                                    <td data-toggle="modal" data-target="#ModalRepart3"> VENCRTTXTS - NVT0000791</td>  
+                                   <td data-toggle="modal" data-target="#ModalRepart3"> Voie </td>
+                                    <td data-toggle="modal" data-target="#ModalRepart3"> Bègles </td>
+                                    <td data-toggle="modal" data-target="#ModalRepart3"> 21/06/2021 - 25/06/2021</td>
+                                    <td data-toggle="modal" data-target="#ModalRepart3"> JCVB_21-01	 </td>
+                                    <td data-toggle="modal" data-target="#ModalRepart3"> </td>
+                                    <td data-toggle="modal" data-target="#ModalRepart3"> 1</td>
+                                    <td> <button class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                </tr>
                                     
                                 </tbody>
                             </table>
@@ -816,6 +869,61 @@
                                             </table>
                                         </td>
                                     </tr>
+
+
+                                    <tr>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> VENCRTTXTS - NVT0000791</td>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> Voie </td>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> Bègles </td>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> 21/06/2021 - 25/06/2021</td>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> JCVB_21-01	 </td>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> </td>
+                                        <td onclick="affichemyDiv('affichemyDiv7')"> 1</td>
+                                        <td> <button class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                    </tr>
+                                    <tr style="display: none;" id="affichemyDiv7" class="bodycolor">
+                                        <td colspan="8">
+                                            <table class="table mt-3">
+                                                <thead class="thead hiddentable">
+                                                  <tr>
+                                                    <th scope="col"><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                    <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                                    <th scope="col" colspan="2"><div class="text-white justify-content-center">Code demande</div></th>
+                                                    <th scope="col" colspan="2"><div class="text-white justify-content-center">Date demande</div></th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="tbody">
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                            <select id="numcp70" class="form-control selectRepart my-2" onchange="changeCPFI('70')"> 
+                                                                <option value="reset"> CP de l'agent</option>
+                                                                <option value="1234567A">1234567A</option> 
+                                                                <option selected="selected" value="2345678F">2345678F</option> 
+                                                            </select> 
+                                                             
+                                                            
+                                                        </td>
+                                                        <td colspan="2">
+                                                            
+                                                                <input type="text" name="nomagent4" id="nomagent70" placeholder="Nom Prénom" value="Berger Nicolas" class="mt-2 form-control" readonly>
+                                                            
+                                                        </td>
+                                                        <td colspan="2">
+                                                            
+                                                                <input type="text" name="codedemande4" id="codedemande70" placeholder="Code demande" class=" mt-2 form-control" readonly>
+                                                            
+                                                        </td>
+                                                        <td colspan="2">
+                                                            
+                                                                <input type="text" name="datedemande4" id="datedemande70" placeholder="Date demande" class=" mt-2 form-control" readonly>
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
                                     
                                     
                                 </tbody>
@@ -851,6 +959,47 @@
                                         <div class="col-md-4">
                                             <label for="datedemande51"> Date de la demande </label>
                                             <input type="text" name="dateDemande1" id="datedemande51" placeholder="Date demande" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 offset-md-5">
+                                            <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                                        </div>
+                                    </div>
+                                    
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ModalRepart3" class="modal fade">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content" style="border: 2px solid black;"> <br />
+                            <h2 class="text-center my-4"> Ajout des agents pour la session VENCRTTXTS - NVT0000791 </h1>
+                            <div class="modal-body">
+                                    <h2 class="text-center"> Agent 1</h2>
+                                    <div class="form-group">
+                                        <label for="numcp71"> Numéro de CP</label>
+                                        <select id="numcp71" class="form-control selectRepart my-2" onchange="changeCPFI('71')">                                             <option selected="selected" value="reset"> CP de l'agent</option>
+                                            <option value="reset"> CP de l'agent</option>
+                                            <option value="1234567A">1234567A</option> 
+                                            <option selected="selected" value="2345678F">2345678F</option> 
+                                        </select> 
+                                    </div>
+
+                                    <div class="form-row mb-3">
+                                        <div class="col-md-4">
+                                            <label for="nomagent51"> Nom et Prénom</label>
+                                            <input type="text" name="nameAgent1" id="nomagent71" value="Berger Nicolas" placeholder="Nom Prénom" class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="codedemande51"> Code de la demande</label>
+                                            <input type="text" name="codeDemande1" id="codedemande71" placeholder="Code demande" class="form-control" readonly>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="datedemande51"> Date de la demande </label>
+                                            <input type="text" name="dateDemande1" id="datedemande11" placeholder="Date demande" class="form-control" readonly>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -999,6 +1148,7 @@
         object["5678912G"] = {"nomPrenom" : "Vasseur Cedric" , "code" : "501267" , "date" : "10/02/2021"};
         object["6123456J"] = {"nomPrenom" : "Bailly Thomas" , "code" : "912457" , "date" : "21/10/2020"};
         object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
+        object["2345678F"] = {"nomPrenom" : "Berger Nicolas" , "code" : "924781" , "date" : "07/09/2020"};
         object["reset"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
 
         function affichemyDiv(id) {
@@ -1019,6 +1169,11 @@
             document.getElementById("nomagent"+id).value = object[value].nomPrenom
             document.getElementById("codedemande"+id).value = object[value].code
             document.getElementById("datedemande"+id).value = object[value].date
+        }
+
+        function changeCPFI(id) {
+            var value = document.getElementById("numcp"+id).value;
+            document.getElementById("nomagent"+id).value = object[value].nomPrenom
         }
 
 

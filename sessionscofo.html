@@ -21,10 +21,63 @@
     <div id="includedContentAC7"></div>
     
         <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Sessions Formation Continue de l'établissement Infrapôle Paris Nord </h1>
+        <h1 class="text-center mb-2"> Sessions de l'établissement </h1>
         <div class="row">
 
-            <div class="col-md-12 mt-5">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                  <div class="col-md-2 mb-2">
+                  
+                    <label for="date" class="font-weight-medium mb-2">Date début</label>
+                    <div data-component="picker">
+                      <div class="input-group" data-toggle>
+                        <div class="form-control-container">
+                          <input id="date" type="text" class="form-control whiteinput" placeholder="Sélectionner une date" data-input>
+                          <span class="form-control-state"></span>
+                        </div>
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                            <i class="icons-calendar" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+  
+                  <div class="col-md-2 mb-2">
+                    
+                    <label for="date" class="font-weight-medium mb-2">Date de fin</label>
+                    <div data-component="picker">
+                      <div class="input-group" data-toggle>
+                        <div class="form-control-container">
+                          <input id="date" type="text" class="form-control whiteinput" placeholder="Sélectionner une date" data-input>
+                          <span class="form-control-state"></span>
+                        </div>
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                            <i class="icons-calendar" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+  
+                  <div class="col-md-3">
+  
+                    <label for="etab" class="ml-1"> Établissement</label>
+                    <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement">
+                    <datalist id="etab">
+                        <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
+                        <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
+                    </datalist>
+  
+                  </div>
+                  <div class="col-md-1">
+                      <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+                  </div>
+                </div>
                 <div class="table-wrapper">
                     <div class="table-scroller last-cell-fixed dragscroll">
                       <table class="table display mb-5" id="sessionscofo">
@@ -36,8 +89,9 @@
                             <th scope="col">Lieu</th>
                             <th scope="col">Date de début</th>
                             <th scope="col">Date de fin</th>
-                            <th scope="col"> Division métier</th>
+                            <th scope="col">Division métier</th>
                             <th scope="col">Nombre d'agents</th>
+                            <th scope="col">Groupe</th>
                             <th scope="col" class="no-sort"> Actions </th>
                           </tr>
                         </thead>
@@ -51,6 +105,7 @@
                             <td> 25/06/2021</td>
                             <td> Voie</td>
                             <td> 1</td>
+                            <td> ISOLE</td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -73,6 +128,7 @@
                             <td> 29/06/2021</td>
                             <td> Signalisation</td>
                             <td> 2</td>
+                            <td> ISOLE</td>
                             <td>
                               <div class="btn-group dropdown align-right">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btncofo1" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -96,6 +152,7 @@
                             <td> 17/06/2021</td>
                             <td> Caténaire</td>
                             <td> 3</td>
+                            <td> ISOLE</td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,6 +166,104 @@
                               </div>
                             </td>
                           </tr>
+
+                          <tr>
+                            <td> VJCM0202</td>
+                            <td> RCS de circulation des trains et d'exploitation</td>
+                            <td> NVT0000458</td>
+                            <td> Bègles</td>
+                            <td> 15/01/2021</td>
+                            <td> 19/01/2021</td>
+                            <td> Signalisation</td>
+                            <td> 3</td>
+                            <td> JCVB_21-01</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td> VVTESM03</td>
+                            <td> TES M Annonceur Sentinelle ASP - LC</td>
+                            <td> NVT0000500</td>
+                            <td> Bègles</td>
+                            <td> 26/01/2021</td>
+                            <td> 28/01/2021</td>
+                            <td> Voie</td>
+                            <td> 3</td>
+                            <td> JCVB_21-01</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td> VPRCOACENC</td>
+                            <td> Module Coactivité (RSNCF/RSO) Encadrants</td>
+                            <td> NVT0000540</td>
+                            <td> Bègles</td>
+                            <td> 15/02/2021</td>
+                            <td> 19/02/2021</td>
+                            <td> Transverse</td>
+                            <td> 3</td>
+                            <td> JCVB_21-01</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td> VENC100RR</td>
+                            <td> Remplacement de rails, Ferrures en ADV incorporés</td>
+                            <td> NVT0000540</td>
+                            <td> Bègles</td>
+                            <td> 15/02/2021</td>
+                            <td> 19/02/2021</td>
+                            <td> Voie</td>
+                            <td> 3</td>
+                            <td> JCVB_21-01</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+
                         </tbody>
                       </table>
                     </div>
