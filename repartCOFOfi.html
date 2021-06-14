@@ -44,9 +44,7 @@
                 </div>
             </div>
             <div class="col-md-11 ml-5 mb-5 row">
-                <div class="col-md-2 offset-md-10">
-                    <button class="btn btn-success mb-2 btn-block" onclick="confirmBtn()"> Enregistrer</button>
-                </div>
+               
                 <div class="table-wrapper">
                     <div class="table-scroller dragscroll">
                         <table class="table">
@@ -54,13 +52,15 @@
                             <thead class="thead bg-secondary">
                                 <tr>
                                     <th scope="col"><div class="text-white">Code Parcours - Libellé Parcours</div></th>
-                                    <th scope="col"><div class="text-white">Division métier </div></th>
+                                    <th scope="col"><div class="text-white"> Métier </div></th>
                                     <th scope="col"><div class="text-white">Lieu</div></th>
                                     <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
                                     <th scope="col"><div class="text-white">Groupe</div></th>
                                     <th scope="col"><div class="text-white">Besoin exprimé</div></th>
                                     <th scope="col"><div class="text-white">Places accordées</div></th>
+                                    <!--
                                     <th scope="col"><div class="text-white">Rendre des places</div></th>
+                                    -->
                                   </tr>
                             </thead>
 
@@ -73,36 +73,97 @@
                                     <td onclick="affichemyDiv('affichemyDiv3')"> LY AMV5 01/22 OP </td>
                                     <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
                                     <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
+                                    <!--
                                     <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                    -->
                                 </tr>
                                 <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
-                                    <td colspan="1"></td>
-                                    <td colspan="6">
+                                    <td colspan="7">
                                         <table class="table mt-3">
                                             <thead class="thead hiddentable">
                                               <tr>
-                                                <th scope="col"><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
-                                                <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                                <th><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                <th colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                                <th><div class="text-white justify-content-center">Voir plus de détails </div></th>
+                                                <th><div class="text-white justify-content-center">Enregistrer </div></th>
+
                                               </tr>
                                             </thead>
                                             <tbody class="tbody">
                                                 <tr>
                                                     <td>
-                                                        
-                                                        <select id="numcp41" class="form-control selectRepart my-2" onchange="changeCP('41')"> 
-                                                            <option selected="selected" value="reset"> CP de l'agent</option>
-                                                            <option value="1234567A">1234567A</option> 
-                                                            <option value="2345678F">2345678F</option> 
-                                                        </select> 
-                                                         
-                                                        
+                                                        <input id="numcp41" list="datanumcp41" class="form-control mt-2" onchange="changeCP('41')" placeholder="CP de l'agent">
+                                                        <datalist id="datanumcp41">
+                                                            <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                            <option value="1234567A">1234567A - Dupont Martin </option> 
+                                                            <option value="2345678F">2345678F - Roux Adèle </option> 
+                                                        </datalist>                                                       
                                                     </td>
                                                     <td colspan="2">
                                                         
                                                             <input type="text" name="nomagent4" id="nomagent41" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
                                                         
                                                     </td>
+                                                    <td>
+                                                        <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours41')"></i>
+                                                    </td>
+                                                    <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
                                                     
+                                                </tr>
+                                                <tr style="display: none;" id="displayparcours41" class="bodycolor">
+                                                    <td colspan="5">
+                                                        <table class="table mt-3">
+                                                            <thead class="thead hiddentable">
+                                                              <tr>
+                                                                <th><div class="text-white justify-content-center"> </div></th>
+                                                                <th><div class="text-white justify-content-center">Code RAF</div></th>
+                                                                <th colspan="2"><div class="text-white justify-content-center"> Libellé code RAF  </div></th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox1" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox1"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> EC110300</td>
+                                                                    <td> Formation de base AMV - ATT/OP - ATT-TS</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox2" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox2"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> EC140100</td>
+                                                                    <td> Préparation pour formation complémentaire ACDV</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox3" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox3"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> EC140005</td>
+                                                                    <td> Formation complémentaire Agent Circulation de Double Voie</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox4" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox4"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> EC125002</td>
+                                                                    <td> Formation complém. Agent Sécurité Electrique</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -118,48 +179,111 @@
                                     <td onclick="affichemyDiv('affichemyDiv4')"> JCVB_22-01 </td>
                                     <td onclick="affichemyDiv('affichemyDiv4')"> 10</td>
                                     <td onclick="affichemyDiv('affichemyDiv4')"> 2</td>
+                                    <!--
                                     <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                    -->
                                 </tr>
                                 <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
-                                    <td colspan="1"></td>
-                                    <td colspan="6">
+                                    <td colspan="7">
                                         <table class="table mt-3">
                                             <thead class="thead hiddentable">
-                                              <tr>
-                                                <th scope="col"><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
-                                                <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
-                                              </tr>
-                                            </thead>
+                                                <tr>
+                                                  <th><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                  <th colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                                  <th><div class="text-white justify-content-center">Voir plus de détails </div></th>
+                                                  <th><div class="text-white justify-content-center">Enregistrer </div></th>
+  
+                                                </tr>
+                                              </thead>
                                             <tbody class="tbody">
                                                 <tr>
                                                     <td>
-                                                        
-                                                        <select id="numcp42" class="form-control selectRepart my-2" onchange="changeCP('42')"> 
-                                                            <option selected="selected" value="reset"> CP de l'agent</option>
-                                                            <option value="8912345B">8912345B </option> 
-                                                            <option value="6789123C">6789123C</option> 
-                                                            <option value="3456789H">3456789H</option> 
-                                                        </select> 
-                                                         
-                                                        
+                                                        <input id="numcp42" list="datanumcp42" class="form-control mt-2" onchange="changeCP('42')" placeholder="CP de l'agent">
+                                                        <datalist id="datanumcp42">
+                                                            <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                            <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                            <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                            <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                        </datalist>    
                                                     </td>
                                                     <td colspan="2">
                                                         
                                                             <input type="text" name="nomagent4" id="nomagent42" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
                                                         
                                                     </td>
+                                                    <td>
+                                                        <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours42')"></i>
+                                                    </td>
+                                                    <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
                                                     
+                                                </tr>
+
+                                                <tr style="display: none;" id="displayparcours42" class="bodycolor">
+                                                    <td colspan="5">
+                                                        <table class="table mt-3">
+                                                            <thead class="thead hiddentable">
+                                                              <tr>
+                                                                <th><div class="text-white justify-content-center"> </div></th>
+                                                                <th><div class="text-white justify-content-center">Code RAF</div></th>
+                                                                <th colspan="2"><div class="text-white justify-content-center"> Libellé code RAF  </div></th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox5" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox5"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VJCM0202 </td>
+                                                                    <td> RCS de circulation des trains et d'exploitation </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox6" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox6"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VVTESM03 </td>
+                                                                    <td> TES M Annonceur Sentinelle ASP - LC </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox7" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox7"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VPRCOACENC </td>
+                                                                    <td> Module Coactivité (RSNCF/RSO) Encadrants </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox8" class="custom-control-input" id="exampleCheckbox8" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox8"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VENC100RR </td>
+                                                                    <td> Remplacement de rails, Ferrures en ADV incorporés </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td>
                                                         
-                                                        <select id="numcp43" class="form-control selectRepart my-2" onchange="changeCP('43')"> 
-                                                            <option selected="selected" value="reset"> CP de l'agent</option>
-                                                            <option value="8912345B">8912345B </option> 
-                                                            <option value="6789123C">6789123C</option> 
-                                                            <option value="3456789H">3456789H</option> 
-                                                        </select> 
+                                                        <input id="numcp43" list="datanumcp43" class="form-control mt-2" onchange="changeCP('43')" placeholder="CP de l'agent">
+                                                        <datalist id="datanumcp43">
+                                                            <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                            <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                            <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                            <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                        </datalist>    
                                                          
                                                         
                                                     </td>
@@ -168,8 +292,70 @@
                                                             <input type="text" name="nomagent4" id="nomagent43" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
                                                         
                                                     </td>
+                                                    <td>
+                                                        <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours43')"></i>
+                                                    </td>
+                                                    <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
                                                     
                                                 </tr>
+                                                
+                                                <tr style="display: none;" id="displayparcours43" class="bodycolor">
+                                                    <td colspan="5">
+                                                        <table class="table mt-3">
+                                                            <thead class="thead hiddentable">
+                                                              <tr>
+                                                                <th><div class="text-white justify-content-center"> </div></th>
+                                                                <th><div class="text-white justify-content-center">Code RAF</div></th>
+                                                                <th colspan="2"><div class="text-white justify-content-center"> Libellé code RAF  </div></th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody class="tbody">
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox5" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox5"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VJCM0202 </td>
+                                                                    <td> RCS de circulation des trains et d'exploitation </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox6" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox6"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VVTESM03 </td>
+                                                                    <td> TES M Annonceur Sentinelle ASP - LC </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox7" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox7"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VPRCOACENC </td>
+                                                                    <td> Module Coactivité (RSNCF/RSO) Encadrants </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="custom-control custom-checkbox">
+                                                                            <input type="checkbox" name="exampleCheckbox8" class="custom-control-input" id="exampleCheckbox8" checked>
+                                                                            <label class="custom-control-label" for="exampleCheckbox8"></label>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td> VENC100RR </td>
+                                                                    <td> Remplacement de rails, Ferrures en ADV incorporés </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+
                                             </tbody>
                                         </table>
                                     </td>
@@ -246,7 +432,7 @@
         object["5678912G"] = {"nomPrenom" : "Vasseur Cedric" , "code" : "501267" , "date" : "10/02/2021"};
         object["6123456J"] = {"nomPrenom" : "Bailly Thomas" , "code" : "912457" , "date" : "21/10/2020"};
         object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
-        object["reset"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
+        object["Remise à zéro"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
 
         function affichemyDiv(id) {
         var x = document.getElementById(id);
@@ -263,9 +449,20 @@
 
         function changeCP(id){
             var value = document.getElementById("numcp"+id).value;
+            if(value=="Remise à zéro"){
+                document.getElementById("numcp"+id).value = ""
+            }
             document.getElementById("nomagent"+id).value = object[value].nomPrenom
-            document.getElementById("codedemande"+id).value = object[value].code
-            document.getElementById("datedemande"+id).value = object[value].date
+            
+        }
+
+        function showParcours(id){
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "table-row";
+            } else {
+                x.style.display = "none";
+            }
         }
 
 
