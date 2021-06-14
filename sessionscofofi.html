@@ -168,9 +168,9 @@
                             <td> NVT0000724</td>
                             <td> Saint-Priest	</td>
                             <td> 05/01/2022</td>
-                            <td> 09/06/2021</td>
+                            <td> 09/01/2021</td>
                             <td> Circulation</td>
-                            <td> 4</td>
+                            <td> 2</td>
                             <td> LY AMV5 01/22 OP	</td>
                             <td> 2</td>
                             <td>
@@ -179,9 +179,9 @@
                                   <span class="sr-only">Actions</span>
                                   <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
                                 </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
-                                  <button type="button" class="dropdown-item">Plus de détails</button>
-                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
+                                  <button type="button" class="dropdown-item" onclick="seeDetails()">Plus de détails</button>
+                                  <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
                                 </div>
                               </div>
                             </td>
@@ -381,13 +381,13 @@
 
       function seeStagiaires(){
           var array = window.location.href.split("/");
-          array[array.length-1]="listestagiaires.html";
+          array[array.length-1]="listestagiairesfi.html";
           location.href = array.join("/");
       }
 
       function seeDetails(){
         var array = window.location.href.split("/");
-        array[array.length-1]="detailsSessionsCOFO.html";
+        array[array.length-1]="detailsSessionsCOFOfi.html";
         location.href = array.join("/");
       }
     </script>
