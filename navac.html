@@ -15,10 +15,16 @@
                     <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropRepart">
+                    <h6 class="dropdown-header">Formation continue</h6>
                     <ul>
                         <li class="dropdown-item"><a href="repartAC.html"> Répartir par établissements</a></li>
                         <li class="dropdown-item"><a href="placesrendues.html"> Voir les places rendues COFO </a></li>
                         <li class="dropdown-item"><a href="placesrenduesac.html"> Voir les places rendues AC </a></li>
+                    </ul>
+                    <h6 class="dropdown-header">Formation initiale</h6>
+                    <ul>
+                        <li class="dropdown-item"><a href="repartACfi.html"> Répartir par établissements</a></li>
+                        <li class="dropdown-item"><a href="placesrenduesfi.html"> Voir les places rendues COFO </a></li>
                     </ul>
                 </div>
             </div>
@@ -31,8 +37,8 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropSessions">
                     <ul>
-                        <li class="dropdown-item"><a href="sessionsac.html"> Sessions FC</a></li>
-                        <li class="dropdown-item"><a href=""> Sessions FI </a></li>
+                        <li class="dropdown-item"><a href="sessionsac.html"> Formation continue</a></li>
+                        <li class="dropdown-item"><a href="sessionsacfi.html"> Formation initiale </a></li>
                     </ul>
                 </div>
             </div>
@@ -51,8 +57,20 @@
             </div>
         </li>
         <li class="toolbar-item separator-gray-500">
-            <a href="demandeac.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Demandes </a>
-        </li>  
+            <div class="btn-group dropdown">
+                <button class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2" type="button" id="dropRepart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="mycontrol">
+                    <span class="d-none d-xl-block">Demandes</span>
+                    <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropRepart">
+                    <ul>
+                        <li class="dropdown-item"><a href="demandeac.html"> Formation continue</a></li>
+                        <li class="dropdown-item"><a href="demandesacfi.html"> Formation initiale</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </li>
         <li class="toolbar-item separator-gray-500">
             <a href="reportingac.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Tableau de bord </a>
         </li>        

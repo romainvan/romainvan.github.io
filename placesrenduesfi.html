@@ -24,7 +24,7 @@
     <div id="includedContentAC1"></div>
     
         <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Places rendues par les COFOs en formation continue</h1>
+        <h1 class="text-center mb-5"> Places rendues par les COFOs en formation initiale</h1>
         <div class="row">
             <div class="col-md-12 row">
                 <div class="col-md-4 ml-5">
@@ -54,8 +54,8 @@
                         <div class="form-control-container col-md-5 whiteinput autocomplete">
                             <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
                             <datalist id="code">
-                              <option value="VCE40124">
-                              <option value="VA216000">
+                              <option value="JCV - Jeune Cadre Voie ">
+                              <option value="CFOP - OP / Reconversion">
                             </datalist>
                         </div>
                         <div class="input-group-append">
@@ -75,14 +75,12 @@
                     <table class="table" id="placesrendues">
                         <thead class="thead bg-secondary">
                             <th scope="col">Établissement</th>
-                            <th scope="col">Code RAF</th>
-                            <th scope="col">Code Session</th>
+                            <th scope="col">Code Parcours - Libellé Parcours </th>
+                            <th scope="col">Code RAF </th>
+                            <th scope="col">Libellé RAF </th>
                             <th scope="col">Lieu</th>
-                            <th scope="col">Date de début</th>
-                            <th scope="col">Date de fin </th>
-                            <th scope="col">Nombre de places accordées </th>
+                            <th scope="col">Groupe </th>
                             <th scope="col">Nombre de places rendues </th>
-                            <th scope="col">Nombre d'inscrits </th>
                             <th scope="col"> Pot commun ZP </th>
                             <th scope="col"> Pot commun National </th>
                             <th scope="col" class="no-sort">  </th>
@@ -93,14 +91,12 @@
                             <tr>
                                 
                                 <td scope="col">  Infrapôle Paris-Est</td>
-                                <td scope="col">  VT160000</td>
-                                <td scope="col">  NVT000146</td>
-                                <td scope="col">  Bègles</td>
-                                <td scope="col">  21/06/2021</td>
-                                <td scope="col">  25/06/2021</td>
-                                <td scope="col">  3</td>
+                                <td scope="col">  CFOP - OP / Reconversion	</td>
+                                <td scope="col">  EC140100  </td>
+                                <td scope="col">  Préparation pour formation complémentaire ACDV </td>
+                                <td scope="col">  Saint-Priest	</td>
+                                <td scope="col">  LY AMV5 01/22 OP	</td>
                                 <td scope="col">  1</td>
-                                <td scope="col">  2</td>
                                 <td scope="col">  <input class="form-control" type="number" id="num1" value="0" ></td>
                                 <td scope="col">  <input class="form-control" type="number" value="0"/></td>
                                 <td scope="col">  <button class="btn btn-success"> Valider </button></td>
@@ -110,17 +106,16 @@
                             <tr>
                                 
                                 <td scope="col">  Infrapôle Paris-Nord</td>
-                                <td scope="col">  VA620600</td>
-                                <td scope="col">  NVT0000151</td>
-                                <td scope="col">  Nanterre</td>
-                                <td scope="col">  28/06/2021</td>
-                                <td scope="col">  29/06/2021</td>
-                                <td scope="col">  5</td>
+                                <td scope="col">  JCV - Jeune Cadre Voie</td>
+                                <td scope="col">  VPRCOACENC </td>
+                                <td scope="col">  Module Coactivité (RSNCF/RSO) Encadrants</td>
+                                <td scope="col">  Bègles	</td>
+                                <td scope="col">  JCVB_22-01	</td>
                                 <td scope="col">  1</td>
-                                <td scope="col">  3</td>
-                                <td scope="col">  <input class="form-control" type="number" value="0"/></td>
+                                <td scope="col">  <input class="form-control" type="number" id="num1" value="0" ></td>
                                 <td scope="col">  <input class="form-control" type="number" value="0"/></td>
                                 <td scope="col">  <button class="btn btn-success"> Valider </button></td>
+                                
                             </tr>
 
                         </tbody>

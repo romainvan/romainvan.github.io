@@ -1,0 +1,387 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Demandes</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.dataTables.min.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentCofo3"></div>
+
+    <div class="container-fluid pb-3">
+        <h1 class="text-center"> Liste des demandes </h1>
+        <div class="row">
+                <div class="col-md-12 mt-5">
+                    <div class="table-wrapper">
+                        <div class="table-scroller last-cell-fixed dragscroll">
+                          <table class="table display" id="cofoencours">
+                            <thead class="thead bg-secondary">
+                              <tr>
+                                <th scope="col">Etablissement</th>
+                                <th scope="col">Métier</th>
+                                <th scope="col">Code parcours</th>
+                                <th scope="col">Libellé parcours</th>
+                                <th scope="col">Janvier</th>
+                                <th scope="col">Février</th>
+                                <th scope="col">Mars</th>
+                                <th scope="col">Avril</th>
+                                <th scope="col">Mai</th>
+                                <th scope="col">Juin</th>
+                                <th scope="col">Juillet</th>
+                                <th scope="col">Août</th>
+                                <th scope="col">Septembre</th>
+                                <th scope="col">Octobre</th>
+                                <th scope="col">Novembre</th>
+                                <th scope="col">Décembre</th>
+                              </tr>
+                            </thead>
+                            <tbody class="tbody">
+                             
+                                <tr>
+                                    <td> Infrapôle LGV Atlantique </td>
+                                    <td> Circulation</td>
+                                    <td> CFOP </td>
+                                    <td> OP / Reconversion</td>
+                                    <td> 1</td>
+                                    <td> 3</td>
+                                    <td> 2</td>
+                                    <td> 5</td>
+                                    <td> 7</td>
+                                    <td> 10</td>
+                                    <td> 0</td>
+                                    <td> 3</td>
+                                    <td> 1</td>
+                                    <td> 4</td>
+                                    <td> 6</td>
+                                    <td> 8</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td> Infrapôle Indre Limousin </td>
+                                    <td> Circulation</td>
+                                    <td> CFOP </td>
+                                    <td> OP / Reconversion</td>
+                                    <td> 6</td>
+                                    <td> 8</td>
+                                    <td> 14</td>
+                                    <td> 3</td>
+                                    <td> 4</td>
+                                    <td> 2</td>
+                                    <td> 4</td>
+                                    <td> 8</td>
+                                    <td> 9</td>
+                                    <td> 6</td>
+                                    <td> 7</td>
+                                    <td> 9</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td> Infrapôle LGV Atlantique </td>
+                                    <td> Circulation</td>
+                                    <td> CFTSTV </td>
+                                    <td> TS </td>
+                                    <td> 3</td>
+                                    <td> 5</td>
+                                    <td> 4</td>
+                                    <td> 8</td>
+                                    <td> 0</td>
+                                    <td> 1</td>
+                                    <td> 9</td>
+                                    <td> 4</td>
+                                    <td> 7</td>
+                                    <td> 8</td>
+                                    <td> 13</td>
+                                    <td> 3</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td> Infrapôle Indre Limousin </td>
+                                    <td> Circulation</td>
+                                    <td> CFTSTV </td>
+                                    <td> TS </td>
+                                    <td> 2</td>
+                                    <td> 4</td>
+                                    <td> 6</td>
+                                    <td> 7</td>
+                                    <td> 5</td>
+                                    <td> 0</td>
+                                    <td> 8</td>
+                                    <td> 7</td>
+                                    <td> 4</td>
+                                    <td> 3</td>
+                                    <td> 2</td>
+                                    <td> 10</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td> Infrapôle Indre Limousin </td>
+                                    <td> Voie</td>
+                                    <td> JCV </td>
+                                    <td> Jeune Cadre Voie </td>
+                                    <td> 16</td>
+                                    <td> 5</td>
+                                    <td> 12</td>
+                                    <td> 17</td>
+                                    <td> 9</td>
+                                    <td> 6</td>
+                                    <td> 4</td>
+                                    <td> 15</td>
+                                    <td> 8</td>
+                                    <td> 7</td>
+                                    <td> 9</td>
+                                    <td> 4</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td> Infrapôle LGV Atlantique </td>
+                                    <td> Voie </td>
+                                    <td> JCV </td>
+                                    <td> Jeune Cadre Voie </td>
+                                    <td> 10</td>
+                                    <td> 13</td>
+                                    <td> 8</td>
+                                    <td> 14</td>
+                                    <td> 9</td>
+                                    <td> 7</td>
+                                    <td> 8</td>
+                                    <td> 6</td>
+                                    <td> 12</td>
+                                    <td> 10</td>
+                                    <td> 8</td>
+                                    <td> 10</td>
+
+                                </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <div id="footercofo2"></div>
+
+   
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(function(){
+        $("#includedContentCofo3").load("navac.html"); 
+        $("#footercofo2").load("footer.html"); 
+        $("#graphcofo").hide()
+      });
+
+      function showGraph() {
+        $("#graphcofo").toggle()
+      }
+
+      $(document).ready(function() {
+      var table = $('#cofoencours').DataTable({
+        dom: 'BPfrtip',
+        colReorder: true,
+        "scrollX": false,
+        "pagingType": "full_numbers",
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+                searchPanes: {
+                    show: false
+                },
+                targets: [7]
+            },
+            {
+      orderable: false,
+      targets: "no-sort",
+    }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                  columns: [ 0,1,2,3,4,5,6]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export demandes en cours du '+titleFile(),
+              filename : function(){
+                  return "Export_Demandes_"+dateFile()
+              },
+              exportOptions: {
+                  columns: [ 0,1,2,3,4,5,6]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              },
+              customize: function (xlsx) {
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                $('row c[r^="G"]', sheet).each( function () {
+                  console.log($('is t', this).text())
+                  if ( $('is t', this).text() == 'En attente de place' ) {
+                        $(this).attr( 's', '20' );
+                  }
+                  else if($('is t', this).text() == 'Inscrit'){
+                    $(this).attr( 's', '15' );
+                  }
+                });
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              filename : function(){
+                  return "Export_Demandes_"+dateFile()
+              },
+              exportOptions: {
+                  columns: [ 0,1,2,3,4,5,6]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize : 'LEGAL',
+                title : 'Export demandes en cours du '+titleFile(),
+                filename : function(){
+                  return "Export_Demandes_"+dateFile()
+                },
+                exportOptions: {
+                  columns: [ 0,1,2,3,4,5,6]
+                },
+                customize: function (doc) {
+                  
+                  statut = doc.content[1].table.body
+                 
+                  for (var i = 1; i < statut.length; i++) {
+                    if (statut[i][6].text ==="En attente de place" ) {
+                      doc.content[1].table.body[i][6].fillColor = '#128fdc';
+                    }
+                    if (statut[i][6].text==="Inscrit") {
+                      doc.content[1].table.body[i][6].fillColor = '#82be00';
+                    }
+                  }
+
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                 
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+           
+      $('#cofoencours thead th').addClass('text-white');
+      })
+
+     
+    </script>
+    
+</body>
+</html>
