@@ -89,7 +89,7 @@
 								<td> </td>
                                 <td> 09/08/2021</td>
                                 <td> 13/08/2021</td>
-                                <td class="bg-info text-white"> ENCOURS </td>
+                                <td class="bg-info text-white"> EN COURS </td>
                               </tr>
 
                               <tr>
@@ -123,7 +123,7 @@
                                 <td> JCSE-21-3</td>
                                 <td> 25/08/2021</td>
                                 <td> 27/08/2021</td>
-                                <td class="bg-info text-white"> ENCOURS </td>
+                                <td class="bg-info text-white"> EN COURS </td>
                               </tr>
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
@@ -228,7 +228,7 @@
                   else if($('is t', this).text() == 'PASSEE'){
                     $(this).attr( 's', '15' );
                   }
-                  else if($('is t', this).text() == 'ENCOURS'){
+                  else if($('is t', this).text() == 'EN COURS'){
                     $(this).attr( 's', '20' );
                   }
                 });
@@ -267,7 +267,7 @@
                     if (statut[i][8].text==="ANNULEE") {
                       doc.content[1].table.body[i][8].fillColor = '#cd0037';
                     }
-                    if (statut[i][8].text==="ENCOURS") {
+                    if (statut[i][8].text==="EN COURS") {
                       doc.content[1].table.body[i][8].fillColor = '#009aa6 ';
                     }
                     if (statut[i][8].text==="PROCHAINEMENT") {

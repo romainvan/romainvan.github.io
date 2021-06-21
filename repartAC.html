@@ -31,92 +31,65 @@
         <div class="container-fluid flex-grow-1 flex-shrink-0">
         <h1 class="text-center mb-5"> Répartition </h1>
         <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-8 ml-5">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="btn-group dropdown" data-component="select-radios">
-                                <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup1">
-                                <span data-role="placeholder">Choix du mois</span>
-                                <i class="icons-arrow-down" aria-hidden="true"></i>
-                                </button>
-                                <div id="actionsgroup1" class="dropdown-menu dropdown-menu-right">
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action1" class="sr-only"/>
-                                    <label class="dropdown-item" for="action1">Janvier</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action2" class="sr-only"/>
-                                    <label class="dropdown-item" for="action2">Février</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action3" class="sr-only"/>
-                                    <label class="dropdown-item" for="action3">Mars</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action4" class="sr-only"/>
-                                    <label class="dropdown-item" for="action4">Avril</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action5" class="sr-only"/>
-                                    <label class="dropdown-item" for="action5">Mai</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action6" class="sr-only"/>
-                                    <label class="dropdown-item" for="action6">Juillet</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action8" class="sr-only"/>
-                                    <label class="dropdown-item" for="action8">Août</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action9" class="sr-only"/>
-                                    <label class="dropdown-item" for="action9">Septembre</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action20" class="sr-only"/>
-                                    <label class="dropdown-item" for="action20">Octobre</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action21" class="sr-only"/>
-                                    <label class="dropdown-item" for="action21">Novembre</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action22" class="sr-only"/>
-                                    <label class="dropdown-item" for="action22">Décembre</label>
-
-                                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action23" class="sr-only"/>
-                                    <label class="dropdown-item" for="action23">Annuel</label>
-                                </div>
+            <div class="col-md-12 row">
+                <div class="col-md-2 ml-3">
+                    <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                      <div data-component="picker">
+                          <div class="input-group" data-toggle>
+                            <div class="form-control-container">
+                              <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Date de début" data-input>
+                              <span class="form-control-state"></span>
                             </div>
-                          <div class="btn-group dropdown ml-3" data-component="select-radios">
-                            <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                              <span data-role="placeholder">Tout</span>
-                              <i class="icons-arrow-down" aria-hidden="true"></i>
-                            </button>
-                            <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
-                              <label class="dropdown-item" for="action11">Signalisation</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
-                              <label class="dropdown-item" for="action12">Voie</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
-                              <label class="dropdown-item" for="action13">Produit Train</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
-                              <label class="dropdown-item" for="action14">Caténaire</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
-                              <label class="dropdown-item" for="action15">Circulation</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
-                              <label class="dropdown-item" for="action16">Tout</label>
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                <i class="icons-calendar" aria-hidden="true"></i>
+                              </button>
                             </div>
                           </div>
-                        </div>
-                        <div class="form-control-container col-md-5 whiteinput autocomplete">
-                            <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
-                            <datalist id="code">
-                              <option value="VCE40124">
-                              <option value="VA216000">
-                            </datalist>
-                        </div>
-                        <div class="input-group-append">
-                          <button type="button" class="btn btn-primary btn-only-icon">
-                            <i class="icons-search" aria-hidden="true"></i>
-                            <span class="sr-only">Rechercher sur le site</span>
-                          </button>
-                        </div>
                       </div>
                 </div>
-                <h2 class="mt-4"> Choix 1 </h2>
-                <div class="col-md-12 mt-5">
+                <div class="col-md-2">
+                    <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                        <div data-component="picker">
+                            <div class="input-group" data-toggle>
+                              <div class="form-control-container">
+                                <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                                <span class="form-control-state"></span>
+                              </div>
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                  <i class="icons-calendar" aria-hidden="true"></i>
+                                </button>
+                              </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-2">
+                  <label for="metier"> Métier</label>
+                  <input list="code" type="text" id="metier" class="whiteinput border-0 form-control">
+                  <datalist id="code">
+                    <option value="Tout">
+                    <option value="Signalisation">
+                    <option value="Voie">
+                    <option value="Produit Train">
+                    <option value="Caténaire">
+                    <option value="Circulation">
+                  </datalist>
+                </div>
+                <div class="col-md-2">
+                  <label for="choix_bieres"> Code RAF</label>
+                  <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control">
+                  <datalist id="code">
+                    <option value="VCE40124">
+                    <option value="VA216000">
+                  </datalist>
+                </div>
+                <div class="col-md-1">
+                  <button class="btn btn-success btnvalid"> Rechercher</button>
+                </div>
+                <div class="col-md-12 mt-2">
+                  <h2 class="mt-4"> Choix 1 </h2>
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
                           <table class="table">

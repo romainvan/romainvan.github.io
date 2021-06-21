@@ -23,8 +23,53 @@
     <div id="includedContentCofo3"></div>
 
     <div class="container-fluid pb-3">
-        <h1 class="text-center"> Liste des demandes </h1>
+        <h1 class="text-center"> Liste des demandes en formation initiale </h1>
         <div class="row">
+          <div class="col-md-1 mt-4">
+            <div class="btn-group dropdown btndate" data-component="select-radios">
+                <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup1">
+                <span data-role="placeholder">2022</span>
+                <i class="icons-arrow-down" aria-hidden="true"></i>
+                </button>
+                <div id="actionsgroup1" class="dropdown-menu dropdown-menu-right">
+
+                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action1" class="sr-only"/>
+                    <label class="dropdown-item" for="action1">2022</label>
+
+                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action2" class="sr-only"/>
+                    <label class="dropdown-item" for="action2">2021</label>
+
+                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action3" class="sr-only"/>
+                    <label class="dropdown-item" for="action3">2020</label>
+
+                    <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch4" id="action4" class="sr-only"/>
+                    <label class="dropdown-item" for="action4">2019</label>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+
+            <label for="parcours" class="ml-1"> Parcours </label>
+            <input list="parcours" type="text" id="idparcours" name="parcours" class="whiteinput border-0 form-control" placeholder="Choix du parcours">
+            <datalist id="parcours">
+                <option data-value="OP / Reconversion"> OP / Reconversion</option>
+                <option data-value="Jeune Cadre Voie"> Jeune Cadre Voie </option>
+            </datalist>
+
+        </div>
+
+        <div class="col-md-2">
+
+            <label for="etab" class="ml-1"> Établissement</label>
+            <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement">
+            <datalist id="etab">
+                <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
+                <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
+            </datalist>
+
+        </div>
                 <div class="col-md-12 mt-5">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">

@@ -23,7 +23,7 @@
     <div id="includedContentCofo3"></div>
 
     <div class="container-fluid pb-3">
-        <h1 class="text-center"> Liste des demandes </h1>
+        <h1 class="text-center"> Liste des demandes en formation continue </h1>
         <div class="row">
                 <div class="col-md-2 offset-md-10">
                   <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
@@ -38,19 +38,20 @@
                     </div>
                   </div>
               </div>
-                <div class="col-md-12 mt-5">
+                <div class="col-md-12 mt-3">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
                           <table class="table display" id="cofoencours">
                             <thead class="thead bg-secondary">
                               <tr>
-                                <th scope="col">Code demande</div></th>
-                                <th scope="col">Date de la demande</div></th>
-                                <th scope="col">Code de l'action</div></th>
-                                <th scope="col">Libellé de l'action </div></th>
-                                <th scope="col">Matricule</div></th>
-                                <th scope="col">Nom Prénom</div></th>
-                                <th scope="col">Statut</div></th>
+                                <th scope="col">Code demande</th>
+                                <th scope="col">Date de la demande</th>
+                                <th scope="col">Code de l'action</th>
+                                <th scope="col">Libellé de l'action </th>
+                                <th scope="col">Matricule</th>
+                                <th scope="col">Nom Prénom</th>
+                                <th scope="col">Établissement</th>
+                                <th scope="col">Statut</th>
                                 <th scope="col" class="no-sort">Actions </th>
                               </tr>
                             </thead>
@@ -62,22 +63,14 @@
                                 <td class="text-left">CREQ Réglementation Circulation Incidents</td>
                                 <td>1234567A</td>
                                 <td>Martin Jean</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="encours">En attente de place</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande"aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="toggle10">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle10">                                        
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
+                                   
                                   
                                 </td>
                               </tr> <tr>
@@ -87,22 +80,14 @@
                                 <td class="text-left">CREQ Réglementation Circulation Incidents</td>
                                 <td>8912345B</td>
                                 <td>Dupont Martin</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="bg-success">Inscrit</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo2" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo2" id="toggle2">                                        
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
+                                   
                                   
                                 </td>
                               </tr>
@@ -113,22 +98,14 @@
                                 <td class="text-left">Approf. Module H : Animation équipe,pédagogie</td>
                                 <td>6789123C</td>
                                 <td>Dubois Bernard</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="encours">En attente de place</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo3" aria-controls="toggle3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo3" id="toggle3">
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
+                                   
                                   
                                 </td>
                               </tr>
@@ -139,22 +116,14 @@
                                 <td class="text-left">Approf. : Sécurité personnel/circulation</td>
                                 <td>8512437D</td>
                                 <td>Gond Quentin</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="encours">En attente de place</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande2"aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo4" aria-controls="toggle4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo4" id="toggle4">
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
+                                    
                                   
                                 </td>
                               </tr>
@@ -166,22 +135,14 @@
                                 <td class="text-left">UV6 1 Appareillage électrique EALE</td>
                                 <td>8512437D</td>
                                 <td>Gond Quentin</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="bg-success">Inscrit</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo5" aria-controls="toggle5" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo5" id="toggle5">
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
+                                   
                                   
                                 </td>
                               </tr>
@@ -193,23 +154,14 @@
                                 <td class="text-left"> Responsable Chantier élémentaire – Adjoint S11 – Haute tension</td>
                                 <td>9256723G</td>
                                 <td>Duchemann Jordan</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="encours">En attente de place</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo6" aria-controls="toggle6" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo6" id="toggle6">
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
-                                  
+                                                                     
                                 </td>
                               </tr>
 
@@ -220,23 +172,14 @@
                                 <td class="text-left">OPCAT3 Risques ferroviaires Engins</td>
                                 <td>8475237A</td>
                                 <td>Ponc Nicolas</td>
+                                <td>Infrapôle Indre Limousin</td>
                                 <td class="encours">En attente de place</td>
                                 <td>
                                   
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
                                       <i class="icons-circle-information icons-size-1x25" aria-hidden="true"></i>
                                     </button>
-                                    <div class="btn-group dropdown">
-                                      <button class="btn btn-only-icon btn-transparent btn-color-gray actBtn" id="btncofo7" aria-controls="toggle7" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="sr-only">Actions</span>
-                                        <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
-                                      </button>
-                                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo7" id="toggle7">
-                                        <button type="button" class="dropdown-item">Modifier</button>
-                                        <button type="button" class="dropdown-item">Supprimer</button>
-                                      </div>
-                                    </div>
-                                  
+                                                                    
                                 </td>
                               </tr>
 
@@ -348,7 +291,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,4,5,6], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
             },
             {
                 searchPanes: {
@@ -389,7 +332,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -403,7 +346,7 @@
                   return "Export_Demandes_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -428,7 +371,7 @@
                   return "Export_Demandes_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -444,7 +387,7 @@
                   return "Export_Demandes_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 customize: function (doc) {
                   
