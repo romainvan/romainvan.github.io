@@ -65,7 +65,7 @@
 								<td>  OPSEG-20-1</td>
                                 <td> 21/06/2021</td>
                                 <td> 25/06/2021</td>
-                                <td class="bg-success text-white"> PRESENT </td>
+                                <td class="bg-success text-white"> PASSEE </td>
                               </tr>
 						
 							  <tr>
@@ -77,7 +77,7 @@
 								<td> OPSEG-20-1</td>
                                 <td> 12/07/2021</td>
                                 <td> 15/07/2021</td>
-                                <td class="bg-danger text-white"> ANNULE </td>
+                                <td class="bg-danger text-white"> ANNULEE </td>
                               </tr>
 
                               <tr>
@@ -89,7 +89,7 @@
 								<td> </td>
                                 <td> 09/08/2021</td>
                                 <td> 13/08/2021</td>
-                                <td class="bg-success text-white"> PRESENT </td>
+                                <td class="bg-info text-white"> ENCOURS </td>
                               </tr>
 
                               <tr>
@@ -99,9 +99,9 @@
                                 <td> NVT000361</td>
                                 <td> Bègles</td>
                                 <td>  JCSE-21-3</td>
-                                <td> 18/08/2021</td>
-                                <td> 20/08/2021</td>
-                                <td class="bg-success text-white"> PRESENT </td>
+                                <td> 18/05/2021</td>
+                                <td> 20/05/2021</td>
+                                <td class="bg-success text-white"> PASSEE </td>
                               </tr>
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
@@ -110,9 +110,9 @@
                                 <td> NVT000259</td>
                                 <td> Bègles</td>
                                 <td> JCSE-21-3</td>
-                                <td> 25/08/2021</td>
-                                <td> 27/08/2021</td>
-                                <td class="bg-warning text-white"> ABSENT </td>
+                                <td> 25/05/2021</td>
+                                <td> 27/05/2021</td>
+                                <td class="bg-success text-white"> PASSEE </td>
                               </tr>
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
@@ -220,14 +220,13 @@
               customize: function (xlsx) {
                 var sheet = xlsx.xl.worksheets['sheet1.xml'];
                 $('row c[r^="I"]', sheet).each( function () {
-                  if ( $('is t', this).text() == 'PRESENT' ) {
-                        $(this).attr( 's', '15' );
-                  }
-                  else if($('is t', this).text() == 'ANNULE'){
+                  console.log($('is t', this).text())
+                 
+                  if($('is t', this).text() == 'ANNULEE'){
                     $(this).attr( 's', '10' );
                   }
-                  else if($('is t', this).text() == 'ABSENT'){
-                    $(this).attr( 's', '5' );
+                  else if($('is t', this).text() == 'PASSEE'){
+                    $(this).attr( 's', '15' );
                   }
                   else if($('is t', this).text() == 'ENCOURS'){
                     $(this).attr( 's', '20' );
@@ -262,14 +261,11 @@
                   statut = doc.content[1].table.body
                  
                   for (var i = 1; i < statut.length; i++) {
-                    if (statut[i][8].text ==="PRESENT" ) {
+                    if (statut[i][8].text ==="PASSEE" ) {
                       doc.content[1].table.body[i][8].fillColor = '#82be00';
                     }
-                    if (statut[i][8].text==="ANNULE") {
+                    if (statut[i][8].text==="ANNULEE") {
                       doc.content[1].table.body[i][8].fillColor = '#cd0037';
-                    }
-                    if (statut[i][8].text==="ABSENT") {
-                      doc.content[1].table.body[i][8].fillColor = '#ffb612';
                     }
                     if (statut[i][8].text==="ENCOURS") {
                       doc.content[1].table.body[i][8].fillColor = '#009aa6 ';
