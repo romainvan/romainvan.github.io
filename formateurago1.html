@@ -1,0 +1,202 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Liste des formateurs </title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+
+</head>
+
+<body class="d-flex flex-column">
+        <div id="includedContentAgo3"></div>
+    
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+            <div class="col-md-12">
+                <h1 class="text-center mb-4" id="titlesession"> Liste des formateurs de la session VT160000 -  NVT000146</h1>
+
+                <div class="col-md-12">
+                    <div class="table-wrapper">
+                        <table class="table" id="agoformateurs">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col"><div class="text-white justify-content-center">Formateur</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Nombre d'heures</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> Boisdet François </td>
+                                    <td> 15h </td>
+                                </tr>
+                                <tr>
+                                    <td> Graoui Hadel </td>
+                                    <td> 9h </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footerago4"></div>
+        <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+        <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+        <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+        <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+        <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+        <script src="script.js"> </script>
+
+        <script>
+              $(function(){
+                $("#includedContentAgo3").load("navago.html"); 
+                $("#footerago4").load("footer.html"); 
+              });
+
+              $(document).ready(function() {
+                var table = $('#agoformateurs').DataTable({
+                dom: 'BPfrtip',
+                "pagingType": "full_numbers",
+                "initComplete": function() {
+                $('.dataTables_filter input').addClass('form-control');
+                },
+                columnDefs:[
+                    {
+                        searchPanes:{
+                            show: true, // It can be true/false
+                        },
+                        targets: [0,1], // Index of columns (starting at 0) that you want show/hide                
+                    },
+                    {
+                        orderable: false,
+                        targets: "no-sort"
+                    }
+                ],
+                lengthMenu: [
+                    [10, 25, 50, 100],
+                    [ '10 ', '25 ', '50 ', '100 ']
+                ],
+                buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                  columns: [ 0,1]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Formateurs ' + document.getElementById("titlesession").innerHTML.split("session")[1],
+              filename : function() {
+                return "Formateurs_"+dateFile()
+              },
+              exportOptions: {
+                  columns: [ 0,1]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              filename : function() {
+                return "Formateurs_"+dateFile()
+              },
+              exportOptions: {
+                  columns: [ 0,1]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize : 'LEGAL',
+                title : 'Formateurs ' + document.getElementById("titlesession").innerHTML.split("session")[1],
+                filename : function() {
+                    return "Formateurs_"+dateFile()
+                },
+                exportOptions: {
+                  columns: [ 0,1]
+                },
+                customize: function (doc) {
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+            },}
+                })
+              });
+        </script>
+    
+</body>

@@ -410,6 +410,10 @@ select > .placeholder {
     margin-top: 2em;
   }
 
+  .checkmarg {
+    margin-left: 2em;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
