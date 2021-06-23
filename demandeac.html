@@ -25,19 +25,68 @@
     <div class="container-fluid pb-3">
         <h1 class="text-center"> Liste des demandes en formation continue </h1>
         <div class="row">
-                <div class="col-md-2 offset-md-10">
-                  <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
-                </div>
-                <div class="col-md-11 mt-5 ofsset-md-1" id="graphcofo">
-                  <div class="row">
-                    <div class="col-md-5 offset-md-2">
-                      <div id="containercofo" style="width:90%; height:100%"> </div>
+          <div class="col-md-2">
+            <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+              <div data-component="picker">
+                  <div class="input-group" data-toggle>
+                    <div class="form-control-container">
+                      <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Date demande" data-input>
+                      <span class="form-control-state"></span>
                     </div>
-                    <div class="col-md-5">
-                      <div id="containercofo2" style="width:90%; height:100%"> </div>
+                    <div class="input-group-append">
+                      <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                        <i class="icons-calendar" aria-hidden="true"></i>
+                      </button>
                     </div>
                   </div>
               </div>
+          </div>
+          <div class="col-md-2">
+            <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                <div data-component="picker">
+                    <div class="input-group" data-toggle>
+                      <div class="form-control-container">
+                        <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Date de demande" data-input>
+                        <span class="form-control-state"></span>
+                      </div>
+                      <div class="input-group-append">
+                        <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                          <i class="icons-calendar" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+              <label for="metier"> Métier</label>
+              <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control" placeholder="Choix métier">
+              <datalist id="listmetier">
+                <option value="Tout">
+                <option value="Signalisation">
+                <option value="Voie">
+                <option value="Produit Train">
+                <option value="Caténaire">
+                <option value="Circulation">
+              </datalist>
+            </div>
+
+            <div class="col-md-1">
+              <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+            </div>
+              <div class="col-md-2 offset-md-10">
+                <button onclick="showGraph()" class="btn btn-primary"> Afficher graphiques</button>
+              </div>
+              <div class="col-md-11 mt-5 ofsset-md-1" id="graphcofo">
+                <div class="row">
+                  <div class="col-md-5 offset-md-2">
+                    <div id="containercofo" style="width:90%; height:100%"> </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div id="containercofo2" style="width:90%; height:100%"> </div>
+                  </div>
+                </div>
+            </div>
                 <div class="col-md-12 mt-3">
                     <div class="table-wrapper">
                         <div class="table-scroller last-cell-fixed dragscroll">
@@ -48,6 +97,7 @@
                                 <th scope="col">Date de la demande</th>
                                 <th scope="col">Code de l'action</th>
                                 <th scope="col">Libellé de l'action </th>
+                                <th scope="col">Métier </th>
                                 <th scope="col">Matricule</th>
                                 <th scope="col">Nom Prénom</th>
                                 <th scope="col">Établissement</th>
@@ -61,6 +111,7 @@
                                 <td>15/10/2018</td>
                                 <td>VCE40124</td>
                                 <td class="text-left">CREQ Réglementation Circulation Incidents</td>
+                                <td> Produit Train </td>
                                 <td>1234567A</td>
                                 <td>Martin Jean</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -78,6 +129,7 @@
                                 <td>15/10/2018</td>
                                 <td>VCE40124</td>
                                 <td class="text-left">CREQ Réglementation Circulation Incidents</td>
+                                <td> Produit Train </td>
                                 <td>8912345B</td>
                                 <td>Dupont Martin</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -96,6 +148,7 @@
                                 <td>23/08/2019</td>
                                 <td>VA216000</td>
                                 <td class="text-left">Approf. Module H : Animation équipe,pédagogie</td>
+                                <td> Transverse </td>
                                 <td>6789123C</td>
                                 <td>Dubois Bernard</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -114,6 +167,7 @@
                                 <td>26/07/2018</td>
                                 <td>VA200100</td>
                                 <td class="text-left">Approf. : Sécurité personnel/circulation</td>
+                                <td> Voie </td>
                                 <td>8512437D</td>
                                 <td>Gond Quentin</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -133,6 +187,7 @@
                                 <td>17/04/2019</td>
                                 <td>VA750601CC</td>
                                 <td class="text-left">UV6 1 Appareillage électrique EALE</td>
+                                <td> EALE </td>
                                 <td>8512437D</td>
                                 <td>Gond Quentin</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -152,6 +207,7 @@
                                 <td>21/12/2020</td>
                                 <td>VC101000</td>
                                 <td class="text-left"> Responsable Chantier élémentaire – Adjoint S11 – Haute tension</td>
+                                <td> Caténaire </td>
                                 <td>9256723G</td>
                                 <td>Duchemann Jordan</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -170,6 +226,7 @@
                                 <td>05/01/2021</td>
                                 <td>VC782503</td>
                                 <td class="text-left">OPCAT3 Risques ferroviaires Engins</td>
+                                <td> Caténaire </td>
                                 <td>8475237A</td>
                                 <td>Ponc Nicolas</td>
                                 <td>Infrapôle Indre Limousin</td>
@@ -488,7 +545,7 @@
           },
           series: [
               {
-                  data: chartData(table,6),
+                  data: chartData(table,8),
               },
           ],
       });
@@ -497,7 +554,7 @@
       table.on('draw', function () {
         chart.series[0].setData(chartData(table,2));
         chart.series[0].setName("Demandes");
-        chart2.series[0].setData(chartData(table,6));
+        chart2.series[0].setData(chartData(table,8));
         chart2.series[0].setName("Statut");
       });
 
