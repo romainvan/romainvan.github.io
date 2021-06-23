@@ -414,6 +414,11 @@ select > .placeholder {
     margin-left: 2em;
   }
 
+  .table td .choixzp{
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;

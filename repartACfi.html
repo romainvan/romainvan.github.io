@@ -111,68 +111,93 @@
                     </thead>
                     <tbody class="tbody">
                       <tr>
-                        <td onclick="affichemyDiv('affichemyDiv')"> CFOP - OP / Reconversion	</td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> Circulation</td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> Saint-Priest	</td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> 05/01/2022 - 10/12/2022</td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> LY AMV5 01/22 OP </td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> 12 </td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> 3</td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> 0</td>
-                        <td onclick="affichemyDiv('affichemyDiv')"> 3</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> CFOP - OP / Reconversion	</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> Circulation</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> Saint-Priest	</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> 05/01/2022 - 10/12/2022</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> LY AMV5 01/22 OP </td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> 12 </td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> 3</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> 0</td>
+                        <td onclick="affichemyDiv('affichemyDiv1')"> 3</td>
                         <td > <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button></td>
                         <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
                       </tr>
-                      <tr style="display: none;" id="affichemyDiv" class="bodycolor">
-                          <td colspan="8">
+                      <tr style="display: none;" id="affichemyDiv1" class="bodycolor">
+                          <td colspan="11">
+                              <table class="table mt-3">
+                                <thead class="thead hiddentable">
+                                  <tr class="bg-cyan">
+                                    <th scope="col"><div class="text-white justify-content-center"></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Nom de la ZP</th>
+                                  </tr>
+                                </thead>
+                                <tbody class="tbody">
+                                  <tr>
+                                    <tr class="choixzp">
+                                      <td>  <i class="icons-add icons-size-x mt-2" aria-hidden="true" id="btnadd41" onclick="affichemyDiv('affichetableau1')"></i></td>
+                                      <td> ZP A </td>                                
+                                    </tr>
+                                  </tr>
+                                </tbody>
+                              </table>
+                          </td>
+                      </tr>
+                      <tr style="display: none;" id="affichetableau1" class="bodycolor">
+                          <td colspan="5">
                             <table class="table mt-3">
                                 <thead class="thead hiddentable">
                                   <tr>
                                     <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
-                                    <th scope="col"><div class="text-white justify-content-center">Nombre de demandes</th>
                                     <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
                                   </tr>
                                 </thead>
                                 <tbody class="tbody">
                                   <tr>
                                     <td> ESTI Île-de-France</td>
-                                    <td> 7</td>
                                     <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
                                   </tr>
                                   <tr>
                                     <td> Infralog Travaux Île-de-France</td>
-                                    <td> 5</td>
                                     <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
                                   </tr>
                                   <tr>
                                     <td> Infrapôle Paris-Est</td>
-                                    <td> 2</td>
                                     <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
                                   </tr>
                                   <tr>
                                     <td> Infrapôle Paris Nord</td>
-                                    <td> 8</td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Sud-Ouest</td>
-                                    <td> 6</td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Sud-Est</td>
-                                    <td> 5 </td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Saint-Lazarre</td>
-                                    <td> 16 </td>
                                     <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
                                   </tr>
                                 </tbody>
                               </table>
                           </td>
-                          <td colspan="4"></td>
+                          <td colspan="5">
+                            <table class="table mt-3">
+                              <thead class="thead hiddentable">
+                                <tr>
+                                  <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                  <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                                </tr>
+                              </thead>
+                              <tbody class="tbody">
+                               
+                                <tr>
+                                  <td> Infrapôle Paris Sud-Ouest</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                                <tr>
+                                  <td> Infrapôle Paris Sud-Est</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                                <tr>
+                                  <td> Infrapôle Paris Saint-Lazarre</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td></td>
                       </tr>
 
                       <tr>
@@ -189,56 +214,61 @@
                         <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
                       </tr>
                       <tr style="display: none;" id="affichemyDiv2" class="bodycolor">
-                          <td colspan="8">
-                            <table class="table mt-3">
-                                <thead class="thead hiddentable">
-                                  <tr>
-                                    <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
-                                    <th scope="col"><div class="text-white justify-content-center">Nombre de demandes</th>
-                                    <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
-                                  </tr>
-                                </thead>
-                                <tbody class="tbody">
-                                  <tr>
-                                    <td> ESTI Île-de-France</td>
-                                    <td> 6</td>
-                                    <td> <input class="form-control" type="number" value="1"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infralog Travaux Île-de-France</td>
-                                    <td> 4</td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris-Est</td>
-                                    <td> 10</td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Nord</td>
-                                    <td> 14</td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Sud-Ouest</td>
-                                    <td> 9</td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Sud-Est</td>
-                                    <td> 5 </td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                  <tr>
-                                    <td> Infrapôle Paris Saint-Lazarre</td>
-                                    <td> 12 </td>
-                                    <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
-                                  </tr>
-                                </tbody>
-                              </table>
-                          </td>
-                          <td colspan="4"></td>
-                      </tr>
+                        <td colspan="5">
+                          <table class="table mt-3">
+                              <thead class="thead hiddentable">
+                                <tr>
+                                  <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                  <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                                </tr>
+                              </thead>
+                              <tbody class="tbody">
+                                <tr>
+                                  <td> ESTI Île-de-France</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                                <tr>
+                                  <td> Infralog Travaux Île-de-France</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                                <tr>
+                                  <td> Infrapôle Paris-Est</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                                <tr>
+                                  <td> Infrapôle Paris Nord</td>
+                                  <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                </tr>
+                              </tbody>
+                            </table>
+                        </td>
+                        <td colspan="5">
+                          <table class="table mt-3">
+                            <thead class="thead hiddentable">
+                              <tr>
+                                <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                              </tr>
+                            </thead>
+                            <tbody class="tbody">
+                             
+                              <tr>
+                                <td> Infrapôle Paris Sud-Ouest</td>
+                                <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                              </tr>
+                              <tr>
+                                <td> Infrapôle Paris Sud-Est</td>
+                                <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                              </tr>
+                              <tr>
+                                <td> Infrapôle Paris Saint-Lazarre</td>
+                                <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <td></td>
+                    </tr>
                       
                      
                     </tbody>
@@ -444,7 +474,12 @@
             if (x.style.display === "none") {
                 x.style.display = "table-row";
             } else {
-                x.style.display = "none";
+              if(id.startsWith("affichemyDiv")){
+                var last = "affichetableau"+id.slice(-1)
+                var y = document.getElementById(last)
+                y.style.display = "none";
+              }
+              x.style.display = "none";
             }
         } 
     </script>
