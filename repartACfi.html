@@ -135,7 +135,7 @@
                                 <tbody class="tbody">
                                   
                                     <tr>
-                                      <td>  <i class="icons-add icons-size-x mt-2" aria-hidden="true" id="btnadd41" onclick="affichemyDiv('affichetableau1')"></i></td>
+                                      <td>  <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1" onclick="affichemyDiv('affichetableau1','icon1')"></i></td>
                                       <td> ZP IDF </td>                                
                                     </tr>
 
@@ -206,7 +206,7 @@
                                     </tr>
 
                                     <tr>
-                                      <td>  <i class="icons-add icons-size-x mt-2" aria-hidden="true" id="btnadd41" onclick="affichemyDiv('affichetableau2')"></i></td>
+                                      <td>  <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2" onclick="affichemyDiv('affichetableau2','icon2')"></i></td>
                                       <td> ZP A </td>                                
                                     </tr>
 
@@ -613,15 +613,25 @@
   <div id="footerac3"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
     <script>
-        function affichemyDiv(id) {
+        function affichemyDiv(id,icon=null) {
             var x = document.getElementById(id);
             if (x.style.display === "none") {
+                if(icon != null){
+                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  document.getElementById(icon).classList.remove('icons-arrow-next');
+                }
                 x.style.display = "table-row";
             } else {
               if(id.startsWith("affichemyDiv")){
                 var last = "affichetableau"+id.slice(-1)
+                console.log(id)
+                console.log(last)
                 var y = document.getElementById(last)
                 y.style.display = "none";
+              }
+              if(icon != null){
+                document.getElementById(icon).classList.remove('icons-arrow-down');
+                document.getElementById(icon).classList.add('icons-arrow-next');
               }
               x.style.display = "none";
             }
