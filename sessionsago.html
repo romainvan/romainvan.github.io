@@ -40,8 +40,7 @@
                     </div>
                   </div>
               </div>
-          </div>
-
+          </div>          
           <div class="col-md-2">
             <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
                 <div data-component="picker">
@@ -58,9 +57,57 @@
                     </div>
                 </div>
             </div>
-
+                    <div class="col-md-2">
+            <label for="metier" class="ml-2"> Métier </label>
+              <input list="metier" type="text" id="inputmetier" class="form-control whiteinput" placeholder="Métier">
+              <datalist id="metier" class="form-control mb-3">
+                <option value="Voie">
+                <option value="Produit Train">
+                <option value="Caténaire">
+                <option value="Circulation">
+                <option value="Signalisation">
+                <option value="Tout">
+              </datalist>
+          </div>
+          
+          <div class="col-md-2">
+            <label for="raf" class="ml-2"> Code RAF </label>
+              <input list="raf" type="text" id="inputraf" class="form-control whiteinput" placeholder="Code RAF">
+              <datalist id="raf">
+                  <option value="VA600600">
+                  <option value="VA600700">
+                  <option value="VALG0800">
+                  <option value="VALIGE24">
+                  <option value="VGE14600">
+              </datalist>
+          </div>
+          
+          <div class="col-md-2">
+            <label for="raf" class="ml-2"> Code RAF </label>
+              <input list="raf" type="text" id="inputraf" class="form-control whiteinput" placeholder="Code RAF">
+              <datalist id="raf">
+                  <option value="VA600600">
+                  <option value="VA600700">
+                  <option value="VALG0800">
+                  <option value="VALIGE24">
+                  <option value="VGE14600">
+              </datalist>
+          </div>
+          <div class="col-md-2">
+            <label for="session" class="ml-2"> Code Session </label>
+              <input list="session" type="text" id="inputsession" class="form-control whiteinput" placeholder="Code Session">
+              <datalist id="session">
+                  <option value="NVE0000047">
+                  <option value="NVS0000369">
+                  <option value="NVT000146">
+                  <option value="NVV0000861">
+                  <option value="NVV0000034">
+              </datalist>
+          </div>
+          
+          
             <div class="col-md-1">
-              <button class="btn btn-success btn-block btnvalid"> Valider </button>
+              <button class="btn btn-success btn-block btnvalid "> Valider </button>
             </div>
             <div class="col-md-12 mt-5 mb-5">
                 <div class="table-wrapper">
