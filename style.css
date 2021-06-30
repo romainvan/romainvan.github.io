@@ -268,8 +268,8 @@ select > .placeholder {
   }
 
   td{
-    font-size: x-small;
-    font-family: cursive;
+    font-size: small;
+    font-family: Georgia, serif;
   }
   .sameLine{
     display: inline;
