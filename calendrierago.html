@@ -71,6 +71,15 @@
               </select>
           </div>
           <div class="col-md-2">
+            <label for="parcours" class="ml-2"> Parcours </label>
+              <input list="parcours" type="text" id="inputparcours" class="form-control" placeholder="Parcours">
+              <datalist id="parcours">
+                  <option value="CFOP - OP / Reconversion	">
+                  <option value="JCV - Jeune Cadre Voie	">
+                  
+              </datalist>
+          </div>
+          <div class="col-md-2">
             <label for="raf" class="ml-2"> Code RAF </label>
               <input list="raf" type="text" id="inputraf" class="form-control" placeholder="Code RAF">
               <datalist id="raf">
@@ -92,7 +101,7 @@
                   <option value="NVV0000034">
               </datalist>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-1">
             <button class="btn btn-success valid" onclick="displaycalender()"> Valider </button>
           </div>
         </div>

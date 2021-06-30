@@ -1,0 +1,7 @@
+label.test::after {
+    position: inherit !important;
+}
+
+.custom-checkbox .custom-control-label::before {
+    margin-left: 4em;
+}

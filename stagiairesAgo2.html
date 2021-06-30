@@ -13,6 +13,7 @@
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="stylecheckago.css">
+  <link rel="stylesheet" href="styleinscrit.css">
   <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
@@ -31,6 +32,9 @@
                 <h1 class="text-center mb-5"> Liste des inscrits de la session VE200200 - NVE0000047</h1>
                 
                 <div class="col-md-12">
+                    <div class="col-md-2 offset-md-10">
+                      <button class="btn btn-success btn-block mb-2"> Enregister</button>
+                    </div>
                     <div class="table-wrapper">
                         <table class="table" id="ago2">
                             <thead class="thead bg-secondary">
@@ -45,7 +49,7 @@
                                     <th scope="col"><div class="text-white justify-content-center">Date envoi convocation</div></th>
                                     <th scope="col"><div class="text-white justify-content-center">Télécharger</div></th>
                                     <th scope="col"><div class="text-white justify-content-center">Absent</div></th>
-
+                                    <th width="18%"><div class="text-white justify-content-center">Commentaire absence</div></th>
                                 </tr>
                             </thead>
 
@@ -66,6 +70,9 @@
                                         <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox3" id>
                                         <label class="custom-control-label test" for="exampleCheckbox3"></label>
                                       </div></td>
+                                    <td> 
+                                        <textarea class="form-control absenttextarea" id="stretchyTextarea1" placeholder="Commentaire" ZgotmplZ></textarea>  
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -83,6 +90,9 @@
                                         <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox2" id>
                                         <label class="custom-control-label test" for="exampleCheckbox2"></label>
                                       </div></td>
+                                    <td> 
+                                        <textarea class="form-control absenttextarea" id="stretchyTextarea2" placeholder="Commentaire" ZgotmplZ></textarea>  
+                                    </td>
                                 </tr>
                                 <tr>
                                     
@@ -99,6 +109,9 @@
                                         <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox1" id>
                                         <label class="custom-control-label test" for="exampleCheckbox1"></label>
                                       </div></td>
+                                    <td> 
+                                        <textarea class="form-control absenttextarea" id="stretchyTextarea3" placeholder="Commentaire" ZgotmplZ></textarea>  
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

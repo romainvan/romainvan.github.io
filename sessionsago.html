@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylecheckago2.css">
   <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
@@ -90,6 +91,7 @@
                             <th scope="col">Nombre de places </th>
                             <th scope="col">Nombre d'inscrits </th>
                             <th scope="col">Groupe </th>
+                            <th scope="col">Présence confirmée </th>
                             <th class="no-sort" scope="col">Actions </th>
                           </tr>
                         </thead>
@@ -105,6 +107,11 @@
                             <td> 12 </td>
                             <td> 1</td>
                             <td> Continue </td>
+                            <td> <div class="custom-control custom-checkbox ml-5">
+                              <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox3">
+                              <label class="custom-control-label test" for="exampleCheckbox3"></label>
+                            </div>
+                            </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btnDrop0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="toggle1">
@@ -113,7 +120,7 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop0" id="toggle1">
                                   <a type="button" class="dropdown-item" href="modifsession.html" >Modifier</a>
-                                  <a type="button" class="dropdown-item" href="stagiairesAgo.html" >Voir les inscrits</a>
+                                  <a type="button" class="dropdown-item" href="stagiairesAgo.html" >Voir les inscrits et confirmer leur présence </a>
                                   <a type="button" class="dropdown-item" href="formateurago1.html" >Voir les formateurs</a>
                                 </div>
                               </div>
@@ -130,6 +137,11 @@
                             <td> 12 </td>
                             <td> 7</td>
                             <td> Continue </td>
+                            <td> <div class="custom-control custom-checkbox ml-5">
+                              <input type="checkbox" name="exampleCheckbox" class="custom-control-input" id="exampleCheckbox2">
+                              <label class="custom-control-label test" for="exampleCheckbox2"></label>
+                            </div>
+                            </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btnDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="toggle10">
@@ -138,7 +150,7 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop1" id="toggle10">
                                   <a type="button" class="dropdown-item" href="modifsession2.html">Modifier</a>
-                                  <a type="button" class="dropdown-item" href="stagiairesAgo2.html">Voir les inscrits</a>
+                                  <a type="button" class="dropdown-item" href="stagiairesAgo2.html">Voir les inscrits et confirmer leur présence</a>
                                   <a type="button" class="dropdown-item" href="formateurago.html" >Voir les formateurs</a>
                                 </div>
                               </div>
@@ -157,6 +169,11 @@
                             <td> 12 </td>
                             <td> 10</td>
                             <td> Continue </td>
+                            <td> <div class="custom-control custom-checkbox ml-5">
+                              <input type="checkbox" name="exampleCheckbox" class="custom-control-input" id="exampleCheckbox1">
+                              <label class="custom-control-label test" for="exampleCheckbox1"></label>
+                            </div>
+                            </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btnDrop3" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="toggle12">
@@ -165,7 +182,7 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop3" id="toggle12">
                                   <a type="button" class="dropdown-item">Modifier</a>
-                                  <a type="button" class="dropdown-item">Voir les inscrits</a>
+                                  <a type="button" class="dropdown-item">Voir les inscrits et confirmer leur présence</a>
                                   <a type="button" class="dropdown-item">Voir les formateurs</a>
 
                                 </div>
@@ -181,9 +198,14 @@
                             <td> Nanterre</td>
                             <td> 21/06/2021</td>
                             <td> 30/06/2021</td>
-                            <td> 9 </td>
+                            <td> 10 </td>
                             <td> 10</td>
                             <td> Continue </td>
+                            <td> <div class="custom-control custom-checkbox ml-5">
+                              <input type="checkbox" name="exampleCheckbox" class="custom-control-input" id="exampleCheckbox0">
+                              <label class="custom-control-label test" for="exampleCheckbox0"></label>
+                            </div>
+                            </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btnDrop4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="toggle13">
@@ -192,7 +214,7 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop4" id="toggle13">
                                   <a type="button" class="dropdown-item">Modifier</a>
-                                  <a type="button" class="dropdown-item">Voir les inscrits</a>
+                                  <a type="button" class="dropdown-item">Voir les inscrits et confirmer leur présence</a>
                                   <a type="button" class="dropdown-item">Voir les formateurs</a>
                                 </div>
                               </div>
