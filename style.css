@@ -267,6 +267,10 @@ select > .placeholder {
     padding-right: 1em!important;
   }
 
+  td{
+    font-size: x-small;
+    font-family: cursive;
+  }
   .sameLine{
     display: inline;
     margin-top: 1em;
