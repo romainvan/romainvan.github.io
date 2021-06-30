@@ -44,7 +44,7 @@
 
           <div class="col-md-2">
             <label for="metier" class="ml-2"> Métier </label>
-              <select id="metier" class="form-control mb-3">
+              <select id="metier" class="form-control mb-3 whiteinput">
                 <option selected data-role="default-hidden-option" disabled hidden selected>Tout</option>
                 <option data-id="1" >Voie</option>
                 <option data-id="2" >Produit Train</option>
@@ -55,17 +55,8 @@
               </select>
           </div>
           <div class="col-md-2">
-            <label for="parcours" class="ml-2"> Parcours </label>
-              <input list="parcours" type="text" id="inputparcours" class="form-control" placeholder="Parcours">
-              <datalist id="parcours">
-                  <option value="CFOP - OP / Reconversion	">
-                  <option value="JCV - Jeune Cadre Voie	">
-                  
-              </datalist>
-          </div>
-          <div class="col-md-2">
             <label for="raf" class="ml-2"> Code RAF </label>
-              <input list="raf" type="text" id="inputraf" class="form-control" placeholder="Code RAF">
+              <input list="raf" type="text" id="inputraf" class="form-control whiteinput" placeholder="Code RAF">
               <datalist id="raf">
                   <option value="VA600600">
                   <option value="VA600700">
@@ -76,7 +67,7 @@
           </div>
           <div class="col-md-2">
             <label for="session" class="ml-2"> Code Session </label>
-              <input list="session" type="text" id="inputsession" class="form-control" placeholder="Code Session">
+              <input list="session" type="text" id="inputsession" class="form-control whiteinput" placeholder="Code Session">
               <datalist id="session">
                   <option value="NVE0000047">
                   <option value="NVS0000369">
@@ -104,7 +95,7 @@
             </div>
 
             <div class="col-md-1">
-              <button class="btn btn-success btn-block btnvalid"> Valider </button>
+              <button class="btn btn-success btn-block btnvalid btn-sm"> Valider </button>
             </div>
             <div class="col-md-12 mt-5 mb-5">
                 <div class="table-wrapper">
