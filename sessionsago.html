@@ -43,6 +43,50 @@
           </div>
 
           <div class="col-md-2">
+            <label for="metier" class="ml-2"> Métier </label>
+              <select id="metier" class="form-control mb-3">
+                <option selected data-role="default-hidden-option" disabled hidden selected>Tout</option>
+                <option data-id="1" >Voie</option>
+                <option data-id="2" >Produit Train</option>
+                <option data-id="3" >Caténaire</option>
+                <option data-id="4" >Circulation</option>
+                <option data-id="5" >Signalisation</option>
+                <option data-id="6" >Tout</option>
+              </select>
+          </div>
+          <div class="col-md-2">
+            <label for="parcours" class="ml-2"> Parcours </label>
+              <input list="parcours" type="text" id="inputparcours" class="form-control" placeholder="Parcours">
+              <datalist id="parcours">
+                  <option value="CFOP - OP / Reconversion	">
+                  <option value="JCV - Jeune Cadre Voie	">
+                  
+              </datalist>
+          </div>
+          <div class="col-md-2">
+            <label for="raf" class="ml-2"> Code RAF </label>
+              <input list="raf" type="text" id="inputraf" class="form-control" placeholder="Code RAF">
+              <datalist id="raf">
+                  <option value="VA600600">
+                  <option value="VA600700">
+                  <option value="VALG0800">
+                  <option value="VALIGE24">
+                  <option value="VGE14600">
+              </datalist>
+          </div>
+          <div class="col-md-2">
+            <label for="session" class="ml-2"> Code Session </label>
+              <input list="session" type="text" id="inputsession" class="form-control" placeholder="Code Session">
+              <datalist id="session">
+                  <option value="NVE0000047">
+                  <option value="NVS0000369">
+                  <option value="NVT000146">
+                  <option value="NVV0000861">
+                  <option value="NVV0000034">
+              </datalist>
+          </div>
+          
+          <div class="col-md-2">
             <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
                 <div data-component="picker">
                     <div class="input-group" data-toggle>
