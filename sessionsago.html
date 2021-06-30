@@ -40,20 +40,48 @@
                     </div>
                   </div>
               </div>
-          </div>
-
+          </div>          
           <div class="col-md-2">
+            <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                <div data-component="picker">
+                    <div class="input-group" data-toggle>
+                      <div class="form-control-container">
+                        <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Date de fin" data-input>
+                        <span class="form-control-state"></span>
+                      </div>
+                      <div class="input-group-append">
+                        <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                          <i class="icons-calendar" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="col-md-2">
             <label for="metier" class="ml-2"> Métier </label>
-              <select id="metier" class="form-control mb-3 whiteinput">
-                <option selected data-role="default-hidden-option" disabled hidden selected>Tout</option>
-                <option data-id="1" >Voie</option>
-                <option data-id="2" >Produit Train</option>
-                <option data-id="3" >Caténaire</option>
-                <option data-id="4" >Circulation</option>
-                <option data-id="5" >Signalisation</option>
-                <option data-id="6" >Tout</option>
-              </select>
+              <input list="metier" type="text" id="inputmetier" class="form-control whiteinput" placeholder="Métier">
+              <datalist id="metier" class="form-control mb-3 whiteinput">
+                <option value="Voie">
+                <option value="Produit Train">
+                <option value="Caténaire">
+                <option value="Circulation">
+                <option value="Signalisation">
+                <option value="Tout">
+              </datalist>
           </div>
+          
+          <div class="col-md-2">
+            <label for="raf" class="ml-2"> Code RAF </label>
+              <input list="raf" type="text" id="inputraf" class="form-control whiteinput" placeholder="Code RAF">
+              <datalist id="raf">
+                  <option value="VA600600">
+                  <option value="VA600700">
+                  <option value="VALG0800">
+                  <option value="VALIGE24">
+                  <option value="VGE14600">
+              </datalist>
+          </div>
+          
           <div class="col-md-2">
             <label for="raf" class="ml-2"> Code RAF </label>
               <input list="raf" type="text" id="inputraf" class="form-control whiteinput" placeholder="Code RAF">
@@ -77,25 +105,9 @@
               </datalist>
           </div>
           
-          <div class="col-md-2">
-            <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
-                <div data-component="picker">
-                    <div class="input-group" data-toggle>
-                      <div class="form-control-container">
-                        <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Date de fin" data-input>
-                        <span class="form-control-state"></span>
-                      </div>
-                      <div class="input-group-append">
-                        <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
-                          <i class="icons-calendar" aria-hidden="true"></i>
-                        </button>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
+          
             <div class="col-md-1">
-              <button class="btn btn-success btn-block btnvalid btn-sm"> Valider </button>
+              <button class="btn btn-success btn-block btnvalid "> Valider </button>
             </div>
             <div class="col-md-12 mt-5 mb-5">
                 <div class="table-wrapper">
