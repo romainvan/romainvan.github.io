@@ -143,9 +143,9 @@
                                   <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop0" id="toggle1">
-                                  <a type="button" class="dropdown-item" href="modifsession.html" >Modifier</a>
-                                  <a type="button" class="dropdown-item" href="stagiairesAgo.html" >Voir les agents inscrits et à repositionner </a>
-                                  <a type="button" class="dropdown-item" href="formateurago1.html" >Voir les formateurs</a>
+                                  <a type="button" class="dropdown-item" href="modifsession.html" target="blank" >Modifier</a>
+                                  <a type="button" class="dropdown-item" href="stagiairesAgo.html" target="blank" >Voir les agents inscrits et à repositionner </a>
+                                  <a type="button" class="dropdown-item" href="formateurago1.html" target="blank" >Voir les formateurs</a>
                                 </div>
                               </div>
                             </td>
@@ -162,7 +162,7 @@
                             <td> 7/12</td>
                             <td> Continue </td>
                             <td> 
-                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true"></i>
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true"></i>
                             </td>
                             <td>
                               <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
@@ -176,9 +176,9 @@
                                   <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop1" id="toggle10">
-                                  <a type="button" class="dropdown-item" href="modifsession2.html">Modifier</a>
-                                  <a type="button" class="dropdown-item" href="stagiairesAgo2.html">Voir les agents inscrits et à repositionner</a>
-                                  <a type="button" class="dropdown-item" href="formateurago.html" >Voir les formateurs</a>
+                                  <a type="button" class="dropdown-item" href="modifsession2.html" target="blank">Modifier</a>
+                                  <a type="button" class="dropdown-item" href="stagiairesAgo2.html" target="blank">Voir les agents inscrits et à repositionner</a>
+                                  <a type="button" class="dropdown-item" href="formateurago.html" target="blank">Voir les formateurs</a>
                                 </div>
                               </div>
                             </td>
@@ -233,7 +233,7 @@
                             <td> 10/10</td>
                             <td> Continue </td>
                             <td> 
-                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true"></i>
+                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true" onclick="changeicon('1')" id="icon1"></i>
 
                             </td>
                             <td>
@@ -417,6 +417,11 @@
       });
       $('#sessionsago thead th').addClass('text-white');
       })
+
+      function changeicon(x){
+        var elt = document.getElementById("icon"+x);
+        console.log(elt.className)
+      }
 
     </script> 
 </body>
