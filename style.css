@@ -422,6 +422,18 @@ select > .placeholder {
     padding-top: 1px !important;
     padding-bottom: 1px !important;
   }
+
+  .redicon{
+    color : red;
+  }
+
+  .greenicon {
+    color : green;
+  }
+
+  .areaheight{
+    height: 10em !important;
+  }
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;

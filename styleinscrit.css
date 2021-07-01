@@ -1,3 +1,7 @@
 textarea.form-control{
     min-height: 0 !important;
 }
+
+.flatpickr-calendar.static.open{
+    display: none !important;
+}

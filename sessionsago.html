@@ -25,7 +25,7 @@
         <div class="container-fluid flex-grow-1 flex-shrink-0">
         <h1 class="text-center"> Sessions formation continue campus de Nanterre  </h1>
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-2 mb-2">
             <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
               <div data-component="picker">
                   <div class="input-group" data-toggle>
@@ -109,10 +109,10 @@
                             <th scope="col">Lieu</th>
                             <th scope="col">Date de début</th>
                             <th scope="col">Date de fin</th>
-                            <th scope="col">Nombre de places </th>
                             <th scope="col">Nombre d'inscrits </th>
                             <th scope="col">Groupe </th>
-                            <th scope="col">Clôturer la présence </th>
+                            <th scope="col">Repositionnement <br/> renseigné </th>
+                            <th class="no-sort" scope="col">Détails </th>
                             <th class="no-sort" scope="col">Actions </th>
                           </tr>
                         </thead>
@@ -125,13 +125,16 @@
                             <td> Nanterre</td>
                             <td> 21/06/2021</td>
                             <td> 25/06/2021</td>
-                            <td> 12 </td>
-                            <td> 1</td>
+                            <td> 1/12</td>
                             <td> Continue </td>
-                            <td> <div class="custom-control custom-checkbox ml-5">
-                              <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox3">
-                              <label class="custom-control-label test" for="exampleCheckbox3"></label>
-                            </div>
+                            <td> 
+                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true"></i>
+
+                            </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
+                                <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande2"aria-hidden="true"></i>
+                              </button>
                             </td>
                             <td>
                               <div class="btn-group dropdown">
@@ -141,11 +144,12 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop0" id="toggle1">
                                   <a type="button" class="dropdown-item" href="modifsession.html" >Modifier</a>
-                                  <a type="button" class="dropdown-item" href="stagiairesAgo.html" >Voir les inscrits et confirmer leur présence </a>
+                                  <a type="button" class="dropdown-item" href="stagiairesAgo.html" >Voir les agents inscrits et à repositionner </a>
                                   <a type="button" class="dropdown-item" href="formateurago1.html" >Voir les formateurs</a>
                                 </div>
                               </div>
                             </td>
+                           
                           </tr>
                           <tr>
                             
@@ -155,13 +159,15 @@
                             <td> Nanterre</td>
                             <td> 23/06/2021</td>
                             <td> 25/06/2021</td>
-                            <td> 12 </td>
-                            <td> 7</td>
+                            <td> 7/12</td>
                             <td> Continue </td>
-                            <td> <div class="custom-control custom-checkbox ml-5">
-                              <input type="checkbox" name="exampleCheckbox" class="custom-control-input" id="exampleCheckbox2">
-                              <label class="custom-control-label test" for="exampleCheckbox2"></label>
-                            </div>
+                            <td> 
+                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true"></i>
+                            </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
+                                <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande2"aria-hidden="true"></i>
+                              </button>
                             </td>
                             <td>
                               <div class="btn-group dropdown">
@@ -171,11 +177,12 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop1" id="toggle10">
                                   <a type="button" class="dropdown-item" href="modifsession2.html">Modifier</a>
-                                  <a type="button" class="dropdown-item" href="stagiairesAgo2.html">Voir les inscrits et confirmer leur présence</a>
+                                  <a type="button" class="dropdown-item" href="stagiairesAgo2.html">Voir les agents inscrits et à repositionner</a>
                                   <a type="button" class="dropdown-item" href="formateurago.html" >Voir les formateurs</a>
                                 </div>
                               </div>
                             </td>
+                           
                           </tr>
 
                         
@@ -187,13 +194,16 @@
                             <td> Nanterre</td>
                             <td> 15/06/2021</td>
                             <td> 16/06/2021</td>
-                            <td> 12 </td>
-                            <td> 10</td>
+                            <td> 10/12</td>
                             <td> Continue </td>
-                            <td> <div class="custom-control custom-checkbox ml-5">
-                              <input type="checkbox" name="exampleCheckbox" class="custom-control-input" id="exampleCheckbox1">
-                              <label class="custom-control-label test" for="exampleCheckbox1"></label>
-                            </div>
+                            <td> 
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true"></i>
+
+                            </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
+                                <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande2"aria-hidden="true"></i>
+                              </button>
                             </td>
                             <td>
                               <div class="btn-group dropdown">
@@ -203,12 +213,13 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop3" id="toggle12">
                                   <a type="button" class="dropdown-item">Modifier</a>
-                                  <a type="button" class="dropdown-item">Voir les inscrits et confirmer leur présence</a>
+                                  <a type="button" class="dropdown-item">Voir les agents inscrits et à repositionner</a>
                                   <a type="button" class="dropdown-item">Voir les formateurs</a>
 
                                 </div>
                               </div>
                             </td>
+                           
                           </tr>
 
                           <tr>
@@ -219,13 +230,16 @@
                             <td> Nanterre</td>
                             <td> 21/06/2021</td>
                             <td> 30/06/2021</td>
-                            <td> 10 </td>
-                            <td> 10</td>
+                            <td> 10/10</td>
                             <td> Continue </td>
-                            <td> <div class="custom-control custom-checkbox ml-5">
-                              <input type="checkbox" name="exampleCheckbox" class="custom-control-input" id="exampleCheckbox0">
-                              <label class="custom-control-label test" for="exampleCheckbox0"></label>
-                            </div>
+                            <td> 
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true"></i>
+
+                            </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
+                                <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDemande2"aria-hidden="true"></i>
+                              </button>
                             </td>
                             <td>
                               <div class="btn-group dropdown">
@@ -235,7 +249,7 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnDrop4" id="toggle13">
                                   <a type="button" class="dropdown-item">Modifier</a>
-                                  <a type="button" class="dropdown-item">Voir les inscrits et confirmer leur présence</a>
+                                  <a type="button" class="dropdown-item">Voir les agents inscrits et à repositionner</a>
                                   <a type="button" class="dropdown-item">Voir les formateurs</a>
                                 </div>
                               </div>
@@ -282,7 +296,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -316,7 +330,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -330,7 +344,7 @@
                 return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8]
+                columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -343,7 +357,7 @@
                 return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8]
+                columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -359,7 +373,7 @@
                   return "Export_SessionsFC_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 

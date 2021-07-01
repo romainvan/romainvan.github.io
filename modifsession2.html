@@ -53,7 +53,7 @@
 
                     <div class="form-row mt-4">
                         <label for="campus" class="ml-1"> Campus </label>
-                        <input list="campusList" type="text" id="campus" class="whiteinput border-0 form-control" value="Bègles">
+                        <input list="campusList" type="text" id="campus" class="whiteinput border-0 form-control" value="Bègles" readonly>
                             <datalist id="campusList">
                                     <option value="Nanterre">
                                     <option value="Bègles">
@@ -63,53 +63,28 @@
 
                     <div class="form-row mt-4">
                         <div class="col">
-                            <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
-                            <div data-component="picker">
-                                <div class="input-group" data-toggle>
-                                  <div class="form-control-container">
-                                    <input id="dateDebut" value ="23/06/2021" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de début" data-input>
-                                    <span class="form-control-state"></span>
-                                  </div>
-                                  <div class="input-group-append">
-                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
-                                      <i class="icons-calendar" aria-hidden="true"></i>
-                                    </button>
-                                  </div>
-                                </div>
-                            </div>
+                          <label for="datedebut" class="ml-1"> Date de début (jj/mm/aaaa)</label>
+                          <input type="text" id="datedebut" class="whiteinput border-0 form-control" value="23/06/2021" readonly>
                         </div>
                         <div class="col">
-                            <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
-                            <div data-component="picker">
-                                <div class="input-group" data-toggle>
-                                  <div class="form-control-container">
-                                    <input id="dateFin" value ="25/06/2021" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
-                                    <span class="form-control-state"></span>
-                                  </div>
-                                  <div class="input-group-append">
-                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
-                                      <i class="icons-calendar" aria-hidden="true"></i>
-                                    </button>
-                                  </div>
-                                </div>
-                            </div>
+                          <label for="datefin" class="ml-1"> Date de fin (jj/mm/aaaa)</label>
+                          <input type="text" id="datefin" class="whiteinput border-0 form-control" value="25/06/2021" readonly>
                         </div>
                        
                     </div>
 
                     <div class="form-group mt-4">
                         <label for="places" class="ml-1"> Nombre de places</label>
-                        <input type="number" value="12" class="form-control whiteinput" id="places"> 
+                        <input type="number" value="12" class="form-control whiteinput" id="places" readonly> 
                     </div>
 
-                    <div class="form-group mt-4">
-                        <label for="group" class="ml-1"> Groupe</label>
-                        <input type="text" value="Continue" class="form-control whiteinput" id="group"> 
-                    </div>
-              
+                                 
                    <div class="form-group mt-4">
-                        <label for="description" class="ml-1"> Commentaire convocation : </label>
-                        <textarea value="Continue" class="form-control whiteinput stretchy" id="description" ZgotmplZ></textarea> 
+                      <label for="stretchyTextarea1">Commentaire</label>
+                      <div class="form-control-container">
+                        <textarea class="form-control whiteinput areaheight" id="stretchyTextarea1" placeholder="Commentaire ..." ZgotmplZ></textarea>
+                        <span class="form-control-state"></span>
+                      </div>
                     </div>
 
                     <div class="row">
