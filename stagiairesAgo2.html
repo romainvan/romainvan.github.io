@@ -420,14 +420,11 @@
         }
       });
       $('#ago2 thead th').addClass('text-white');
-      })
-      
-      
-      
-      
-      
-              $(document).ready(function() {
-      var table = $('#etablissement').DataTable({
+          
+          
+          
+          
+          var table = $('#etablissement').DataTable({
         dom: 'BPfrtip',
         "pagingType": "full_numbers",
         "initComplete": function() {
@@ -438,7 +435,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -472,7 +469,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [0,1,2,3,4,5]
+                  columns: [0,1,2]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -481,12 +478,12 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success btnnopad',
-              title : 'Export liste des inscrits de la session VE200200 - NVE0000047 au '+titleFile(),
+              title : 'Export liste des établissements en attente inscripion '+titleFile(),
               filename : function() {
-                return "Export_InscritsVE200200-NVE0000047_"+dateFile()
+                return "Export_session_VE200200_Etablissement_attente"+dateFile()
               },
               exportOptions: {
-                  columns: [0,1,2,3,4,5]
+                  columns: [0,1,2]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -496,10 +493,10 @@
               extend : 'csvHtml5',
               className : 'btn btn-success btnnopad',
               filename : function() {
-                return "Export_InscritsVE200200-NVE0000047_"+dateFile()
+                return "Export_EtabNonInscritInscritsVE200200-NVE0000047_"+dateFile()
               },
               exportOptions: {
-                  columns: [0,1,2,3,4,5]
+                  columns: [0,1,2]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -510,12 +507,12 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
-                title : 'Export liste des inscrits de la session VE200200 - NVE0000047 au '+titleFile(),
+                title : 'Export liste des établissements en attente inscripion '+titleFile(),
                 filename : function() {
-                    return "Export_InscritsVE200200-NVE0000047_"+dateFile()
+                    return "Export_Etab_nonInscritInscritsVE200200-NVE0000047_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [0,1,2,3,4,5]
+                  columns: [0,1,2]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
@@ -559,6 +556,11 @@
       });
       $('#etablissement thead th').addClass('text-white');
       })
+      
+      
+      
+      
+      
       </script> 
 </body>
 </html>
