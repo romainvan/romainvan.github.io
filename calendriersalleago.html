@@ -36,7 +36,7 @@
             </li>
 
             <li>
-            <a href="calendriergroupeago.html" class="mastnav-item active">
+            <a href="calendriergroupeago.html" class="mastnav-item">
                 <i class="icons-large-group icons-size-1x5 " aria-hidden="true"></i>
                 <span class="font-weight-medium">Groupes</span>
             </a>
@@ -50,7 +50,7 @@
             </li>
 
             <li>
-              <a href="calendriersalleago.html" class="mastnav-item">
+              <a href="calendriersalleago.html" class="mastnav-item active">
                   <i class="icons-itinerary-train-station icons-size-1x5 " aria-hidden="true"></i>
                   <span class="font-weight-medium">Salles</span>
               </a>
@@ -61,7 +61,7 @@
     
 
     <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center" id="titlegroupe"> Calendrier groupe </h1>
+        <h1 class="text-center" id="titlegroupe"> Calendrier salle </h1>
         <div class="row">
             <div class="col-md-2 offset-md-1">
               <label for="campus" class="ml-2"> Campus </label>
@@ -73,25 +73,25 @@
                 </select>
             </div>
             <div class="col-md-2">
-              <label for="metier" class="ml-2"> Métier </label>
-                <select id="metier" class="form-control mb-3">
+              <label for="batiment" class="ml-2"> Batiment </label>
+                <select id="batiment" class="form-control mb-3">
                   <option selected data-role="default-hidden-option" disabled hidden>Tout</option>
-                  <option data-id="1" >Voie</option>
-                  <option data-id="2" >Produit Train</option>
-                  <option data-id="3" >Caténaire</option>
-                  <option data-id="4" >Circulation</option>
-                  <option data-id="5" >Signalisation</option>
-                  <option data-id="6" >Tout</option>
+                  <option data-id="1" >Touraine</option>
+                  <option data-id="2" >Artois</option>
+                  <option data-id="3" >Champagne</option>
+                  <option data-id="4" >Dauphine</option>
+                  <option data-id="5" >Paris</option>
+                  <option data-id="6" >Flandre</option>
                 </select>
             </div>
             <div class="col-md-3">
                 <div>
                     <div class="form-control-container autocomplete">
-                        <label for="code" class="ml-2"> Groupe </label>
-                        <input list="code" type="text" id="groupe" class="border-0 form-control" placeholder="Choix du groupe">
-                        <datalist id="code">
-                            <option value="CAT-22-1">
-                            <option value="SE-22-1">
+                        <label for="sallename" class="ml-2"> Nom de la salle </label>
+                        <input list="sallename" type="text" id="salle" class="border-0 form-control" placeholder="Choix de la salle">
+                        <datalist id="sallename">
+                            <option value="T01">
+                            <option value="A13">
                         </datalist>
                     </div>
                    
@@ -163,32 +163,33 @@
     </script>
 
 <script>
-    
+
+
     function displayCalendar() {
-      if($("#groupe").val()==""){
-        $("#titlegroupe").text("Calendrier groupe")
-       }
-       else{
-        $("#titlegroupe").text("Calendrier du groupe "+$("#groupe").val())
-       }
-      $("#legend").show()
-      var metier = $("#metier").val()
-      var groupe = $("#groupe").val()
-      if(metier == "Caténaire" || groupe=="CAT-22-1"){
-          $("#calendarcat").show()
-          $("#calendar").hide()
-          $("#calendarse").hide()
-      }
-      else if (metier == "Signalisation" || groupe=="SE-22-1"){
-          $("#calendarcat").hide()
-          $("#calendar").hide()
-          $("#calendarse").show()
-      }
-      else{
-          $("#calendarcat").hide()
-          $("#calendar").show()
-          $("#calendarse").hide()
-      }
+        var salle = $("#salle").val()
+        if(salle==""){
+            $("#titlegroupe").text("Calendrier salle")
+        }
+        else{
+            $("#titlegroupe").text("Calendrier de la salle "+$("#salle").val())
+        }
+        $("#legend").show()
+        var groupe = $("#groupe").val()
+        if(salle=="A13"){
+            $("#calendarcat").show()
+            $("#calendar").hide()
+            $("#calendarse").hide()
+        }
+        else if (salle=="T01"){
+            $("#calendarcat").hide()
+            $("#calendar").hide()
+            $("#calendarse").show()
+        }
+        else{
+            $("#calendarcat").hide()
+            $("#calendar").show()
+            $("#calendarse").hide()
+        }
     }
   </script>
 </body>

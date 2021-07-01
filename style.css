@@ -434,6 +434,9 @@ select > .placeholder {
   .areaheight{
     height: 10em !important;
   }
+
+  .fc-content td:hover{background: #adf4fa;}
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
