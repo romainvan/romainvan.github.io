@@ -128,7 +128,7 @@
                             <td> 10/16</td>
                             <td> Continue </td>
                             <td> 
-                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true"></i>
+                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true" onclick="changeicon('4')" id="icon4"></i>
 
                             </td>
                             <td>
@@ -162,7 +162,7 @@
                             <td> 7/12</td>
                             <td> Continue </td>
                             <td> 
-                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true"></i>
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('3')" id="icon3"></i>
                             </td>
                             <td>
                               <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
@@ -197,7 +197,7 @@
                             <td> 10/12</td>
                             <td> Continue </td>
                             <td> 
-                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true"></i>
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('2')" id="icon2"></i>
 
                             </td>
                             <td>
@@ -420,7 +420,19 @@
 
       function changeicon(x){
         var elt = document.getElementById("icon"+x);
-        console.log(elt.className)
+        if(elt.className.includes("check")){
+          elt.classList.remove("icons-checked");
+          elt.classList.remove("greenicon");
+          elt.classList.add("icons-close");
+          elt.classList.add("redicon");
+
+        }
+        else{
+          elt.classList.add("icons-checked");
+          elt.classList.add("greenicon");
+          elt.classList.remove("icons-close");
+          elt.classList.remove("redicon");
+        }
       }
 
     </script> 
