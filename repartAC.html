@@ -88,107 +88,6 @@
                 <div class="col-md-1">
                   <button class="btn btn-success btnvalid"> Rechercher</button>
                 </div>
-                <div class="col-md-12 mt-2">
-                  <h2 class="mt-4"> Choix 1 </h2>
-                    <div class="table-wrapper">
-                        <div class="table-scroller last-cell-fixed dragscroll">
-                          <table class="table">
-                            <thead class="thead bg-secondary">
-                              <tr>
-                                <th scope="col"><div class="text-white justify-content-center">Code RAF</div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Code Session</div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Lieu</div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Date début</div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Date fin</div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Groupe </div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Places totales </div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Places ZP </div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Inscrits ZP </div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Restants à répartir </div></th>
-                                <th scope="col"><div class="text-white justify-content-center">Réattribuer des places </div></th>
-                                <td class="cell-placeholder" aria-hidden="true"><span></span></td>
-                                <th class="cell-fixed"><span class="sr-only">Actions</span></th>
-                              </tr>
-                            </thead>
-                            <tbody class="tbody">
-                              <tr>
-                                
-                                <td> VT160000</td>
-                                <td> NVT000146</td>
-                                <td> Bègles</td>
-                                <td> 21/06/2021</td>
-                                <td> 25/06/2021</td>
-                                <td> Continue </td>
-                                <td> 12 </td>
-                                <td> 3</td>
-                                <td> 0</td>
-                                <td> 2</td>
-                                <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Réattribuer</button></div></td>
-                                <td class="cell-placeholder"><span></span></td>
-                                <td class="cell-fixed">
-                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC"> Réattribuer </button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td> VA216000</td>
-                                <td> NVT000172</td>
-                                <td> Saint-Priest</td>
-                                <td> 05/07/2021</td>
-                                <td> 06/07/2021</td>
-                                <td> Continue </td>
-                                <td> 6 </td>
-                                <td> 2</td>
-                                <td> 0</td>
-                                <td> 1</td>
-                                <td> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalRendre2"> Réattribuer</button></td>
-                                <td class="cell-placeholder"><span></span></td>
-                                <td class="cell-fixed">
-                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC2"> Réattribuer </button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td> VA216000</td>
-                                <td> NVT000172</td>
-                                <td> Saint-Priest</td>
-                                <td> 05/07/2021</td>
-                                <td> 06/07/2021</td>
-                                <td> Continue </td>
-                                <td> 6 </td>
-                                <td> 2</td>
-                                <td> 0</td>
-                                <td> 1</td>
-                                <td> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalRendre2"> Réattribuer</button></td>
-                                <td class="cell-placeholder"><span></span></td>
-                                <td class="cell-fixed">
-                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC2"> Réattribuer </button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td> VA216000</td>
-                                <td> NVT000172</td>
-                                <td> Saint-Priest</td>
-                                <td> 05/07/2021</td>
-                                <td> 06/07/2021</td>
-                                <td> Continue </td>
-                                <td> 6 </td>
-                                <td> 2</td>
-                                <td> 0</td>
-                                <td> 1</td>
-                                <td> <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ModalRendre2"> Réattribuer</button></td>
-                                <td class="cell-placeholder"><span></span></td>
-                                <td class="cell-fixed">
-                                  <button class="btn btn-success btn-block btnrepart" data-toggle="modal" data-target="#ModalRepartAC2"> Réattribuer </button>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                </div>               
-            </div>
-
-        <h2 class="mt-2"> Choix 2 </h2>
 
         <div class="col-md-12 mt-5 px-5">
             <div class="table-wrapper table-responsive">
@@ -611,25 +510,7 @@
         </div>
     </div>
 
-    <div id="ModalRendre1" class="modal fade">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content" style="border: 2px solid black;"> <br />
-              <h2 class="text-center my-4"> Réattribuer des places pour la session NVT000146 - VT160000 </h1>
-              <div class="modal-body">
-                      <div class="form-group">                    
-                        <label for="rendre"> Réattribuer des places</label>
-                        <input type="number" class="form-control" id="rendre">
-                      </div>
-                      <div class="row">
-                          <div class="col-md-2 offset-md-5">
-                            <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
-                          </div>
-                      </div>                                          
-              </div>
-  
-          </div>
-      </div>
-    </div>
+
 
     <div id="ModalRendre2" class="modal fade">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -727,6 +608,49 @@
 
       
   </div>
+
+<div id="ModalRendre1" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content" style="border: 2px solid black;"> <br />
+              <h2 class="text-center my-4"> Réattribuer des places aux autres ZP pour le groupe LY AMV5 01/22 OP	</h2>
+              <div class="modal-body">
+                <table class="table table-bordered">
+                  <thead class="thead bg-secondary">
+                    <tr>
+                      <th scope="col"><div class="text-white justify-content-center">Places accordées</th>
+                      <th scope="col"><div class="text-white justify-content-center">Places réparties</th>
+                      <th scope="col"><div class="text-white justify-content-center">Places restantes</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP A</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP IDF</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP NEN</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP SE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> 3 </td>
+                      <td> 0 </td>
+                      <td> 3 </td>
+                      <td>  <input type="number" class="form-control"> </td>
+                      <td>  <input type="number" class="form-control"> </td>
+                      <td>  <input type="number" class="form-control"> </td>
+                      <td>  <input type="number" class="form-control"> </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row">
+                  <div class="col-md-2 offset-md-5">
+                    <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                  </div>
+                </div>                             
+              </div>
+  
+          </div>
+      </div>
+    </div>
+
+
   <div id="footerac3"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
     <script>
