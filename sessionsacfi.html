@@ -104,10 +104,13 @@
                             <th scope="col">Date de début</th>
                             <th scope="col">Date de fin</th>
                             <th scope="col">Division métier</th>
-                            <th scope="col">Nombre d'inscrits</th>
                             <th scope="col">Groupe</th>
-                            <th scope="col"> Places restantes</th>
+                            <th scope="col"> ZP A</th>
+                            <th scope="col"> ZP IDF</th>
+                            <th scope="col"> ZP NEN</th>
+                            <th scope="col"> ZP SE</th>
                             <th scope="col" class="no-sort"> Actions </th>
+                            <th scope="col" class="no-sort"> Détails </th>
                           </tr>
                         </thead>
                         <tbody class="tbody">
@@ -119,9 +122,11 @@
                             <td> 15/01/2022</td>
                             <td> 19/01/2022</td>
                             <td> Signalisation</td>
-                            <td> 2</td>
                             <td> JCVB_22-01	</td>
-                            <td> 1 </td>
+                            <td> 2/3 </td>
+                            <td> 2/2 </td>
+                            <td> 2/4 </td>
+                            <td> 2/3 </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -134,6 +139,11 @@
                                 </div>
                               </div>
                             </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                              </button>
+                          </td>
                           </tr>
                           <tr>
                             <td> VVTESM03</td>
@@ -144,9 +154,11 @@
                             <td> 01/02/2022</td>
                             <td> 05/02/2022</td>
                             <td> Voie</td>
-                            <td> 2</td>
                             <td> JCVB_22-01</td>
-                            <td> 0 </td>
+                            <td> 2/3 </td>
+                            <td> 1/2 </td>
+                            <td> 3/4 </td>
+                            <td> 2/3 </td>
                             <td>
                               <div class="btn-group dropdown align-right">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btncofo1" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -159,6 +171,11 @@
                                 </div>
                               </div>
                             </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                <i class="icons-circle-information icons-size-1x25"></i>
+                              </button>
+                            </td>
                           </tr>
 
                           <tr>
@@ -170,9 +187,11 @@
                             <td> 05/01/2022</td>
                             <td> 09/01/2021</td>
                             <td> Circulation</td>
-                            <td> 10</td>
                             <td> LY AMV5 01/22 OP	</td>
-                            <td> 2</td>
+                            <td> 1/4 </td>
+                            <td> 2/4 </td>
+                            <td> 3/4 </td>
+                            <td> 3/4 </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -185,6 +204,11 @@
                                 </div>
                               </div>
                             </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails2" aria-hidden="true"></i>
+                              </button>
+                          </td>
                           </tr>
 
 
@@ -198,9 +222,11 @@
                             <td> 15/01/2022</td>
                             <td> 19/06/2021</td>
                             <td> Circulation</td>
-                            <td> 11</td>
                             <td> LY AMV5 01/22 OP	</td>
-                            <td> 1</td>
+                            <td> 4/4 </td>
+                            <td> 2/4 </td>
+                            <td> 3/4 </td>
+                            <td> 3/4 </td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -213,6 +239,11 @@
                                 </div>
                               </div>
                             </td>
+                            <td>
+                              <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                <i class="icons-circle-information icons-size-1x25"></i>
+                              </button>
+                            </td>
                           </tr>
 
 
@@ -224,6 +255,98 @@
             </div>
     </div>
 
+    <div id="ModalDetails" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content"> <br />
+              <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      
+                      <h2 class="text-center my-4"> Détails de la session <strong> NVT000146 </strong> </h1>
+
+                      <ul>
+                        <li> Code RAF : VJCM0202 </li>
+                        <li> Code Session : NVT000347 </li>
+                        <li> Libellé de l'action : RCS de circulation des trains et d'exploitation	</li>
+                        <li> Lieu : Bègles</li>
+                        <li> Date de début : 15/01/2022	</li>
+                        <li> Date de fin : 19/01/2022	</li>
+                        <li> Groupe : JCVB_22-01	</li>
+                        <li> Division métier : Signalisation</li>
+                        <li> Date ouverture session : 26/08/2021</li>
+                        <li> Nombre de places totales : 12 </li>
+                        <li> Nombre de places ZP : 2 </li>
+                        <li> Nombre de places prises : 1 </li>
+                      </ul>
+
+                      <h2 class="text-center mt-2"> Détails des places</h2>
+
+                      <ul>
+                        <li>  Infrapôle Aquitaine  :  1 sur 1 </li>
+                        <li>  Infrapôle Bretagne : <strong class="alert"> 0 sur 1</strong></li>
+                        <li>  Infrapôle Centre  :  1 sur 1 </li>
+                      </ul>
+
+
+                        
+                    </div>
+                  </div>                           
+              </div>
+  
+          </div>
+      </div>
+    </div>
+    
+    <div id="ModalDetails2" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content"> <br />
+              <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      
+                      <h2 class="text-center my-4"> Détails de la session <strong> NVT000146 </strong> </h1>
+
+                      <ul>
+                        <li> Code RAF : EC110300 </li>
+                        <li> Code Session : NVT0000724 </li>
+                        <li> Libellé de l'action : Formation de base AMV - ATT/OP - ATT-TS		</li>
+                        <li> Lieu : Saint-Priest	</li>
+                        <li> Date de début : 05/01/2022		</li>
+                        <li> Date de fin : 09/01/2021		</li>
+                        <li> Groupe : LY AMV5 01/22 OP		</li>
+                        <li> Division métier : Circulation</li>
+                        <li> Date ouverture session : 26/08/2021</li>
+                        <li> Nombre de places totales : 16 </li>
+                        <li> Nombre de places ZP : 16 </li>
+                        <li> Nombre de places prises : 9 </li>
+                      </ul>
+
+                      <h2 class="text-center mt-2"> Détails des places</h2>
+
+                      <ul>
+                        <li>  Eic Aquitaine Poitou-Charentes :  <strong class="alert"> 1 sur 2</strong></li>
+                        <li>  Eic Centre Val De Loire :  <strong class="alert"> 0 sur 1</strong></li>
+                        <li>  Eic Midi-Pyrénées :  <strong class="alert"> 1 sur 2</strong></li>
+                        <li>  Eic Paris Est :  <strong class="alert"> 1 sur 2</strong></li>
+                        <li>  Eic Paris St Lazare : <strong class="alert"> 1 sur 2</strong></li>
+                        <li>  Eic Paris Rive Gauche :  1 sur 1</li>
+                        <li>  Eic Paris Nord : 1 sur 1</li>
+                        <li>  Eic Alsace :  <strong class="alert"> 0 sur 1</strong></li>
+                        <li>  Eic Hauts De France :  2 sur 2</li>
+                        <li>  Eic Normandie :  2 sur 2</li>
+                        <li>  Eic PACA :  <strong class="alert"> 0 sur 1</strong></li>
+                        <li>  Eic Alpes :  1 sur 1</li>
+                        <li>  Eic Auvergne Nivernais :  1 sur 1</li>
+                        <li>  Eic Rhone Alpes :  1 sur 1</li>
+
+                      </ul>
+                    </div>
+                  </div>                           
+              </div>
+  
+          </div>
+      </div>
+    </div>
     <div id="footercofo5"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
@@ -258,7 +381,7 @@
                 },
                 targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
             },
-            { width: "30%", targets: 1 },
+            { width: "20%", targets: 1 },
             {
       orderable: false,
       targets: "no-sort"
