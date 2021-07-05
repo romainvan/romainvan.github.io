@@ -437,6 +437,12 @@ select > .placeholder {
 
   .fc-content td:hover{background: #adf4fa;}
 
+  .centertd{
+    vertical-align : middle !important;
+    text-align:center !important;
+    font-size: 1em;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
