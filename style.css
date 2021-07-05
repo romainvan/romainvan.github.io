@@ -267,7 +267,7 @@ select > .placeholder {
     padding-right: 1em!important;
   }
 
-  td{
+  th, td, td .btn, td label,td input{
     font-size: small;
     font-family: Georgia, serif;
   }
