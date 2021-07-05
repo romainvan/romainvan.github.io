@@ -21,7 +21,7 @@
     <div id="includedContentAC7"></div>
     
         <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-2"> Liste des sessions formation continue pour la ZP </h1>
+        <h1 class="text-center mb-2"> Liste des sessions pour la ZP </h1>
         <div class="row">
           <div class="col-md-12">
             <div class="row mb-2">
@@ -147,6 +147,39 @@
                             <td> 18/06/2021</td>
                             <td> Circulation </td>
                             <td> Continue </td>
+                            <td> 3/3 </td>
+                            <td> 1/1</td>
+                            <td> 3/4</td>
+                            <td> 1/2</td>
+                            <td>
+                              <div class="btn-group dropdown align-right">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btncofo1" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                  <i class="icons-circle-information icons-size-1x25"></i>
+                                </button>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            
+                            <td> VENC100RR</td>
+                            <td> Remplacement de rails, Ferrures en ADV incorporés </td>
+                            <td> NVT000348</td>
+                            <td> Nanterre</td>
+                            <td> 25/06/2021</td>
+                            <td> 29/06/2021</td>
+                            <td> Voie </td>
+                            <td> JCVB_22-01	 </td>
                             <td> 3/3 </td>
                             <td> 1/1</td>
                             <td> 3/4</td>
@@ -362,13 +395,13 @@
       function seeStagiaires(){
           var array = window.location.href.split("/");
           array[array.length-1]="listestagiairesfiac.html";
-          location.href = array.join("/");
+         window.open(array.join("/"));
       }
 
       function seeDetails(){
         var array = window.location.href.split("/");
         array[array.length-1]="detailsSessionsAC.html";
-        location.href = array.join("/");
+       window.open(array.join("/"));
       }
     </script>
 </body>

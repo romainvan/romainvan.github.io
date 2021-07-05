@@ -290,7 +290,7 @@
       function seeStagiaires(){
           var array = window.location.href.split("/");
           array[array.length-1]="listestagiaires.html";
-          location.href = array.join("/");
+         window.open(array.join("/"));
       }
     </script>
 </body>

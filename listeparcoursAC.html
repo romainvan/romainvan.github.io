@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Liste des sessions</title>
+  <title>Liste des parcours</title>
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
@@ -18,39 +18,108 @@
 </head>
 
 <body class="d-flex flex-column">
-    <div id="includedContentAC8"></div>
+    <div id="includedContentAC7"></div>
     
         <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Suivi Formation Initiale de l'établissement Infrapôle Paris Nord </h1>
+        <h1 class="text-center mb-2"> Liste des parcours pour la ZP </h1>
         <div class="row">
 
-            <div class="col-md-12 mt-5">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                  <div class="col-md-2 mb-2">
+                  
+                    <label for="date" class="font-weight-medium mb-2">Date début</label>
+                    <div data-component="picker">
+                      <div class="input-group" data-toggle>
+                        <div class="form-control-container">
+                          <input id="date" type="text" class="form-control whiteinput" placeholder="Sélectionner une date" data-input>
+                          <span class="form-control-state"></span>
+                        </div>
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                            <i class="icons-calendar" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+  
+                  <div class="col-md-2 mb-2">
+                    
+                    <label for="date" class="font-weight-medium mb-2">Date de fin</label>
+                    <div data-component="picker">
+                      <div class="input-group" data-toggle>
+                        <div class="form-control-container">
+                          <input id="date" type="text" class="form-control whiteinput" placeholder="Sélectionner une date" data-input>
+                          <span class="form-control-state"></span>
+                        </div>
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                            <i class="icons-calendar" aria-hidden="true"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+  
+                  </div>
+
+                  <div class="col-md-2">
+  
+                    <label for="etab" class="ml-1"> Parcours </label>
+                    <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Parcours">
+                    <datalist id="etab">
+                        <option data-value="CFOP - OP / Reconversion"> CFOP - OP / Reconversion</option>
+                        <option data-value="JCV - Jeune Cadre Voie	"> JCV - Jeune Cadre Voie	 </option>
+                    </datalist>
+  
+                  </div>
+
+                  <div class="col-md-1">
+                      <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+                  </div>
+                </div>
                 <div class="table-wrapper">
                     <div class="table-scroller last-cell-fixed dragscroll">
                       <table class="table display mb-5" id="sessionscofo">
                         <thead class="thead bg-secondary">
                           <tr>
-                            <th scope="col">Nom du groupe</th>
-                            <th scope="col">Nombre d'agents de l'établissement</th>
-                            <th scope="col" class="no-sort"> Actions </th>
+                            <th> Code parcours</th>
+                            <th> Libellé parcours</th>
+                            <th> Groupe </th>
+                            <th> Date de début</th>
+                            <th> Date de fin </th>
+                            <th> Nombre d'agents</th>
+                            <th> Début distanciel</th>
+                            <th> 1er module métier</th>
+                            <th class="no-sort"> Actions </th>
                           </tr>
                         </thead>
                         <tbody class="tbody">
-                          <tr>
-                            <td> OPSEG-20-6</td>
-                            <td> 3</td>
+                         
+                        <tr>
+                            <td> CFOP </td>
+                            <td> OP / Reconversion </td>
+                            <td> LY AMV5 01/22 OP </td>
+                            <td> 05/01/2022</td>
+                            <td> 10/12/2022</td>
+                            <td> 10 </td>
+                            <td> 05/01/2022</td>
+                            <td> 25/01/2022</td>
                             <td>
-                                <button type="button" class="btn btn-only-icon btn-white" data-toggle="modal" data-target="#ModalAgents">
-                                    <span class="sr-only">Search</span>
-                                    <i class="icons-menu-account icons-size-2x" aria-hidden="true"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-only-icon btn-white" data-toggle="modal" data-target="#ModalSessions">
-                                    <span class="sr-only">Search</span>
-                                    <i class="icons-large-information icons-size-2x" aria-hidden="true"></i>
-                                </button>
+                                <div class="btn-group dropdown">
+                                  <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Actions</span>
+                                    <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                  </button>
+                                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
+                                    <button type="button" class="dropdown-item" onclick="seeDetails()">Voir la liste des sessions </button>
+                                    <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
+                                  </div>
+                                </div>
                             </td>
-                          </tr>
+                        </tr>
+
                         </tbody>
                       </table>
                     </div>
@@ -59,52 +128,10 @@
             </div>
     </div>
 
-    <div id="footercofo6"></div>
-
-    <div id="ModalAgents" class="modal fade">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content" style="border: 2px solid black;"> <br />
-                <h2 class="text-center my-4"> Liste des agents du groupe <strong> OPSEG-20-6 </strong> </h1>
-                <div class="modal-body">                     
-                    <ul class="list-group">
-                        <li class="list-group-item"> 1234567A Dupont Martin</li>
-                        <li class="list-group-item"> 8912345B Courbet Théo</li>
-                        <li class="list-group-item"> 6789123C Mercier Jean</li>
-                    </ul>
-                </div>
+   
     
-            </div>
-        </div>
-    </div>
-
-    <div id="ModalSessions" class="modal fade">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content" style="border: 2px solid black;"> <br />
-                <h2 class="text-center my-4"> Liste des sessions du groupe <strong> OPSEG-20-6 </strong> </h1>
-                <div class="modal-body"> 
-                    <h2> Sessions passées</h2>                    
-                    <ul class="list-group">
-                        <li class="list-group-item"> VS121100 : NVS0000078</li>
-                        <li class="list-group-item"> VS121200 : NVS0000073</li>
-                        <li class="list-group-item"> VS122100 : NVS0000074</li>
-                    </ul>
-                    <h2 class="mt-2"> Sessions à venir </h2>
-                    <ul class="list-group">
-                        <li class="list-group-item"> VS122200 : NVS0000085 </li>
-                        <li class="list-group-item"> VS123300 : NVS0000082</li>
-                        <li class="list-group-item"> VS122400 : NVS0000090</li>
-                    </ul>
-                    <div class="row">
-                        <div class="col-md-4 offset-md-4">
-                            <a href="listesessionsgroupe.html" class="btn btn-primary mt-3"> Voir plus en détails</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
+    <div id="footercofo5"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
@@ -118,16 +145,10 @@
 
     <script>
       $(function(){
-        $("#includedContentAC8").load("navcofo.html");
-        $("#footercofo6").load("footer.html"); 
+        $("#includedContentAC7").load("navac.html");
+        $("#footercofo5").load("footer.html"); 
 
       });
-
-      function seeSessions(){
-          var array = window.location.href.split("/");
-          array[array.length-1]="listesessionsgroupe.html";
-         window.open(array.join("/"));
-      }
       
       
       $(document).ready(function() {
@@ -142,8 +163,9 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
             },
+            { width: "20%", targets: 1 },
             {
       orderable: false,
       targets: "no-sort"
@@ -176,7 +198,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -185,12 +207,12 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success btnnopad',
-              title : 'Export sessions formations initiales du '+titleFile(),
+              title : 'Export sessions formations continues du '+titleFile(),
               filename : function() {
-                  return "Export_SessionsFI_"+dateFile()
+                return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -200,10 +222,10 @@
               extend : 'csvHtml5',
               className : 'btn btn-success btnnopad',
               filename : function() {
-                  return "Export_SessionsFI_"+dateFile()
+                return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -212,21 +234,20 @@
             },
             {
                 extend: 'pdfHtml5',
-                orientation: 'portrait',
+                orientation: 'landscape',
                 pageSize : 'LEGAL',
-                title : 'Export sessions formations initiales du '+titleFile(),
+                title : 'Export sessions formations continues du '+titleFile(),
                 filename : function() {
-                    return "Export_SessionsFI_"+dateFile()
+                  return "Export_SessionsFC_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1]
+                  columns: [ 0,1,2,3,4,5,6,7]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
                       Array(doc.content[1].table.body[0].length + 1).join('*').split('');
                   doc.styles.tableBodyEven.alignment = 'center';
                   doc.styles.tableBodyOdd.alignment = 'center'; 
-                 
                 },
                 className : 'btn btn-primary btnnopad',
                 init: function( api, node, config) {
@@ -267,8 +288,14 @@
 
       function seeStagiaires(){
           var array = window.location.href.split("/");
-          array[array.length-1]="listestagiaires.html";
+          array[array.length-1]="listegroupe.html";
          window.open(array.join("/"));
+      }
+
+      function seeDetails(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="sessionsparcoursAC.html";
+        window.open(array.join("/"));
       }
     </script>
 </body>
