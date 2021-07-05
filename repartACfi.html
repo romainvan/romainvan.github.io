@@ -96,11 +96,13 @@
                   <table class="table table-fixed">
                     <thead class="thead bg-secondary">
                       <tr>
+                        <th scope="col"><div class="text-white justify-content-center"> </div></th>
                         <th scope="col"><div class="text-white justify-content-center">Code Parcours - Libellé Parcours </div></th>
                         <th scope="col"><div class="text-white justify-content-center">Métier</div></th>
                         <th scope="col"><div class="text-white justify-content-center">Lieu</div></th>
                         <th scope="col"><div class="text-white justify-content-center">Date début - Date de fin</div></th>
                         <th scope="col"><div class="text-white justify-content-center">Groupe </div></th>
+                        <th scope="col"><div class="text-white justify-content-center">Date limite recrutement </div></th>
                         <th scope="col"><div class="text-white justify-content-center">Places totales </div></th>
                         <th scope="col"><div class="text-white justify-content-center">ZP A </div></th>
                         <th scope="col"><div class="text-white justify-content-center">ZP IDF </div></th>
@@ -113,22 +115,24 @@
                     </thead>
                     <tbody class="tbody">
                       <tr>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> CFOP - OP / Reconversion	</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> Circulation</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> Saint-Priest	</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 05/01/2022 - 10/12/2022</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> LY AMV5 01/22 OP </td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 12 </td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 1/3</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 2/3</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 0/3</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 3/3</td>
-                        <td onclick="affichemyDiv('affichemyDiv1')"> 3</td>
+                        <td onclick="affichemyDiv('affichemyDiv1','icon1')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i> </td>
+                        <td> CFOP - OP / Reconversion	</td>
+                        <td> Circulation</td>
+                        <td> Saint-Priest	</td>
+                        <td> 05/01/2022 - 10/12/2022</td>
+                        <td> LY AMV5 01/22 OP </td>
+                        <td> 20/12/2021 </td>
+                        <td> 12 </td>
+                        <td> 1/3</td>
+                        <td> 2/3</td>
+                        <td> 0/3</td>
+                        <td> 3/3</td>
+                        <td> 3</td>
                         <td > <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Réattribuer</button></td>
                         <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
                       </tr>
                       <tr style="display: none;" id="affichemyDiv1" class="bodycolor">
-                          <td colspan="13">
+                          <td colspan="16">
                               <table class="table mt-3">
                                 <thead class="thead hiddentable">
                                   <tr class="bg-cyan">
@@ -139,7 +143,7 @@
                                 <tbody class="tbody">
                                   
                                     <tr>
-                                      <td onclick="affichemyDiv('affichetableau1','icon1')">  <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i></td>
+                                      <td onclick="affichemyDiv('affichetableau1','icon3')">  <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon3"></i></td>
                                       <td> ZP IDF </td>                                
                                     </tr>
 
@@ -298,22 +302,24 @@
                      
 
                       <tr>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> JCV - Jeune Cadre Voie	</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> Voie</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> Bègles</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 15/01/2022 - 25/06/2023</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> JCVB_22-01 </td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 20 </td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 2/2</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 3/4</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 3/4</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 2/6</td>
-                        <td onclick="affichemyDiv('affichemyDiv2')"> 0</td>
+                        <td onclick="affichemyDiv('affichemyDiv2','icon4')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon4"></i> </td>
+                        <td> JCV - Jeune Cadre Voie	</td>
+                        <td> Voie</td>
+                        <td> Bègles</td>
+                        <td> 15/01/2022 - 25/06/2023</td>
+                        <td> JCVB_22-01 </td>
+                        <td> 05/12/2021 </td>
+                        <td> 20 </td>
+                        <td> 2/2</td>
+                        <td> 3/4</td>
+                        <td> 3/4</td>
+                        <td> 2/6</td>
+                        <td> 0</td>
                         <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Réattribuer</button></td>
                         <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
                       </tr>
                       <tr style="display: none;" id="affichemyDiv2" class="bodycolor">
-                        <td colspan="5">
+                        <td colspan="8">
                           <table class="table mt-3">
                               <thead class="thead hiddentable">
                                 <tr>
@@ -346,7 +352,7 @@
                               </tbody>
                             </table>
                         </td>
-                        <td colspan="7">
+                        <td colspan="8">
                           <table class="table mt-3">
                             <thead class="thead hiddentable">
                               <tr>
@@ -621,17 +627,18 @@
     <script>
         function affichemyDiv(id,icon=null) {
             var x = document.getElementById(id);
+            console.log(icon);
             if (x.style.display === "none") {
+                console.log("before");
                 if(icon != null){
-                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  console.log("after");
                   document.getElementById(icon).classList.remove('icons-arrow-next');
+                  document.getElementById(icon).classList.add('icons-arrow-down');
                 }
                 x.style.display = "table-row";
             } else {
               if(id.startsWith("affichemyDiv")){
                 var last = "affichetableau"+id.slice(-1)
-                console.log(id)
-                console.log(last)
                 var y = document.getElementById(last)
                 y.style.display = "none";
               }
