@@ -25,79 +25,59 @@
       <h1 class="text-center mb-5"> Tableau de bord agent </h1>
 
       <div class="row">
-        <div class="col-md-4">
-            <div class="input-group">
+        <div class="col-md-2">
 
-                <div class="btn-group dropdown col-md-5" data-component="select-radios">
-                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                      <span data-role="placeholder">Novembre</span>
-                      <i class="icons-arrow-down" aria-hidden="true"></i>
-                    </button>
-                    <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action1" class="sr-only"/>
-                        <label class="dropdown-item" for="action1">Janvier</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action2" class="sr-only"/>
-                        <label class="dropdown-item" for="action2">Février</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action3" class="sr-only"/>
-                        <label class="dropdown-item" for="action3">Mars</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action4" class="sr-only"/>
-                        <label class="dropdown-item" for="action4">Avril</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action5" class="sr-only"/>
-                        <label class="dropdown-item" for="action5">Mai</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action6" class="sr-only"/>
-                        <label class="dropdown-item" for="action6">Juillet</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action8" class="sr-only"/>
-                        <label class="dropdown-item" for="action8">Août</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action9" class="sr-only"/>
-                        <label class="dropdown-item" for="action9">Septembre</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action20" class="sr-only"/>
-                        <label class="dropdown-item" for="action20">Octobre</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action21" class="sr-only"/>
-                        <label class="dropdown-item" for="action21">Novembre</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action22" class="sr-only"/>
-                        <label class="dropdown-item" for="action22">Décembre</label>
-      
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action23" class="sr-only"/>
-                        <label class="dropdown-item" for="action23">2021</label>
-
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action24" class="sr-only"/>
-                        <label class="dropdown-item" for="action24">2020</label>
-
-                        <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action25" class="sr-only"/>
-                        <label class="dropdown-item" for="action25">2019</label>
-                    </div>
-                </div>
-              
-                <div class="form-control-container col-md-5 whiteinput autocomplete">
-                    <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" placeholder="Numéro CP" value="9800000N">
-                    <datalist id="code">
-                      <option value="1234567A">
-                      <option value="8912345B">
-                      <option value="6789123C">
-                      <option value="9514759D">
-                      <option value="9800000N">
-                    </datalist>
+          <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+          <div data-component="picker">
+              <div class="input-group" data-toggle>
+                <div class="form-control-container">
+                  <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de début" data-input>
+                  <span class="form-control-state"></span>
                 </div>
                 <div class="input-group-append">
-                  <button type="button" class="btn btn-primary btn-only-icon">
-                    <i class="icons-search" aria-hidden="true"></i>
-                    <span class="sr-only">Rechercher sur le site</span>
+                  <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                    <i class="icons-calendar" aria-hidden="true"></i>
                   </button>
                 </div>
-            </div>
+              </div>
+          </div>
+       
         </div>
-        <div class="col-md-2 offset-md-6">
-            <button class="btn btn-primary" id="mybtngraph" tex> Afficher les graphiques</button>
+        <div class="col-md-2">
+
+            
+          <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+          <div data-component="picker">
+              <div class="input-group" data-toggle>
+                <div class="form-control-container">
+                  <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                  <span class="form-control-state"></span>
+                </div>
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                    <i class="icons-calendar" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+          </div>
+          
+        </div> <!-- col-md-3 -->
+        <div class="col-md-2">
+          <label for="choix_bieres"> Numéro CP</label>
+          <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" placeholder="Numéro CP" value="9800000N">
+          <datalist id="code">
+            <option value="1234567A">
+            <option value="8912345B">
+            <option value="6789123C">
+            <option value="9514759D">
+            <option value="9800000N">
+          </datalist>
+        </div>
+        <div class="col-md-1">
+          <button class="btn btn-success btnvalid"> Valider</button>
+        </div>
+        <div class="col-md-2 offset-md-2">
+            <button class="btn btn-primary btnvalid" id="mybtngraph" tex> Afficher les graphiques</button>
         </div>
         <div class="col-md-11 mt-5 ofsset-md-1" id="graph">
             <div class="row">
