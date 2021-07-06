@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center mb-4"> Liste des inscrits de la session VA620600 -  NVT0000151</h1>
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-12">
                     <div class="table-wrapper mt-3">
                         <table class="table" id="listestagiaires">
                             <thead class="thead bg-secondary">
@@ -38,6 +38,10 @@
                                     <th scope="col">Convocation</th>
                                     <th scope="col"> Date d'envoi</th>
                                     <th scope="col"> Télécharger</th>
+                                    <th scope="col"> Date inscription</th>
+                                    <th scope="col"> Statut</th>
+                                    <th scope="col"> Présence</th>
+                                    <th scope="col"> Commentaire</th>
                                     <th scope="col"> Annulation </th>
                                     <th scope="col">  </th>
 
@@ -57,6 +61,10 @@
                                     <td>  25/05/2021</td>
                                     <td> <a href="Durand - Accès à E - UV6 Technique, maintenance et agrément - Engins - 28 au 29.06.21.pdf" download="Durand - Accès à E - UV6 Technique, maintenance et agrément - Engins - 28 au 29.06.21.pdf"> <i class="icons-document icons-size-1x5" aria-hidden="true"></i>
                                     </a> </td>
+                                    <td> 25/05/2021</td>
+                                    <td> Inscrit</td>
+                                    <td> </td>
+                                    <td> <input class="form-control" placeholder="Commentaire absence" readonly> </td>
                                     <td> 
                                       <select id="select0">
                                         <option selected data-role="default-hidden-option" disabled hidden>Choix du motif</option>
@@ -86,6 +94,10 @@
                                     <td>  Non envoyée </td>
                                     <td>  </td>
                                     <td> </td>
+                                    <td> 27/05/2021</td>
+                                    <td> Inscrit</td>
+                                    <td> </td>
+                                    <td> <input class="form-control" placeholder="Commentaire absence" readonly> </td>
                                     <td> 
                                       <select id="select0">
                                         <option selected data-role="default-hidden-option" disabled hidden>Choix du motif</option>
@@ -114,10 +126,14 @@
                                   <td>   </td>
                                   <td>  </td>
                                   <td> </td>
+                                  <td></td>
                                   <td> 
                                       <span class="alert"> Annulé</span>
                                   </td>
-                                  <td> </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>  <span class="alert"> Annulé</span> </td>
+                                  <td></td>
                               </tr>
                                 
                             </tbody>
@@ -171,7 +187,10 @@
             {
               orderable: false,
               targets: "no-sort"
-            }
+            },
+            { width: "2%", targets: 7},
+            { width: "13%", targets: 12},
+
         ],
         lengthMenu: [
           [10, 25, 50, 100],
