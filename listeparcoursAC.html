@@ -115,6 +115,7 @@
                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
                                     <button type="button" class="dropdown-item" onclick="seeDetails()">Voir la liste des sessions </button>
                                     <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
+                                    <button type="button" class="dropdown-item" onclick="seeGroupe()">Suivre le groupe</button>
                                   </div>
                                 </div>
                             </td>
@@ -295,6 +296,12 @@
       function seeDetails(){
         var array = window.location.href.split("/");
         array[array.length-1]="sessionsparcoursAC.html";
+        window.open(array.join("/"));
+      }
+
+      function seeGroupe(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="suivifiac2.html";
         window.open(array.join("/"));
       }
     </script>
