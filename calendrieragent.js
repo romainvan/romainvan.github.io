@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'NVE0000047 : Protections MICOM P12x',
                 start: new Date('2021-06-02T08:30:00'),
                 end: new Date('2021-06-02T17:00:00'),
-                description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+                description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Nanterre ',
                 classNames : ['bg-success','pl-2']
             },
             {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'NVE0000047 : Protections MICOM P12x',
                 start: new Date('2021-06-03T08:30:00'),
                 end: new Date('2021-06-03T17:00:00'),
-                description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean ',
+                description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean <br/> Campus : Nanterre  ',
                 classNames : ['bg-success','pl-2']
             },
             {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'NVE0000053 : Protections MICOM P12x',
                 start: new Date('2021-06-21T13:30:00'),
                 end: new Date('2021-06-21T17:00:00'),
-                description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+                description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Nanterre ',
                 classNames : ['bg-success','pl-2']
             },
             {
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: 'NVE0000053 : Protections MICOM P12x',
                 start: new Date('2021-06-22T08:30:00'),
                 end: new Date('2021-06-22T17:00:00'),
-                description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+                description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Nanterre ',
                 classNames : ['bg-success','pl-2']
             },
            

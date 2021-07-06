@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'NVV0000861 : Agent PN en travaux TS',
             start: new Date('2021-06-08T08:30:00'),
             end: new Date('2021-06-08T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Bègles ',
             classNames : ['bg-warning','pl-2']
         },
         {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'NVV0000861 : Agent PN en travaux TS',
             start: new Date('2021-06-09T08:30:00'),
             end: new Date('2021-06-09T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Bègles ',
             classNames : ['bg-warning','pl-2']
         },
         {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'NVV0000251 : Agent PN en travaux TS',
             start: new Date('2021-06-02T08:30:00'),
             end: new Date('2021-06-02T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Bègles ',
             classNames : ['bg-warning','pl-2']
         },
         {
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'NVV0000251 : Agent PN en travaux TS',
             start: new Date('2021-06-03T08:30:00'),
             end: new Date('2021-06-03T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Bègles ',
             classNames : ['bg-warning','pl-2']
         },
            
