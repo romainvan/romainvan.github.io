@@ -51,6 +51,7 @@
 
                             <thead class="thead bg-secondary">
                                 <tr>
+                                    <th scope="col"><div class="text-white"></div></th>
                                     <th scope="col"><div class="text-white">Code Parcours - Libellé Parcours</div></th>
                                     <th scope="col"><div class="text-white"> Métier </div></th>
                                     <th scope="col"><div class="text-white">Lieu</div></th>
@@ -66,19 +67,20 @@
 
                             <tbody class="tbody">
                                 <tr>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> CFOP - OP / Reconversion</td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> Circulation </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> Saint-Priest </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> 05/01/2022 - 10/12/2022 </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> LY AMV5 01/22 OP </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
+                                    <td onclick="affichemyDiv('affichemyDiv3','icon1')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i> </td>
+                                    <td> CFOP - OP / Reconversion</td>
+                                    <td> Circulation </td>
+                                    <td> Saint-Priest </td>
+                                    <td> 05/01/2022 - 10/12/2022 </td>
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 1</td>
+                                    <td> 1</td>
                                     <!--
                                     <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     -->
                                 </tr>
                                 <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
-                                    <td colspan="7">
+                                    <td colspan="8">
                                         <table class="table mt-3">
                                             <thead class="thead hiddentable">
                                               <tr>
@@ -172,19 +174,20 @@
                                 </tr>
 
                                 <tr>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> JCV - Jeune Cadre Voie	</td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> Voie </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> Bègles </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> 15/01/2022 - 25/06/2023 </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> JCVB_22-01 </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> 10</td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> 2</td>
+                                    <td onclick="affichemyDiv('affichemyDiv4','icon2')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2"></i> </td>
+                                    <td> JCV - Jeune Cadre Voie	</td>
+                                    <td> Voie </td>
+                                    <td> Bègles </td>
+                                    <td> 15/01/2022 - 25/06/2023 </td>
+                                    <td> JCVB_22-01 </td>
+                                    <td> 10</td>
+                                    <td> 2</td>
                                     <!--
                                     <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     -->
                                 </tr>
                                 <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
-                                    <td colspan="7">
+                                    <td colspan="8">
                                         <table class="table mt-3">
                                             <thead class="thead hiddentable">
                                                 <tr>
@@ -434,14 +437,23 @@
         object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
         object["Remise à zéro"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
 
-        function affichemyDiv(id) {
-        var x = document.getElementById(id);
+        function affichemyDiv(id,icon=null) {
+            var x = document.getElementById(id);
             if (x.style.display === "none") {
+                if(icon != null){
+                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  document.getElementById(icon).classList.remove('icons-arrow-next');
+                }
                 x.style.display = "table-row";
             } else {
-                x.style.display = "none";
+              if(icon != null){
+                document.getElementById(icon).classList.remove('icons-arrow-down');
+                document.getElementById(icon).classList.add('icons-arrow-next');
+              }
+              x.style.display = "none";
             }
-        }
+        } 
+
 
         function confirmBtn() {
             confirm("Etes-vous sûr d'enregistrer ces modifications");
