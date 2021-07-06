@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center mb-4"> Liste des inscrits de la session VA620600 -  NVT0000151</h1>
-                <div class="col-md-10 offset-md-1">
+                <div class="col-md-12">
                     <div class="table-wrapper mt-3">
                         <table class="table" id="listestagiaires">
                             <thead class="thead bg-secondary">
@@ -38,6 +38,13 @@
                                     <th scope="col">Convocation</th>
                                     <th scope="col"> Date d'envoi</th>
                                     <th scope="col"> Télécharger</th>
+                                    <th scope="col"> Date inscription</th>
+                                    <th scope="col"> Statut</th>
+                                    <th scope="col"> Présence</th>
+                                    <th scope="col"> Commentaire</th>
+                                    <th scope="col"> Annulation </th>
+                                    <th scope="col">  </th>
+
                                 </tr>
                             </thead>
 
@@ -54,6 +61,26 @@
                                     <td>  25/05/2021</td>
                                     <td> <a href="Durand - Accès à E - UV6 Technique, maintenance et agrément - Engins - 28 au 29.06.21.pdf" download="Durand - Accès à E - UV6 Technique, maintenance et agrément - Engins - 28 au 29.06.21.pdf"> <i class="icons-document icons-size-1x5" aria-hidden="true"></i>
                                     </a> </td>
+                                    <td> 25/05/2021</td>
+                                    <td> Inscrit</td>
+                                    <td> </td>
+                                    <td> <input class="form-control" placeholder="Commentaire absence" readonly> </td>
+                                    <td> 
+                                      <select id="select0">
+                                        <option selected data-role="default-hidden-option" disabled hidden>Choix du motif</option>
+                                        <option data-id="9"></option>
+                                        <option data-id="0">Malade ou en congès</option>
+                                        <option data-id="1" >Session annulée ou reportée</option>
+                                        <option data-id="2" >Cause nécessité de service</option>
+                                        <option data-id="3" >Changement du besoin de l'agent</option>
+                                        <option data-id="4" >Sortie</option>
+                                        <option data-id="5" >Desistement</option>
+                                        <option data-id="6" >Erreur inscription</option>
+                                        <option data-id="7" >Causes extérieures</option>
+                                        <option data-id="8" >Absence syndicale</option>
+                                      </select>
+                                    </td>
+                                    <td> <button class="btn btn-warning"> Annuler </button></td>
 
                                 </tr>
 
@@ -67,7 +94,47 @@
                                     <td>  Non envoyée </td>
                                     <td>  </td>
                                     <td> </td>
+                                    <td> 27/05/2021</td>
+                                    <td> Inscrit</td>
+                                    <td> </td>
+                                    <td> <input class="form-control" placeholder="Commentaire absence" readonly> </td>
+                                    <td> 
+                                      <select id="select0">
+                                        <option selected data-role="default-hidden-option" disabled hidden>Choix du motif</option>
+                                        <option data-id="9"></option>
+                                        <option data-id="0">Malade ou en congès</option>
+                                        <option data-id="1" >Session annulée ou reportée</option>
+                                        <option data-id="2" >Cause nécessité de service</option>
+                                        <option data-id="3" >Changement du besoin de l'agent</option>
+                                        <option data-id="4" >Sortie</option>
+                                        <option data-id="5" >Desistement</option>
+                                        <option data-id="6" >Erreur inscription</option>
+                                        <option data-id="7" >Causes extérieures</option>
+                                        <option data-id="8" >Absence syndicale</option>
+                                      </select>
+                                    </td>
+                                    <td> <button class="btn btn-warning"> Annuler </button></td>
                                 </tr>
+
+                                <tr>
+                                    
+                                  <td>  426843 </td>
+                                  <td>  VA620600 </td>
+                                  <td>  6874153D </td>
+                                  <td>  Perrin Bernard </td>
+                                  <td>  01/03/2020 </td>
+                                  <td>   </td>
+                                  <td>  </td>
+                                  <td> </td>
+                                  <td></td>
+                                  <td> 
+                                      <span class="alert"> Annulé</span>
+                                  </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>  <span class="alert"> Annulé</span> </td>
+                                  <td></td>
+                              </tr>
                                 
                             </tbody>
                         </table>
@@ -120,7 +187,10 @@
             {
               orderable: false,
               targets: "no-sort"
-            }
+            },
+            { width: "2%", targets: 7},
+            { width: "13%", targets: 12},
+
         ],
         lengthMenu: [
           [10, 25, 50, 100],
@@ -149,7 +219,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [1,2,3,4,5,6]
+                  columns: [0,1,2,3,4,5,6]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')

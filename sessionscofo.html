@@ -64,13 +64,34 @@
   
                   </div>
   
-                  <div class="col-md-3">
+                  <div class="col-md-2">
   
-                    <label for="etab" class="ml-1"> Établissement</label>
-                    <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement">
+                    <label for="etab" class="ml-1"> Métier</label>
+                    <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix du métier">
                     <datalist id="etab">
-                        <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
-                        <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
+                        <option data-value="Voie"> Voie</option>
+                        <option data-value="Circulation"> Circulation </option>
+                        <option data-value="Signalisation"> Signalisation </option>
+                        <option data-value="Caténaire"> Caténaire </option>
+
+                    </datalist>
+  
+                  </div>
+
+                  <div class="col-md-2">
+  
+                    <label for="raf" class="ml-1"> Code RAF</label>
+                    <input list="raf" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Code RAF">
+                    <datalist id="raf">
+                        <option data-value="EC110300"> EC110300</option>
+                        <option data-value="EC140100"> EC140100	 </option>
+                        <option data-value="VA620600"> VA620600	 </option>
+                        <option data-value="VA670701"> VA670701	 </option>
+                        <option data-value="VJCM0202"> VJCM0202	 </option>
+                        <option data-value="VT160000"> VT160000	 </option>
+                        <option data-value="VVTESM03"> VVTESM03	 </option>
+
+
                     </datalist>
   
                   </div>
@@ -93,6 +114,7 @@
                             <th scope="col">Nombre d'agents</th>
                             <th scope="col">Groupe</th>
                             <th scope="col"> Places restantes</th>
+                            <th scope="col"> Typologie</th>
                             <th scope="col" class="no-sort"> Actions </th>
                           </tr>
                         </thead>
@@ -108,6 +130,7 @@
                             <td> 1</td>
                             <td> Continue</td>
                             <td> 0 </td>
+                            <td> Continue</td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -132,6 +155,7 @@
                             <td> 2</td>
                             <td> Continue</td>
                             <td> 2 </td>
+                            <td> Continue</td>
                             <td>
                               <div class="btn-group dropdown align-right">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btncofo1" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -158,6 +182,115 @@
                             <td> 3</td>
                             <td> Continue</td>
                             <td> 1 </td>
+                            <td> Continue</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td> VJCM0202</td>
+                            <td> RCS de circulation des trains et d'exploitation </td>
+                            <td> NVT000347</td>
+                            <td> Bègles</td>
+                            <td> 15/01/2022</td>
+                            <td> 19/01/2022</td>
+                            <td> Signalisation</td>
+                            <td> 2</td>
+                            <td> JCVB_22-01	</td>
+                            <td> 1 </td>
+                            <td> Initiale</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
+                                  <button type="button" class="dropdown-item">Plus de détails</button>
+                                  <button type="button" class="dropdown-item">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> VVTESM03</td>
+                            <td> TES M Annonceur Sentinelle ASP - LC
+                            </td>
+                            <td> NVT0000358</td>
+                            <td> Nanterre</td>
+                            <td> 01/02/2022</td>
+                            <td> 05/02/2022</td>
+                            <td> Voie</td>
+                            <td> 2</td>
+                            <td> JCVB_22-01</td>
+                            <td> 0 </td>
+                            <td> Initiale</td>
+                            <td>
+                              <div class="btn-group dropdown align-right">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray" id="btncofo1" aria-controls="toggle2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
+                                  <button type="button" class="dropdown-item" onclick="seeDetails()">Plus de détails</button>
+                                  <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td> EC110300</td>
+                            <td> Formation de base AMV - ATT/OP - ATT-TS
+                            </td>
+                            <td> NVT0000724</td>
+                            <td> Saint-Priest	</td>
+                            <td> 05/01/2022</td>
+                            <td> 09/01/2021</td>
+                            <td> Circulation</td>
+                            <td> 2</td>
+                            <td> LY AMV5 01/22 OP	</td>
+                            <td> 2</td>
+                            <td> Initiale</td>
+                            <td>
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Actions</span>
+                                  <i class="icons-options icons-size-1x25" aria-hidden="true"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo1" id="toggle2">
+                                  <button type="button" class="dropdown-item" onclick="seeDetailsfi()">Plus de détails</button>
+                                  <button type="button" class="dropdown-item" onclick="seeStagiairesfi()">Voir la liste des inscrits</button>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+
+
+                          <tr>
+                            <td> EC140100</td>
+                            <td> Préparation pour formation complémentaire ACDV
+
+                            </td>
+                            <td> NVT0000812</td>
+                            <td> Saint-Priest	</td>
+                            <td> 15/01/2022</td>
+                            <td> 19/06/2021</td>
+                            <td> Circulation</td>
+                            <td> 4</td>
+                            <td> LY AMV5 01/22 OP	</td>
+                            <td> 1</td>
+                            <td> Initiale</td>
                             <td>
                               <div class="btn-group dropdown">
                                 <button class="btn btn-only-icon btn-transparent btn-color-gray"  id="btncofo" aria-controls="toggle1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -212,7 +345,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5], // Index of columns (starting at 0) that you want show/hide                
             },
             { width: "30%", targets: 1 },
             {
@@ -247,7 +380,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -261,7 +394,7 @@
                 return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -274,7 +407,7 @@
                 return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -290,7 +423,7 @@
                   return "Export_SessionsFC_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
@@ -350,6 +483,18 @@
       function addComment(){
         var array = window.location.href.split("/");
         array[array.length-1]="addCommentCofo.html";
+       window.open(array.join("/"));
+      }
+
+      function seeStagiairesfi(){
+          var array = window.location.href.split("/");
+          array[array.length-1]="listestagiairesfi.html";
+         window.open(array.join("/"));
+      }
+
+      function seeDetailsfi(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="detailsSessionsCOFOfi.html";
        window.open(array.join("/"));
       }
     </script>

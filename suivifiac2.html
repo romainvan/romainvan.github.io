@@ -1,0 +1,297 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Suivi du groupe  </title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="suivigroupe.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+  
+
+  <script> 
+    $(function(){
+      $("#includedContentAC2").load("navac.html"); 
+      $("#footerac3").load("footer.html"); 
+    });
+  </script> 
+  
+
+</head>
+
+<body class="d-flex flex-column">
+
+    <div id="includedContentAC2"></div>
+    
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-2"> Suivi du groupe LY AMV5 01/22 OP  </h1>
+        <div class="row">
+            <div class="col-md-12 mt-5 px-5">
+                <button id="btnExport" onclick="ExportToExcel('xlsx')" class="btn btn-success mb-2"> Excel </button>
+                <div class="table-wrapper table-responsive">
+                    <div class="table-scroller last-cell-fixed dragscroll">
+                        <table class="table table-fixed" id="tbl_exporttable_to_xls">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th class="text-white"> Groupe</th>
+                                    <th class="text-white"> Rang </th>
+                                    <th class="text-white"> ZP</th>
+                                    <th class="text-white"> Nom Prénom</th>
+                                    <th class="text-white"> CP</th>
+                                    <th class="text-white"> Établissement</th>
+                                    <th class="text-white"> Commentaires</th>
+                                    <th class="text-white"> EC110300 </th>
+                                    <th class="text-white"> EC140100 </th>
+                                    <th class="text-white"> EC140005</th>
+                                    <th class="text-white"> EC125002</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td rowspan="5" colspan="6" class="centertd"> Observations</td>
+                                    <td> N° de session</td>
+                                    <td> NVD000717</td>
+                                    <td> NVE000264</td>
+                                    <td> NVE000451</td>
+                                    <td> NVE000126</td>
+                                </tr>
+                                <tr>
+                                    <td> Dates </td>
+                                    <td> 05/01/22 au 16/01/22</td>
+                                    <td> 15/02/22 au 05/03/22</td>
+                                    <td> 20/06/22 au 15/07/22 </td>
+                                    <td> 15/10/22 au 10/12/22</td>
+                                </tr>
+                                <tr>
+                                    <td> Lieu de formation </td>
+                                    <td> Saint-Priest </td>
+                                    <td> Saint-Priest </td>
+                                    <td> Saint-Priest </td>
+                                    <td> Saint-Priest </td>
+                                </tr>
+                                <tr>
+                                    <td> Places prévues </td>
+                                    <td> 10</td>
+                                    <td> 10</td>
+                                    <td> 10</td>
+                                    <td> 10</td>
+                                </tr>
+                                <tr>
+                                    <td> Places prises </td>
+                                    <td> 10</td>
+                                    <td> 10</td>
+                                    <td> 10</td>
+                                    <td> 10</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 1 </td>
+                                    <td> NEN</td>
+                                    <td> MARTIN Jean</td>
+                                    <td> 1234567A</td>
+                                    <td> Infrapôle Lorraine </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-danger"></td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 2 </td>
+                                    <td> SE</td>
+                                    <td> PONC Nicolas</td>
+                                    <td> 6789123C</td>
+                                    <td> Infrapôle Rhodanien </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 3 </td>
+                                    <td> NEN</td>
+                                    <td> DUPONT Aymeric	</td>
+                                    <td> 8912345B</td>
+                                    <td> Infralog National </td>
+                                    <td> </td>
+                                    <td class="bg-danger"></td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 4 </td>
+                                    <td> IDF</td>
+                                    <td> DOS SANTOS Eduardo	</td>
+                                    <td> 9102652N</td>
+                                    <td> Infrapôle Paris Nord </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 5 </td>
+                                    <td> IDF</td>
+                                    <td> DOS SANTOS Eduardo	</td>
+                                    <td> 9102652N</td>
+                                    <td> Infrapôle Paris Nord </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 6 </td>
+                                    <td> IDF</td>
+                                    <td> FINEUR Lisa </td>
+                                    <td> 9501112P	</td>
+                                    <td> Infrapôle Paris Sud Est   </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-danger"></td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 7 </td>
+                                    <td> IDF</td>
+                                    <td> GALTIER Christopher </td>
+                                    <td> 9602652N </td>
+                                    <td> Infrapôle Paris Sud Est   </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-danger"></td>
+                                    <td class="bg-danger"></td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 8 </td>
+                                    <td> IDF</td>
+                                    <td> VOLI Andrea </td>
+                                    <td> 9802250T </td>
+                                    <td> Infrapôle Paris Sud Est   </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 9 </td>
+                                    <td> A</td>
+                                    <td> MORIN Thomas </td>
+                                    <td> 8456912D </td>
+                                    <td> Infrapôle Centre  </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-danger"></td>
+                                </tr>
+                                <tr> 
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 10 </td>
+                                    <td> A</td>
+                                    <td> BERGER Céline </td>
+                                    <td> 9745123F </td>
+                                    <td> Infrapôle Centre  </td>
+                                    <td> </td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                    <td class="bg-success">X</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="txtArea1" style="display:none"></iframe>
+    <div id="footerac3"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script> 
+        $(function(){
+          $("#includedContentAC2").load("navac.html"); 
+          $("#footerac3").load("footer.html"); 
+        });
+
+        function ExportToExcel(type, fn, dl) {
+            var elt = document.getElementById('tbl_exporttable_to_xls');
+            var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+            return dl ?
+                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+        }
+
+        function fnExcelReport()
+        {
+            var tab_text="<table border='2px'><tr bgcolor='#87AFC6'>";
+            var textRange; var j=0;
+            tab = document.getElementById('suivigroupe'); // id of table
+
+            for(j = 0 ; j < tab.rows.length ; j++) 
+            {     
+                tab_text=tab_text+tab.rows[j].innerHTML+"</tr>";
+                //tab_text=tab_text+"</tr>";
+            }
+
+            tab_text=tab_text+"</table>";
+            tab_text= tab_text.replace(/<A[^>]*>|<\/A>/g, "");//remove if u want links in your table
+            tab_text= tab_text.replace(/<img[^>]*>/gi,""); // remove if u want images in your table
+            tab_text= tab_text.replace(/<input[^>]*>|<\/input>/gi, ""); // reomves input params
+
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE "); 
+            console.log(tab_text);
+            if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))      // If Internet Explorer
+            {
+                txtArea1.document.open("txt/html","replace");
+                txtArea1.document.write(tab_text);
+                txtArea1.document.close();
+                txtArea1.focus(); 
+                sa=txtArea1.document.execCommand("SaveAs",true,"Say Thanks to Sumit.xls");
+            }  
+            else                 //other browser not tested on IE 11
+                sa = window.open('data:application/vnd.ms-excel,' + encodeURIComponent(tab_text));  
+
+            return (sa);
+        }        
+    </script> 
+
+</body>

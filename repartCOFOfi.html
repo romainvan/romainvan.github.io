@@ -30,14 +30,67 @@
     <div class="container-fluid flex-grow-1 flex-shrink-0">
         <h1 class="text-center mb-2"> Répartition formation initiale </h1>
         <div class="row">
-            <div class="col-md-12 row">
-                <div class="col-md-3 ml-5">
+            <div class="row mb-2">
+                <div class="col-md-2 ml-5">
                     <label for="etab" class="ml-1"> Établissement</label>
                     <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
                     <datalist id="etab">
                         <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
                         <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
                     </datalist>
+                </div>
+                <div class="col-md-2">
+                    <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                      <div data-component="picker">
+                          <div class="input-group" data-toggle>
+                            <div class="form-control-container">
+                              <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Date de début" data-input>
+                              <span class="form-control-state"></span>
+                            </div>
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                <i class="icons-calendar" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                        <div data-component="picker">
+                            <div class="input-group" data-toggle>
+                              <div class="form-control-container">
+                                <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                                <span class="form-control-state"></span>
+                              </div>
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                  <i class="icons-calendar" aria-hidden="true"></i>
+                                </button>
+                              </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-md-2">
+                  <label for="metier"> Métier</label>
+                  <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control" placeholder="Métier">
+                  <datalist id="listmetier">
+                    <option value="Tout">
+                    <option value="Signalisation">
+                    <option value="Voie">
+                    <option value="Produit Train">
+                    <option value="Caténaire">
+                    <option value="Circulation">
+                  </datalist>
+                </div>
+                <div class="col-md-2">
+                  <label for="coderaf"> Parcours</label>
+                  <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control" placeholder="Parcours">
+                  <datalist id="code">
+                    <option value="CFOP - OP / Reconversion	">
+                    <option value="JCV - Jeune Cadre Voie	">
+                  </datalist>
                 </div>
                 <div class="col-md-1">
                     <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
@@ -51,6 +104,7 @@
 
                             <thead class="thead bg-secondary">
                                 <tr>
+                                    <th scope="col"><div class="text-white"></div></th>
                                     <th scope="col"><div class="text-white">Code Parcours - Libellé Parcours</div></th>
                                     <th scope="col"><div class="text-white"> Métier </div></th>
                                     <th scope="col"><div class="text-white">Lieu</div></th>
@@ -58,6 +112,7 @@
                                     <th scope="col"><div class="text-white">Groupe</div></th>
                                     <th scope="col"><div class="text-white">Besoin exprimé</div></th>
                                     <th scope="col"><div class="text-white">Places accordées</div></th>
+                                    <th scope="col"><div class="text-white">Rendre des places</div></th>
                                     <!--
                                     <th scope="col"><div class="text-white">Rendre des places</div></th>
                                     -->
@@ -66,25 +121,27 @@
 
                             <tbody class="tbody">
                                 <tr>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> CFOP - OP / Reconversion</td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> Circulation </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> Saint-Priest </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> 05/01/2022 - 10/12/2022 </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> LY AMV5 01/22 OP </td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
-                                    <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
-                                    <!--
+                                    <td onclick="affichemyDiv('affichemyDiv3','icon1')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i> </td>
+                                    <td> CFOP - OP / Reconversion</td>
+                                    <td> Circulation </td>
+                                    <td> Saint-Priest </td>
+                                    <td> 05/01/2022 - 10/12/2022 </td>
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 1</td>
+                                    <td> 1</td>
+                                    
                                     <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    -->
+                                    
                                 </tr>
                                 <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
-                                    <td colspan="7">
+                                    <td colspan="8">
                                         <table class="table mt-3">
                                             <thead class="thead hiddentable">
                                               <tr>
                                                 <th><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
                                                 <th colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
-                                                <th><div class="text-white justify-content-center">Voir plus de détails </div></th>
+                                                <th><div class="text-white justify-content-center">Choix des modules </div></th>
+                                                <span class="tooltiptext">Tooltip text</span>
                                                 <th><div class="text-white justify-content-center">Enregistrer </div></th>
 
                                               </tr>
@@ -105,7 +162,10 @@
                                                         
                                                     </td>
                                                     <td>
-                                                        <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours41')"></i>
+                                                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Cliquer ici et cocher les modules fait par le stagiaires">
+
+                                                            <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours41')"></i>
+                                                        </span>
                                                     </td>
                                                     <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
                                                     
@@ -172,25 +232,26 @@
                                 </tr>
 
                                 <tr>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> JCV - Jeune Cadre Voie	</td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> Voie </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> Bègles </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> 15/01/2022 - 25/06/2023 </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> JCVB_22-01 </td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> 10</td>
-                                    <td onclick="affichemyDiv('affichemyDiv4')"> 2</td>
-                                    <!--
+                                    <td onclick="affichemyDiv('affichemyDiv4','icon2')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2"></i> </td>
+                                    <td> JCV - Jeune Cadre Voie	</td>
+                                    <td> Voie </td>
+                                    <td> Bègles </td>
+                                    <td> 15/01/2022 - 25/06/2023 </td>
+                                    <td> JCVB_22-01 </td>
+                                    <td> 10</td>
+                                    <td> 2</td>
+                                    
                                     <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    -->
+                                
                                 </tr>
                                 <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
-                                    <td colspan="7">
+                                    <td colspan="8">
                                         <table class="table mt-3">
                                             <thead class="thead hiddentable">
                                                 <tr>
                                                   <th><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
                                                   <th colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
-                                                  <th><div class="text-white justify-content-center">Voir plus de détails </div></th>
+                                                  <th><div class="text-white justify-content-center">Choix des modules </div></th>
                                                   <th><div class="text-white justify-content-center">Enregistrer </div></th>
   
                                                 </tr>
@@ -212,7 +273,11 @@
                                                         
                                                     </td>
                                                     <td>
-                                                        <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours42')"></i>
+                                                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Cliquer ici et cocher les modules fait par le stagiaires">
+
+                                                            <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours42')"></i>
+                                                        </span>
+                                                   
                                                     </td>
                                                     <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
                                                     
@@ -293,8 +358,12 @@
                                                         
                                                     </td>
                                                     <td>
-                                                        <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours43')"></i>
-                                                    </td>
+                                                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Cliquer ici et cocher les modules fait par le stagiaires">
+
+                                                            <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours43')"></i>
+                                                   
+                                                        </span>
+                                                     </td>
                                                     <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
                                                     
                                                 </tr>
@@ -434,14 +503,23 @@
         object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
         object["Remise à zéro"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
 
-        function affichemyDiv(id) {
-        var x = document.getElementById(id);
+        function affichemyDiv(id,icon=null) {
+            var x = document.getElementById(id);
             if (x.style.display === "none") {
+                if(icon != null){
+                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  document.getElementById(icon).classList.remove('icons-arrow-next');
+                }
                 x.style.display = "table-row";
             } else {
-                x.style.display = "none";
+              if(icon != null){
+                document.getElementById(icon).classList.remove('icons-arrow-down');
+                document.getElementById(icon).classList.add('icons-arrow-next');
+              }
+              x.style.display = "none";
             }
-        }
+        } 
+
 
         function confirmBtn() {
             confirm("Etes-vous sûr d'enregistrer ces modifications");
@@ -464,6 +542,10 @@
                 x.style.display = "none";
             }
         }
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
 
 
     </script>

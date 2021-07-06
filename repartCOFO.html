@@ -76,7 +76,7 @@
     
                     <div class="col-md-2">
                       <label for="metier"> Métier</label>
-                      <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control">
+                      <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control" placeholder="Métier">
                       <datalist id="listmetier">
                         <option value="Tout">
                         <option value="Signalisation">
@@ -88,7 +88,7 @@
                     </div>
                     <div class="col-md-2">
                       <label for="coderaf"> Code RAF</label>
-                      <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control">
+                      <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control" placeholder="Code RAF">
                       <datalist id="code">
                         <option value="VCE40124">
                         <option value="VA216000">
@@ -100,428 +100,16 @@
                 </div>
                 
 
-                <div class="col-md-12 mt-5 ml-5">
-                    <h1 class="text-center"> Choix 1 </h1>
-                    <div class="row">
-                        <div class="col-md-8 repartHaut border-2">
-                            <h2 class="text-center my-1"> VT160000 - NVT0000146</h1>
-                        </div>
-                        <div class="col-md-8 repartHaut border-2">
-                            <h2 class="text-center my-1"> Réseaux IP et applicatifs SNCF</h1>
-                        </div>
-                        <div class="col-md-4">
-
-                        </div>
-                        <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Lieu de formation :</p>
-                        </div>
-                        <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Saint-Priest</p>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Nombre de places :</p>
-                        </div>
-                        <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> 4</p>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Groupe </p>
-                        </div>
-                        <div class="col-md-4 repartMilieu border-2">
-                            <p class="text-center my-1"> Continue</p>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> Date de début :</p>
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> 21/06/2021</p>
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> Date de fin</p>
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> 25/06/2021</p>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> Besoin exprimé</p>
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> 5</p>
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> Place accordée</p>
-                        </div>
-                        <div class="col-md-2 repartBas border-2">
-                            <p class="text-center my-1"> 1</p>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> /</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Matricule</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Nom</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Prénom</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Code demande</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Date demande</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Établissement</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-1"> Ville</p>
-                        </div>
-                        <div class="col-md-4">
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <p class="text-center my-3"> Agent 1</p>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <select name="numcp1" id="numcp1" class="form-control selectRepart my-2" onchange="changeCP('1')"> 
-                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                <option value="1234567A">1234567A</option> 
-                                <option value="2345678F">2345678F</option> 
-                            </select> 
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <input type="text" name="nom1" id="nomagent1" placeholder="Nom" class="mt-2 form-control" readonly>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <input type="text" name="prenom1" id="prenom1" placeholder="Prénom" class="mt-2 form-control" readonly>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <input type="text" name="code1" id="codedemande1" placeholder="Code" class="mt-2 form-control" readonly>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-                            <input type="text" name="date1" id="datedemande1" placeholder="Date" class="mt-2 form-control" readonly>
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-
-                        </div>
-                        <div class="col-md-1 repartAgent border-2">
-
-                        </div>
-                        
-                    </div>
-                      
-                </div>
-
-                <div class="col-md-11 mt-5 ml-5 row">
-                    <div class="col-md-3 offset-md-5">
-                        <h1 class="text-center"> Choix 2 (cliquer sur la flèche) </h1>
-                    </div>
-                    <div class="col-md-2 offset-md-2">
-                        <button class="btn btn-success mb-2 btn-block" onclick="confirmBtn()"> Enregistrer</button>
-                    </div>
-                    <div class="table-wrapper" data-component="table">
-                        <div class="table-scroller dragscroll">
-                            <table class="table display">
-                                <thead class="thead bg-secondary">
-                                    <tr>
-                                      <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
-                                      <th scope="col"><div class="text-white">Métier</div></th>
-                                      <th scope="col"><div class="text-white">Lieu</div></th>
-                                      <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
-                                      <th scope="col"><div class="text-white">Groupe</div></th>
-                                      <th scope="col"><div class="text-white">Places accordées</div></th>
-                                      <th scope="col"><div class="text-white">Rendre des places</div></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="tbody">
-                                    <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="0"> <div class="cell-inner"> VT160000 - NVT0000146 </div></td>
-                                        <td> Signalisation </td>  
-                                        <td> Saint-Priest </td>
-                                        <td> 21/06/2021 - 25/06/2021</td>
-                                        <td> Continue </td>
-                                        <td> 1</td>
-                                        <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    </tr>
-                                    <tr class="trgroup" data-trgroup="0">
-                                       
-                                        <td>
-                                            
-                                                <select name="numcp" id="numcp20" class="form-control selectRepart my-2" onchange="changeCP('20')"> 
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="1234567A">1234567A</option> 
-                                                    <option value="2345678F">2345678F</option> 
-                                                </select> 
-                                             
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" name="nomagent" id="nomagent20" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" name="codedemande" id="codedemande20" placeholder="Code demande" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" name="dateDemande" id="datedemande20" placeholder="Date demande" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                    </tr>
-
-                        
-                                    <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="1">  <div class="cell-inner nopad"> VA620600 - NVT0000151 </div></td>
-                                        <td> Produit Train </td>  
-                                        <td> Nanterre </td>
-                                        <td> 28/06/2021 - 29/06/2021 </td>
-                                        <td> Continue </td>
-                                        <td> 2</td>
-                                        <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    </tr>
-                                    <tr class="trgroup" data-trgroup="1">
-                                       
-                                        <td>
-                                            
-                                                <select id="numcp21" class="form-control selectRepart my-2" onchange="changeCP('21')"> 
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="8912345B">8912345B </option> 
-                                                    <option value="6789123C">6789123C</option> 
-                                                    <option value="3456789H">3456789H</option> 
-                                                </select> 
-                                             
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Nom Prénom" id="nomagent21"  class="mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text"  placeholder="Code demande" id="codedemande21" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Date demande" id="datedemande21" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr class="trgroup" data-trgroup="1">
-                                       
-                                        <td>
-                                            
-                                                <select id="numcp22" class="form-control selectRepart my-2" onchange="changeCP('22')"> 
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="8912345B">8912345B </option> 
-                                                    <option value="6789123C">6789123C</option> 
-                                                    <option value="3456789H">3456789H</option> 
-                                                </select> 
-                                            
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Nom Prénom" id="nomagent22"  class="mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Code demande" id="codedemande22" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Date demande" id="datedemande22" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                    </tr>
-
-                               
-                                    <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="2">  <div class="cell-inner nopad"> VA670701 - NVT0000245 </div></td>
-                                         <td> Signalisation </td>
-                                        <td> Bègles </td>
-                                        <td> 15/06/2021-17/06/2021</td>
-                                        <td> Continue </td>
-                                        <td contenteditable="true"> 3</td>
-                                        <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    </tr>
-                                    <tr class="trgroup" data-trgroup="2">
-                                       
-                                        <td>
-                                            
-                                                <select id="numcp31" class="form-control selectRepart my-2" onchange="changeCP('31')"> 
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="0123456B">0123456B</option> 
-                                                    <option value="6123456J">6123456J </option> 
-                                                    <option value="5678912G">5678912G</option> 
-                                                    <option value="4891234B">4891234B</option> 
-                                                </select> 
-                                             
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Nom Prénom" id="nomagent31" class="mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Code demande" id="codedemande31" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Date demande" id="datedemande31" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr class="trgroup" data-trgroup="2">
-                                       
-                                        <td>
-                                            
-                                            <select id="numcp32" class="form-control selectRepart my-2" onchange="changeCP('32')"> 
-                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                <option value="0123456B">0123456B</option> 
-                                                <option value="6123456J">6123456J </option> 
-                                                <option value="5678912G">5678912G</option> 
-                                                <option value="4891234B">4891234B</option> 
-                                            </select> 
-                                             
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text"  placeholder="Nom Prénom" id="nomagent32" class="mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text"  placeholder="Code demande" id="codedemande32" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Date demande" id="datedemande32" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                    </tr>
-                                    <tr class="trgroup" data-trgroup="2">
-                                       
-                                        <td>
-                                            
-                                            <select id="numcp33" class="form-control selectRepart my-2" onchange="changeCP('33')"> 
-                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="0123456B">0123456B</option> 
-                                                    <option value="6123456J">6123456J </option> 
-                                                    <option value="5678912G">5678912G</option> 
-                                                    <option value="4891234B">4891234B</option> 
-                                                </select> 
-                                             
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Nom Prénom" id="nomagent33" class="mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text"  placeholder="Code demande" id="codedemande33" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                        <td colspan="2">
-                                            
-                                                <input type="text" placeholder="Date demande" id="datedemande33" class=" mt-2 form-control" readonly>
-                                            
-                                        </td>
-                                    </tr>
-
-                                                                       
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    
-                </div>
-
-                <div class="col-md-11 mt-5 ml-5">                    
-                    <h1 class="text-center"> Choix 3 (cliquer sur une cellule du tableau) </h1>
-                    <div class="table-wrapper" data-component="table">
-                        <div class="table-scroller dragscroll">
-                            <table class="table">
-                                <thead class="thead bg-secondary">
-                                    <tr>
-                                      <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
-                                       <th scope="col"><div class="text-white">Métier</div></th>
-                                      <th scope="col"><div class="text-white">Lieu</div></th>
-                                      <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
-                                      <th scope="col"><div class="text-white">Groupe</div></th>
-                                      <th scope="col"><div class="text-white">Places accordées</div></th>
-                                      <th scope="col"><div class="text-white">Rendre des places</div></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="tbody">
-                                    <tr>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> VT160000 - NVT0000146</td>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> Signalisation </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> Saint-Priest </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> 21/06/2021 - 25/06/2021</td>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> Continue </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart"> 1</td>
-                                        <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    </tr>
-                                    <tr>
-                                        <td data-toggle="modal" data-target="#ModalRepart2"> VA620600 - NVT0000151</td>  
-                                       <td data-toggle="modal" data-target="#ModalRepart2"> Produit Train </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart2"> Nanterre </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart2"> 28/06/2021 - 29/06/2021</td>
-                                        <td data-toggle="modal" data-target="#ModalRepart2"> Continue </td>
-                                        <td data-toggle="modal" data-target="#ModalRepart2"> 2</td>
-                                        <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    </tr>
-                                    <tr class="trhead">
-                                        <td class="cell-caret"> VA670701 - NVT0000245</td>
-                                        <td> Signalisation </td>
-                                        <td> Bègles </td>
-                                        <td> 15/06/2021-17/06/2021</td>
-                                        <td> Continue </td>
-                                        <td> 3</td>
-                                        <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Rendre</button> </td>
-                                    </tr>
-
-                                </tr>
-                               
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
+            
 
                 <div class="col-md-11 mt-5 ml-5 mb-5 row">
-                    <div class="col-md-4 offset-md-4">
-                        <h1 class="text-center"> Choix 4 (cliquer sur une cellule du tableau)  </h1>
-                    </div>
-                    <div class="col-md-2 offset-md-2">
-                        <button class="btn btn-success mb-2 btn-block" onclick="confirmBtn()"> Enregistrer</button>
-                    </div>
+                   
                     <div class="table-wrapper">
                         <div class="table-scroller dragscroll">
                             <table class="table">
                                 <thead class="thead bg-secondary">
                                     <tr>
+                                      <th scope="col"><div class="text-white"></div></th>
                                       <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
                                       <th scope="col"><div class="text-white">Métier </div></th>
                                       <th scope="col"><div class="text-white">Lieu</div></th>
@@ -533,12 +121,13 @@
                                 </thead>
                                 <tbody class="tbody">
                                     <tr>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> VT160000 - NVT0000146</td>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> Signalisation </td>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> Saint-Priest </td>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> 21/06/2021 - 25/06/2021</td>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> Continue </td>
-                                        <td onclick="affichemyDiv('affichemyDiv3')"> 1</td>
+                                        <td onclick="affichemyDiv('affichemyDiv3','icon1')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i> </td>
+                                        <td> VT160000 - NVT0000146</td>
+                                        <td> Signalisation </td>
+                                        <td> Saint-Priest </td>
+                                        <td> 21/06/2021 - 25/06/2021</td>
+                                        <td> Continue </td>
+                                        <td> 1</td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
@@ -550,17 +139,22 @@
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Code demande</div></th>
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Date demande</div></th>
+                                                    <th scope="col"><div class="text-white justify-content-center"></div></th>
+
                                                   </tr>
                                                 </thead>
                                                 <tbody class="tbody">
                                                     <tr>
                                                         <td>
                                                             
-                                                            <select id="numcp41" class="form-control selectRepart my-2" onchange="changeCP('41')"> 
-                                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                                <option value="1234567A">1234567A</option> 
-                                                                <option value="2345678F">2345678F</option> 
-                                                            </select> 
+                                                          
+                                                            <input id="numcp41" list="datanumcp42" class="form-control mt-2" onchange="changeCP('41')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp42">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                                <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                                <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                            </datalist>   
                                                              
                                                             
                                                         </td>
@@ -579,19 +173,29 @@
                                                                 <input type="text" name="datedemande4" id="datedemande41" placeholder="Date demande" class=" mt-2 form-control" readonly>
                                                             
                                                         </td>
+                                                        <td>
+                                                                <div class="col-md-12 px-0">
+                                                                    <button class="btn btn-success btn-sm btn-block btnrepartcofo mb-1"> Valider et envoyer la convocation</button>
+                                                                </div>
+                                                                <div class="col-md-12 px-0">
+                                                                    <button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> VA620600 - NVT0000151</td>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> Produit Train </td>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> Nanterre </td>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> 28/06/2021 - 29/06/2021</td>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> Continue </td>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> 2</td>
-                                        <td onclick="affichemyDiv('affichemyDiv4')"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                        <td onclick="affichemyDiv('affichemyDiv4','icon2')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2"></i> </td>
+                                        <td> VA620600 - NVT0000151</td>
+                                        <td> Produit Train </td>
+                                        <td> Nanterre </td>
+                                        <td> 28/06/2021 - 29/06/2021</td>
+                                        <td> Continue </td>
+                                        <td> 2</td>
+                                        <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
                                         <td colspan="8">
@@ -602,19 +206,21 @@
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Code demande</div></th>
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Date demande</div></th>
+                                                    <th scope="col"></th>
                                                   </tr>
                                                 </thead>
                                                 <tbody class="tbody">
                                                     <tr>
                                                         <td>
                                                             
-                                                            <select id="numcp420" class="form-control selectRepart my-2" onchange="changeCP('420')"> 
-                                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                                <option value="8912345B">8912345B </option> 
-                                                                <option value="6789123C">6789123C</option> 
-                                                                <option value="3456789H">3456789H</option> 
-                                                            </select> 
-                                                             
+                                                            <input id="numcp420" list="datanumcp420" class="form-control mt-2" onchange="changeCP('420')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp420">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                                <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                                <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                            </datalist>   
+                                                           
                                                             
                                                         </td>
                                                         <td colspan="2"> 
@@ -632,16 +238,28 @@
                                                                 <input type="text"  placeholder="Date demande" id="datedemande420" class=" mt-2 form-control" readonly>
                                                             
                                                         </td>
+                                                        <td>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-success btn-sm btn-block btnrepartcofo mb-1"> Valider et envoyer la convocation</button>
+                                                            </div>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                                                            </div>
+                                                        </div>
+                                                        </td>
+                                                        
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             
-                                                            <select id="numcp421" class="form-control selectRepart my-2" onchange="changeCP('421')"> 
-                                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                                <option value="8912345B">8912345B </option> 
-                                                                <option value="6789123C">6789123C</option> 
-                                                                <option value="3456789H">3456789H</option> 
-                                                            </select> 
+                                                            <input id="numcp421" list="datanumcp421" class="form-control mt-2" onchange="changeCP('421')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp421">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                                <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                                <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                            </datalist>  
+                                                            
                                                              
                                                             
                                                         </td>
@@ -660,19 +278,29 @@
                                                                 <input type="text" placeholder="Date demande" id="datedemande421" class=" mt-2 form-control" readonly>
                                                             
                                                         </td>
+                                                        <td>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-success btn-sm btn-block btnrepartcofo mb-1"> Valider et envoyer la convocation</button>
+                                                            </div>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                                                            </div>
+                                                        </div>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td onclick="affichemyDiv('affichemyDiv5')">  VA670701 - NVT0000245</td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> Signalisation </td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> Bègles </td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> 15/06/2021-17/06/2021</td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> Continue </td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> 3</td>
-                                        <td onclick="affichemyDiv('affichemyDiv5')"> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                        <td onclick="affichemyDiv('affichemyDiv5','icon3')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon3"></i> </td>
+                                        <td>  VA670701 - NVT0000245</td>
+                                        <td> Signalisation </td>
+                                        <td> Bègles </td>
+                                        <td> 15/06/2021-17/06/2021</td>
+                                        <td> Continue </td>
+                                        <td> 3</td>
+                                        <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
 
                                     <tr style="display: none;" id="affichemyDiv5" class="bodycolor">
@@ -684,19 +312,20 @@
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Code demande</div></th>
                                                     <th scope="col" colspan="2"><div class="text-white justify-content-center">Date demande</div></th>
+                                                    <th scope="col"></th>
                                                   </tr>
                                                 </thead>
                                                 <tbody class="tbody">
                                                     <tr>
                                                         <td>
-                                                            
-                                                            <select id="numcp430" class="form-control selectRepart my-2" onchange="changeCP('430')"> 
-                                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                                <option value="0123456B">0123456B</option> 
-                                                                <option value="6123456J">6123456J </option> 
-                                                                <option value="5678912G">5678912G</option> 
-                                                                <option value="4891234B">4891234B</option> 
-                                                            </select> 
+                                                            <input id="numcp430" list="datanumcp430" class="form-control mt-2" onchange="changeCP('430')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp430">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="0123456B">0123456B - Masson Eva</option> 
+                                                                <option value="6123456J">6123456J - Bailly Thomas </option> 
+                                                                <option value="5678912G">5678912G - Vasseur Cedric</option> 
+                                                                <option value="4891234B">4891234B - Garcia Roger</option> 
+                                                            </datalist>  
                                                              
                                                             
                                                         </td>
@@ -715,19 +344,26 @@
                                                                 <input type="text" placeholder="Date demande" id="datedemande430" class=" mt-2 form-control" readonly>
                                                             
                                                         </td>
+                                                        <td>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-success btn-sm btn-block btnrepartcofo mb-1"> Valider et envoyer la convocation</button>
+                                                            </div>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                                                            </div>
+                                                        </div>
+                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            
-                                                            <select id="numcp431" class="form-control selectRepart my-2" onchange="changeCP('431')"> 
-                                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                                <option value="0123456B">0123456B</option> 
-                                                                <option value="6123456J">6123456J </option> 
-                                                                <option value="5678912G">5678912G</option> 
-                                                                <option value="4891234B">4891234B</option> 
-                                                            </select> 
-                                                             
-                                                            
+                                                            <input id="numcp431" list="datanumcp431" class="form-control mt-2" onchange="changeCP('431')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp431">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="0123456B">0123456B - Masson Eva</option> 
+                                                                <option value="6123456J">6123456J - Bailly Thomas </option> 
+                                                                <option value="5678912G">5678912G - Vasseur Cedric</option> 
+                                                                <option value="4891234B">4891234B - Garcia Roger</option> 
+                                                            </datalist>  
                                                         </td>
                                                         <td colspan="2">
                                                             
@@ -744,17 +380,28 @@
                                                                 <input type="text" placeholder="Date demande" id="datedemande431" class=" mt-2 form-control" readonly>
                                                             
                                                         </td>
+                                                        <td>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-success btn-sm btn-block btnrepartcofo mb-1"> Valider et envoyer la convocation</button>
+                                                            </div>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             
-                                                            <select id="numcp432" class="form-control selectRepart my-2" onchange="changeCP('432')"> 
-                                                                <option selected="selected" value="reset"> CP de l'agent</option>
-                                                                <option value="0123456B">0123456B</option> 
-                                                                <option value="6123456J">6123456J </option> 
-                                                                <option value="5678912G">5678912G</option> 
-                                                                <option value="4891234B">4891234B</option> 
-                                                            </select> 
+                                                        
+                                                            <input id="numcp432" list="datanumcp432" class="form-control mt-2" onchange="changeCP('432')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp432">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="0123456B">0123456B - Masson Eva</option> 
+                                                                <option value="6123456J">6123456J - Bailly Thomas </option> 
+                                                                <option value="5678912G">5678912G - Vasseur Cedric</option> 
+                                                                <option value="4891234B">4891234B - Garcia Roger</option> 
+                                                            </datalist>  
                                                              
                                                             
                                                         </td>
@@ -773,6 +420,15 @@
                                                                 <input type="text" placeholder="Date demande" id="datedemande432" class=" mt-2 form-control" readonly>
                                                             
                                                         </td>
+                                                        <td>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-success btn-sm btn-block btnrepartcofo mb-1"> Valider et envoyer la convocation</button>
+                                                            </div>
+                                                            <div class="col-md-12 px-0">
+                                                                <button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     </tr>
                                                    
                                                 </tbody>
@@ -984,6 +640,40 @@
                 </div>
             </div>
           </div>
+
+          <div id="ModalAnnulation" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 2px solid black;"> <br />
+                    <h2 class="text-center my-4"> Annuler l'inscription de l'agent  </h1>
+                    <div class="modal-body">
+                        
+                            <div class="form-group">                    
+                              <label for="motif"> Motif annulation</label>
+                              <select id="motif">
+                                <option selected data-role="default-hidden-option" disabled hidden>Choix du motif</option>
+                                <option data-id="9"></option>
+                                <option data-id="0">Malade ou en congès</option>
+                                <option data-id="1" >Session annulée ou reportée</option>
+                                <option data-id="2" >Cause nécessité de service</option>
+                                <option data-id="3" >Changement du besoin de l'agent</option>
+                                <option data-id="4" >Sortie</option>
+                                <option data-id="5" >Desistement</option>
+                                <option data-id="6" >Erreur inscription</option>
+                                <option data-id="7" >Causes extérieures</option>
+                                <option data-id="8" >Absence syndicale</option>
+                              </select>                            </div>
+                            <div class="row">
+                                <div class="col-md-2 offset-md-5">
+                                    <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                                </div>
+                            </div>
+                            
+                                                                 
+                    </div>
+        
+                </div>
+            </div>
+          </div>
         
 
     </div>
@@ -1003,16 +693,24 @@
         object["6123456J"] = {"nomPrenom" : "Bailly Thomas" , "code" : "912457" , "date" : "21/10/2020"};
         object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
         object["2345678F"] = {"nomPrenom" : "Berger Nicolas" , "code" : "924781" , "date" : "07/09/2020"};
-        object["reset"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
+        object["Remise à zéro"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
 
-        function affichemyDiv(id) {
-        var x = document.getElementById(id);
+        function affichemyDiv(id,icon=null) {
+            var x = document.getElementById(id);
             if (x.style.display === "none") {
+                if(icon != null){
+                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  document.getElementById(icon).classList.remove('icons-arrow-next');
+                }
                 x.style.display = "table-row";
             } else {
-                x.style.display = "none";
+              if(icon != null){
+                document.getElementById(icon).classList.remove('icons-arrow-down');
+                document.getElementById(icon).classList.add('icons-arrow-next');
+              }
+              x.style.display = "none";
             }
-        }
+        } 
 
         function confirmBtn() {
             confirm("Etes-vous sûr d'enregistrer ces modifications");
