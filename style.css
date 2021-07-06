@@ -443,6 +443,10 @@ select > .placeholder {
     font-size: 1em;
   }
 
+  .btnrepartcofo{
+    font-size: 1em !important;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
