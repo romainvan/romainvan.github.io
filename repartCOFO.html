@@ -116,6 +116,7 @@
                                       <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
                                       <th scope="col"><div class="text-white">Groupe</div></th>
                                       <th scope="col"><div class="text-white">Places accordées</div></th>
+                                      <th scope="col"><div class="text-white">Convocation</div></th>
                                       <th scope="col"><div class="text-white">Rendre des places</div></th>
                                     </tr>
                                 </thead>
@@ -128,10 +129,11 @@
                                         <td> 21/06/2021 - 25/06/2021</td>
                                         <td> Continue </td>
                                         <td> 1</td>
+                                        <td> <button class="btn btn-primary btn-sm"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
-                                        <td colspan="8">
+                                        <td colspan="9">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -195,10 +197,11 @@
                                         <td> 28/06/2021 - 29/06/2021</td>
                                         <td> Continue </td>
                                         <td> 2</td>
+                                        <td> <button class="btn btn-primary btn-sm" onclick="convocation()"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
-                                        <td colspan="8">
+                                        <td colspan="9">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -300,11 +303,12 @@
                                         <td> 15/06/2021-17/06/2021</td>
                                         <td> Continue </td>
                                         <td> 3</td>
+                                        <td> <button class="btn btn-primary btn-sm"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
 
                                     <tr style="display: none;" id="affichemyDiv5" class="bodycolor">
-                                        <td colspan="8">
+                                        <td colspan="9">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -727,6 +731,12 @@
             var value = document.getElementById("numcp"+id).value;
             document.getElementById("nomagent"+id).value = object[value].nomPrenom
         }
+
+        function convocation(){
+          var array = window.location.href.split("/");
+          array[array.length-1]="addCommentCofo.html";
+         window.open(array.join("/"));
+      }
 
 
     </script>
