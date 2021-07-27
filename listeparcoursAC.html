@@ -116,6 +116,7 @@
                                     <button type="button" class="dropdown-item" onclick="seeDetails()">Voir la liste des sessions </button>
                                     <button type="button" class="dropdown-item" onclick="seeStagiaires()">Voir la liste des inscrits</button>
                                     <button type="button" class="dropdown-item" onclick="seeGroupe()">Suivre le groupe</button>
+                                    <button type="button" class="dropdown-item" onclick="seeCalendar()">Voir le calendrier</button>
                                   </div>
                                 </div>
                             </td>
@@ -302,6 +303,12 @@
       function seeGroupe(){
         var array = window.location.href.split("/");
         array[array.length-1]="suivifiac2.html";
+        window.open(array.join("/"));
+      }
+
+      function seeCalendar(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="calendriergroupeac.html";
         window.open(array.join("/"));
       }
     </script>
