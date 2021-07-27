@@ -114,6 +114,7 @@
                   <th scope="col"> Groupe </th>
                   <th scope="col"> Typologie</th>
                   <th scope="col"> Statut</th>
+                  <th scope="col"> Annuler</th>
               </tr>
             </thead>
             <tbody class="tbody">
@@ -129,6 +130,7 @@
                 <td> Continue</td>
                 <td> Continue</td>
                 <td> Cloturé</td>
+                <td></td>
               </tr>
               <tr>
                 <td>9800000N<br /> GRIEZMAN Antoine</td>
@@ -142,6 +144,7 @@
                 <td> Continue</td>
                 <td> Continue</td>
                 <td> Cloturé</td>
+                <td></td>
               </tr>
 
               <tr>
@@ -156,7 +159,23 @@
                 <td> Continue</td>
                 <td> Continue</td>
                 <td> Annulé</td>
+                <td></td>
+              </tr>
 
+              <tr>
+                <td>9800000N<br /> GRIEZMAN Antoine</td>
+                <td> VT160000</td>
+                <td> Réseaux IP et applicatifs SNCF </td>
+                <td> NVT0000146</td>
+                <td> Saint-Priest	</td>
+                <td> 21/10/2021 </td>
+                <td> 25/10/2021</td>
+                <td> Signalisation</td>
+                <td> Continue</td>
+                <td> Continue</td>
+                <td> Prochainement</td>
+                <td><button class="btn btn-warning btn-sm btn-block btnrepartcofo" data-toggle="modal" data-target="#ModalAnnulation"> Annuler </button>
+                </td>
               </tr>
              
             </tbody>
@@ -164,6 +183,41 @@
         </div>
       </div>
     </div>
+
+    <div id="ModalAnnulation" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content" style="border: 2px solid black;"> <br />
+              <h2 class="text-center my-4"> Annuler l'inscription de l'agent  </h1>
+              <div class="modal-body">
+                  
+                      <div class="form-group">                    
+                        <label for="motif"> Motif annulation</label>
+                        <select id="motif">
+                          <option selected data-role="default-hidden-option" disabled hidden>Choix du motif</option>
+                          <option data-id="9"></option>
+                          <option data-id="0">Malade ou en congès</option>
+                          <option data-id="1" >Session annulée ou reportée</option>
+                          <option data-id="2" >Cause nécessité de service</option>
+                          <option data-id="3" >Changement du besoin de l'agent</option>
+                          <option data-id="4" >Sortie</option>
+                          <option data-id="5" >Desistement</option>
+                          <option data-id="6" >Erreur inscription</option>
+                          <option data-id="7" >Causes extérieures</option>
+                          <option data-id="8" >Absence syndicale</option>
+                        </select>                            </div>
+                      <div class="row">
+                          <div class="col-md-2 offset-md-5">
+                              <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                          </div>
+                      </div>
+                      
+                                                           
+              </div>
+  
+          </div>
+      </div>
+    </div>
+
     <div id="footercofo6"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
