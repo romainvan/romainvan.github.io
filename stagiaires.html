@@ -50,6 +50,7 @@
                                   <th scope="col"> Code Session </th>
                                   <th scope="col"> Lieu </th>
                                   <th scope="col"> Groupe </th>
+                                  <th scope="col"> Typologie </th>
                                   <th scope="col"> Date début </th>
                                   <th scope="col"> Date fin </th>
                                   <th scope="col"> Statut </th>
@@ -58,23 +59,25 @@
                             <tbody class="tbody">
                               <tr>
                                 <td>9800000N<br /> GRIEZMAN Antoine</td>
-								<td> Infrapôle Paris Sud-Est</td>
+								                <td> Infrapôle Paris Sud-Est</td>
                                 <td> VT140000</td>
                                 <td> NVT000185</td>
                                 <td> Bègles</td>
-								<td>  OPSEG-20-1</td>
+                                <td>  OPSEG-20-1</td>
+                                <td> Initiale</td>
                                 <td> 21/06/2021</td>
                                 <td> 25/06/2021</td>
                                 <td class="bg-success text-white"> PASSEE </td>
                               </tr>
 						
-							  <tr>
+							                <tr>
                                 <td>9800000N<br /> GRIEZMAN Antoine</td>
-								<td> Infrapôle Paris Sud-Est</td>
+								                <td> Infrapôle Paris Sud-Est</td>
                                 <td> VT160000</td>
                                 <td> NVT000140</td>
                                 <td> Bègles</td>
-								<td> OPSEG-20-1</td>
+                                <td> OPSEG-20-1</td>
+                                <td> Initiale</td>
                                 <td> 12/07/2021</td>
                                 <td> 15/07/2021</td>
                                 <td class="bg-danger text-white"> ANNULEE </td>
@@ -82,11 +85,12 @@
 
                               <tr>
                                 <td>9800000N<br /> GRIEZMAN Antoine</td>
-								<td> Infrapôle Paris Sud-Est</td>
+								                <td> Infrapôle Paris Sud-Est</td>
                                 <td> VA650600</td>
                                 <td> NVT000235</td>
                                 <td> Nanterre</td>
-								<td> </td>
+                                <td></td>
+								                <td> Continue </td>
                                 <td> 09/08/2021</td>
                                 <td> 13/08/2021</td>
                                 <td class="bg-info text-white"> EN COURS </td>
@@ -94,47 +98,51 @@
 
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
-								<td> Infrapôle Paris Nord</td>
+								                <td> Infrapôle Paris Nord</td>
                                 <td> VA660400</td>
                                 <td> NVT000361</td>
                                 <td> Bègles</td>
                                 <td>  JCSE-21-3</td>
+                                <td> Initiale</td>
                                 <td> 18/05/2021</td>
                                 <td> 20/05/2021</td>
                                 <td class="bg-success text-white"> PASSEE </td>
                               </tr>
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
-								<td> Infrapôle Paris Nord</td>
+								                <td> Infrapôle Paris Nord</td>
                                 <td> VA650600</td>
                                 <td> NVT000259</td>
                                 <td> Bègles</td>
                                 <td> JCSE-21-3</td>
+                                <td> Initiale</td>
                                 <td> 25/05/2021</td>
                                 <td> 27/05/2021</td>
                                 <td class="bg-success text-white"> PASSEE </td>
                               </tr>
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
-								<td> Infrapôle Paris Nord</td>
+								                <td> Infrapôle Paris Nord</td>
                                 <td> VA650600</td>
                                 <td> NVT000259</td>
                                 <td> Bègles</td>
                                 <td> JCSE-21-3</td>
+                                <td> Initiale</td>
                                 <td> 25/08/2021</td>
                                 <td> 27/08/2021</td>
                                 <td class="bg-info text-white"> EN COURS </td>
                               </tr>
                               <tr>
                                 <td>1234567A<br /> Bartolli Marion</td>
-								<td> Infrapôle Paris Nord</td>
+								                <td> Infrapôle Paris Nord</td>
                                 <td> VA650600</td>
                                 <td> NVT000259</td>
                                 <td> Bègles</td>
                                 <td> JCSE-21-3</td>
+                                <td> Initiale</td>
                                 <td> 25/08/2021</td>
                                 <td> 27/08/2021</td>
-                                <td class="text-black"> PROCHAINEMENT </td>
+                                <td class="text-black"> NON DÉMARRÉ </td>
                               </tr>
                             </tbody>
                           </table>
@@ -176,7 +184,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide
+                targets: [0,2,3,4,5,6,7,8,9], // Index of columns (starting at 0) that you want show/hide
             }
         ],
         lengthMenu: [
@@ -219,7 +227,7 @@
               },
               customize: function (xlsx) {
                 var sheet = xlsx.xl.worksheets['sheet1.xml'];
-                $('row c[r^="I"]', sheet).each( function () {
+                $('row c[r^="J"]', sheet).each( function () {
                   console.log($('is t', this).text())
                  
                   if($('is t', this).text() == 'ANNULEE'){
@@ -261,17 +269,17 @@
                   statut = doc.content[1].table.body
                  
                   for (var i = 1; i < statut.length; i++) {
-                    if (statut[i][8].text ==="PASSEE" ) {
-                      doc.content[1].table.body[i][8].fillColor = '#82be00';
+                    if (statut[i][9].text ==="PASSEE" ) {
+                      doc.content[1].table.body[i][9].fillColor = '#82be00';
                     }
-                    if (statut[i][8].text==="ANNULEE") {
-                      doc.content[1].table.body[i][8].fillColor = '#cd0037';
+                    if (statut[i][9].text==="ANNULEE") {
+                      doc.content[1].table.body[i][9].fillColor = '#cd0037';
                     }
-                    if (statut[i][8].text==="EN COURS") {
-                      doc.content[1].table.body[i][8].fillColor = '#009aa6 ';
+                    if (statut[i][9].text==="EN COURS") {
+                      doc.content[1].table.body[i][9].fillColor = '#009aa6 ';
                     }
-                    if (statut[i][8].text==="PROCHAINEMENT") {
-                      doc.content[1].table.body[i][8].fillColor = '#FFFFFF ';
+                    if (statut[i][9].text==="NON DÉMARRÉ") {
+                      doc.content[1].table.body[i][9].fillColor = '#FFFFFF ';
                     }
                   }
 

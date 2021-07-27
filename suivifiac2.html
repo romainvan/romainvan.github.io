@@ -38,6 +38,7 @@
         <div class="row">
             <div class="col-md-12 mt-5 px-5">
                 <button id="btnExport" onclick="ExportToExcel('xlsx')" class="btn btn-success mb-2"> Excel </button>
+                <button class="btn btn-success mb-2"> Valider changement sous groupe</button>
                 <div class="table-wrapper table-responsive">
                     <div class="table-scroller last-cell-fixed dragscroll">
                         <table class="table table-fixed" id="tbl_exporttable_to_xls">
@@ -49,6 +50,7 @@
                                     <th class="text-white"> Nom Prénom</th>
                                     <th class="text-white"> CP</th>
                                     <th class="text-white"> Établissement</th>
+                                    <th class="text-white sousgroupe"> Sous groupe</th>
                                     <th class="text-white"> Commentaires</th>
                                     <th class="text-white"> EC110300 </th>
                                     <th class="text-white"> EC140100 </th>
@@ -58,7 +60,7 @@
                             </thead>
                             <tbody class="tbody">
                                 <tr>
-                                    <td rowspan="5" colspan="6" class="centertd"> Observations</td>
+                                    <td rowspan="5" colspan="7" class="centertd"> Observations</td>
                                     <td> N° de session</td>
                                     <td> NVD000717</td>
                                     <td> NVE000264</td>
@@ -100,6 +102,12 @@
                                     <td> MARTIN Jean</td>
                                     <td> 1234567A</td>
                                     <td> Infrapôle Lorraine </td>
+                                    <td>
+                                        <select id="select0" class="form-control">
+                                        <option selected disabled>G1</option>
+                                        <option data-id="1" disabled >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>
@@ -113,6 +121,12 @@
                                     <td> PONC Nicolas</td>
                                     <td> 6789123C</td>
                                     <td> Infrapôle Rhodanien </td>
+                                    <td>
+                                        <select id="select1" class="form-control">
+                                        <option selected disabled>G1</option>
+                                        <option data-id="1" disabled >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>
@@ -126,6 +140,12 @@
                                     <td> DUPONT Aymeric	</td>
                                     <td> 8912345B</td>
                                     <td> Infralog National </td>
+                                    <td>
+                                        <select id="select2" class="form-control">
+                                        <option selected disabled>G1</option>
+                                        <option data-id="1" disabled >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-danger"></td>
                                     <td class="bg-success">X</td>
@@ -139,6 +159,12 @@
                                     <td> DOS SANTOS Eduardo	</td>
                                     <td> 9102652N</td>
                                     <td> Infrapôle Paris Nord </td>
+                                    <td>
+                                        <select id="select3" class="form-control">
+                                        <option selected>G1</option>
+                                        <option data-id="1" >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>
@@ -152,6 +178,12 @@
                                     <td> DOS SANTOS Eduardo	</td>
                                     <td> 9102652N</td>
                                     <td> Infrapôle Paris Nord </td>
+                                    <td>
+                                        <select id="select4" class="form-control">
+                                        <option selected >G1</option>
+                                        <option data-id="1"  >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>
@@ -165,6 +197,12 @@
                                     <td> FINEUR Lisa </td>
                                     <td> 9501112P	</td>
                                     <td> Infrapôle Paris Sud Est   </td>
+                                    <td>
+                                        <select id="select5" class="form-control">
+                                        <option  >G1</option>
+                                        <option data-id="1"  selected >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-danger"></td>
@@ -178,6 +216,12 @@
                                     <td> GALTIER Christopher </td>
                                     <td> 9602652N </td>
                                     <td> Infrapôle Paris Sud Est   </td>
+                                    <td>
+                                        <select id="select6" class="form-control">
+                                        <option  >G1</option>
+                                        <option data-id="1"  selected >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-danger"></td>
@@ -191,6 +235,12 @@
                                     <td> VOLI Andrea </td>
                                     <td> 9802250T </td>
                                     <td> Infrapôle Paris Sud Est   </td>
+                                    <td>
+                                        <select id="select7" class="form-control">
+                                        <option  >G1</option>
+                                        <option data-id="1"  selected >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>
@@ -204,6 +254,12 @@
                                     <td> MORIN Thomas </td>
                                     <td> 8456912D </td>
                                     <td> Infrapôle Centre  </td>
+                                    <td>
+                                        <select id="select8" class="form-control">
+                                        <option  disabled>G1</option>
+                                        <option data-id="1" disabled selected >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>
@@ -217,6 +273,12 @@
                                     <td> BERGER Céline </td>
                                     <td> 9745123F </td>
                                     <td> Infrapôle Centre  </td>
+                                    <td>
+                                        <select id="select9" class="form-control">
+                                        <option  disabled>G1</option>
+                                        <option data-id="1" disabled selected >G2 </option>
+                                        </select> 
+                                    </td>
                                     <td> </td>
                                     <td class="bg-success">X</td>
                                     <td class="bg-success">X</td>

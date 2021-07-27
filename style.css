@@ -461,6 +461,10 @@ select > .placeholder {
     z-index: 1;
 }
 
+  .sousgroupe{
+    width: 5em !important;
+  }
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }

@@ -1,4 +1,13 @@
-.table td{
+  .table td{
     padding-top: 1px !important;
     padding-bottom: 1px !important;
+  }
+
+  select {
+    background-image: none !important;
+    width: 5em !important;
+  }
+
+  .form-control{
+    font-size: 1em !important;
   }
