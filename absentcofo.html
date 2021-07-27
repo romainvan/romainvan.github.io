@@ -25,6 +25,30 @@
     <div class="container-fluid pb-3">
         <h1 class="text-center mb-3"> Liste des agents absents </h1>
         <div class="row">
+            <div class="col-md-3 mb-4">
+                <label for="raf" class="ml-1"> RAF </label>
+                <input list="raf" type="text" id="rafinput" name="raf" class="whiteinput border-0 form-control" placeholder="RAF">
+                <datalist id="raf">
+                    <option data-value="VT160000"> VT160000 - Réseaux IP et applicatifs SNCF	</option>
+                </datalist>
+            </div>
+            <div class="col-md-2 mb-4">
+                <label for="agent" class="ml-1"> Agent </label>
+                <input list="agent" type="text" id="agentinput" name="agent" class="whiteinput border-0 form-control" placeholder="Agent">
+                <datalist id="agent">
+                    <option data-value="8912345B">8912345B - Durand Arthur </option> 
+                </datalist>
+            </div>
+            <div class="col-md-2 mb-4">
+                <label for="session" class="ml-1"> Code Session </label>
+                <input list="session" type="text" id="sessioninput" name="session" class="whiteinput border-0 form-control" placeholder="Code session">
+                <datalist id="session">
+                    <option data-value="NVT0000146">NVT0000146 </option> 
+                </datalist>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success btnvalid"> Valider</button>
+            </div>
             <div class="col-md-12">
                 <div class="table-wrapper">
                     <div class="table-scroller last-cell-fixed dragscroll">
