@@ -111,11 +111,13 @@
                                     <tr>
                                       <th scope="col"><div class="text-white"></div></th>
                                       <th scope="col"><div class="text-white">Code RAF - Code Session</div></th>
+                                      <th scope="col"><div class="text-white">Libellé Code RAF</div></th>
                                       <th scope="col"><div class="text-white">Métier </div></th>
                                       <th scope="col"><div class="text-white">Lieu</div></th>
                                       <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
                                       <th scope="col"><div class="text-white">Groupe</div></th>
                                       <th scope="col"><div class="text-white">Places accordées</div></th>
+                                      <th scope="col"><div class="text-white">Commentaire</div></th>
                                       <th scope="col"><div class="text-white">Convocation</div></th>
                                       <th scope="col"><div class="text-white">Rendre des places</div></th>
                                     </tr>
@@ -124,16 +126,21 @@
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv3','icon1')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i> </td>
                                         <td> VT160000 - NVT0000146</td>
+                                        <td> Réseaux IP et applicatifs SNCF</td>
                                         <td> Signalisation </td>
                                         <td> Saint-Priest </td>
                                         <td> 21/06/2021 - 25/06/2021</td>
                                         <td> Continue </td>
                                         <td> 1</td>
+                                        <td> 
+                                            <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true" onclick="changeicon('12')" id="icon12"></i>
+              
+                                        </td>
                                         <td> <button class="btn btn-primary btn-sm"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
-                                        <td colspan="9">
+                                        <td colspan="11">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -192,16 +199,21 @@
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv4','icon2')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2"></i> </td>
                                         <td> VA620600 - NVT0000151</td>
+                                        <td> Accès à E - UV6 Technique, maintenance et agrément - Engins</td>
                                         <td> Produit Train </td>
                                         <td> Nanterre </td>
                                         <td> 28/06/2021 - 29/06/2021</td>
                                         <td> Continue </td>
                                         <td> 2</td>
+                                        <td> 
+                                            <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('11')" id="icon11"></i>
+              
+                                        </td>
                                         <td> <button class="btn btn-primary btn-sm" onclick="convocation()"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
-                                        <td colspan="9">
+                                        <td colspan="11">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -298,17 +310,22 @@
                                     <tr>
                                         <td onclick="affichemyDiv('affichemyDiv5','icon3')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon3"></i> </td>
                                         <td>  VA670701 - NVT0000245</td>
+                                        <td> Technique travaux  Caténaire KV CAT MOETX</td>
                                         <td> Signalisation </td>
                                         <td> Bègles </td>
                                         <td> 15/06/2021-17/06/2021</td>
                                         <td> Continue </td>
                                         <td> 3</td>
+                                        <td> 
+                                            <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('10')" id="icon10"></i>
+              
+                                        </td>
                                         <td> <button class="btn btn-primary btn-sm"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
                                     </tr>
 
                                     <tr style="display: none;" id="affichemyDiv5" class="bodycolor">
-                                        <td colspan="9">
+                                        <td colspan="11">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -714,7 +731,24 @@
               }
               x.style.display = "none";
             }
-        } 
+        }
+
+        function changeicon(x){
+            var elt = document.getElementById("icon"+x);
+            if(elt.className.includes("check")){
+            elt.classList.remove("icons-checked");
+            elt.classList.remove("greenicon");
+            elt.classList.add("icons-close");
+            elt.classList.add("redicon");
+
+            }
+            else{
+            elt.classList.add("icons-checked");
+            elt.classList.add("greenicon");
+            elt.classList.remove("icons-close");
+            elt.classList.remove("redicon");
+            }
+        }
 
         function confirmBtn() {
             confirm("Etes-vous sûr d'enregistrer ces modifications");
