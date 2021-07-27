@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Page d'accueil</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+    <script> 
+      $(function(){
+        $("#includedContentAC").load("navguichet.html"); 
+        $("#footerac1").load("footer.html");
+        var date = new Date();
+        var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+        $("#actuac").text("Actualités du " +date.toLocaleDateString("fr-FR", options)+ " pour la zone de production Atlantique")
+        $("#monthac").text(actuDate())
+      });
+
+    </script> 
+  
+
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAC"></div>
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-5"> Bienvenue sur OctopusRéseau Guichet </h1>
+        
+    </div>
+
+    <div id="footerac1"></div>
+
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+</body>
+</html>

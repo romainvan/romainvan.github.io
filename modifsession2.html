@@ -28,18 +28,23 @@
     <div id="includedContentAgo2"></div>
     
         <div class="container-fluid flex-grow-1 flex-shrink-0">
-        <h1 class="text-center mb-5"> Modification de la session NVE0000047  </h1>
+        <h1 class="text-center mb-5"> Ajout de commentaire pour la session NVE0000047  </h1>
         <div class="row">
             <div class="col-md-6 offset-md-3">
+
+                    <div class="form-group mt-4">
+                      <label for="stretchyTextarea1">Commentaire</label>
+                      <div class="form-control-container">
+                        <textarea class="form-control whiteinput areaheight" id="stretchyTextarea1" placeholder="Commentaire ..." ZgotmplZ></textarea>
+                        <span class="form-control-state"></span>
+                      </div>
+                    </div>
                 
                     <div class="form-row">
                         <div class="col">
                             <label for="coderaf" class="ml-1"> Code RAF</label>
                             <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control" value="VE200200" readonly>
-                                <datalist id="code">
-                                        <option value="VCE40124">
-                                        <option value="VA216000">
-                                </datalist>
+                          
                         </div>
 
                         <div class="col">
@@ -50,6 +55,11 @@
                         
                         
                     </div>
+
+                    <div class="form-group mt-4">
+                      <label for="libelle" class="ml-1"> Libellé code RAF </label>
+                      <input type="text" value="Protections MICOM P12x" class="form-control whiteinput" id="libelle" readonly> 
+                  </div>
 
                     <div class="form-row mt-4">
                         <label for="campus" class="ml-1"> Campus </label>
@@ -64,11 +74,11 @@
                     <div class="form-row mt-4">
                         <div class="col">
                           <label for="datedebut" class="ml-1"> Date de début (jj/mm/aaaa)</label>
-                          <input type="text" id="datedebut" class="whiteinput border-0 form-control" value="23/06/2021" readonly>
+                          <input type="text" id="datedebut" class="whiteinput border-0 form-control" value="23/06/2021 à 08h30" readonly>
                         </div>
                         <div class="col">
                           <label for="datefin" class="ml-1"> Date de fin (jj/mm/aaaa)</label>
-                          <input type="text" id="datefin" class="whiteinput border-0 form-control" value="25/06/2021" readonly>
+                          <input type="text" id="datefin" class="whiteinput border-0 form-control" value="25/06/2021 à 17h00" readonly>
                         </div>
                        
                     </div>
@@ -79,17 +89,10 @@
                     </div>
 
                                  
-                   <div class="form-group mt-4">
-                      <label for="stretchyTextarea1">Commentaire</label>
-                      <div class="form-control-container">
-                        <textarea class="form-control whiteinput areaheight" id="stretchyTextarea1" placeholder="Commentaire ..." ZgotmplZ></textarea>
-                        <span class="form-control-state"></span>
-                      </div>
-                    </div>
-
+                   
                     <div class="row">
                         <div class="col-md-2 offset-md-5">
-                            <button class="btn btn-success text-white" onclick="location.href=window.location.href" > Modifier la session </button>
+                            <button class="btn btn-success text-white" onclick="location.href=window.location.href" > Ajouter commentaire </button>
                         </div>
                     </div>
             
