@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Pot commun ZP</title>
+  <title>Pot commun ZP FI</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -32,7 +32,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row mb-2">
-                    <div class="col-md-3 ml-5">
+                    <div class="col-md-2 ml-5">
                         <label for="etab" class="ml-1"> Établissement</label>
                         <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
                         <datalist id="etab">
@@ -40,183 +40,495 @@
                             <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
                         </datalist>
                     </div>
+                    <div class="col-md-2">
+                        <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                          <div data-component="picker">
+                              <div class="input-group" data-toggle>
+                                <div class="form-control-container">
+                                  <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Date de début" data-input>
+                                  <span class="form-control-state"></span>
+                                </div>
+                                <div class="input-group-append">
+                                  <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                    <i class="icons-calendar" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                            <div data-component="picker">
+                                <div class="input-group" data-toggle>
+                                  <div class="form-control-container">
+                                    <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                                    <span class="form-control-state"></span>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+    
+                    <div class="col-md-2">
+                      <label for="metier"> Métier</label>
+                      <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control">
+                      <datalist id="listmetier">
+                        <option value="Tout">
+                        <option value="Signalisation">
+                        <option value="Voie">
+                        <option value="Produit Train">
+                        <option value="Caténaire">
+                        <option value="Circulation">
+                      </datalist>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="coderaf"> Parcours</label>
+                      <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control">
+                      <datalist id="code">
+                        <option value="CFOP - OP / Reconversion">
+                        <option value="JCV - Jeune Cadre Voie">
+                      </datalist>
+                    </div>
                     <div class="col-md-1">
                         <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                          <div class="btn-group dropdown ml-5" data-component="select-radios">
-                            <button type="button" class="btn btn-secondary dropdown-toggle radiusBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="actionsgroup2">
-                              <span data-role="placeholder">Tout</span>
-                              <i class="icons-arrow-down" aria-hidden="true"></i>
-                            </button>
-                            <div id="actionsgroup2" class="dropdown-menu dropdown-menu-right">
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch1" id="action11" class="sr-only"/>
-                              <label class="dropdown-item" for="action11">Signalisation</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch2" id="action12" class="sr-only"/>
-                              <label class="dropdown-item" for="action12">Voie</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action13" class="sr-only"/>
-                              <label class="dropdown-item" for="action13">Produit Train</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action14" class="sr-only"/>
-                              <label class="dropdown-item" for="action14">Caténaire</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action15" class="sr-only"/>
-                              <label class="dropdown-item" for="action15">Circulation</label>
-                              <input data-role="value" type="radio" name="keywordSearch" value="keywordSearch3" id="action16" class="sr-only"/>
-                              <label class="dropdown-item" for="action16">Tout</label>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-control-container col-md-3 whiteinput autocomplete">
-                            <input list="code" type="text" id="choix_bieres" class="whiteinput border-0 form-control" placeholder="Parcours">
-                            <datalist id="code">
-                              <option value="CFOP - OP / Reconversion">
-                              <option value="JCV - Jeune Cadre Voie">
-                            </datalist>
-                        </div>
-                        <div class="input-group-append">
-                          <button type="button" class="btn btn-primary btn-only-icon">
-                            <i class="icons-search" aria-hidden="true"></i>
-                            <span class="sr-only">Rechercher sur le site</span>
-                          </button>
-                        </div>
-                      </div>
-                </div>
 
-              
-
-                <div class="col-md-11 mt-5 ml-5">
-                    <div class="table-wrapper" data-component="table">
+                <div class="col-md-11 ml-5 mb-5 row">
+               
+                    <div class="table-wrapper">
                         <div class="table-scroller dragscroll">
                             <table class="table">
+    
                                 <thead class="thead bg-secondary">
                                     <tr>
-                                      <th scope="col"><div class="cell-inner text-white">Code parcours - Libellé parcours</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Lieu</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Date de début</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Date de fin</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Groupe</div></th>
-                                      <th scope="col"><div class="cell-inner text-white">Places restantes</div></th>
-                                    </tr>
+                                        <th scope="col"><div class="text-white"></div></th>
+                                        <th scope="col"><div class="text-white">Code Parcours - Libellé Parcours</div></th>
+                                        <th scope="col"><div class="text-white"> Métier </div></th>
+                                        <th scope="col"><div class="text-white">Lieu</div></th>
+                                        <th scope="col"><div class="text-white">Date de début - Date de fin</div></th>
+                                        <th scope="col"><div class="text-white">Groupe</div></th>
+                                        <th scope="col"><div class="text-white">Places restantes</div></th>
+                                        <!--
+                                        <th scope="col"><div class="text-white">Rendre des places</div></th>
+                                        -->
+                                      </tr>
                                 </thead>
+    
                                 <tbody class="tbody">
-                                    <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="0"><div class="cell-inner"> CFOP - OP / Reconversion </div></td>
-                                        <td>  Saint-Priest  </td>
-                                        <td>  05/01/2022 </td>
-                                        <td>  10/12/2022 </td>
-                                        <td>  LY AMV5 01/22 OP  </td>
-                                        <td>  1 </td>
+                                    <tr>
+                                        <td onclick="affichemyDiv('affichemyDiv3','icon1')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon1"></i> </td>
+                                        <td> CFOP - OP / Reconversion</td>
+                                        <td> Circulation </td>
+                                        <td> Saint-Priest </td>
+                                        <td> 05/01/2022 - 10/12/2022 </td>
+                                        <td> LY AMV5 01/22 OP </td>
+                                        <td> 1</td>                                       
+                                              
                                     </tr>
-                                    <tr class="trgroup" data-trgroup="0">
-                                       
-                                        <td colspan="2">
-                                            <div class="cell-inner">
-                                                <select id="numcp1" class="form-control selectRepart my-2" onchange="changeCP('1')">
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="1234567A">1234567A</option> 
-                                                    <option value="8912345B">8912345B </option> 
-                                                    <option value="6789123C">6789123C</option> 
-                                                    <option value="4567891D">4567891D</option> 
-                                                </select> 
-                                            </div> 
+                                    <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
+                                        <td colspan="7">
+                                            <table class="table mt-3">
+                                                <thead class="thead hiddentable">
+                                                  <tr>
+                                                    <th><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                    <th colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                                    <th><div class="text-white justify-content-center">Choix des modules </div></th>
+                                                    <span class="tooltiptext">Tooltip text</span>
+                                                    <th><div class="text-white justify-content-center">Enregistrer </div></th>
+    
+                                                  </tr>
+                                                </thead>
+                                                <tbody class="tbody">
+                                                    <tr>
+                                                        <td>
+                                                            <input id="numcp41" list="datanumcp41" class="form-control mt-2" onchange="changeCP('41')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp41">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="1234567A">1234567A - Dupont Martin </option> 
+                                                                <option value="2345678F">2345678F - Roux Adèle </option> 
+                                                            </datalist>                                                       
+                                                        </td>
+                                                        <td colspan="2">
+                                                            
+                                                                <input type="text" name="nomagent4" id="nomagent41" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Cliquer ici et cocher les modules fait par le stagiaire">
+    
+                                                                <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours41')"></i>
+                                                            </span>
+                                                        </td>
+                                                        <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
+                                                        
+                                                    </tr>
+                                                    <tr style="display: none;" id="displayparcours41" class="bodycolor">
+                                                        <td colspan="5">
+                                                            <table class="table mt-3">
+                                                                <thead class="thead hiddentable">
+                                                                  <tr>
+                                                                    <th><div class="text-white justify-content-center"> </div></th>
+                                                                    <th><div class="text-white justify-content-center">Code RAF</div></th>
+                                                                    <th><div class="text-white justify-content-center"> Libellé code RAF  </div></th>
+                                                                    <th><div class="text-white justify-content-center"> Date de début  </div></th>
+                                                                    <th><div class="text-white justify-content-center"> Date de fin  </div></th>
+    
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody class="tbody">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox1" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox1"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> EC110300</td>
+                                                                        <td> Formation de base AMV - ATT/OP - ATT-TS</td>
+                                                                        <td> 05/01/2022</td>
+                                                                        <td> 16/01/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox2" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox2"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> EC140100</td>
+                                                                        <td> Préparation pour formation complémentaire ACDV</td>
+                                                                        <td> 15/02/2022</td>
+                                                                        <td> 05/03/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox3" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox3"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> EC140005</td>
+                                                                        <td> Formation complémentaire Agent Circulation de Double Voie</td>
+                                                                        <td> 20/06/2022</td>
+                                                                        <td> 15/07/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox4" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox4"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> EC125002</td>
+                                                                        <td> Formation complém. Agent Sécurité Electrique</td>
+                                                                        <td> 15/10/2022</td>
+                                                                        <td> 15/10/2022</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </td>
-                                        <td colspan="3">
-                                            <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent1" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                        
+                                        <td colspan="1"></td>
                                     </tr>
-
-                                    <tr class="trhead">
-                                        <td class="cell-caret nopad" data-role="toggle-group-btn" data-id="1"><div class="cell-inner"> JCV - Jeune Cadre Voie</div></td>
-                                        <td>  Bègles  </td>
-                                        <td>  15/01/2022 </td>
-                                        <td>  25/06/2023 </td>
-                                        <td>  JCVB_21-01  </td>
-                                        <td>  2 </td>
+    
+                                    <tr>
+                                        <td onclick="affichemyDiv('affichemyDiv4','icon2')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2"></i> </td>
+                                        <td> JCV - Jeune Cadre Voie	</td>
+                                        <td> Voie </td>
+                                        <td> Bègles </td>
+                                        <td> 15/01/2022 - 25/06/2023 </td>
+                                        <td> JCVB_22-01 </td>
+                                        <td> 2</td>
                                     </tr>
-                                    <tr class="trgroup" data-trgroup="1">
-                                       
-                                        <td colspan="2">
-                                            <div class="cell-inner">
-                                                <select id="numcp20" class="form-control selectRepart my-2" onchange="changeCP('20')">
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="1234567A">1234567A</option> 
-                                                    <option value="8912345B">8912345B </option> 
-                                                    <option value="6789123C">6789123C</option> 
-                                                    <option value="4567891D">4567891D</option> 
-                                                </select> 
-                                            </div> 
+                                    <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
+                                        <td colspan="7">
+                                            <table class="table mt-3">
+                                                <thead class="thead hiddentable">
+                                                    <tr>
+                                                      <th><div class="text-white justify-content-center">Numéro de CP de l'agent </div></th>
+                                                      <th colspan="2"><div class="text-white justify-content-center">Nom Prénom</div></th>
+                                                      <th><div class="text-white justify-content-center">Choix des modules </div></th>
+                                                      <th><div class="text-white justify-content-center">Enregistrer </div></th>
+      
+                                                    </tr>
+                                                  </thead>
+                                                <tbody class="tbody">
+                                                    <tr>
+                                                        <td>
+                                                            <input id="numcp42" list="datanumcp42" class="form-control mt-2" onchange="changeCP('42')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp42">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                                <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                                <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                            </datalist>    
+                                                        </td>
+                                                        <td colspan="2">
+                                                            
+                                                                <input type="text" name="nomagent4" id="nomagent42" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Cliquer ici et cocher les modules fait par le stagiaire">
+    
+                                                                <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours42')"></i>
+                                                            </span>
+                                                       
+                                                        </td>
+                                                        <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
+                                                        
+                                                    </tr>
+    
+                                                    <tr style="display: none;" id="displayparcours42" class="bodycolor">
+                                                        <td colspan="5">
+                                                            <table class="table mt-3">
+                                                                <thead class="thead hiddentable">
+                                                                  <tr>
+                                                                    <th><div class="text-white justify-content-center"> </div></th>
+                                                                    <th><div class="text-white justify-content-center">Code RAF</div></th>
+                                                                    <th><div class="text-white justify-content-center"> Libellé code RAF  </div></th>
+                                                                    <th><div class="text-white justify-content-center"> Date de début</div></th>
+                                                                    <th><div class="text-white justify-content-center"> Date de fin</div></th>
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody class="tbody">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox5" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox5"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VJCM0202 </td>
+                                                                        <td> RCS de circulation des trains et d'exploitation </td>
+                                                                        <td> 15/01/2022</td>
+                                                                        <td> 30/01/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox6" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox6"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VVTESM03 </td>
+                                                                        <td> TES M Annonceur Sentinelle ASP - LC </td>
+                                                                        <td> 17/02/2022</td>
+                                                                        <td> 05/03/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox7" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox7"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VPRCOACENC </td>
+                                                                        <td> Module Coactivité (RSNCF/RSO) Encadrants </td>
+                                                                        <td> 08/04/2022</td>
+                                                                        <td> 10/05/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox8" class="custom-control-input" id="exampleCheckbox8" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox8"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VENC100RR </td>
+                                                                        <td> Remplacement de rails, Ferrures en ADV incorporés </td>
+                                                                        <td> 13/06/2022</td>
+                                                                        <td> 04/07/2022</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+    
+                                                    <tr>
+                                                        <td>
+                                                            
+                                                            <input id="numcp43" list="datanumcp43" class="form-control mt-2" onchange="changeCP('43')" placeholder="CP de l'agent">
+                                                            <datalist id="datanumcp43">
+                                                                <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                                                                <option value="8912345B">8912345B - Durand Arthur </option> 
+                                                                <option value="6789123C">6789123C - Fournier Gabriel</option> 
+                                                                <option value="3456789H">3456789H - Legrand Barbara</option> 
+                                                            </datalist>    
+                                                             
+                                                            
+                                                        </td>
+                                                        <td colspan="2">
+                                                            
+                                                                <input type="text" name="nomagent4" id="nomagent43" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Cliquer ici et cocher les modules fait par le stagiaire">
+    
+                                                                <i class="icons-add icons-size-2x mt-2" aria-hidden="true" id="btnadd41" onclick="showParcours('displayparcours43')"></i>
+                                                       
+                                                            </span>
+                                                         </td>
+                                                        <td> <button class="btn btn-success mt-1"> Enregistrer </button> </td>
+                                                        
+                                                    </tr>
+                                                    
+                                                    <tr style="display: none;" id="displayparcours43" class="bodycolor">
+                                                        <td colspan="5">
+                                                            <table class="table mt-3">
+                                                                <thead class="thead hiddentable">
+                                                                  <tr>
+                                                                    <th><div class="text-white justify-content-center"> </div></th>
+                                                                    <th><div class="text-white justify-content-center">Code RAF</div></th>
+                                                                    <th><div class="text-white justify-content-center"> Libellé code RAF  </div></th>
+                                                                    <th><div class="text-white justify-content-center"> Date de début</div></th>
+                                                                    <th><div class="text-white justify-content-center"> Date de fin</div></th>
+                                                                  </tr>
+                                                                </thead>
+                                                                <tbody class="tbody">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox5" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox5"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VJCM0202 </td>
+                                                                        <td> RCS de circulation des trains et d'exploitation </td>
+                                                                        <td> 15/01/2022</td>
+                                                                        <td> 30/01/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox6" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox6"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VVTESM03 </td>
+                                                                        <td> TES M Annonceur Sentinelle ASP - LC </td>
+                                                                        <td> 17/02/2022</td>
+                                                                        <td> 05/03/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox1" class="custom-control-input" id="exampleCheckbox7" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox7"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VPRCOACENC </td>
+                                                                        <td> Module Coactivité (RSNCF/RSO) Encadrants </td>
+                                                                        <td> 08/04/2022</td>
+                                                                        <td> 10/05/2022</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="custom-control custom-checkbox">
+                                                                                <input type="checkbox" name="exampleCheckbox8" class="custom-control-input" id="exampleCheckbox8" checked>
+                                                                                <label class="custom-control-label" for="exampleCheckbox8"></label>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td> VENC100RR </td>
+                                                                        <td> Remplacement de rails, Ferrures en ADV incorporés </td>
+                                                                        <td> 13/06/2022</td>
+                                                                        <td> 04/07/2022</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+    
+    
+                                                </tbody>
+                                            </table>
                                         </td>
-                                        <td colspan="3">
-                                            <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent20" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                        
+                                        <td colspan="1"></td>
                                     </tr>
-
-                                    <tr class="trgroup" data-trgroup="1">
-                                       
-                                        <td colspan="2">
-                                            <div class="cell-inner">
-                                                <select id="numcp21" class="form-control selectRepart my-2" onchange="changeCP('21')">
-                                                    <option selected="selected" value="reset"> CP de l'agent</option>
-                                                    <option value="1234567A">1234567A</option> 
-                                                    <option value="8912345B">8912345B </option> 
-                                                    <option value="6789123C">6789123C</option> 
-                                                    <option value="4567891D">4567891D</option> 
-                                                </select> 
-                                            </div> 
-                                        </td>
-                                        <td colspan="3">
-                                            <div class="cell-inner">
-                                                <input type="text" name="nomagent" id="nomagent21" placeholder="Nom Prénom" class="mt-2 form-control" readonly>
-                                            </div>
-                                        </td>
-                                       
-                                    </tr>
-
+    
                                     
-                                                      
-                                    
-                               
-                                   
                                 </tbody>
                             </table>
                         </div>
                     </div>
-
-                    
                 </div>
 
+
+              
+
+                    
             </div>
         </div>
-    
-
-
     </div>
     <div id="footercofo3"></div>
     <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
 
     <script>
         var object = new Object();
-        object["1234567A"] = {"nomPrenom" : "Dupont Martin" , "code" : "8456" , "date" : "20/09/2020"};
-        object["8912345B"] = {"nomPrenom" : "Durand Arthur" , "code" : "2567" , "date" : "22/10/2020"};
-        object["6789123C"] = {"nomPrenom" : "Fournier Gabriel" , "code" : "1221" , "date" : "01/12/2020"};
+        object["1234567A"] = {"nomPrenom" : "Dupont Martin" , "code" : "124782" , "date" : "20/09/2020"};
+        object["8912345B"] = {"nomPrenom" : "Durand Arthur" , "code" : "754329" , "date" : "22/10/2020"};
+        object["6789123C"] = {"nomPrenom" : "Fournier Gabriel" , "code" : "815637" , "date" : "01/12/2020"};
         object["4567891D"] = {"nomPrenom" : "Muller Thomas" , "code" : "5746" , "date" : "11/12/2020"};
-        object["reset"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
+        object["2345678F"] = {"nomPrenom" : "Roux Adèle" , "code" : "152743" , "date" : "10/05/2020"};
+        object["3456789H"] = {"nomPrenom" : "Legrand Barbara" , "code" : "453745" , "date" : "09/02/2021"};
+        object["4891234B"] = {"nomPrenom" : "Garcia Roger" , "code" : "482103" , "date" : "25/03/2021"};
+        object["5678912G"] = {"nomPrenom" : "Vasseur Cedric" , "code" : "501267" , "date" : "10/02/2021"};
+        object["6123456J"] = {"nomPrenom" : "Bailly Thomas" , "code" : "912457" , "date" : "21/10/2020"};
+        object["0123456B"] = {"nomPrenom" : "Masson Eva" , "code" : "924781" , "date" : "07/09/2020"};
+        object["Remise à zéro"] = {"nomPrenom" : "" , "code" : "" , "date" : ""};
 
+        function affichemyDiv(id,icon=null) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                if(icon != null){
+                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  document.getElementById(icon).classList.remove('icons-arrow-next');
+                }
+                x.style.display = "table-row";
+            } else {
+              if(icon != null){
+                document.getElementById(icon).classList.remove('icons-arrow-down');
+                document.getElementById(icon).classList.add('icons-arrow-next');
+              }
+              x.style.display = "none";
+            }
+        } 
+
+
+        function confirmBtn() {
+            confirm("Etes-vous sûr d'enregistrer ces modifications");
+        }
 
         function changeCP(id){
             var value = document.getElementById("numcp"+id).value;
+            if(value=="Remise à zéro"){
+                document.getElementById("numcp"+id).value = ""
+            }
             document.getElementById("nomagent"+id).value = object[value].nomPrenom
-            document.getElementById("codedemande"+id).value = object[value].code
-            document.getElementById("datedemande"+id).value = object[value].date
+            
         }
+
+        function showParcours(id){
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "table-row";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
 
     </script>
 </body>
