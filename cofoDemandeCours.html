@@ -841,7 +841,7 @@
               },
               customize: function (xlsx) {
                 var sheet = xlsx.xl.worksheets['sheet1.xml'];
-                $('row c[r^="G"]', sheet).each( function () {
+                $('row c[r^="H"]', sheet).each( function () {
                   console.log($('is t', this).text())
                   if ( $('is t', this).text() == 'En attente de place' ) {
                         $(this).attr( 's', '20' );
@@ -888,17 +888,17 @@
                   statut = doc.content[1].table.body
                  
                   for (var i = 1; i < statut.length; i++) {
-                    if (statut[i][6].text ==="En attente de place" ) {
-                      doc.content[1].table.body[i][6].fillColor = '#128fdc';
+                    if (statut[i][7].text ==="En attente de place" ) {
+                      doc.content[1].table.body[i][7].fillColor = '#128fdc';
                     }
-                    if (statut[i][6].text==="Inscrit") {
-                      doc.content[1].table.body[i][6].fillColor = '#82be00';
+                    if (statut[i][7].text==="Inscrit") {
+                      doc.content[1].table.body[i][7].fillColor = '#82be00';
                     }
-                    if (statut[i][6].text==="Rejeté") {
-                      doc.content[1].table.body[i][6].fillColor = '#cd0037';
+                    if (statut[i][7].text==="Rejeté") {
+                      doc.content[1].table.body[i][7].fillColor = '#cd0037';
                     }
-                    if (statut[i][6].text==="A reconduire") {
-                      doc.content[1].table.body[i][6].fillColor = '#ffb612 ';
+                    if (statut[i][7].text==="A reconduire") {
+                      doc.content[1].table.body[i][7].fillColor = '#ffb612 ';
                     }
                   }
 
