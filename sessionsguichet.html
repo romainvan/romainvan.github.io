@@ -159,7 +159,7 @@
                             <td> 28/06/2021</td>
                             <td> 29/06/2021</td>
                             <td> Signalisation</td>
-                            <td> 1/2</td>
+                            <td> 1/1</td>
                             <td> Continue</td>
                             <td> 2 </td>
                             <td> Continue</td>
@@ -236,7 +236,7 @@
 
     <script>
       $(function(){
-        $("#includedContentAC7").load("navcofo.html");
+        $("#includedContentAC7").load("navguichet.html");
         $("#footercofo5").load("footer.html"); 
 
       });
@@ -379,13 +379,13 @@
 
       function seeStagiaires(){
           var array = window.location.href.split("/");
-          array[array.length-1]="listestagiaires.html";
+          array[array.length-1]="listestagiairesguichet.html";
          window.open(array.join("/"));
       }
 
       function seeDetails(){
         var array = window.location.href.split("/");
-        array[array.length-1]="detailsSessionsCOFO.html";
+        array[array.length-1]="detailsSessionGuichet.html";
        window.open(array.join("/"));
       }
 

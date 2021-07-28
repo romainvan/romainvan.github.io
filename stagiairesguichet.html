@@ -1,0 +1,339 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Suivi inscriptions</title>
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+  
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAC8"></div>
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center"> Suivi des inscriptions </h1>
+        <div class="row">
+                <div class="col-md-2">
+                    <label for="numcp41"> Agent </label>
+                    <input id="numcp41" list="datanumcp42" class="form-control mt-2 whiteinput" placeholder="Identifiant ou nom prénom">
+                    <datalist id="datanumcp42">
+                        <option selected="selected" class="form-control" value="Remise à zéro"> CP de l'agent</option>
+                        <option value="EXT01">EXT01	 - Dupont Marc </option> 
+                        <option value="EXT02">EXT02 - Roy Marie</option> 
+                        <option value="EXT03">EXT03 - Petit	Thomas </option> 
+                    </datalist> 
+                </div>
+                <div class="col-md-2">
+                    <label for="raf"> RAF</label>
+                    <input id="raf" list="listraf" class="form-control mt-2 whiteinput" placeholder="Code ou libellé RAF">
+                    <datalist id="listraf">
+                        <option value="VT160000">VT160000 - Réseaux IP et applicatifs SNCF	 </option> 
+                        <option value="VA620600">VA620600 - Accès à E - UV6 Technique, maintenance et agrément - Engins</option> 
+                        <option value="VC524000	">VC524000 - Agents CAT Accès toitures engins moteurs électriques	 </option> 
+                    </datalist> 
+                </div>
+                
+                <div class="col-md-2">
+                    <label for="session"> Code session</label>
+                    <input id="session" list="listsession" class="form-control mt-2 whiteinput" placeholder="Code session">
+                    <datalist id="listsession">
+                        <option>NVT000185 </option> 
+                        <option>NVT0000151</option> 
+                        <option>NVT0000214</option> 
+                    </datalist> 
+                </div>
+
+                <div class="col-md-2">
+                    <label for="metier"> Métier</label>
+                    <input id="metier" list="listmetier" class="form-control mt-2 whiteinput" placeholder="Métier">
+                    <datalist id="listmetier">
+                        <option>Télécom </option> 
+                        <option>Produit Train</option> 
+                        <option>Caténaire</option> 
+                    </datalist> 
+                </div>
+
+                <div class="col-md-1">
+                    <button class="btn btn-success btnvalid"> Valider </button>
+                </div>
+                <div class="col-md-12 mt-3">
+                    <div class="table-wrapper">
+                        <div class="table-scroller last-cell-fixed dragscroll">
+                          <table class="table display" id="suiviinscription">
+                            <thead class="thead bg-secondary text-white">
+                              <tr>
+                                  <th scope="col">Identifiant</th>
+                                  <th scope="col">Nom Prénom</th>
+                                  <th scope="col"> Code RAF </th>
+                                  <th scope="col"> Libellé Code RAF </th>
+                                  <th scope="col"> Métier </th>
+                                  <th scope="col"> Code Session </th>
+                                  <th scope="col"> Lieu </th>
+                                  <th scope="col"> Date début </th>
+                                  <th scope="col"> Date fin </th>
+                                  <th scope="col"> Statut inscription </th>
+                              </tr>
+                            </thead>
+                            <tbody class="tbody">
+                              <tr>
+                                <td> EXT01</td>
+                                <td> Dupont Marc</td>
+                                <td> VT160000</td>
+                                <td> Réseaux IP et applicatifs SNCF</td>
+                                <td> Télécom</td>
+                                <td> NVT000185</td>
+                                <td> Bègles</td>
+                                <td> 21/06/2021</td>
+                                <td> 25/06/2021</td>
+                                <td class="bg-success text-white"> Validée </td>
+                              </tr>
+
+                              <tr>
+                                <td> EXT02</td>
+                                <td> Roy Marie</td>
+                                <td> VT160000</td>
+                                <td> Réseaux IP et applicatifs SNCF</td>
+                                <td> Télécom</td>
+                                <td> NVT000185</td>
+                                <td> Bègles</td>
+                                <td> 21/06/2021</td>
+                                <td> 25/06/2021</td>
+                                <td class="bg-danger text-white"> Annulée </td>
+                              </tr>
+
+                              <tr>
+                                <td> EXT01</td>
+                                <td> Dupont Marc</td>
+                                <td> VA620600</td>
+                                <td> Accès à E - UV6 Technique, maintenance et agrément - Engins	</td>
+                                <td> Produit Train</td>
+                                <td> NVT0000151</td>
+                                <td> Nanterre</td>
+                                <td> 28/06/2021</td>
+                                <td> 29/06/2021</td>
+                                <td class="bg-success text-white"> Validée </td>
+                              </tr>
+
+                              <tr>
+                                <td> EXT03</td>
+                                <td> Petit Thomas</td>
+                                <td> VC524000</td>
+                                <td> Agents CAT Accès toitures engins moteurs électriques	</td>
+                                <td> Caténaire</td>
+                                <td> NVT0000214</td>
+                                <td> Saint Priest</td>
+                                <td> 12/07/2021</td>
+                                <td> 13/07/2021</td>
+                                <td class="bg-success text-white"> Validée </td>
+                              </tr>
+						
+							               
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerac8"></div>
+
+<script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+<script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+<script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="script.js"></script>
+
+<script>
+  $(document).ready(function() {
+      var table = $('#suiviinscription').DataTable({
+        dom: 'BPfrtip',
+        "pagingType": "full_numbers",
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3,4,5,6,7,8,9], // Index of columns (starting at 0) that you want show/hide
+            }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              className : 'btn btn-warning btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              },
+              exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7,8,9]
+                }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export suivi inscriptions au '+titleFile(),
+                filename : function() {
+                    return "Export_Suivi_Inscription_"+dateFile()
+                },
+              exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7,8,9]
+                },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              },
+              customize: function (xlsx) {
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                $('row c[r^="J"]', sheet).each( function () {                 
+                  if($('is t', this).text() == 'Validée'){
+                    $(this).attr( 's', '15' );
+                  }
+                  else if($('is t', this).text() == 'Annulée'){
+                    $(this).attr( 's', '10' );
+                  }
+                });
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7,8,9]
+                },
+                filename : function() {
+                    return "Export_Suivi_Inscription_"+dateFile()
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'LEGAL',
+                title : 'Export suivi inscriptions au '+titleFile(),
+                filename : function() {
+                    return "Export_Suivi_Inscription_"+dateFile()
+                },
+                exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7,8,9]
+                },
+                customize: function (doc) {
+                  
+                  statut = doc.content[1].table.body
+                 
+                  for (var i = 1; i < statut.length; i++) {
+                    if (statut[i][9].text ==="Validée" ) {
+                      doc.content[1].table.body[i][9].fillColor = '#82be00';
+                    }
+                    else {
+                      doc.content[1].table.body[i][9].fillColor = '#cd0037';
+                    }
+                   
+                  }
+
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                 
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+     
+      $('#suiviinscription thead th').addClass('text-white');
+     
+  } );
+
+
+
+
+
+  $(function(){
+      $("#includedContentAC8").load("navguichet.html");
+      $("#footerac8").load("footer.html");
+      $(".dtsp-panesContainer").hide()
+    });
+
+  </script>
+
+</body>
+
+</html>
