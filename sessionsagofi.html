@@ -113,6 +113,8 @@
                             <th scope="col">Nombre d'inscrits </th>
                             <th scope="col">Groupe </th>
                             <th scope="col">Repositionnement <br/> renseigné </th>
+                            <th scope="col">Commentaire </th>
+                            <th scope="col">Clôturée </th>
                             <th class="no-sort" scope="col">Détails </th>
                             <th class="no-sort" scope="col">Actions </th>
                           </tr>
@@ -130,8 +132,18 @@
                             <td> 10/16</td>
                             <td> LY AMV5 01/22 OP </td>
                             <td> 
+                              <p class="d-none"> oui </p>
                               <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true" onclick="changeicon('4')" id="icon4"></i>
 
+                            </td>
+                            <td>
+                              <p class="d-none"> oui </p>
+                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true" onclick="changeicon('14')" id="icon14"></i>
+
+                            </td>
+                            <td> 
+                              <p class="d-none"> non </p>
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('24')" id="icon24"></i>
                             </td>
                             <td>
                               <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
@@ -164,8 +176,18 @@
                             <td> 25/06/2021</td>
                             <td> 7/12</td>
                             <td> JCVB_22-01	 </td>
-                            <td> 
+                            <td>
+                              <p class="d-none"> non </p>
                               <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('3')" id="icon3"></i>
+                            </td>
+                            <td>
+                              <p class="d-none"> oui </p>
+                              <i class="icons-checked icons-size-1x25 greenicon" aria-hidden="true" onclick="changeicon('14')" id="icon14"></i>
+
+                            </td>
+                            <td> 
+                              <p class="d-none"> non </p>
+                              <i class="icons-close icons-size-1x25 redicon" aria-hidden="true" onclick="changeicon('24')" id="icon24"></i>
                             </td>
                             <td>
                               <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1">
@@ -318,10 +340,37 @@
                 return "Export_SessionsFC_"+dateFile()
               },
               exportOptions: {
-                columns: [ 0,1,2,3,4,5,6,7]
+                columns: [ 0,1,2,3,4,5,6,7,8,9,10,11]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
+              },
+              customize: function (xlsx) {
+                var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                $('row c[r^="J"]', sheet).each( function () {
+                  if($('is t', this).text() == 'oui'){
+                    $(this).attr( 's', '15' );
+                  }
+                  else if($('is t', this).text() == 'non'){
+                    $(this).attr( 's', '10' );
+                  }
+                });
+                $('row c[r^="K"]', sheet).each( function () {
+                  if($('is t', this).text() == 'oui'){
+                    $(this).attr( 's', '15' );
+                  }
+                  else if($('is t', this).text() == 'non'){
+                    $(this).attr( 's', '10' );
+                  }
+                });
+                $('row c[r^="L"]', sheet).each( function () {
+                  if($('is t', this).text() == 'oui'){
+                    $(this).attr( 's', '15' );
+                  }
+                  else if($('is t', this).text() == 'non'){
+                    $(this).attr( 's', '10' );
+                  }
+                });
               }
             },
             {
@@ -341,15 +390,40 @@
             {
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
-                pageSize : 'LEGAL',
+                pageSize : 'A3',
                 title : 'Export sessions formations continues du '+titleFile(),
                 filename : function() {
                   return "Export_SessionsFC_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8,9,10,11]
                 },
                 customize: function (doc) {
+                  statut = doc.content[1].table.body
+                 
+                 for (var i = 1; i < statut.length; i++) {
+                   console.log(statut[i][9]);
+                   if (statut[i][9].text ==="oui" ) {
+                     doc.content[1].table.body[i][9].fillColor = '#008000';
+                   }
+                   if (statut[i][9].text==="non") {
+                     doc.content[1].table.body[i][9].fillColor = '#cd0037';
+                   }
+                   if (statut[i][10].text ==="oui" ) {
+                     doc.content[1].table.body[i][10].fillColor = '#008000';
+                   }
+                   if (statut[i][10].text==="non") {
+                     doc.content[1].table.body[i][10].fillColor = '#cd0037';
+                   }
+                   if (statut[i][11].text ==="oui" ) {
+                     doc.content[1].table.body[i][11].fillColor = '#008000';
+                   }
+                   if (statut[i][11].text==="non") {
+                     doc.content[1].table.body[i][11].fillColor = '#cd0037';
+                   }
+                  
+                 }
+                 
                   doc.content[1].table.widths = 
                       Array(doc.content[1].table.body[0].length + 1).join('*').split('');
                   doc.styles.tableBodyEven.alignment = 'center';
