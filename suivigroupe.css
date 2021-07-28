@@ -11,3 +11,7 @@
   .form-control{
     font-size: 1em !important;
   }
+
+  .alert {
+    padding : 0 !important;
+  }

@@ -1,0 +1,257 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Liste des externes </title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.dataTables.min.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAgo2">
+
+    </div>
+   
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center"> Liste des externes </h1>
+        <div class="col-md-2 offset-md-10">
+            <button class="btn btn-primary" onclick="createExterne()"> Créer un externe</button>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-2">
+                <label for="identifiant"> Identifiant </label>
+                <input type="text" placeholder="Identifiant externe" class="form-control whiteinput" id="identifiant">
+            </div>
+    
+            <div class="col-md-2">
+                <label for="nom"> Nom Prénom </label>
+                <input type="text" placeholder="Nom prénom" class="form-control whiteinput" id="nom">
+            </div>
+
+            <div class="col-md-2">
+                <label for="societe"> Société </label>
+                <input type="text" placeholder="Société" class="form-control whiteinput" id="societe">
+            </div>
+    
+            <div class="col-md-1">
+                <button class="btn btn-success btnvalid"> Valider</button>
+            </div>
+        </div>
+        
+
+        <div class="col-md-12">
+            <div class="table-wrapper">
+                <div class="table-scroller last-cell-fixed dragscroll">
+                    <table class="table display" id="externes">
+                        <thead class="thead bg-secondary">
+                            <tr>
+                                <th scope="col">Identifiant</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prénom</th>
+                                <th scope="col">Société</th>
+                                <th scope="col">Adresse mail</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td> EXT01</td>
+                                <td> Dupont</td>
+                                <td> Marc</td>
+                                <td> RATP</td>
+                                <td> dupontmarc@ratp.fr</td>
+                            </tr>
+                            <tr>
+                                <td> EXT02</td>
+                                <td> ROY</td>
+                                <td> Marie</td>
+                                <td> RATP</td>
+                                <td> roymarie@ratp.fr</td>
+                            </tr>
+                            <tr>
+                                <td> EXT03</td>
+                                <td> Petit</td>
+                                <td> Thomas</td>
+                                <td> SociétéA</td>
+                                <td> petitthomas@societea.fr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    <div id="footercreate"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+     
+
+      $(function(){
+        $("#includedContentAgo2").load("navguichet.html");
+        $("#footercreate").load("footer.html"); 
+      });
+
+      function createExterne(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="creerexterne.html";
+        window.open(array.join("/"));
+      }
+
+      $(document).ready(function() {
+      var table = $('#externes').DataTable({
+        dom: 'BPfrtip',
+        colReorder: true,
+        "scrollX": false,
+        "pagingType": "full_numbers",
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3,4], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+      orderable: false,
+      targets: "no-sort",
+            }
+        ],
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                columns:[0,1,2,3,4]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export externes au '+titleFile(),
+                filename : function(){
+                    return "Export_Externes_"+dateFile()
+                },
+              exportOptions: {
+                columns:[0,1,2,3,4]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              },
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+                filename : function(){
+                    return "Export_Externes_"+dateFile()
+                },
+              exportOptions: {
+                columns: [0,1,2,3,4]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                pageSize : 'LEGAL',
+                title : 'Export externes au '+titleFile(),
+                filename : function(){
+                    return "Export_Externes_"+dateFile()
+                },
+                exportOptions: {
+                    columns: [0,1,2,3,4]
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      $('#externes thead th').addClass('text-white');
+
+    })
+    </script>
+</body>
+</html>
+    

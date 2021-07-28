@@ -12,10 +12,7 @@
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
   <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+  <link rel="stylesheet" href="suivigroupe.css">
 </head>
 
 <body class="d-flex flex-column">
@@ -25,6 +22,9 @@
    
     <div class="container-fluid flex-grow-1 flex-shrink-0">
         <h1 class="text-center"> Création externe</h1>
+        <div class="col-md-2 offset-md-10">
+            <button class="btn btn-primary" onclick="seeExternes()"> Voir les externes</button>
+        </div>
         <div class="col-md-6 offset-md-3">
             <div class="form-group mt-4">
                 <label for="identifiant">Identifiant</label>
@@ -33,22 +33,22 @@
 
             <div class="form-row">
                 <div class="col">
-                    <label for="nom">Nom *</label>
+                    <label for="nom">Nom <span class="alert"> * </span></label>
                     <input type="text" class="form-control whiteinput" id="nom" placeholder="Nom externe">
                 </div>
                 <div class="col">
-                    <label for="prenom">Prénom *</label>
+                    <label for="prenom">Prénom <span class="alert"> * </span></label>
                     <input type="text" class="form-control whiteinput" id="prenom" placeholder="Prénom externe">
                 </div>
             </div>
 
             <div class="form-group mt-4">
-                <label for="societe">Société *</label>
+                <label for="societe">Société <span class="alert"> * </span></label>
                 <input type="text" class="form-control whiteinput" id="societe" placeholder="Société externe">
             </div>
 
             <div class="form-group mt-4">
-                <label for="mail">Adresse mail</label>
+                <label for="mail">Adresse mail <span class="alert"> * </span></label>
                 <input type="email" class="form-control whiteinput" id="mail" placeholder="Adresse mail">
             </div>
 
@@ -69,6 +69,12 @@
         $("#includedContentAgo2").load("navguichet.html");
         $("#footercreate").load("footer.html"); 
       });
+
+      function seeExternes(){
+        var array = window.location.href.split("/");
+        array[array.length-1]="listeexternes.html";
+        window.open(array.join("/"));
+      }
     </script>
 </body>
 </html>
