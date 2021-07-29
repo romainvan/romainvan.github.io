@@ -1,0 +1,167 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Calendrier stagiaire</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="fullcalendar/lib/main.css" rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentCofo3"></div>
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center" id="titlestagiaire"> Calendrier stagiaire </h1>
+        <div class="row">
+            <div class="col-md-3 offset-md-1 mb-2">
+                
+              <label for="cpagent" class="ml-1"> CP de l'agent </label>
+              <input list="cpagent" type="text" id="cpagentinput" name="cpagent" class="whiteinput border-0 form-control" placeholder="Choix de l'agent">
+              <datalist id="cpagent">
+                  <option data-value="8912345B"> 8912345B - Durand Arthur</option>
+                  <option data-value="6789123C"> 6789123C - Fournier Gabriel </option>
+              </datalist>
+                    
+            </div>
+            <div class="col-md-2">
+              <button class="btn btn-success valid" onclick="displayCalendar()"> Valider</button>
+            </div>
+            <div class="col-md-11 offset-md-1 row px-0">
+              <div class="col-md-11">
+                <div class="col-md-12" id="calendar"></div>
+                <div class="col-md-12" id="calendar2"></div>
+              </div>
+              <div class="col-md-1 row" id="legend">
+                <div class="col-md-12">
+                  <span class="dot bg-success"> </span>
+                  <p class="legendinline"> Caténaire</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-purple"> </span>
+                  <p class="legendinline"> Voie</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-primary"> </span>
+                  <p class="legendinline"> Signalisation</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-danger"> </span>
+                  <p class="legendinline"> Produit Train</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-dark"> </span>
+                  <p class="legendinline"> Circulation</p>
+                </div>
+
+                <div class="col-md-12">
+                  <span class="dot bg-teal"> </span>
+                  <p class="legendinline"> Télécom</p>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footercofo2"></div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="titresession"> </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul >
+              <li id="datedebut">  </li>
+              <li id="datefin"> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title mb-4" id="titresession"> Ajout d'un événement au planning </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <label for="nameevent"> Nom de l'événement </label>
+                <input type="text" placeholder="nom de l'événement" id="nameevent" class="form-control mb-4">
+              <label for="datedebut"> Date de début</label>
+              <input type="date" id="datedebut" class="form-control">
+              <label for="datefin"> Date de fin</label>
+              <input type="date" id="datefin" class="form-control">
+              <label for="heuredebut"> Heure de début</label>
+              <input type="time" id="heuredebut" value="08:30" class="form-control">
+              <label for="heuredefin"> Heure de fin</label>
+              <input type="time" id="heuredefin" value="17:00" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src='fullcalendar/lib/main.js'></script>
+    <script src='fullcalendar/lib/locales/fr.js'></script>
+    <script src="script.js"></script>
+    <script src="calendrieragent.js"></script>
+    <script src="calendrieragent2.js"></script>
+  
+    <script>
+      $(function(){
+        $("#legend").hide()
+        $("#includedContentCofo3").load("navac.html"); 
+        $("#footercofo2").load("footer.html");
+        $("#calendar").hide()
+        $("#calendar2").hide()
+      });
+
+      function displayCalendar() {
+        var cpetnom =  $('[name="cpagent"]').val().split('-')
+        var cp = cpetnom[0].trim()
+        var nom = cpetnom[1]
+        $("#titlestagiaire").text("Calendrier de " + nom )
+        $("#legend").show()
+        if(cp=="8912345B"){
+          $("#calendar").show()
+          $("#calendar2").hide()
+
+        }
+        else if (cp=="6789123C"){
+          $("#calendar2").show()
+          $("#calendar").hide()
+        }
+        else{
+          $("#calendar2").hide()
+          $("#calendar").hide()
+          $("#titlestagiaire").text("Calendrier stagiaire")
+          $("#legend").hide()
+        }
+
+      }
+    </script>    
+</body>
+</html>

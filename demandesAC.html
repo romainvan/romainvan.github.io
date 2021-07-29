@@ -75,14 +75,29 @@
 
                 </div>
 
-                <div class="col-md-1">
-                    <button class="btn btn-success btnvalid"> Valider </button>
+                <div class="col-md-2">
+
+                  <label for="metier" class="ml-1"> Métier</label>
+                  <input list="listmetier" type="text" id="metier" name="metier" class="whiteinput border-0 form-control" placeholder="Choix du métier">
+                  <datalist id="listmetier">
+                      <option data-value="Caténaire"> Caténaire</option>
+                      <option data-value="EALE"> EALE</option>
+                      <option data-value="Produit Train"> Produit Train</option>
+                      <option data-value="Télécom"> Télécom</option>
+                      <option data-value="Voie"> Voie</option>
+
+                  </datalist>
+
                 </div>
 
-                <div class="col-md-2 offset-md-2 mt-3">
-                  <label for="btngraph"></label>
-                  <button onclick="showGraph()" class="btn btn-primary mb-5 btndate" id="btngraph"> Afficher graphiques</button>
-                </div>
+              <div class="col-md-1">
+                  <button class="btn btn-success btnvalid"> Valider </button>
+              </div>
+
+              <div class="col-md-2 mt-3">
+                <label for="btngraph"></label>
+                <button onclick="showGraph()" class="btn btn-primary mb-5 btndate" id="btngraph"> Afficher graphiques</button>
+              </div>
 
                 <div class="col-md-11 mt-5 ofsset-md-1 mb-1" id="graphcofo">
                   <div class="row">
@@ -180,7 +195,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -253,7 +268,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -290,7 +305,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -327,7 +342,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -364,7 +379,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -401,7 +416,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -438,7 +453,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -475,7 +490,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -548,7 +563,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -585,7 +600,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -621,7 +636,7 @@
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btncofo" id="toggle1">
                                       <button type="button" class="dropdown-item" onclick="tableaudebord()">Suivi agent</button>
                                       <button type="button" class="dropdown-item" onclick="calendrieragent()">Calendrier agent</button>
-                                     
+                                      <button type="button" class="dropdown-item" onclick="voirplaces()">Voir les places disponibles</button>
                                     </div>
                                   </div>
                                 </td>
@@ -753,19 +768,19 @@
 
       function calendrieragent(){
           var array = window.location.href.split("/");
-          array[array.length-1]="calendrieragent.html";
+          array[array.length-1]="calendrieragentac.html";
          window.open(array.join("/"));
       }
 
       function tableaudebord(){
         var array = window.location.href.split("/");
-        array[array.length-1]="reportingagentcofo.html";
+        array[array.length-1]="listestagiairesfiac.html";
        window.open(array.join("/"));
       }
 
       function voirplaces(){
         var array = window.location.href.split("/");
-        array[array.length-1]="repartCOFO.html";
+        array[array.length-1]="repartAC2.html";
        window.open(array.join("/"));
       }
 

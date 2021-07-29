@@ -75,14 +75,29 @@
 
                 </div>
 
-                <div class="col-md-1">
-                  <button class="btn btn-success btnvalid"> Valider </button>
+                <div class="col-md-2">
+
+                  <label for="metier" class="ml-1"> Métier</label>
+                  <input list="listmetier" type="text" id="metier" name="metier" class="whiteinput border-0 form-control" placeholder="Choix du métier">
+                  <datalist id="listmetier">
+                      <option data-value="Caténaire"> Caténaire</option>
+                      <option data-value="EALE"> EALE</option>
+                      <option data-value="Produit Train"> Produit Train</option>
+                      <option data-value="Télécom"> Télécom</option>
+                      <option data-value="Voie"> Voie</option>
+
+                  </datalist>
+
                 </div>
 
-                <div class="col-md-2 offset-md-2 mt-3">
-                  <label for="btngraph"></label>
-                  <button onclick="showGraph()" class="btn btn-primary mb-5 btndate" id="btngraph"> Afficher graphiques</button>
-                </div>
+              <div class="col-md-1">
+                  <button class="btn btn-success btnvalid"> Valider </button>
+              </div>
+
+              <div class="col-md-2 mt-3">
+                <label for="btngraph"></label>
+                <button onclick="showGraph()" class="btn btn-primary mb-5 btndate" id="btngraph"> Afficher graphiques</button>
+              </div>
 
                 <div class="col-md-11 mt-5 ofsset-md-1 mb-1" id="graphcofo">
                   <div class="row">
@@ -759,7 +774,7 @@
 
       function tableaudebord(){
         var array = window.location.href.split("/");
-        array[array.length-1]="reportingagentcofo.html";
+        array[array.length-1]="suiviglobalcofo.html";
        window.open(array.join("/"));
       }
 
