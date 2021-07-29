@@ -1,0 +1,245 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Agents absents </title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/colreorder/1.5.3/css/colReorder.dataTables.min.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentCofo3"></div>
+
+    <div class="container-fluid pb-3">
+        <h1 class="text-center mb-3"> Liste des agents absents </h1>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <label for="raf" class="ml-1"> RAF </label>
+                <input list="raf" type="text" id="rafinput" name="raf" class="whiteinput border-0 form-control" placeholder="RAF">
+                <datalist id="raf">
+                    <option data-value="VT160000"> VT160000 - Réseaux IP et applicatifs SNCF	</option>
+                </datalist>
+            </div>
+            <div class="col-md-2 mb-4">
+                <label for="agent" class="ml-1"> Agent </label>
+                <input list="agent" type="text" id="agentinput" name="agent" class="whiteinput border-0 form-control" placeholder="Agent">
+                <datalist id="agent">
+                    <option data-value="8912345B">8912345B - Durand Arthur </option> 
+                </datalist>
+            </div>
+            <div class="col-md-2 mb-4">
+                <label for="session" class="ml-1"> Code Session </label>
+                <input list="session" type="text" id="sessioninput" name="session" class="whiteinput border-0 form-control" placeholder="Code session">
+                <datalist id="session">
+                    <option data-value="NVT0000146">NVT0000146 </option> 
+                </datalist>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-success btnvalid"> Valider</button>
+            </div>
+            <div class="col-md-12">
+                <div class="table-wrapper">
+                    <div class="table-scroller last-cell-fixed dragscroll">
+                        <table class="table display" id="cofoabsents">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col">Matricule</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Prénom</th>
+                                    <th scope="col">Code RAF</th>
+                                    <th scope="col">Libellé code RAF</th>
+                                    <th scope="col">Code Session</th>
+                                    <th scope="col">Date de début</th>
+                                    <th scope="col">Date de fin</th>
+                                    <th scope="col">Commentaires AGO</th>
+                                    <th scope="col">Date saisie</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td> 8912345B </td>
+                                    <td> Durand</td>
+                                    <td> Arthur</td>
+                                    <td> VT160000</td>
+                                    <td> Réseaux IP et applicatifs SNCF	</td>
+                                    <td> NVT0000146</td>
+                                    <td> 20/07/2021</td>
+                                    <td> 24/07/2021</td>
+                                    <td> Agent absent à la totalité du module </td>
+                                    <td> 27/07/2021</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                    
+        </div>
+    </div>
+
+    <div id="footercofo2"></div>
+
+
+
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/colreorder/1.5.3/js/dataTables.colReorder.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $(function(){
+        $("#includedContentCofo3").load("navac.html"); 
+        $("#footercofo2").load("footer.html"); 
+      });
+
+      $(document).ready(function() {
+      var table = $('#cofoabsents').DataTable({
+        dom: 'BPfrtip',
+        colReorder: true,
+        "scrollX": false,
+        "pagingType": "full_numbers",
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,4,5], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+      orderable: false,
+      targets: "no-sort",
+            }
+        ],
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                columns: [ 0,1,2,3,4,5,6,7,8,9]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export absents au '+titleFile(),
+              filename : function(){
+                  return "Export_Absents_"+dateFile()
+              },
+              exportOptions: {
+                columns: [ 0,1,2,3,4,5,6,7,8,9]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              },
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              filename : function(){
+                  return "Export_Absents_"+dateFile()
+              },
+              exportOptions: {
+                columns: [ 0,1,2,3,4,5,6,7,8,9]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize : 'LEGAL',
+                title : 'Export absents au '+titleFile(),
+                filename : function(){
+                    return "Export_Absents_"+dateFile()
+                },
+                exportOptions: {
+                    columns: [ 0,1,2,3,4,5,6,7,8,9]
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      $('#cofoabsents thead th').addClass('text-white');
+
+    })
+
+    </script>
