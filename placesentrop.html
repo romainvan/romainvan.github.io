@@ -1,0 +1,408 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Places surplus</title>
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAC7"></div>
+    
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-2"> Places en surplus </h1>
+        <div class="row mt-3">
+            <div class="col-md-2 ml-5">
+                  <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                    <div data-component="picker">
+                        <div class="input-group" data-toggle>
+                          <div class="form-control-container">
+                            <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Date de début" data-input>
+                            <span class="form-control-state"></span>
+                          </div>
+                          <div class="input-group-append">
+                            <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                              <i class="icons-calendar" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-md-2">
+                  <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                      <div data-component="picker">
+                          <div class="input-group" data-toggle>
+                            <div class="form-control-container">
+                              <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                              <span class="form-control-state"></span>
+                            </div>
+                            <div class="input-group-append">
+                              <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                <i class="icons-calendar" aria-hidden="true"></i>
+                              </button>
+                            </div>
+                          </div>
+                      </div>
+              </div>
+
+              <div class="col-md-2">
+                <label for="metier"> Métier</label>
+                <input list="code" type="text" id="metier" class="whiteinput border-0 form-control" placeholder="Métier">
+                <datalist id="code">
+                  <option value="Tout">
+                  <option value="Signalisation">
+                  <option value="Voie">
+                  <option value="Produit Train">
+                  <option value="Caténaire">
+                  <option value="Circulation">
+                </datalist>
+              </div>
+              <div class="col-md-2">
+                <label for="choix_bieres"> Parcours</label>
+                <input list="codeparcours" type="text" id="choix_bieres" class="whiteinput border-0 form-control" placeholder="Parcours">
+                <datalist id="codeparcours">
+                  <option value="CFOP - OP / Reconversion">
+                  <option value="JCV - Jeune Cadre Voie">
+                </datalist>
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-success btnvalid"> Rechercher</button>
+              </div>
+
+              <div class="col-md-12 mt-5 px-5">
+                <div class="table-wrapper table-responsive">
+                    <div class="table-scroller last-cell-fixed dragscroll">
+                        <table class="table table-fixed">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col"> </th>
+                                    <th scope="col"><div class="text-white justify-content-center">Code Parcours - Libellé Parcours </div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Code RAF </div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Libellé code RAF </div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Code session </div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Métier </div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Date de début</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Date de fin</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Groupe</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Capacité RAF</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Capacité Groupe</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Places en surplus</div></th>
+                                    <th scope="col"><div class="text-white justify-content-center">Places restantes</div></th>
+                                    <th scope="col"> </th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr>
+                                    <td onclick="affichemyDiv('affichemyDiv1','icon3')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon3"></i> </td>
+                                    <td> CFOP - OP / Reconversion </td>
+                                    <td> EC110300 </td>
+                                    <td> Formation de base AMV - ATT/OP - ATT-TS </td>
+                                    <td> NVT0000173</td>
+                                    <td> Circulation</td>
+                                    <td> 05/01/2022	</td>
+                                    <td> 15/01/2022</td>
+                                    <td> LY AMV5 01/22 OP </td>
+                                    <td> 14 </td>
+                                    <td> 12 </td>
+                                    <td> 2</td>
+                                    <td> 2</td>
+                                    <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
+                                </tr>
+
+                                <tr style="display: none;" id="affichemyDiv1" class="bodycolor">
+                                    <td colspan="14">
+                                        <table class="table mt-3">
+                                          <thead class="thead hiddentable">
+                                            <tr class="bg-cyan">
+                                              <th scope="col"><div class="text-white justify-content-center"></th>
+                                              <th scope="col"><div class="text-white justify-content-center">Nom de la ZP</th>
+                                              <th colspan="2"><div class="text-white justify-content-center"> </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="tbody">
+                                            
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> ZP A </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées à la ZP A"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                <td onclick="affichemyDiv('affichetableau1','icon50')">  <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon50"></i></td>
+                                                <td> ZP IDF </td>
+                                                <td></td>                              
+                                              </tr>
+          
+                                              <tr style="display: none;" id="affichetableau1" class="bodycolor">
+                                                <td scope="col">
+                                                  <table class="table mt-3">
+                                                      <thead class="thead hiddentable">
+                                                        <tr>
+                                                          <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                                          <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody class="tbody">
+                                                        <tr>
+                                                          <td> ESTI Île-de-France</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                        <tr>
+                                                          <td> Infralog Travaux Île-de-France</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                        <tr>
+                                                          <td> Infrapôle Paris-Est</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                        <tr>
+                                                          <td> Infrapôle Paris Nord</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                </td>
+                                                <td scope="col">
+                                                  <table class="table mt-3">
+                                                    <thead class="thead hiddentable">
+                                                      <tr>
+                                                        <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                                        <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody class="tbody">
+                                                     
+                                                      <tr>
+                                                        <td> Infrapôle Paris Sud-Ouest</td>
+                                                        <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                      </tr>
+                                                      <tr>
+                                                        <td> Infrapôle Paris Sud-Est</td>
+                                                        <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                      </tr>
+                                                      <tr>
+                                                        <td> Infrapôle Paris Saint-Lazarre</td>
+                                                        <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> ZP NEN </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées à la ZP NEN"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> ZP SE </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées à la ZP SE"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                <td> </td>
+                                                <td> Guichet unique </td> 
+                                                <td> <input type="number" class="form-control" placeholder="Nombre de places accordées au guichet unique"> </td>                               
+                                              </tr>
+            
+          
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> Pot commun ZP </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées pour le pot commun ZP"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> Pot commun National </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées pour le pot commun National"> </td>                               
+                                              </tr>  
+                                          </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td onclick="affichemyDiv('affichemyDiv2','icon2')"> <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon2"></i> </td>
+                                    <td> JCV - Jeune Cadre Voie	 </td>
+                                    <td> VTCBSECU </td>
+                                    <td> Tronc Commun Bases de la Sécurité </td>
+                                    <td> NVT0000246</td>
+                                    <td> Voie</td>
+                                    <td> 18/01/2022	</td>
+                                    <td> 26/01/2022</td>
+                                    <td> JCVB_22-01	 </td>
+                                    <td> 16 </td>
+                                    <td> 12 </td>
+                                    <td> 4 </td>
+                                    <td> 1</td>
+                                    <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
+                                </tr>
+
+                                <tr style="display: none;" id="affichemyDiv2" class="bodycolor">
+                                    <td colspan="14">
+                                        <table class="table mt-3">
+                                          <thead class="thead hiddentable">
+                                            <tr class="bg-cyan">
+                                              <th scope="col"><div class="text-white justify-content-center"></th>
+                                              <th scope="col"><div class="text-white justify-content-center">Nom de la ZP</th>
+                                              <th colspan="2"><div class="text-white justify-content-center"> </th>
+                                            </tr>
+                                          </thead>
+                                          <tbody class="tbody">
+                                            
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> ZP A </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées à la ZP A"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                <td onclick="affichemyDiv('affichetableau2','icon51')">  <i class="icons-arrow-next icons-size-x mt-2" aria-hidden="true" id="icon51"></i></td>
+                                                <td> ZP IDF </td>
+                                                <td></td>                              
+                                              </tr>
+          
+                                              <tr style="display: none;" id="affichetableau2" class="bodycolor">
+                                                <td scope="col">
+                                                  <table class="table mt-3">
+                                                      <thead class="thead hiddentable">
+                                                        <tr>
+                                                          <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                                          <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                                                        </tr>
+                                                      </thead>
+                                                      <tbody class="tbody">
+                                                        <tr>
+                                                          <td> ESTI Île-de-France</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                        <tr>
+                                                          <td> Infralog Travaux Île-de-France</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                        <tr>
+                                                          <td> Infrapôle Paris-Est</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                        <tr>
+                                                          <td> Infrapôle Paris Nord</td>
+                                                          <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                </td>
+                                                <td scope="col">
+                                                  <table class="table mt-3">
+                                                    <thead class="thead hiddentable">
+                                                      <tr>
+                                                        <th scope="col"><div class="text-white justify-content-center">Etablissement</th>
+                                                        <th scope="col"><div class="text-white justify-content-center">Nombre de places accordées</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody class="tbody">
+                                                     
+                                                      <tr>
+                                                        <td> Infrapôle Paris Sud-Ouest</td>
+                                                        <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                      </tr>
+                                                      <tr>
+                                                        <td> Infrapôle Paris Sud-Est</td>
+                                                        <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                      </tr>
+                                                      <tr>
+                                                        <td> Infrapôle Paris Saint-Lazarre</td>
+                                                        <td> <input class="form-control" type="number" placeholder="Places accordées"/></td>                                
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> ZP NEN </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées à la ZP NEN"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> ZP SE </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées à la ZP SE"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                <td> </td>
+                                                <td> Guichet unique </td> 
+                                                <td> <input type="number" class="form-control" placeholder="Nombre de places accordées au guichet unique"> </td>                               
+                                              </tr>
+            
+          
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> Pot commun ZP </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées pour le pot commun ZP"> </td>                               
+                                              </tr>
+          
+                                              <tr>
+                                                  <td> </td>
+                                                  <td> Pot commun National </td> 
+                                                  <td> <input type="number" class="form-control" placeholder="Nombre de places accordées pour le pot commun National"> </td>                               
+                                              </tr>  
+                                          </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+             
+                    
+        </div>
+    </div>
+    <div id="footercofo5"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      $(function(){
+        $("#includedContentAC7").load("navac.html");
+        $("#footercofo5").load("footer.html");
+
+      });
+
+      function affichemyDiv(id,icon=null) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                if(icon != null){
+                  document.getElementById(icon).classList.add('icons-arrow-down');
+                  document.getElementById(icon).classList.remove('icons-arrow-next');
+                }
+                x.style.display = "table-row";
+            } else {
+              if(id.startsWith("affichemyDiv")){
+                var last = "affichetableau"+id.slice(-1)
+                var y = document.getElementById(last)
+                y.style.display = "none";
+            }
+              if(icon != null){
+                document.getElementById(icon).classList.remove('icons-arrow-down');
+                document.getElementById(icon).classList.add('icons-arrow-next');
+              }
+              x.style.display = "none";
+            }
+        } 
+    </script>
+</body>
+</html>
