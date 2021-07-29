@@ -85,7 +85,7 @@
           <p> Pour se connecter en tant qu'AGO l'identifiant groupe SNCF est <strong> AGO </strong> et le mot de passe <strong> reste vide </strong> </p> <br/>
           <p> Pour se connecter en tant qu'AC l'identifiant groupe SNCF est <strong> AC </strong> et le mot de passe <strong> reste vide </strong></p> <br/>
           <p> Pour se connecter en tant que Guichet Unique l'identifiant groupe SNCF est <strong> GUICHET </strong> et le mot de passe <strong> reste vide </strong></p> <br/>
-
+          <p> Pour se connecter en tant que Formateur l'identifiant groupe SNCF est <strong> FORMATEUR </strong> et le mot de passe <strong> reste vide </strong></p> <br/>
         </div>
        
       </div>
@@ -116,6 +116,10 @@
           }
           else if (cp=="GUICHET"){
             window.location.href = "accueilguichet.html";
+            return false;
+          }
+          else if (cp=="FORMATEUR"){
+            window.location.href = "accueilformateur.html";
             return false;
           }
           else{

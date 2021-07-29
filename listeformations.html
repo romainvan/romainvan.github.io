@@ -1,0 +1,368 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Liste formations</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+
+    <script> 
+      $(function(){
+        $("#includedContentCofo4").load("navformateur.html"); 
+        $("#footercofo3").load("footer.html"); 
+      });
+    </script> 
+
+
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentCofo4"></div>
+    
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+
+        <h1 class="text-center mb-5"> Liste des formations </h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row mb-2">
+                    
+                    <div class="col-md-2 ml-5">
+                        <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                          <div data-component="picker">
+                              <div class="input-group" data-toggle>
+                                <div class="form-control-container">
+                                  <input id="dateDebut" type="text" class="form-control whiteinput" placeholder="Date de début" data-input>
+                                  <span class="form-control-state"></span>
+                                </div>
+                                <div class="input-group-append">
+                                  <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                    <i class="icons-calendar" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                            <div data-component="picker">
+                                <div class="input-group" data-toggle>
+                                  <div class="form-control-container">
+                                    <input id="dateFin" type="text" class="form-control whiteinput" placeholder="Sélectionner la date de fin" data-input>
+                                    <span class="form-control-state"></span>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+    
+                    <div class="col-md-2">
+                      <label for="metier"> Métier</label>
+                      <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control" placeholder="Métier">
+                      <datalist id="listmetier">
+                        <option value="Tout">
+                        <option value="Signalisation">
+                        <option value="Voie">
+                        <option value="Produit Train">
+                        <option value="Caténaire">
+                        <option value="Circulation">
+                      </datalist>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="coderaf"> Code RAF</label>
+                      <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control" placeholder="Code RAF">
+                      <datalist id="code">
+                        <option value="VT160000 - Réseaux IP et applicatifs SNCF">
+                        <option value="VA620600 - Accès à E - UV6 Technique, maintenance et agrément - Engins">
+                      </datalist>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success mb-2 btn-block btnvalid"> Valider</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="table-wrapper mt-3">
+                    <table class="table" id="formations">
+                        <thead class="thead bg-secondary">
+                            <tr>
+                                <th scope="col"> Code RAF </th>
+                                <th scope="col"> Libellé Code RAF</th>
+                                <th scope="col"> Métier </th>
+                                <th scope="col"> Code Session </th>
+                                <th scope="col"> Nom item </th>
+                                <th scope="col"> Date de début </th>
+                                <th scope="col"> Date de fin </th>
+                                <th scope="col"> Salle </th>
+                                <th scope="col"> Détails </th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="tbody">
+                            <tr>
+                                <td> VT160000 </td>
+                                <td> Réseaux IP et applicatifs SNCF	</td>
+                                <td> Télécom </td>
+                                <td> NVT0000475</td>
+                                <td> Item 1 </td>
+                                <td> 10/10/2021 8h30 </td>
+                                <td> 10/10/2021 10h00 </td>
+                                <td> Salle spec1 </td>
+                                <td>
+                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> VT160000 </td>
+                                <td> Réseaux IP et applicatifs SNCF	</td>
+                                <td> Télécom </td>
+                                <td> NVT0000475</td>
+                                <td> Item 2 </td>
+                                <td> 10/10/2021 10h30 </td>
+                                <td> 10/10/2021 12h00 </td>
+                                <td> Salle bana1 </td>
+                                <td>
+                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> VT160000 </td>
+                                <td> Réseaux IP et applicatifs SNCF	</td>
+                                <td> Télécom </td>
+                                <td> NVT0000475</td>
+                                <td> Item 3 </td>
+                                <td> 10/10/2021 13h30 </td>
+                                <td> 10/10/2021 15h00 </td>
+                                <td> Salle spec2 </td>
+                                <td>
+                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td> VCM26000 </td>
+                                <td> Maintenance IPBX type NeXspan </td>
+                                <td> Signalisation</td>
+                                <td> NVT0000716</td>
+                                <td> Item Télécom </td>
+                                <td> 12/10/2021 8h30</td>
+                                <td> 12/10/2021 17h00</td>
+                                <td> Salle telecom </td>
+                                <td>
+                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
+                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalDetails" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content"> <br />
+                <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        
+                        <h2 class="text-center my-4"> Liste des inscrits</strong> </h1>
+
+                        <ul class="list-group text-left">
+                            <li class="list-group-item"> Agent 1 : <strong> 8912345B Durand Arthur </strong> </li>
+                            <li class="list-group-item"> Agent 2 : <strong> 6789123C Fournier Gabriel	 </strong> </li>
+                            <li class="list-group-item"> Agent 3 : <strong> 8512437D Gond Quentin </strong> </li>
+                            <li class="list-group-item"> Agent 4 : <strong> 8475237A Ponc Nicolas </strong> </li>
+                            <li class="list-group-item"> Agent 5 : <strong> 6789123C Fournier Gabriel </strong> </li>
+                            <li class="list-group-item"> Agent 6 : <strong> 5678912G Vasseur Cedric	 </strong> </li>
+                            <li class="list-group-item"> Agent 7 : <strong> 4891234B Garcia Roger </strong> </li>
+    
+                        </ul>
+                      </div>
+                    </div>                           
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <div id="footercofo3"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+      var table = $('#formations').DataTable({
+        dom: 'BPfrtip',
+        "pagingType": "full_numbers",
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+                searchPanes:{
+                    show: false, // It can be true/false
+                },
+                targets: [8], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+              orderable: false,
+              targets: "no-sort"
+            }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                columns:[0,1,2,3,4,5,6,7]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Mes formations au '+titleFile(),
+                filename : function() {
+                  return "MesFormations_"+dateFile()
+                },
+              exportOptions: {
+                columns: [0,1,2,3,4,5,6,7]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+                filename : function() {
+                  return "MesFormations_"+dateFile()
+                },
+              exportOptions: {
+                columns: [0,1,2,3,4,5,6,7]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize : 'LEGAL',
+                title : 'Mes formations au '+titleFile(),
+                filename : function() {
+                  return "MesFormations_"+dateFile()
+                },
+                exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7]
+                },
+                customize: function (doc) {
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      $('#formations thead th').addClass('text-white');
+      })
+    </script>
+</body>
+</html>

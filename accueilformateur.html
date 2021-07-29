@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Page d'accueil</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link href="fullcalendar/lib/main.css" rel='stylesheet' />
+ 
+    <script> 
+      $(function(){
+        $("#includedContentAC").load("navformateur.html"); 
+        $("#footerac1").load("footer.html");
+        var date = new Date();
+        var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+        $("#actuac").text("Vos formations du  " +date.toLocaleDateString("fr-FR", options))
+        $("#monthac").text(actuDate())
+      });
+
+    </script> 
+  
+
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAC"></div>
+        <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center mb-5"> Bienvenue sur OctopusRéseau Formateur </h1>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="col-md-12 border border-dark blanc">
+                    <h1 class="text-center mb-4 mt-4" id="actuac"> </h1>
+                    <div class="justify-content-center">
+                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded justify-content-center py-3">
+                            <p class="mt-2 sameLine"> VT16000 - Item 1 :  </p> <p class="mt-2 sameLine"> 13h30 à 15h00 Salle Banalisée1 </p>
+                        </div>
+                    </div>
+                    <div class="justify-content-center">
+                        <div class="col-md-10 ml-2 border border-primary mb-3 rounded justify-content-center py-3">
+                            <p class="mt-2 sameLine"> VT16000 - Item 2 :  </p> <p class="mt-2 sameLine"> 13h30 à 17h00 Salle Banalisée2 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 offset-md-1 border border-dark blanc" id="calendar">
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="footerac1"></div>
+
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src='fullcalendar/lib/main.js'></script>
+    <script src='fullcalendar/lib/locales/fr.js'></script>
+    <script src="script.js"></script>
+    <script src="calendarformateur2.js"></script>
+</body>
+</html>

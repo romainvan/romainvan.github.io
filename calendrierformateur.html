@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Calendrier formateur</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link href="fullcalendar/lib/main.css" rel='stylesheet' />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="calendrier.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+</head>
+
+<body class="d-flex flex-column">
+    <div id="includedContentAgo3"></div>
+      
+
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+        <h1 class="text-center" id="titleformateur"> Mon calendrier </h1>
+        <div class="row">
+            <div class="col-md-2 offset-md-1">
+                <label for="coderaf"> Code RAF</label>
+                <input list="code" type="text" id="coderaf" class="border-0 form-control" placeholder="Code RAF">
+                <datalist id="code">
+                  <option value="VT160000 - Réseaux IP et applicatifs SNCF">
+                  <option value="VA620600 - Accès à E - UV6 Technique, maintenance et agrément - Engins">
+                </datalist>
+              </div>
+            <div class="col-md-2">
+              <label for="metier" class="ml-2"> Métier </label>
+                <select id="metier" class="form-control mb-3">
+                  <option selected data-role="default-hidden-option" disabled hidden>Tout</option>
+                  <option data-id="1" >Voie</option>
+                  <option data-id="2" >Produit Train</option>
+                  <option data-id="3" >Caténaire</option>
+                  <option data-id="4" >Circulation</option>
+                  <option data-id="5" >Signalisation</option>
+                  <option data-id="6" >Tout</option>
+                </select>
+            </div>
+            
+            <div class="col-md-2">
+              <button class="btn btn-success valid" onclick="displayCalendar()"> Valider </button>
+            </div>
+
+            <div class="col-md-11 offset-md-1 row px-0">
+              <div class="col-md-11">
+                <div class="col-md-12" id="calendar"></div>
+                <div class="col-md-12" id="calendar2"></div>
+              </div>
+              <div class="col-md-1 row" id="legend">
+                <div class="col-md-12">
+                  <span class="dot bg-success"> </span>
+                  <p class="legendinline"> Caténaire</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-purple"> </span>
+                  <p class="legendinline"> Voie</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-primary"> </span>
+                  <p class="legendinline"> Signalisation</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-danger"> </span>
+                  <p class="legendinline"> Produit Train</p>
+                </div>
+    
+                <div class="col-md-12">
+                  <span class="dot bg-dark"> </span>
+                  <p class="legendinline"> Circulation</p>
+                </div>
+
+                <div class="col-md-12">
+                  <span class="dot bg-teal"> </span>
+                  <p class="legendinline"> Télécom</p>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footerago2"></div>
+
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src='fullcalendar/lib/main.js'></script>
+    <script src='fullcalendar/lib/locales/fr.js'></script>
+    <script src="script.js"></script>
+    <script src="calendarformateur2.js"></script>
+ 
+    <script>
+      $(function(){
+        $("#includedContentAgo3").load("navformateur.html"); 
+        $("#footerago2").load("footer.html"); 
+        $('[data-toggle="tooltip"]').tooltip()
+
+      });
+    </script>
+
+  
+</body>
+</html>
