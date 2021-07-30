@@ -474,6 +474,10 @@ select > .placeholder {
     color: black;
   }
 
+  .numInput{
+    width: 5em !important;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;

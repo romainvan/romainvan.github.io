@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Liste formations</title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+
+    <script> 
+      $(function(){
+        $("#includedContentCofo4").load("navmanager.html"); 
+        $("#footercofo3").load("footer.html"); 
+      });
+    </script> 
+
+
+</head>
+
+<body class="d-flex flex-column bg-white">
+    <div id="includedContentCofo4"></div>
+    
+    <div class="container-fluid flex-grow-1 flex-shrink-0">
+
+        <h1 class="text-center mb-5"> Ajouter indisponibilité</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                
+                <div class="form-group mb-4">
+                    <label for="formateur"> Formateur</label>
+                    <select class="form-control whiteinput" id="formateur">
+                        <option selected data-role="default-hidden-option" disabled hidden>Choix formateur</option>
+                        <option> FormateurA </option>
+                        <option> FormateurB </option>
+                        <option> FormateurC </option>
+                    </select>
+                </div>
+
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                        <div data-component="picker">
+                            <div class="input-group" data-toggle>
+                              <div class="form-control-container">
+                                <input id="dateDebut" type="text" class="form-control" placeholder="Sélectionner la date de début" data-input>
+                                <span class="form-control-state"></span>
+                              </div>
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                  <i class="icons-calendar" aria-hidden="true"></i>
+                                </button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                        <div data-component="picker">
+                            <div class="input-group" data-toggle>
+                              <div class="form-control-container">
+                                <input id="dateFin" type="text" class="form-control" placeholder="Sélectionner la date de fin" data-input>
+                                <span class="form-control-state"></span>
+                              </div>
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                  <i class="icons-calendar" aria-hidden="true"></i>
+                                </button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label class="font-weight-medium mb-2" for="timepickerExemple">Heure de début</label>
+                        <div data-component="picker" data-mode="time" data-increment-hours-on-minutes-max>
+                            <div class="input-group" data-toggle>
+                                <div class="form-control-container">
+                                <input id="timepickerExemple" tabindex="-1" type="text" class="form-control" placeholder="Sélectionner une heure" data-input>
+                                <span class="form-control-state"></span>
+                                </div>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <label class="font-weight-medium mb-2" for="timepickerExemple">Heure de fin</label>
+                        <div data-component="picker" data-mode="time" data-increment-hours-on-minutes-max>
+                            <div class="input-group" data-toggle>
+                                <div class="form-control-container">
+                                <input id="timepickerExemple" tabindex="-1" type="text" class="form-control" placeholder="Sélectionner une heure" data-input>
+                                <span class="form-control-state"></span>
+                                </div>
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <select class="form-control">
+                        <option selected data-role="default-hidden-option" disabled>Choix motif </option>
+                        <option> En congé</option>
+                        <option> En double</option>
+                        <option> En maladie</option>
+                        <option> En coanimation</option>
+                        <option> En formation</option>
+                        <option> En révisions</option>
+                        <option> En réunion</option>
+                        <option> Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-control-container" data-component="control">
+                        <label for="countTextarea1">Observations</label>
+                        <textarea class="form-control stretchy " id="countTextarea1" placeholder="Remarques, notes..." data-role="input" aria-describedby="charcounter"></textarea>
+                        <span class="form-control-state"></span>
+                      </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="footercofo3"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="script.js"></script>
+
+  
+</body>
+</html>
