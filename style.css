@@ -469,6 +469,11 @@ select > .placeholder {
     visibility: visible;
 }
 
+  .dropdown-header{
+    font-weight: bold;
+    color: black;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;
