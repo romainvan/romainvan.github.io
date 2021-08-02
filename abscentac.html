@@ -74,6 +74,7 @@
                                     <th scope="col">Date de fin</th>
                                     <th scope="col">Commentaires AGO</th>
                                     <th scope="col">Date saisie</th>
+                                    <th scope="col">Inscription</th>
                                 </tr>
                             </thead>
                             <tbody class="tbody">
@@ -89,6 +90,7 @@
                                     <td> 24/07/2021</td>
                                     <td> Agent absent à la totalité du module </td>
                                     <td> 27/07/2021</td>
+                                    <td> <button class="btn btn-primary btn-sm" onclick="seeDispo()"> Voir les places <br/> disponibles</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -251,5 +253,11 @@
       $('#cofoabsents thead th').addClass('text-white');
 
     })
+
+    function seeDispo(){
+          var array = window.location.href.split("/");
+          array[array.length-1]="inscriptionac.html";
+         window.open(array.join("/"));
+      }
 
     </script>
