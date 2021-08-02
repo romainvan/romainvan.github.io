@@ -89,7 +89,8 @@
                             <th> Groupe </th>
                             <th> Date de début</th>
                             <th> Date de fin </th>
-                            <th> Nombre d'agents</th>
+                            <th> Mes inscrits </th>
+                            <th> Places en attentes </th>
                             <th> Début distanciel</th>
                             <th> 1er module métier</th>
                             <th class="no-sort"> Actions </th>
@@ -103,7 +104,8 @@
                             <td> LY AMV5 01/22 OP </td>
                             <td> 05/01/2022</td>
                             <td> 10/12/2022</td>
-                            <td> 10 </td>
+                            <td> 2/3 </td>
+                            <td> 2 </td>
                             <td> 05/01/2022</td>
                             <td> 25/01/2022</td>
                             <td>
@@ -165,7 +167,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7,8], // Index of columns (starting at 0) that you want show/hide                
             },
             { width: "20%", targets: 1 },
             {
@@ -200,7 +202,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -209,12 +211,12 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success btnnopad',
-              title : 'Export sessions formations continues du '+titleFile(),
-              filename : function() {
-                return "Export_SessionsFC_"+dateFile()
-              },
+              title : 'Export liste des parcours au '+titleFile(),
+                filename : function() {
+                  return "Export_Parcours_"+dateFile()
+                },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -223,11 +225,11 @@
             {
               extend : 'csvHtml5',
               className : 'btn btn-success btnnopad',
-              filename : function() {
-                return "Export_SessionsFC_"+dateFile()
-              },
+                filename : function() {
+                  return "Export_Parcours_"+dateFile()
+                },
               exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -238,12 +240,12 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
-                title : 'Export sessions formations continues du '+titleFile(),
+                title : 'Export liste des parcours au '+titleFile(),
                 filename : function() {
-                  return "Export_SessionsFC_"+dateFile()
+                  return "Export_Parcours_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7]
+                  columns: [ 0,1,2,3,4,5,6,7,8]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
