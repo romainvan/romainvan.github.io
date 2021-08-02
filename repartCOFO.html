@@ -35,8 +35,8 @@
                 <div class="row mb-2">
                     <div class="col-md-2 ml-5">
                         <label for="etab" class="ml-1"> Établissement</label>
-                        <input list="etab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
-                        <datalist id="etab">
+                        <input list="listetab" type="text" id="cpagentinput" name="etab" class="whiteinput border-0 form-control" placeholder="Choix de l'établissement" value="Infrapôle Indre Limousin">
+                        <datalist id="listetab">
                             <option data-value="InfrapôleIndreLimousin"> Infrapôle Indre Limousin</option>
                             <option data-value="InfrapôleLGVAtlantique"> Infrapôle LGV Atlantique </option>
                         </datalist>
@@ -121,6 +121,7 @@
                                       <th scope="col"><div class="text-white">Commentaire</div></th>
                                       <th scope="col"><div class="text-white">Convocation</div></th>
                                       <th scope="col"><div class="text-white">Rendre des places</div></th>
+                                      <th scope="col"><div class="text-white">Échanger des places</div></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tbody">
@@ -139,9 +140,10 @@
                                         </td>
                                         <td> <button class="btn btn-primary btn-sm"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                        <td> <button data-toggle="modal" data-target="#ModalEchange1" class="btn btn-sm btn-primary"> Échanger</button> </td>
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv3" class="bodycolor">
-                                        <td colspan="11">
+                                        <td colspan="12">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -212,9 +214,11 @@
                                         </td>
                                         <td> <button class="btn btn-primary btn-sm" onclick="convocation()"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                        <td> <button data-toggle="modal" data-target="#ModalEchange2" class="btn btn-sm btn-primary"> Échanger</button> </td>
+
                                     </tr>
                                     <tr style="display: none;" id="affichemyDiv4" class="bodycolor">
-                                        <td colspan="11">
+                                        <td colspan="12">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -323,10 +327,12 @@
                                         </td>
                                         <td> <button class="btn btn-primary btn-sm"> Éditer </button></td>
                                         <td> <button data-toggle="modal" data-target="#ModalRendre1" class="btn btn-sm btn-primary"> Rendre</button> </td>
+                                        <td> <button data-toggle="modal" data-target="#ModalEchange3" class="btn btn-sm btn-primary"> Échanger</button> </td>
+
                                     </tr>
 
                                     <tr style="display: none;" id="affichemyDiv5" class="bodycolor">
-                                        <td colspan="11">
+                                        <td colspan="12">
                                             <table class="table mt-3">
                                                 <thead class="thead hiddentable">
                                                   <tr>
@@ -696,6 +702,123 @@
                 </div>
             </div>
           </div>
+
+
+          <div id="ModalEchange1" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 2px solid black;"> <br />
+                    <h2 class="text-center my-4"> Échanger des places pour la session VT160000 - NVT0000146	 </h2>
+                    <div class="modal-body">
+                        
+                        <table class="table table-bordered">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col"><div class="text-white justify-content-center">Places accordées</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Agents inscrits</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Places restantes</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Infrapôle Indre Limousin</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Infrapôle LGV Atlantique</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 1 </td>
+                                    <td> 0 </td>
+                                    <td> 1 </td>
+                                    <td>  <input type="number" class="form-control"> </td>
+                                    <td>  <input type="number" class="form-control"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-5">
+                              <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                            </div>
+                        </div>    
+                                                                 
+                    </div>
+        
+                </div>
+            </div>
+          </div>
+
+          <div id="ModalEchange2" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 2px solid black;"> <br />
+                    <h2 class="text-center my-4"> Échanger des places pour la session VA620600 - NVT0000151	 </h2>
+                    <div class="modal-body">
+                        
+                        <table class="table table-bordered">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col"><div class="text-white justify-content-center">Places accordées</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Agents inscrits</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Places restantes</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Infrapôle Indre Limousin</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Infrapôle LGV Atlantique</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 2 </td>
+                                    <td> 1 </td>
+                                    <td> 1 </td>
+                                    <td>  <input type="number" class="form-control"> </td>
+                                    <td>  <input type="number" class="form-control"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-5">
+                              <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                            </div>
+                        </div>    
+                                                                 
+                    </div>
+        
+                </div>
+            </div>
+          </div>
+
+          <div id="ModalEchange3" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content" style="border: 2px solid black;"> <br />
+                    <h2 class="text-center my-4"> Échanger des places pour la session VA670701 - NVT0000245	 </h2>
+                    <div class="modal-body">
+                        
+                        <table class="table table-bordered">
+                            <thead class="thead bg-secondary">
+                                <tr>
+                                    <th scope="col"><div class="text-white justify-content-center">Places accordées</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Agents inscrits</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Places restantes</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Infrapôle Indre Limousin</th>
+                                    <th scope="col"><div class="text-white justify-content-center">Infrapôle LGV Atlantique</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 3 </td>
+                                    <td> 3 </td>
+                                    <td> 0 </td>
+                                    <td>  <input type="number" class="form-control"> </td>
+                                    <td>  <input type="number" class="form-control"> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-5">
+                              <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                            </div>
+                        </div>    
+                                                                 
+                    </div>
+        
+                </div>
+            </div>
+          </div>
+
+          
         
 
     </div>
