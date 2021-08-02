@@ -72,10 +72,10 @@
             </div>
 
             <div class="col-md-1">
-                <button class="btn btn-success btnvalid"> Valider </button>
+                <button class="btn btn-success btnvalid" onclick="showContrat()"> Valider </button>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-12" id="contrat">
               <embed src= "Contrat.pdf" type="application/pdf" width="100%" height="1000" type="application/pdf">
             </div>
 
@@ -92,8 +92,13 @@
       $(function(){
         $("#includedContentAC7").load("navcofo.html");
         $("#footercofo5").load("footer.html"); 
+        $("#contrat").hide();
 
       });
+
+      function showContrat(){
+        $("#contrat").show();
+      }
 
      
     </script>

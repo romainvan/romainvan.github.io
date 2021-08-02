@@ -72,10 +72,10 @@
             </div>
 
             <div class="col-md-1">
-                <button class="btn btn-success btnvalid"> Valider </button>
+                <button class="btn btn-success btnvalid" onclick="showContrat()"> Valider </button>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-12" id="contrat">
               <embed src= "Contrat.pdf" type="application/pdf" width="100%" height="1000" type="application/pdf">
             </div>
         </div>
@@ -96,131 +96,16 @@
     <script>
       $(function(){
         $("#includedContentAC7").load("navago.html");
-        $("#footercofo5").load("footer.html"); 
+        $("#footercofo5").load("footer.html");
+        $("#contrat").hide();
 
       });
 
-      $(document).ready(function() {
-      var table = $('#contrat').DataTable({
-        dom: 'BPfrtip',
-        "pagingType": "full_numbers",
-        "initComplete": function() {
-          $('.dataTables_filter input').addClass('form-control');
-        },
-        columnDefs:[
-            {
-                searchPanes:{
-                    show: true, // It can be true/false
-                },
-                targets: [0,1,2,3,4,5,6,7,8,9], // Index of columns (starting at 0) that you want show/hide
-            },
-            {
-      orderable: false,
-      targets: "no-sort"
-    }
-        ],
-        lengthMenu: [
-          [10, 25, 50, 100],
-          [ '10 ', '25 ', '50 ', '100 ']
-        ],
-        buttons: [
-          //'searchPanes',
-            {
-              extend : 'pageLength',
-              className : 'btn btn-success mt-1 btnnopad',
-              
-            },
-            {
-              text: 'Filtres avancés',
-              className: 'btn btn-primary btnnopad',
-              action: function (e, dt, node, config) {
-                  $(".dtsp-panesContainer").toggle()
-              },
-              init: function( api, node, config) {
-                  $(node).removeClass('dt-button')
-              }
-            },
-            {
-              extend : 'copyHtml5',
-              className : 'btn btn-warning btnnopad',
-              exportOptions: {
-                  columns:  [0,1,2,3,4,5,6,7,8,9]
-                },
-                init: function( api, node, config) {
-                  $(node).removeClass('dt-button buttons-copy buttons-html5')
-              }
-            },
-            {
-              extend : 'excelHtml5',
-              className : 'btn btn-success btnnopad',
-              title : 'Contrat du '+titleFile(),
-              filename : function() {
-                return "Contrat_"+dateFile()
-              },
-              exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8,9]
-                },
-                init: function( api, node, config) {
-                  $(node).removeClass('dt-button buttons-excel buttons-html5')
-              }
-            },
-            {
-              extend : 'csvHtml5',
-              className : 'btn btn-success btnnopad',
-              filename : function() {
-                return "Contrat_"+dateFile()
-              },
-              exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8,9]
-                },
-                init: function( api, node, config) {
-                  $(node).removeClass('dt-button buttons-csv buttons-html5')
-                }
+      function showContrat(){
+        $("#contrat").show();
+      }
 
-            },
-            {
-                extend: 'pdfHtml5',
-                orientation: 'landscape',
-                pageSize : 'LEGAL',
-                title : 'Contrat du '+titleFile(),
-              filename : function() {
-                return "Contrat_"+dateFile()
-              },
-                exportOptions: {
-                  columns: [ 0,1,2,3,4,5,6,7,8,9]
-                },
-                customize: function (doc) {
-                  doc.content[1].table.widths = 
-                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
-                  doc.styles.tableBodyEven.alignment = 'center';
-                  doc.styles.tableBodyOdd.alignment = 'center'; 
-                },
-                className : 'btn btn-primary btnnopad',
-                init: function( api, node, config) {
-                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
-                }
-            }
-        ],
-        "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
-            searchPanes: {
-                collapse: "Afficher les filtres",
-                title : {
-                  _: '%d - Filtres sélectionnés',
-                  0 : 'Aucun filtres sélectionnés'
-                },
-                clearMessage : 'Réinitialisé'
-            },
-            buttons : {
-              pageLength: {
-                _: "%d éléments par page",
-                '-1': "Tout afficher"
-              }
-            }
-        }
-      });
-      $('#contrat thead th').addClass('text-white');
-      })
+     
     </script>
 </body>
 </html>
