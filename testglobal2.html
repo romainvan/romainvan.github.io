@@ -1,0 +1,521 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> Liste des inscrits </title>
+  
+
+  <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
+  <link rel="stylesheet alternate" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.darkmode.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/searchpanes/1.2.1/css/searchPanes.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css"> 
+</head>
+
+  <style>
+    td, th, label, .smallbutton{
+      font-size: x-small !important;
+    }
+  </style>
+<body class="d-flex flex-column">
+    <div id="includedContentCofo5"></div>
+    <nav role="navigation" class="mastnav">
+        <ul class="mastnav-top">
+           
+            <li>
+            <a href="testglobal1.html" class="mastnav-item">
+                <i class="icons-menu-account icons-size-1x5 " aria-hidden="true"></i>
+                <span class="font-weight-medium">Liste des inscrits</span>
+            </a>
+            </li>
+  
+            <li>
+            <a href="testglobal2.html" class="mastnav-item active">
+                <i class="icons-large-group icons-size-1x5 " aria-hidden="true"></i>
+                <span class="font-weight-medium">Suivi des inscriptions par établissements</span>
+            </a>
+            </li>
+  
+              
+        </ul>
+      </nav>
+   
+        <div class="container-fluid flex-shrink-0">
+         
+
+          <div class="row">
+            <div class="col-md-11 offset-md-1">
+               
+               <div class="" style="background-color:white; border: border-style: solid 2px black; ">
+            <div class="row" style="background-color:white;">
+              <div class="col-md-11">
+              <h5>Filtre de recherche </h5>
+              </div>
+              <div class="col-md-1">
+                <button class="btn btn-primary btn-sm smallbutton" >Rechercher</button>
+              </div>
+            </div>
+          <div class="row" style="background-color:white;">
+              
+       
+          
+            <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                 Module (raf/nom)
+                </label>
+                <input class="form-control" id="name" name="name" type="text"/>
+              </div>
+            </div>
+  
+            <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                 Code session
+                </label>
+                <input class="form-control" id="name" name="name" type="text"/>
+              </div>
+            </div>
+  
+            <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                 Groupe
+                </label>
+                <input class="form-control" id="name" name="name" type="text"/>
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                  Campus
+                </label>
+                <input class="form-control" id="name" name="name" type="date"/>
+              </div>
+            </div>
+            
+            
+              <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                 Date de début
+                </label>
+                <input class="form-control" id="name" name="name" type="date"/>
+              </div> <!-- form-group -->
+            </div> <!-- col-md-2 -->
+           
+           <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                 Date de fin
+                </label>
+                <input class="form-control" id="name" name="name" type="date"/>
+              </div> <!-- form-group -->
+            </div> <!-- col-md-2 -->
+            
+          </div> <!-- row -->
+         <div class="row" style="background-color:white;"> 
+          
+      
+            
+            <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="select">
+       ZP
+      </label>
+      <select class="select form-control" id="select" name="select">
+       <option value="A">
+        A
+       </option>
+       <option value="IDF">
+        IDF
+       </option>
+       <option value="NEN">
+        NEN
+       </option>
+       <option value="SE">
+        SE
+       </option>
+       <option value="EXTERNE">
+        EXTERNE
+       </option>
+      </select>
+              </div> <!-- form-group -->
+            </div> <!-- col-md-2 -->
+
+          
+           <div class="col-md-2">
+              <div class="form-group form-group-sm">
+                <label class="control-label " for="name">
+                 Etablissement
+                </label>
+                <input class="form-control" id="name" name="name" type="text"/>
+              </div> <!-- form-group -->
+            </div> <!-- col-md-2 -->
+
+          </div> <!--row -->
+            
+          </div>
+              
+             <div class="row"> 
+              
+              <div classs="col-md-12">
+                <div class="table-wrapper">
+                  
+                    <h1 class="text-center mb-4 mt-2"> Suivi des inscriptions par établissements</h1>
+                      <table class="table" id="etablissement">
+                            <thead class="bg-secondary" style="color:white;">
+                                <tr>
+                                   <th scope="col">Code    <br /> RAF</th>
+                                    <th scope="col">Libellé <br /> module</th>
+                                    <th scope="col">Code <br /> Session</th>
+                                    <th scope="col">Groupe</th>
+                                    <th scope="col">Date <br /> début</th>
+                                    <th scope="col">Date <br /> fin</th>
+                                    <th scope="col">Campus</th>
+                        
+                        
+                                    <th style="color:white;">ZP</th>
+                                    <th style="color:white;">Établissement</th>
+                                    <th style="color:white;">Inscrit/attribuée</th>
+                                  <th style="color:white;">Annulé</th>
+                                  <th style="color:white;">Place rendu</th>
+                                  <th style="color:white;">Place perdue</th>
+                                  <th style="color:white;">Place récupérée pot commun ZP</th>
+                                  <th style="color:white;">Place récupérée pot commun N</th>
+                                  
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                
+                                <tr>
+                                  
+                                  <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                  
+                                  
+                                  <td>NEN</td>
+                                  <td style="text-align:left">Infrapôle Lorraine</td>
+                                  <td>1/3</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              <tr>
+                                
+                                <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                
+                                
+                                  <td>SE</td>
+                                  <td style="text-align:left">Infrapôle Alpes</td>
+                                  <td>0/1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>2</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                </tr>
+                               <tr>
+                                 
+                                  <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                 
+                                 
+                                  <td>SE</td>
+                                  <td style="text-align:left">Infrapôle Pays de la loire</td>
+                                  <td>0/1</td>
+                                 <td>0</td>
+                                  <td>1</td>
+                                 <td>1</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                </tr>
+                               <tr>
+                                 
+                                 <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                 
+                                 
+                                  <td>SE</td>
+                                  <td style="text-align:left">Infrapôle Rhodanien</td>
+                                  <td>1/2</td>
+                                   <td>0</td>
+                                    <td>1</td>
+                                 <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                               <tr>
+                                 
+                                 <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                 
+                                 
+                                  <td>NEN</td>
+                                  <td style="text-align:left">Infralog National</td>
+                                  <td>1/1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                 <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              <tr>
+                                
+                                <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                
+                                  <td>IDF</td>
+                                  <td style="text-align:left">Infrapôle Paris Sud Est</td>
+                                  <td>3/3</td>
+                                  <td>2</td>
+                                  <td>0</td>
+                                <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                              <tr>
+                                
+                                <td> VE200200 </td>
+                                    <td> Protections MICOM P12x </td>
+                                
+                                    <td>MCX_OOOO1</td>
+                                    <td>AUCUN</td>
+                                    <td>12/12/2021</td>
+                                    <td>20/12/2021</td>
+                                    <td>Bègles</td>
+                                
+                                
+                                
+                                  <td>IDF</td>
+                                  <td style="text-align:left">Infrapôle Paris Nord</td>
+                                  <td>1/1</td>
+                                  <td>3</td>
+                                  <td>0</td>
+                                <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                        </tbody>
+                      </table>
+                  
+                </div>
+              </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="footerlistestg"></div>
+    <script src="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" ></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js" ></script>
+    <script src="https://cdn.datatables.net/searchpanes/1.2.1/js/dataTables.searchPanes.min.js"></script>
+    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      $("#examples-thead").click(function() {
+        $("input[type=checkbox]").prop("checked", $(this).prop("checked"));
+      });
+      $("input[type=checkbox]").click(function() {
+        if (!$(this).prop("checked")) {
+          $("#examples-thead").prop("checked", false);
+        }
+      });
+
+      $(function(){
+        $("#includedContentCofo5").load("navac.html");
+        $("#footerlistestg").load("footer.html"); 
+      });
+
+      $(document).ready(function() {
+      var table = $('#listestagiaires').DataTable({
+        dom: 'BPfrtip',
+        "pagingType": "full_numbers",
+        "initComplete": function() {
+          $('.dataTables_filter input').addClass('form-control');
+        },
+        columnDefs:[
+            {
+                searchPanes:{
+                    show: true, // It can be true/false
+                },
+                targets: [0,1,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
+            },
+            {
+              orderable: false,
+              targets: "no-sort"
+            }
+        ],
+        lengthMenu: [
+          [10, 25, 50, 100],
+          [ '10 ', '25 ', '50 ', '100 ']
+        ],
+        buttons: [
+          //'searchPanes',
+            {
+              extend : 'pageLength',
+              className : 'btn btn-success mt-1 btnnopad',
+              
+            },
+            {
+              text: 'Filtres avancés',
+              className: 'btn btn-primary btnnopad',
+              action: function (e, dt, node, config) {
+                  $(".dtsp-panesContainer").toggle()
+              },
+              init: function( api, node, config) {
+                  $(node).removeClass('dt-button')
+              }
+            },
+            {
+              extend : 'copyHtml5',
+              text : 'Copier',
+              copyTitle: 'Données copiées',
+              className : 'btn btn-warning btnnopad',
+              exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7,8]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-copy buttons-html5')
+              }
+            },
+            {
+              extend : 'excelHtml5',
+              className : 'btn btn-success btnnopad',
+              title : 'Export agent de la session VT140000 - NVT000423 au '+titleFile(),
+              filename : function() {
+                return "Export_AgentSession_"+dateFile()
+              },
+              exportOptions: {
+                  columns:[0,1,2,3,4,5,6,7,8]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-excel buttons-html5')
+              }
+            },
+            {
+              extend : 'csvHtml5',
+              className : 'btn btn-success btnnopad',
+              filename : function() {
+                return "Export_AgentSession_"+dateFile()
+              },
+              exportOptions: {
+                  columns:[0,1,2,3,4,5,6,7,8]
+                },
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-csv buttons-html5')
+                }
+
+            },
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize : 'LEGAL',
+                title : 'Export agent de la session VT140000 - NVT000423 au '+titleFile(),
+                filename : function() {
+                  return "Export_AgentSession_"+dateFile()
+                },
+                exportOptions: {
+                  columns: [0,1,2,3,4,5,6,7,8]
+                },
+                customize: function (doc) {
+                  doc.content[1].table.widths = 
+                      Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                  doc.styles.tableBodyEven.alignment = 'center';
+                  doc.styles.tableBodyOdd.alignment = 'center'; 
+                },
+                className : 'btn btn-primary btnnopad',
+                init: function( api, node, config) {
+                  $(node).removeClass('dt-button buttons-pdf buttons-html5')
+                }
+            }
+        ],
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.22/i18n/French.json",
+            searchPanes: {
+                collapse: "Afficher les filtres",
+                title : {
+                  _: '%d - Filtres sélectionnés',
+                  0 : 'Aucun filtres sélectionnés'
+                },
+                clearMessage : 'Réinitialisé'
+            },
+            buttons : {
+              pageLength: {
+                _: "%d éléments par page",
+                '-1': "Tout afficher"
+              },
+              copy: 'Copier',
+            copySuccess: {
+                1: "Copie d'une ligne",
+                _: "Copie de %d lignes"
+            },
+            copyTitle: 'Données copiées',
+            copyKeys: 'Press <i>ctrl</i> or <i>\u2318</i> + <i>C</i> to copy the table data<br>to your system clipboard.<br><br>To cancel, click this message or press escape.'
+
+            ,
+       
+            },
+        }
+      });
+      $('#listestagiaires thead th').addClass('text-white');
+      var elt = document.getElementById("remove");
+      elt.classList.remove("sorting_asc")
+      })
+
+    </script>
+    </body>
+</html>
