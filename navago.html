@@ -10,12 +10,26 @@
     <ul class="mastheader-title toolbar mb-0 mt-2">
         
         <li class="toolbar-item separator-gray-500">
-            <a href="sessionsago.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Mes sessions </a>
-        </li>
+            <a href="visucontratago.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Contrat </a>
+        </li> 
+
+      
 
         <li class="toolbar-item separator-gray-500">
-            <a href="listeparcoursago.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Mes parcours</a>
-        </li>
+            <div class="btn-group dropdown">
+                <button class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2" type="button" id="dropSessions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="mycontrol">
+                    <span class="d-none d-xl-block">Suivi</span>
+                    <i class="icons-arrow-down d-none d-xl-block" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropSessions">
+                    <ul>
+                        <li class="dropdown-item"><a href="sessionsago.html"> Sessions</a></li>
+                        <li class="dropdown-item"><a href="listeparcoursago.html"> Parcours </a></li>
+                        <li class="dropdown-item"><a href="absentsago.html"> Absents </a></li>
+                    </ul>
+                </div>
+            </div>
+        </li> 
         
         <li class="toolbar-item separator-gray-500">
             <a href="calendrierago.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Calendrier</a>
@@ -35,9 +49,7 @@
             </div>
         </li>
 
-        <li class="toolbar-item separator-gray-500">
-            <a href="visucontratago.html" class="btn btn-transparent dropdown-toggle toolbar-item-spacing px-2"> Contrat </a>
-        </li>         
+          
     </ul>
 
     <ul class="mastheader-toolbar toolbar mb-0 mt-2">
