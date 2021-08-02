@@ -73,11 +73,19 @@ eventMouseLeave: function(info) {
   nextDayThreshold: '00:00:00',
   events: [
     {
+      id : 'e',
+      title: 'Item Télécom222 - VCM26000',
+      start: new Date('2021-08-12T08:30:00'),
+      end: new Date('2021-08-12T17:00:00'),
+      description : '<br/> Salle : Salle telecom <br/> Formateur : FormateurC <br/> VCM26000 : Maintenance IPBX type NeXspan <br/>',
+      classNames : ['bg-teal','pl-2']
+    },
+    {
       id : 'a',
       title: 'Item Télécom222 - VCM26000',
       start: new Date('2021-10-12T08:30:00'),
       end: new Date('2021-10-12T17:00:00'),
-      description : '<br/> Salle : Salle telecom <br/> VCM26000 : Maintenance IPBX type NeXspan ',
+      description : '<br/> Salle : Salle telecom <br/> Formateur : FormateurB <br/> VCM26000 : Maintenance IPBX type NeXspan ',
       classNames : ['bg-primary','pl-2']
     },
     {
@@ -85,7 +93,7 @@ eventMouseLeave: function(info) {
         title: 'Item 1 - VT160000	',
         start: new Date('2021-10-13T08:30:00'),
         end: new Date('2021-10-13T10:00:00'),
-        description : '<br/> Salle : Salle spec1 <br/> VT160000 : Réseaux IP et applicatifs SNCF	 ',
+        description : '<br/> Salle : Salle spec1 <br/> Formateur : FormateurA <br/> VT160000 : Réseaux IP et applicatifs SNCF	 ',
         classNames : ['bg-teal','pl-2']
     },
 
@@ -94,7 +102,7 @@ eventMouseLeave: function(info) {
         title: 'Item 2 - VT160000	',
         start: new Date('2021-10-13T10:30:00'),
         end: new Date('2021-10-13T12:00:00'),
-        description : '<br/> Salle : Salle bana1 <br/> VT160000 : Réseaux IP et applicatifs SNCF	 ',
+        description : '<br/> Salle : Salle bana1 <br/> Formateur : FormateurA <br/> VT160000 : Réseaux IP et applicatifs SNCF	 ',
         classNames : ['bg-teal','pl-2']
     },
 
@@ -103,7 +111,7 @@ eventMouseLeave: function(info) {
         title: 'Item 3 - VT160000	',
         start: new Date('2021-10-13T13:30:00'),
         end: new Date('2021-10-13T15:00:00'),
-        description : '<br/> Salle : Salle spec2 <br/> VT160000 : Réseaux IP et applicatifs SNCF	 ',
+        description : '<br/> Salle : Salle spec2 <br/> Formateur : FormateurA <br/> VT160000 : Réseaux IP et applicatifs SNCF	 ',
         classNames : ['bg-teal','pl-2']
     },
             

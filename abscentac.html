@@ -33,6 +33,14 @@
                 </datalist>
             </div>
             <div class="col-md-2 mb-4">
+              <label for="typo" class="ml-1"> Typologie </label>
+              <input list="listtyypo" type="text" id="typo" name="raf" class="whiteinput border-0 form-control" placeholder="Typologie">
+              <datalist id="listtyypo">
+                  <option> Initiale	</option>
+                  <option> Continue	</option>
+              </datalist>
+          </div>
+            <div class="col-md-2 mb-4">
                 <label for="agent" class="ml-1"> Agent </label>
                 <input list="agent" type="text" id="agentinput" name="agent" class="whiteinput border-0 form-control" placeholder="Agent">
                 <datalist id="agent">
@@ -60,6 +68,7 @@
                                     <th scope="col">Prénom</th>
                                     <th scope="col">Code RAF</th>
                                     <th scope="col">Libellé code RAF</th>
+                                    <th scope="col">Typologie</th>
                                     <th scope="col">Code Session</th>
                                     <th scope="col">Date de début</th>
                                     <th scope="col">Date de fin</th>
@@ -74,6 +83,7 @@
                                     <td> Arthur</td>
                                     <td> VT160000</td>
                                     <td> Réseaux IP et applicatifs SNCF	</td>
+                                    <td> Continue	</td>
                                     <td> NVT0000146</td>
                                     <td> 20/07/2021</td>
                                     <td> 24/07/2021</td>
@@ -122,7 +132,7 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,4,5], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
             },
             {
       orderable: false,
@@ -159,7 +169,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                columns: [ 0,1,2,3,4,5,6,7,8,9]
+                columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -173,7 +183,7 @@
                   return "Export_Absents_"+dateFile()
               },
               exportOptions: {
-                columns: [ 0,1,2,3,4,5,6,7,8,9]
+                columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -186,7 +196,7 @@
                   return "Export_Absents_"+dateFile()
               },
               exportOptions: {
-                columns: [ 0,1,2,3,4,5,6,7,8,9]
+                columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -202,7 +212,7 @@
                     return "Export_Absents_"+dateFile()
                 },
                 exportOptions: {
-                    columns: [ 0,1,2,3,4,5,6,7,8,9]
+                  columns: [ 0,1,2,3,4,5,6,7,8,9,10]
                 },
                 className : 'btn btn-primary btnnopad',
                 init: function( api, node, config) {

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Liste formations</title>
+  <title>Liste indisponibilités</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -33,7 +33,7 @@
     
     <div class="container-fluid flex-grow-1 flex-shrink-0">
 
-        <h1 class="text-center mb-5"> Liste des formations </h1>
+        <h1 class="text-center mb-5"> Liste des indisponibilités </h1>
         <div class="row">
             <div class="col-md-12">
                 <div class="row mb-2">
@@ -71,26 +71,7 @@
                             </div>
                     </div>
     
-                    <div class="col-md-2">
-                      <label for="metier"> Métier</label>
-                      <input list="listmetier" type="text" id="metier" class="whiteinput border-0 form-control" placeholder="Métier">
-                      <datalist id="listmetier">
-                        <option value="Tout">
-                        <option value="Signalisation">
-                        <option value="Voie">
-                        <option value="Produit Train">
-                        <option value="Caténaire">
-                        <option value="Circulation">
-                      </datalist>
-                    </div>
-                    <div class="col-md-2">
-                      <label for="coderaf"> Code RAF</label>
-                      <input list="code" type="text" id="coderaf" class="whiteinput border-0 form-control" placeholder="Code RAF">
-                      <datalist id="code">
-                        <option value="VT160000 - Réseaux IP et applicatifs SNCF">
-                        <option value="VA620600 - Accès à E - UV6 Technique, maintenance et agrément - Engins">
-                      </datalist>
-                    </div>
+                   
                     <div class="col-md-2">
                         <label for="formateur"> Formateur </label>
                         <input list="listformateur" type="text" id="formateur" class="whiteinput border-0 form-control" placeholder="Choix formateur">
@@ -108,113 +89,43 @@
 
             <div class="col-md-12">
                 <div class="table-wrapper mt-3">
-                    <table class="table" id="formations">
+                    <table class="table" id="indispo">
                         <thead class="thead bg-secondary">
                             <tr>
-                                <th scope="col"> Campus </th>
-                                <th scope="col"> Code RAF </th>
-                                <th scope="col"> Libellé Code RAF</th>
-                                <th scope="col"> Métier </th>
-                                <th scope="col"> Code Session </th>
-                                <th scope="col"> Nom item </th>
+                                <th scope="col"> CP Formateur </th>
+                                <th scope="col"> Nom  </th>
+                                <th scope="col">  Prénom </th>
                                 <th scope="col"> Date de début </th>
-                                <th scope="col"> Date de fin </th>
-                                <th scope="col"> Salle </th>
-                                <th scope="col"> Formateur </th>
-                                <th scope="col"> Inscrits </th>
+                                <th scope="col"> Date de fin </th>                               
+                                <th scope="col"> Motif </th>
+                                <th scope="col"> Observations </th>
+                                <th scope="col" class="no-sort"> Modifier </th>  
+                                <th scope="col" class="no-sort"> Supprimer </th>                                                            
                             </tr>
                         </thead>
 
                         <tbody class="tbody">
                             <tr>
-                                <td> Bègles </td>
-                                <td> VT160000 </td>
-                                <td> Réseaux IP et applicatifs SNCF	</td>
-                                <td> Télécom </td>
-                                <td> NVT0000475</td>
-                                <td> Item 1 </td>
-                                <td> 10/10/2021 8h30 </td>
-                                <td> 10/10/2021 10h00 </td>
-                                <td> Salle spec1 </td>
-                                <td> FormateurA</td>
+                                <td> 0123456A</td>
+                                <td> Dupont  </td>
+                                <td> Jean </td>
+                                <td> 2/08/2021 08h00 </td>
+                                <td> 20/08/2021 17h00 </td>
+                                <td> En congé </td>
+                                <td> </td>
                                 <td>
                                     <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
-                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                                        <i class="icons-pencil editicon icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0" onclick="return confirm('Voulez-vous supprimer cette indisponibilité?')">
+                                        <i class="icons-close redicon icons-size-1x25" aria-hidden="true"></i>
                                     </button>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td> Bègles </td>
-                                <td> VT160000 </td>
-                                <td> Réseaux IP et applicatifs SNCF	</td>
-                                <td> Télécom </td>
-                                <td> NVT0000475</td>
-                                <td> Item 2 </td>
-                                <td> 10/10/2021 10h30 </td>
-                                <td> 10/10/2021 12h00 </td>
-                                <td> Salle bana1 </td>
-                                <td> FormateurA</td>
-                                <td>
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
-                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td> Bègles </td>
-                                <td> VT160000 </td>
-                                <td> Réseaux IP et applicatifs SNCF	</td>
-                                <td> Télécom </td>
-                                <td> NVT0000475</td>
-                                <td> Item 3 </td>
-                                <td> 10/10/2021 13h30 </td>
-                                <td> 10/10/2021 15h00 </td>
-                                <td> Salle spec2 </td>
-                                <td> FormateurA</td>
-                                <td>
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
-                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td> Bègles </td>
-                                <td> VCM26000 </td>
-                                <td> Maintenance IPBX type NeXspan </td>
-                                <td> Signalisation</td>
-                                <td> NVT0000716</td>
-                                <td> Item Télécom </td>
-                                <td> 12/10/2021 8h30</td>
-                                <td> 12/10/2021 17h00</td>
-                                <td> Salle telecom </td>
-                                <td> FormateurC</td>
-                                <td>
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
-                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td> Bègles </td>
-                                <td> VCM26000 </td>
-                                <td> Maintenance IPBX type NeXspan </td>
-                                <td> Signalisation</td>
-                                <td> NVT0000716</td>
-                                <td> Item Télécom 2 </td>
-                                <td> 13/10/2021 8h30</td>
-                                <td> 13/10/2021 17h00</td>
-                                <td> Salle telecom </td>
-                                <td> FormateurB</td>
-                                <td>
-                                    <button class="btn btn-only-icon btn-transparent btn-color-gray favbtn ml-1 mx-0">
-                                        <i class="icons-circle-information icons-size-1x25" data-toggle="modal" data-target="#ModalDetails" aria-hidden="true"></i>
-                                    </button>
-                                </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -226,23 +137,114 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content"> <br />
                 <div class="modal-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        
-                        <h2 class="text-center my-4"> Liste des inscrits</strong> </h1>
-
-                        <ul class="list-group text-left">
-                            <li class="list-group-item"> Agent 1 : <strong> 8912345B Durand Arthur </strong> </li>
-                            <li class="list-group-item"> Agent 2 : <strong> 6789123C Fournier Gabriel	 </strong> </li>
-                            <li class="list-group-item"> Agent 3 : <strong> 8512437D Gond Quentin </strong> </li>
-                            <li class="list-group-item"> Agent 4 : <strong> 8475237A Ponc Nicolas </strong> </li>
-                            <li class="list-group-item"> Agent 5 : <strong> 6789123C Fournier Gabriel </strong> </li>
-                            <li class="list-group-item"> Agent 6 : <strong> 5678912G Vasseur Cedric	 </strong> </li>
-                            <li class="list-group-item"> Agent 7 : <strong> 4891234B Garcia Roger </strong> </li>
+                    <h2 class="text-center mb-4"> Modification indisponibilité formateur</h2>
+                    <div class="form-group mb-4">
+                        <label for="formateur"> Formateur</label>
+                        <select class="form-control whiteinput" id="formateur">
+                            <option selected> FormateurA </option>
+                            <option disabled> FormateurB </option>
+                            <option disabled> FormateurC </option>
+                        </select>
+                    </div>
     
-                        </ul>
-                      </div>
-                    </div>                           
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="dateDebut" class="ml-1"> Date de début (jj/mm/aaaa) </label>
+                            <div data-component="picker" data-default-date="02/08/2021">
+                                <div class="input-group" data-toggle>
+                                  <div class="form-control-container">
+                                    <input id="dateDebut" type="text" class="form-control" placeholder="Sélectionner la date de début" data-input>
+                                    <span class="form-control-state"></span>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="dateFin" class="ml-1"> Date de fin (jj/mm/aaaa) </label>
+                            <div data-component="picker" data-default-date="20/08/2021">
+                                <div class="input-group" data-toggle>
+                                  <div class="form-control-container">
+                                    <input id="dateFin" type="text" class="form-control" placeholder="Sélectionner la date de fin" data-input>
+                                    <span class="form-control-state"></span>
+                                  </div>
+                                  <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                      <i class="icons-calendar" aria-hidden="true"></i>
+                                    </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label class="font-weight-medium mb-2" for="timepickerExemple">Heure de début</label>
+                            <div data-component="picker" data-mode="time" data-increment-hours-on-minutes-max>
+                                <div class="input-group" data-toggle>
+                                    <div class="form-control-container">
+                                    <input id="timepickerExemple" tabindex="-1" type="text" class="form-control" placeholder="Sélectionner une heure" data-input value="08:00">
+                                    <span class="form-control-state"></span>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                          <i class="icons-calendar" aria-hidden="true"></i>
+                                        </button>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col">
+                            <label class="font-weight-medium mb-2" for="timepickerExemple">Heure de fin</label>
+                            <div data-component="picker" data-mode="time" data-increment-hours-on-minutes-max>
+                                <div class="input-group" data-toggle>
+                                    <div class="form-control-container">
+                                    <input id="timepickerExemple" tabindex="-1" type="text" class="form-control" placeholder="Sélectionner une heure" data-input value="17:00">
+                                    <span class="form-control-state"></span>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-primary btn-only-icon" data-role="btn" tabindex="-1" aria-expanded="false">
+                                          <i class="icons-calendar" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="form-group">
+                      <label for="motif"> Choix motif </label>
+                        <select class="form-control" id="motif">
+                            <option data-role="default-hidden-option" disabled>Choix motif </option>
+                            <option selected> En congé</option>
+                            <option> En double</option>
+                            <option> En maladie</option>
+                            <option> En coanimation</option>
+                            <option> En formation</option>
+                            <option> En révisions</option>
+                            <option> En réunion</option>
+                            <option> Autre</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <div class="form-control-container" data-component="control">
+                            <label for="countTextarea1">Observations</label>
+                            <textarea class="form-control stretchy " id="countTextarea1" placeholder="Remarques, notes..." data-role="input" aria-describedby="charcounter"></textarea>
+                            <span class="form-control-state"></span>
+                          </div>
+                    </div>
+    
+                    <div class="col-md-2 offset-md-4">
+                      <button class="btn btn-warning"> Modifier</button>
+                    </div>
+    
                 </div>
     
             </div>
@@ -262,7 +264,7 @@
 
     <script>
         $(document).ready(function() {
-      var table = $('#formations').DataTable({
+      var table = $('#indispo').DataTable({
         dom: 'BPfrtip',
         "pagingType": "full_numbers",
         "initComplete": function() {
@@ -273,13 +275,13 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6,7,8,9], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6], // Index of columns (starting at 0) that you want show/hide                
             },
             {
                 searchPanes:{
                     show: false, // It can be true/false
                 },
-                targets: [10], // Index of columns (starting at 0) that you want show/hide                
+                targets: [7,8], // Index of columns (starting at 0) that you want show/hide                
             },
             {
               orderable: false,
@@ -313,7 +315,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                columns:[0,1,2,3,4,5,6,7,8,9]
+                columns:[0,1,2,3,4,5,6]
 
                 },
                 init: function( api, node, config) {
@@ -323,13 +325,12 @@
             {
               extend : 'excelHtml5',
               className : 'btn btn-success btnnopad',
-              title : 'Mes formations au '+titleFile(),
+              title : 'Indisponibiltés formateurs au '+titleFile(),
                 filename : function() {
-                  return "MesFormations_"+dateFile()
+                  return "IndispoFormateur"+dateFile()
                 },
               exportOptions: {
-                columns:[0,1,2,3,4,5,6,7,8,9]
-
+                columns:[0,1,2,3,4,5,6]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -339,10 +340,10 @@
               extend : 'csvHtml5',
               className : 'btn btn-success btnnopad',
                 filename : function() {
-                  return "MesFormations_"+dateFile()
+                  return "IndispoFormateur"+dateFile()
                 },
               exportOptions: {
-                columns:[0,1,2,3,4,5,6,7,8,9]
+                columns:[0,1,2,3,4,5,6]
 
                 },
                 init: function( api, node, config) {
@@ -354,12 +355,12 @@
                 extend: 'pdfHtml5',
                 orientation: 'landscape',
                 pageSize : 'LEGAL',
-                title : 'Mes formations au '+titleFile(),
+                title : 'Indisponibiltés formateurs au '+titleFile(),
                 filename : function() {
-                  return "MesFormations_"+dateFile()
+                  return "IndispoFormateur"+dateFile()
                 },
                 exportOptions: {
-                  columns:[0,1,2,3,4,5,6,7,8,9]
+                    columns:[0,1,2,3,4,5,6]
 
                 },
                 customize: function (doc) {
@@ -402,7 +403,7 @@
             },
         }
       });
-      $('#formations thead th').addClass('text-white');
+      $('#indispo thead th').addClass('text-white');
       })
     </script>
 </body>

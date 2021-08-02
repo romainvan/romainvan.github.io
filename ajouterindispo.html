@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Required meta tags -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Liste formations</title>
+  <title>Ajouter indisponibilité</title>
   
 
   <link rel="stylesheet" href="bootstrap-sncf.metier.v4.3.1-r5/bootstrap-sncf.min.css">
@@ -119,7 +119,8 @@
                 </div>
 
                 <div class="form-group">
-                    <select class="form-control">
+                  <label for="motif"> Choix motif </label>
+                    <select class="form-control" id="motif">
                         <option selected data-role="default-hidden-option" disabled>Choix motif </option>
                         <option> En congé</option>
                         <option> En double</option>
@@ -139,6 +140,12 @@
                         <span class="form-control-state"></span>
                       </div>
                 </div>
+
+                <div class="col-md-2 offset-md-4">
+                  <button class="btn btn-success"> Enregistrer</button>
+                </div>
+
+
            
             </div>
         </div>

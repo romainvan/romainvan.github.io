@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'NVE0000047 : Protections MICOM P12x',
           start: new Date('2021-06-02T13:30:00'),
           end: new Date('2021-06-02T17:00:00'),
-          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean <br/> Campus : Nanterre',
           classNames : ['bg-success','pl-2']
       },
       {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'NVE0000047 : Protections MICOM P12x',
           start: new Date('2021-06-03T08:30:00'),
           end: new Date('2021-06-03T17:00:00'),
-          description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean ',
+          description : '<br/> Salle : Tourraine 02 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre ',
           classNames : ['bg-success','pl-2']
       },
       {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'NVE0000120 : Maintenance - Eurobalises',
           start: new Date('2021-05-31T13:30:00'),
           end: new Date('2021-05-31T17:00:00'),
-          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre ',
           classNames : ['bg-primary','pl-2']
       },
       {
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'NVE0000120 : Maintenance - Eurobalises',
           start: new Date('2021-06-01T08:30:00'),
           end: new Date('2021-06-01T17:00:00'),
-          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre ',
           classNames : ['bg-primary','pl-2']
       },
      
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
           title: 'NVV0000495 : Agents CAT Accès toitures engins moteurs électriques',
           start: new Date('2021-06-04T08:30:00'),
           end: new Date('2021-06-04T12:00:00'),
-          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+          description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre',
           classNames : ['bg-success','pl-2']
       }, 
       
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'NVV0000495 : Agents CAT Accès toitures engins moteurs électriques',
         start: new Date('2021-06-07T13:30:00'),
         end: new Date('2021-06-07T17:00:00'),
-        description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+        description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre ',
         classNames : ['bg-success','pl-2']
     },                
       

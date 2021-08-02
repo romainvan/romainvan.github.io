@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'NVE0000120 : Maintenance - Eurobalises',
             start: new Date('2021-05-31T13:30:00'),
             end: new Date('2021-05-31T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre',
             classNames : ['bg-primary','pl-2']
         },
         {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'NVE0000120 : Maintenance - Eurobalises',
             start: new Date('2021-06-01T08:30:00'),
             end: new Date('2021-06-01T17:00:00'),
-            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean ',
+            description : '<br/> Salle : Tourraine 01 <br/> Formateur : Dupont Jean  <br/> Campus : Nanterre',
             classNames : ['bg-primary','pl-2']
         },
        

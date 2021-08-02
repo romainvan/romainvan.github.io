@@ -478,6 +478,10 @@ select > .placeholder {
     width: 5em !important;
   }
 
+  .editicon {
+    color : #0088ce;
+  }
+
   .dt-button{
     color: #fff !important;
     background-color: #0088ce !important;

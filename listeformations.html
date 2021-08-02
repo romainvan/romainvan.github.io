@@ -102,6 +102,7 @@
                     <table class="table" id="formations">
                         <thead class="thead bg-secondary">
                             <tr>
+                                <th scope="col"> Campus </th>
                                 <th scope="col"> Code RAF </th>
                                 <th scope="col"> Libellé Code RAF</th>
                                 <th scope="col"> Métier </th>
@@ -117,6 +118,7 @@
 
                         <tbody class="tbody">
                             <tr>
+                                <td> Bègles </td>
                                 <td> VT160000 </td>
                                 <td> Réseaux IP et applicatifs SNCF	</td>
                                 <td> Télécom </td>
@@ -134,6 +136,7 @@
                             </tr>
 
                             <tr>
+                                <td> Bègles </td>
                                 <td> VT160000 </td>
                                 <td> Réseaux IP et applicatifs SNCF	</td>
                                 <td> Télécom </td>
@@ -151,6 +154,7 @@
                             </tr>
 
                             <tr>
+                                <td> Bègles </td>
                                 <td> VT160000 </td>
                                 <td> Réseaux IP et applicatifs SNCF	</td>
                                 <td> Télécom </td>
@@ -168,6 +172,7 @@
                             </tr>
 
                             <tr>
+                                <td> Saint Priest </td>
                                 <td> VCM26000 </td>
                                 <td> Maintenance IPBX type NeXspan </td>
                                 <td> Signalisation</td>
@@ -241,13 +246,13 @@
                 searchPanes:{
                     show: true, // It can be true/false
                 },
-                targets: [0,1,2,3,4,5,6,7], // Index of columns (starting at 0) that you want show/hide                
+                targets: [0,1,2,3,4,5,6,7,8,9], // Index of columns (starting at 0) that you want show/hide                
             },
             {
                 searchPanes:{
                     show: false, // It can be true/false
                 },
-                targets: [8], // Index of columns (starting at 0) that you want show/hide                
+                targets: [10], // Index of columns (starting at 0) that you want show/hide                
             },
             {
               orderable: false,
@@ -281,7 +286,7 @@
               copyTitle: 'Données copiées',
               className : 'btn btn-warning btnnopad',
               exportOptions: {
-                columns:[0,1,2,3,4,5,6,7]
+                columns:[0,1,2,3,4,5,6,7,8,9]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-copy buttons-html5')
@@ -295,7 +300,7 @@
                   return "MesFormations_"+dateFile()
                 },
               exportOptions: {
-                columns: [0,1,2,3,4,5,6,7]
+                columns:[0,1,2,3,4,5,6,7,8,9]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-excel buttons-html5')
@@ -308,7 +313,7 @@
                   return "MesFormations_"+dateFile()
                 },
               exportOptions: {
-                columns: [0,1,2,3,4,5,6,7]
+                columns:[0,1,2,3,4,5,6,7,8,9]
                 },
                 init: function( api, node, config) {
                   $(node).removeClass('dt-button buttons-csv buttons-html5')
@@ -324,7 +329,7 @@
                   return "MesFormations_"+dateFile()
                 },
                 exportOptions: {
-                  columns: [0,1,2,3,4,5,6,7]
+                  columns:[0,1,2,3,4,5,6,7,8,9]
                 },
                 customize: function (doc) {
                   doc.content[1].table.widths = 
