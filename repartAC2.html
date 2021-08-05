@@ -30,6 +30,12 @@
     
         <div class="container-fluid flex-grow-1 flex-shrink-0">
         <h1 class="text-center mb-5"> Répartition </h1>
+        <div class="alert alert-primary ml-5 col-md-11" role="alert">
+          <h2 class="text-center"> Informations maquettes </h2>
+          <p class="text-secondary"> Nous sommes dans le cas de l'AC de la ZP IDF</p>
+          <p class="text-secondary"> La 1ère ligne du tableau ci-dessous correspond à l'affichage des AC ayant 2 ZP</p>
+
+        </div>
         <div class="row">
             <div class="col-md-12 row">
                 <div class="col-md-2 ml-3">
@@ -103,7 +109,7 @@
                         <th scope="col"><div class="text-white justify-content-center">Date début</div></th>
                         <th scope="col"><div class="text-white justify-content-center">Date fin</div></th>
                         <th scope="col"><div class="text-white justify-content-center">Groupe </div></th>
-                        <th scope="col"><div class="text-white justify-content-center">Nombre de place </div></th>
+                        <th scope="col"><div class="text-white justify-content-center">Nombre de places </div></th>
                         <th scope="col"><div class="text-white justify-content-center">ZP A</div></th>
                         <th scope="col"><div class="text-white justify-content-center">ZP IDF</div></th>
                         <th scope="col"><div class="text-white justify-content-center">ZP NEN </div></th>
@@ -331,14 +337,14 @@
                         <td> Continue </td>
                         <td> 12 </td>
                         <td> 3/3</td>
-                        <td> 0/3</td>
+                        <td> 1/3</td>
                         <td> 3/3</td>
                         <td> 2/3</td>
                         <td> <button data-toggle="modal" data-target="#ModalRendre2" class="btn btn-sm btn-primary"> Réattribuer </button></td>
                         <td> <button class="btn btn-success btn-sm"> Enregistrer</button></td>
                       </tr>
                       <tr style="display: none;" id="affichemyDiv2" class="bodycolor">
-                          <td colspan="9">
+                          <td colspan="7">
                             <table class="table mt-3">
                                 <thead class="thead hiddentable">
                                   <tr>
@@ -377,7 +383,7 @@
                                 </tbody>
                               </table>
                           </td>
-                          <td colspan="6">
+                          <td colspan="8">
                             <table class="table mt-3">
                                 <thead class="thead hiddentable">
                                   <tr>
@@ -421,7 +427,7 @@
                         <td> 05/07/2021</td>
                         <td> 06/07/2021</td>
                         <td> Continue </td>
-                        <td> 1/12 </td>
+                        <td> 12 </td>
                         <td> 3/3</td>
                         <td> 0/3</td>
                         <td> 3/3</td>
@@ -438,7 +444,7 @@
                         <td> 07/07/2021</td>
                         <td> 08/07/2021</td>
                         <td> Continue </td>
-                        <td> 1/12 </td>
+                        <td> 12 </td>
                         <td> 3/3</td>
                         <td> 0/3</td>
                         <td> 3/3</td>
@@ -528,25 +534,7 @@
 
 
 
-    <div id="ModalRendre2" class="modal fade">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content" style="border: 2px solid black;"> <br />
-              <h2 class="text-center my-4"> Réattribuer des places pour la session NVT000172 - VA216000 </h1>
-              <div class="modal-body">
-                      <div class="form-group">                    
-                        <label for="rendre2"> Réattribuer des places</label>
-                        <input type="number" class="form-control" id="rendre2">
-                      </div>
-                      <div class="row">
-                          <div class="col-md-2 offset-md-5">
-                            <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
-                          </div>
-                      </div>                                            
-              </div>
-  
-          </div>
-      </div>
-    </div>
+   
 
     <div id="ModalRepartAC2" class="modal fade">
       <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -628,7 +616,7 @@
 <div id="ModalRendre1" class="modal fade">
       <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content" style="border: 2px solid black;"> <br />
-              <h2 class="text-center my-4"> Réattribuer des places aux autres ZP pour le groupe LY AMV5 01/22 OP	</h2>
+              <h2 class="text-center my-4"> Réattribuer des places aux autres ZP pour la session VT160000	- NVT000146		</h2>
               <div class="modal-body">
                 <table class="table table-bordered">
                   <thead class="thead bg-secondary">
@@ -647,6 +635,47 @@
                       <td> 3 </td>
                       <td> 0 </td>
                       <td> 3 </td>
+                      <td>  <input type="number" class="form-control"> </td>
+                      <td>  <input type="number" class="form-control"> </td>
+                      <td>  <input type="number" class="form-control"> </td>
+                      <td>  <input type="number" class="form-control"> </td>
+
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row">
+                  <div class="col-md-2 offset-md-5">
+                    <button class="btn btn-success text-white" onclick="location.href=window.location.href"> Valider </button>
+                  </div>
+                </div>                             
+              </div>
+  
+          </div>
+      </div>
+    </div>
+
+    <div id="ModalRendre2" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content" style="border: 2px solid black;"> <br />
+              <h2 class="text-center my-4"> Réattribuer des places aux autres ZP pour la session VA216000	- NVT000172		</h2>
+              <div class="modal-body">
+                <table class="table table-bordered">
+                  <thead class="thead bg-secondary">
+                    <tr>
+                      <th scope="col"><div class="text-white justify-content-center">Places accordées</th>
+                      <th scope="col"><div class="text-white justify-content-center">Places réparties</th>
+                      <th scope="col"><div class="text-white justify-content-center">Places restantes</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP A</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP IDF</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP NEN</th>
+                      <th scope="col"><div class="text-white justify-content-center">ZP SE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> 3 </td>
+                      <td> 1 </td>
+                      <td> 2 </td>
                       <td>  <input type="number" class="form-control"> </td>
                       <td>  <input type="number" class="form-control"> </td>
                       <td>  <input type="number" class="form-control"> </td>
